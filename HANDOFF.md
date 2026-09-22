@@ -43,6 +43,7 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 | `qa-lola-mobile-sweep.mjs` | overflow horizontal e saúde por rota a 390px |
 | `qa-lola-product-alignment.mjs` | posição e tamanho das imagens contra a origem em 1440, 768 e 390px |
 | `qa-lola-mobile-gallery.mjs` | galeria verdadeira de celular: UA mobile, toque, DPR, swipe e indicadores |
+| `qa-lola-phone-header.mjs` | header mobile real, posições e interações em iPhone/Android emulados |
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
@@ -116,6 +117,19 @@ Evidências: `mobile-gallery-extraction.json`, `mobile-gallery-qa.json` e screen
 nem execução do motor WebKit/Safari. O popup de marketing da origem é bloqueado apenas
 no teste de gesto para que não intercepte o toque durante a validação.
 
+### Header da versão de celular
+
+O antigo `chrome.HeaderMobile` era idêntico ao desktop. Agora o pipeline usa as capturas
+completas `header-phone-extraction.json` e `header-phone-interior-extraction.json`.
+Elas geram `HeaderMobile` e `HeaderMobileInterior`, com logo centralizado, ícones na
+primeira linha e busca na segunda. O detector em `mobileDevice.ts` é compartilhado
+com a galeria. Header reassocia os handlers quando o HTML muda após a hidratação.
+
+O layout usa o CSS original, sem overrides de posicionamento. A variante desktop e
+o header simplificado do carrinho com drawer foram preservados. Reproduzir esses
+testes em contextos com user agent, tela, DPR e toque; redimensionar apenas a janela
+desktop não ativa o template que a origem entrega aos celulares.
+
 ## Diferenças conhecidas, e que são fiéis
 
 - Auditoria adicional: `/colecoes/be-m-dita-ghee` contém uma landing CronoLola com
@@ -130,6 +144,3 @@ no teste de gesto para que não intercepte o toque durante a validação.
 - 4 seções da home (`BenefitsBanner`, `ReasonsToLove`, `Benefits`, `SocialLinks`) estão
   `display:none` — o original também as esconde no desktop. O `BenefitsBanner` aparece no
   mobile, nos dois.
-- A comparação antiga do header a 390px se referia ao desktop estreitado. A captura
-  com contexto mobile completo mostra outro header na origem (busca em uma segunda
-  linha). Essa diferença é separada da galeria e não foi alterada neste ajuste.

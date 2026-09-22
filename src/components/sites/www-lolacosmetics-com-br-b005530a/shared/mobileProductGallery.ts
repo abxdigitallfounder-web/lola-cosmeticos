@@ -1,10 +1,9 @@
 import options from "./mobile-gallery-options.json";
+import { isMobileBrowser } from "./mobileDevice";
 
 /** The origin chooses a different PDP template by device, not viewport width. */
 export function mountMobileProductGalleries(root: HTMLElement): () => void {
-  const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  if (!mobile) return () => {};
+  if (!isMobileBrowser()) return () => {};
 
   const replacements: Array<{ desktop: Element; gallery: HTMLElement }> = [];
   root.querySelectorAll("figure.wd-product-medias").forEach(desktop => {

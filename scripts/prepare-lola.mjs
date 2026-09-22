@@ -73,13 +73,20 @@ fs.copyFileSync('node_modules/slick-carousel/slick/ajax-loader.gif',`public/site
 fs.mkdirSync(`public/sites/${site}/fonts`,{recursive:true});
 for(const font of fs.readdirSync('node_modules/slick-carousel/slick/fonts'))fs.copyFileSync(`node_modules/slick-carousel/slick/fonts/${font}`,`public/sites/${site}/fonts/${font}`);
 const fragments={};for(const [name,s] of Object.entries(sections))fragments[name]=clean(s.html);
-const $m=load(mobile.html);fragments.HeaderMobile=clean($m('#header').toString());fragments.HeroMobile=clean($m('.fullbanner').toString());
+const $m=load(mobile.html);
+// A narrow desktop capture is not the phone template: the source renders a separate
+// mobile header when requested with a mobile UA. Preserve that actual DOM separately.
+const phoneHeader=JSON.parse(fs.readFileSync(`${root}/header-phone-extraction.json`));
+const phoneInterior=JSON.parse(fs.readFileSync(`${root}/header-phone-interior-extraction.json`));
+fragments.HeaderMobile=createSanitizer(manifest).clean(phoneHeader.html);
+fragments.HeroMobile=clean($m('.fullbanner').toString());
 // Mobile slider options come from the same hero instance: one slide and four dots.
 fragments.HeroMobile=fragments.HeroMobile.replace(/data-lola-slider="[^"]*"/g,`data-lola-slider="${JSON.stringify(options[0].options).replaceAll('"','&quot;')}"`);
 // Shared chrome lives outside the page fragments. The cart uses its own simplified
 // captured header, while other interior routes use the home navigation without an h1.
 const chromeNames=['Header','HeaderMobile','Footer'];
 const chrome=Object.fromEntries(chromeNames.map(n=>[n,fragments[n]]));
+chrome.HeaderMobileInterior=createSanitizer(manifest).clean(phoneInterior.html);
 // The storefront marks the logo up as the page heading only on the home page; every
 // interior route uses a plain container, so a second variant keeps them from shipping a
 // stray <h1> that the source does not have.

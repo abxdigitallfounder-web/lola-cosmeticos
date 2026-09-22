@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import chrome from "./chrome.json";
+import { isMobileBrowser } from "./mobileDevice";
 import "./header-extra.css";
 
 /** Preserve the captured header DOM while replacing the storefront's remote scripts. */
@@ -11,6 +12,11 @@ import "./header-extra.css";
  */
 export default function Header({ variant = "home" }: { variant?: "home" | "interior" | "cart" } = {}) {
   const root = useRef<HTMLDivElement>(null);
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => { setMobile(isMobileBrowser()); }, []);
+  const html = variant === "cart" ? chrome.HeaderCart
+    : mobile ? (variant === "interior" ? chrome.HeaderMobileInterior : chrome.HeaderMobile)
+    : variant === "interior" ? chrome.HeaderInterior : chrome.Header;
 
   useEffect(() => {
     const header = root.current?.querySelector<HTMLElement>("#header");
@@ -155,8 +161,7 @@ export default function Header({ variant = "home" }: { variant?: "home" | "inter
       document.removeEventListener("click", onOutside);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [variant]);
+  }, [html]);
 
-  const html = variant === "cart" ? chrome.HeaderCart : variant === "interior" ? chrome.HeaderInterior : chrome.Header;
   return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: html }} />;
 }
