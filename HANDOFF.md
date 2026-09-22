@@ -44,28 +44,30 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
-## Aberto: overflow no carrinho (mobile)
+## Corrigido: overflow no carrinho (mobile)
 
-`/carrinho` a 390px tem **43px de overflow horizontal**. Única rota com o problema.
+A rota `/carrinho` usa agora `Header variant="cart"`, com o HTML simplificado do original
+(`.main-bar.simples`, logo centralizado, sem menu/busca/ícone extra de sacola).
+O overflow medido a 390px caiu de **43px para 0px**, sem acrescentar `overflow-x: hidden`.
 
-Causa já diagnosticada: o header compartilhado vem da captura da home, que traz 3 elementos
-`.basket`. O original serve só 1 na página do carrinho. O `.basket` extra fica em `x=395`,
-fora da viewport de 390px, e empurra a página.
+A correção está no pipeline, não apenas nos arquivos gerados:
 
-```
-clone  /carrinho: .basket em x=395 w=25 right=420 → overflow 43px
-source /carrinho: nenhum .basket → overflow 0
-```
+- `capture-lola-pages.mjs` passa a preservar `headerHtml`.
+- A captura existente do carrinho recebeu o header, também documentado em
+  `carrinho-1bc30c37/header-extraction.json`.
+- `prepare-lola.mjs` sanitiza essa captura em `shared/chrome.json.HeaderCart` e acusa erro
+  se ela estiver ausente, em vez de reutilizar silenciosamente o header da home.
+- `prepare-lola-pages.mjs` seleciona essa variante só em `/carrinho`.
+- `header-extra.css` restaura `body.BasketIndexRoute { padding:0 }`, medido no original,
+  para neutralizar os 8px de uma regra genérica vinda de outra captura no CSS combinado.
 
-Contagem de `class="basket"` no HTML do original: home 3, /login 3, /tratamentos 3,
-**/carrinho 1**.
+As variantes da home e das demais páginas foram preservadas. A contagem relevante no
+DOM é `#header .basket`: 1 na variante interior antiga, 0 no header original do carrinho.
+Contar a string `basket` no HTML também inclui classes de outros elementos.
 
-Correção fiel: dar à rota do carrinho um header próprio (uma terceira variante em
-`chrome.json`, como já é feito com `HeaderInterior`), derivada da captura de `/carrinho`.
-O componente `shared/Header.tsx` já aceita `variant`; basta acrescentar o caso e trocar em
-`scripts/prepare-lola-pages.mjs`, que hoje passa `variant="interior"` para todas.
-
-Evitar `overflow-x: hidden` no body: esconde o sintoma e não reproduz o original.
+O QA mobile de 13 rotas representativas passou sem overflow, imagens quebradas, erros
+no console ou respostas 4xx. A especificação do ajuste está em
+`carrinho-1bc30c37/components/HeaderCart.spec.md`.
 
 ## Diferenças conhecidas, e que são fiéis
 

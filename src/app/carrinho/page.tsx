@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <BodyClass value="column-1 BasketIndexRoute page-basket" />
       <section id="main" className="BasketIndexRoute">
-        <Header variant="interior" />
+        <Header variant="cart" />
         <div id="bg-search" />
         <PageContent />
         <Footer />

@@ -1,0 +1,17 @@
+{
+  "url": "https://www.lolacosmetics.com.br/carrinho",
+  "headerHtml": "<header id=\"header\">               <div class=\"main-bar simples\"> \t<div class=\"wrapper\"> \t\t<div class=\"row align-items-center\"> \t\t\t \t\t\t<div id=\"logo\" class=\"col col-lg-2 col-8\"> \t\t\t\t \t\t\t\t\t<a href=\"/\" title=\"Ir para a página inicial.\">Lola Cosmetics</a> \t\t\t\t\t \t\t\t</div> \t\t\t \t\t</div> \t</div> </div> \t\t\t         </header>",
+  "bodyMargin": "0px",
+  "width": 1440,
+  "scrollWidth": 1440,
+  "header": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 120,
+    "top": 0,
+    "right": 1440,
+    "bottom": 120,
+    "left": 0
+  }
+}

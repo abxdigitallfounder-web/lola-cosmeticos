@@ -7,9 +7,9 @@ import "./header-extra.css";
 /** Preserve the captured header DOM while replacing the storefront's remote scripts. */
 /**
  * `variant` picks which captured markup to replay: the source makes the logo the page
- * heading on the home page only, so interior routes get the variant without the <h1>.
+ * heading on the home page only. The cart has a separate, simplified source header.
  */
-export default function Header({ variant = "home" }: { variant?: "home" | "interior" } = {}) {
+export default function Header({ variant = "home" }: { variant?: "home" | "interior" | "cart" } = {}) {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -155,7 +155,8 @@ export default function Header({ variant = "home" }: { variant?: "home" | "inter
       document.removeEventListener("click", onOutside);
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, []);
+  }, [variant]);
 
-  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: variant === "interior" ? chrome.HeaderInterior : chrome.Header }} />;
+  const html = variant === "cart" ? chrome.HeaderCart : variant === "interior" ? chrome.HeaderInterior : chrome.Header;
+  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: html }} />;
 }

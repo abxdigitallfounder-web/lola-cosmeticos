@@ -63,7 +63,7 @@ export default function Page() {
     <>
       <BodyClass value=${JSON.stringify(bodyClass)} />
       <section id="main"${attr("className", mainClass)}>
-        <Header variant="interior" />
+        <Header variant="${target.pathname === "/carrinho" ? "cart" : "interior"}" />
         <div id="bg-search" />
         <PageContent />
         <Footer />

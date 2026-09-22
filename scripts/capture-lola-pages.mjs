@@ -186,6 +186,7 @@ async (page) => {
         title: document.title,
         bodyClass: document.body.className,
         mainClass: main ? main.className : "",
+        headerHtml: document.querySelector("#header")?.outerHTML || "",
         sections,
         middleHtml: middle ? middle.outerHTML : "",
         sliderOptions,

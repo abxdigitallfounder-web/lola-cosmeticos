@@ -1,4 +1,7 @@
 #header .hamburguer > svg { cursor: pointer; }
+/* Other captured pages add a generic body padding in the combined theme. The cart's
+   source body has padding:0; keep its simplified header flush with the viewport. */
+body.BasketIndexRoute { padding: 0; }
 #header .suggestion-box:empty { display: none; }
 #header .suggestion-box:has(.lola-local-suggestions) { display: block; }
 #header .lola-local-suggestions { max-height: min(460px, 65vh); overflow-y: auto; box-shadow: 0 8px 20px #0002; }

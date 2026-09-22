@@ -60,8 +60,8 @@ const fragments={};for(const [name,s] of Object.entries(sections))fragments[name
 const $m=load(mobile.html);fragments.HeaderMobile=clean($m('#header').toString());fragments.HeroMobile=clean($m('.fullbanner').toString());
 // Mobile slider options come from the same hero instance: one slide and four dots.
 fragments.HeroMobile=fragments.HeroMobile.replace(/data-lola-slider="[^"]*"/g,`data-lola-slider="${JSON.stringify(options[0].options).replaceAll('"','&quot;')}"`);
-// Header and Footer are identical on every target, so they live in the site's shared
-// namespace and are left out of each page's own fragment set.
+// Shared chrome lives outside the page fragments. The cart uses its own simplified
+// captured header, while other interior routes use the home navigation without an h1.
 const chromeNames=['Header','HeaderMobile','Footer'];
 const chrome=Object.fromEntries(chromeNames.map(n=>[n,fragments[n]]));
 // The storefront marks the logo up as the page heading only on the home page; every
@@ -69,6 +69,9 @@ const chrome=Object.fromEntries(chromeNames.map(n=>[n,fragments[n]]));
 // stray <h1> that the source does not have.
 chrome.HeaderInterior=chrome.Header.replace(/<h1(\s[^>]*)?>/,'<div class="logo-heading">').replace('</h1>','</div>');
 if(chrome.HeaderInterior===chrome.Header)throw new Error('logo heading not found in captured header');
+const cartCapture=captures.find(c=>c.url&&new URL(c.url).pathname==='/carrinho');
+if(!cartCapture?.headerHtml)throw new Error('Cart header missing; recapture /carrinho before preparing shared chrome');
+chrome.HeaderCart=createSanitizer(manifest).clean(cartCapture.headerHtml);
 const pageFragments=Object.fromEntries(Object.entries(fragments).filter(([n])=>!chromeNames.includes(n)));
 fs.mkdirSync(shared,{recursive:true});
 fs.writeFileSync(`${shared}/chrome.json`,JSON.stringify(chrome,null,2));
