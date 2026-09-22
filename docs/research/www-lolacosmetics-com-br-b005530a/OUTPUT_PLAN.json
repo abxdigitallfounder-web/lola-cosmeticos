@@ -1,0 +1,181 @@
+{
+  "source": "https://www.lolacosmetics.com.br/",
+  "appRoot": ".",
+  "siteKey": "www-lolacosmetics-com-br-b005530a",
+  "note": "Multi-page expansion of the existing single-page clone. The / route is already built and must not be replaced.",
+  "sharedFoundation": {
+    "layout": "src/app/layout.tsx",
+    "globals": "src/app/globals.css",
+    "sourceCss": "public/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/source.css",
+    "rule": "Built once per origin. New pages merge their stylesheets into the shared source.css rather than replacing it; per-page declarations that collide get scoped under the page's route wrapper."
+  },
+  "sharedNamespaces": {
+    "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/shared/",
+    "assets": "public/sites/www-lolacosmetics-com-br-b005530a/shared/",
+    "note": "Header and Footer currently live under the root page namespace. They are the same on every target, so they move to the shared namespace before parallel page work begins; the / route keeps importing them from the new location."
+  },
+  "fallbackRoute": {
+    "routeFile": "src/app/[...slug]/page.tsx",
+    "purpose": "The 139 distinct source pathnames reduce to the targets below; every pathname not cloned renders the shared header and footer with a notice instead of leaving the clone or 404ing.",
+    "note": "Static routes take precedence over the catch-all, so each cloned page still wins."
+  },
+  "targets": [
+    {
+      "url": "https://www.lolacosmetics.com.br/",
+      "pathname": "/",
+      "template": "home",
+      "status": "done",
+      "pageKey": "root-8a5edab2",
+      "routeFile": "src/app/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/root-8a5edab2/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-root-8a5edab2.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/tratamentos",
+      "pathname": "/tratamentos",
+      "template": "category",
+      "status": "todo",
+      "pageKey": "tratamentos-8a17264f",
+      "routeFile": "src/app/tratamentos/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/tratamentos-8a17264f/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/tratamentos-8a17264f/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/tratamentos-8a17264f/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/tratamentos-8a17264f/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-tratamentos-8a17264f.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/tipos-de-cabelo",
+      "pathname": "/tipos-de-cabelo",
+      "template": "category",
+      "status": "todo",
+      "pageKey": "tipos-de-cabelo-c8d37892",
+      "routeFile": "src/app/tipos-de-cabelo/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/tipos-de-cabelo-c8d37892/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/tipos-de-cabelo-c8d37892/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/tipos-de-cabelo-c8d37892/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/tipos-de-cabelo-c8d37892/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-tipos-de-cabelo-c8d37892.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/colecoes",
+      "pathname": "/colecoes",
+      "template": "category",
+      "status": "todo",
+      "pageKey": "colecoes-b8394c56",
+      "routeFile": "src/app/colecoes/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/colecoes-b8394c56/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/colecoes-b8394c56/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/colecoes-b8394c56/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/colecoes-b8394c56/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-colecoes-b8394c56.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/lancamentos",
+      "pathname": "/lancamentos",
+      "template": "category",
+      "status": "todo",
+      "pageKey": "lancamentos-11622ffd",
+      "routeFile": "src/app/lancamentos/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/lancamentos-11622ffd/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/lancamentos-11622ffd/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/lancamentos-11622ffd/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/lancamentos-11622ffd/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-lancamentos-11622ffd.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/promocao",
+      "pathname": "/promocao",
+      "template": "category",
+      "status": "todo",
+      "pageKey": "promocao-8e631b9a",
+      "routeFile": "src/app/promocao/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/promocao-8e631b9a/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/promocao-8e631b9a/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/promocao-8e631b9a/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/promocao-8e631b9a/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-promocao-8e631b9a.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/tratamentos/cronograma-capilar",
+      "pathname": "/tratamentos/cronograma-capilar",
+      "template": "subcategory",
+      "status": "todo",
+      "pageKey": "tratamentos-cronograma-capilar-e590e43e",
+      "routeFile": "src/app/tratamentos/cronograma-capilar/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/tratamentos-cronograma-capilar-e590e43e/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/tratamentos-cronograma-capilar-e590e43e/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/tratamentos-cronograma-capilar-e590e43e/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/tratamentos-cronograma-capilar-e590e43e/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-tratamentos-cronograma-capilar-e590e43e.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/colecoes/babados-da-lola",
+      "pathname": "/colecoes/babados-da-lola",
+      "template": "subcategory",
+      "status": "todo",
+      "pageKey": "colecoes-babados-da-lola-39f96520",
+      "routeFile": "src/app/colecoes/babados-da-lola/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/colecoes-babados-da-lola-39f96520/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/colecoes-babados-da-lola-39f96520/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/colecoes-babados-da-lola-39f96520/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/colecoes-babados-da-lola-39f96520/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-colecoes-babados-da-lola-39f96520.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/volumao-shampoo-250ml-ps-19629-321-p46389",
+      "pathname": "/volumao-shampoo-250ml-ps-19629-321-p46389",
+      "template": "product",
+      "status": "todo",
+      "pageKey": "volumao-shampoo-250ml-ps-19629-321-p46389-68be359d",
+      "routeFile": "src/app/volumao-shampoo-250ml-ps-19629-321-p46389/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/volumao-shampoo-250ml-ps-19629-321-p46389-68be359d/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/volumao-shampoo-250ml-ps-19629-321-p46389-68be359d/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/volumao-shampoo-250ml-ps-19629-321-p46389-68be359d/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/volumao-shampoo-250ml-ps-19629-321-p46389-68be359d/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-volumao-shampoo-250ml-ps-19629-321-p46389-68be359d.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/kit-a-formula-lamelar-p46345",
+      "pathname": "/kit-a-formula-lamelar-p46345",
+      "template": "product-kit",
+      "status": "todo",
+      "pageKey": "kit-a-formula-lamelar-p46345-dcfe78d8",
+      "routeFile": "src/app/kit-a-formula-lamelar-p46345/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/kit-a-formula-lamelar-p46345-dcfe78d8/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/kit-a-formula-lamelar-p46345-dcfe78d8/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/kit-a-formula-lamelar-p46345-dcfe78d8/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/kit-a-formula-lamelar-p46345-dcfe78d8/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-kit-a-formula-lamelar-p46345-dcfe78d8.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/login",
+      "pathname": "/login",
+      "template": "login",
+      "status": "todo",
+      "pageKey": "login-7e93fba0",
+      "routeFile": "src/app/login/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/login-7e93fba0/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/login-7e93fba0/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/login-7e93fba0/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/login-7e93fba0/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-login-7e93fba0.mjs"
+    },
+    {
+      "url": "https://www.lolacosmetics.com.br/carrinho",
+      "pathname": "/carrinho",
+      "template": "cart",
+      "status": "todo",
+      "pageKey": "carrinho-1bc30c37",
+      "routeFile": "src/app/carrinho/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/carrinho-1bc30c37/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/carrinho-1bc30c37/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/carrinho-1bc30c37/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/carrinho-1bc30c37/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-carrinho-1bc30c37.mjs"
+    }
+  ],
+  "collisionCheck": "Every pageKey, route file, artifact root, component root, asset root and downloader filename below is distinct; no target's pathname collides with an existing route."
+}
