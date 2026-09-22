@@ -1,2 +1,2 @@
 export interface LolaProduct { id: string; name: string; image: string; price: number; quantity: number; }
-export type LolaSectionName = "Header" | "Hero" | "Categories" | "Favorites" | "HairTypes" | "DailyDeals" | "Launches" | "Collector" | "BeforeAfter" | "Affiliate" | "Blog" | "Reviews" | "Footer" | "HeaderMobile" | "HeroMobile";
+export type LolaSectionName = "Header" | "Hero" | "BenefitsBanner" | "Categories" | "ReasonsToLove" | "Favorites" | "HairTypes" | "DailyDeals" | "Benefits" | "Launches" | "Collector" | "BeforeAfter" | "Affiliate" | "Blog" | "SocialLinks" | "Reviews" | "Footer" | "HeaderMobile" | "HeroMobile";
