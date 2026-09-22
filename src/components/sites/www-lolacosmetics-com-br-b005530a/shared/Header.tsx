@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import fragments from "./fragments.json";
+import chrome from "./chrome.json";
 import "./header-extra.css";
 
 /** Preserve the captured header DOM while replacing the storefront's remote scripts. */
@@ -153,5 +153,5 @@ export default function Header() {
     };
   }, []);
 
-  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: fragments.Header }} />;
+  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: chrome.Header }} />;
 }

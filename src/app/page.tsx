@@ -1,4 +1,4 @@
-import Header from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Header";
+import Header from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/Header";
 import Hero from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Hero";
 import MediaStories from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/MediaStories";
 import BenefitsBanner from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/BenefitsBanner";
@@ -15,8 +15,8 @@ import Affiliate from "@/components/sites/www-lolacosmetics-com-br-b005530a/root
 import Blog from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Blog";
 import SocialLinks from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/SocialLinks";
 import Reviews from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Reviews";
-import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Footer";
-import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/ShopInteractions";
+import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/Footer";
+import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/ShopInteractions";
 
 // Section order and nesting mirror the captured #main tree; see PAGE_TOPOLOGY.md.
 export default function Home() {

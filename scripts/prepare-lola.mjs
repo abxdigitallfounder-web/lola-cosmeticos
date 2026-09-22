@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {load} from 'cheerio';
 const site='www-lolacosmetics-com-br-b005530a/root-8a5edab2';
 const root=`docs/research/${site}`, out=`src/components/sites/${site}`;
+const shared='src/components/sites/www-lolacosmetics-com-br-b005530a/shared';
 const raw=JSON.parse(fs.readFileSync(`${root}/desktop-extraction.json`));
 const d=JSON.parse(fs.readFileSync(`${root}/loaded-extraction.json`));
 const mobile=JSON.parse(fs.readFileSync(`${root}/mobile-extraction.json`));
@@ -49,10 +50,23 @@ const fragments={};for(const [name,s] of Object.entries(sections))fragments[name
 const $m=load(mobile.html);fragments.HeaderMobile=clean($m('#header').toString());fragments.HeroMobile=clean($m('.fullbanner').toString());
 // Mobile slider options come from the same hero instance: one slide and four dots.
 fragments.HeroMobile=fragments.HeroMobile.replace(/data-lola-slider="[^"]*"/g,`data-lola-slider="${JSON.stringify(options[0].options).replaceAll('"','&quot;')}"`);
-fs.writeFileSync(`${out}/fragments.json`,JSON.stringify(fragments,null,2));
+// Header and Footer are identical on every target, so they live in the site's shared
+// namespace and are left out of each page's own fragment set.
+const chromeNames=['Header','HeaderMobile','Footer'];
+const chrome=Object.fromEntries(chromeNames.map(n=>[n,fragments[n]]));
+const pageFragments=Object.fromEntries(Object.entries(fragments).filter(([n])=>!chromeNames.includes(n)));
+fs.mkdirSync(shared,{recursive:true});
+fs.writeFileSync(`${shared}/chrome.json`,JSON.stringify(chrome,null,2));
+fs.writeFileSync(`${out}/fragments.json`,JSON.stringify(pageFragments,null,2));
 const shadows=d.shadows.filter(x=>['WIDDE-PRO-HIGHLIGHTS','WIDDE-PRO-CAROUSEL'].includes(x.tag));
 fs.writeFileSync(`${out}/media-data.json`,JSON.stringify(shadows.map(x=>({tag:x.tag,html:rewrite(x.html),images:x.images.map(im=>({...im,src:local(im.src),poster:local(im.poster)}))})),null,2));
-fs.writeFileSync(`${out}/types.ts`,'export interface LolaProduct { id: string; name: string; image: string; price: number; quantity: number; }\nexport type LolaSectionName = '+Object.keys(fragments).map(k=>JSON.stringify(k)).join(' | ')+';\n');
+// One thin wrapper per section, generated so a new page only has to be captured.
+// Mobile variants are alternates of a section already wrapped, not sections of their own.
+for(const name of Object.keys(pageFragments).filter(n=>!n.endsWith('Mobile')))
+  fs.writeFileSync(`${out}/${name}.tsx`,`import SourceSection from "../shared/SourceSection";\nimport fragments from "./fragments.json";\nexport default function ${name}() { return <SourceSection name="${name}" html={fragments.${name}} />; }\n`);
+// The only shared contract left is the demo cart's product shape: SourceSection takes the
+// fragment HTML directly, so the per-page section union it used to need is gone.
+fs.writeFileSync(`${shared}/types.ts`,'export interface LolaProduct { id: string; name: string; image: string; price: number; quantity: number; }\n');
 for(const [name,s] of Object.entries(sections)){const specPath=`${root}/components/${name}.spec.md`;
 // Builder agents correct their own spec in place, so only fill in the ones still missing.
 if(fs.existsSync(specPath))continue;const text=load(s.html).text().replace(/\s+/g,' ').trim();const st=s.tree.styles;const spec=`# ${name} Specification\n\n## Overview\n- Target: ${out}/${name}.tsx\n- Screenshot: docs/design-references/${site}/desktop-loaded-1440.png and mobile-390.png\n- Interaction: ${['Hero'].includes(name)?'time-driven autoplay 5000ms plus click/swipe, transition 500ms ease': ['Categories','Favorites','DailyDeals','Launches','Collector'].includes(name)?'click/swipe carousel, 500ms ease':'links, hover and local UI controls'}\n\n## DOM Structure\nExact sanitized source markup is provided as fragments.${name} in fragments.json. All source class names and inline SVGs retained. Render as HTML with display:contents wrapper to preserve selectors. Original CSS is loaded globally from local source.css, including all descendant values. Do not approximate or override original styles.\n\n## Computed Styles\n${Object.keys(st).length?Object.entries(st).map(([k,v])=>'- '+k+': '+v).join('\n'):'No computed capture for this section; the original declarations in source.css apply unchanged.'}\n\n## States & Behaviors\nNative scrolling, fixed header remains 212px at 1440 before and after scroll; no Lenis. Desktop navigation hover reveals menus (block/grid/flex); mobile .dropdown-menu toggles .active-menu with left 0px and 0.3s transition. Hero starts at slide 0, auto advance every 5000ms, pauses on hover/focus, dots clickable. Product carousels: 4 desktop, 3 below 1250, 2 below 1024; paired promo/collector 2 throughout.\n\n## Per-State Content\nAll carousel slide contents retained in fragments; source inline icons retained verbatim. No backend or authentication. Non-home destinations link to original site. Local demo purchase/wishlist are handled separately.\n\n## Assets\nAll URLs in fragment are rewritten using asset-manifest.json to /sites/${site}/. Exact source imagery, fonts, SVGs, and videos locally hosted.\n\n## Text Content (verbatim)\n${text}\n\n## Responsive Behavior\n1440: original desktop layout. 768 and 390: source CSS media queries, header switches at 1100px. Matching mobile screenshot and mobile-specific hero/header fragments available. Product rails use breakpoints above.\n`;

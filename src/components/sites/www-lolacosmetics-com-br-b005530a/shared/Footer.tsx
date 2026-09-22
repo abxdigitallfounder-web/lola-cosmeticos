@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import fragments from "./fragments.json";
+import chrome from "./chrome.json";
 
 const consentKey = "lola-demo-cookie-consent";
 
@@ -111,5 +111,5 @@ export default function Footer() {
     };
   }, []);
 
-  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: fragments.Footer }} />;
+  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: chrome.Footer }} />;
 }

@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
-import fragments from "./fragments.json";
-import type { LolaSectionName } from "./types";
 
-export default function SourceSection({ name }: { name: LolaSectionName }) {
+/** Replays one captured source fragment and re-initializes the carousels inside it. */
+export default function SourceSection({ name, html }: { name: string; html: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let disposed = false;
@@ -31,6 +30,6 @@ export default function SourceSection({ name }: { name: LolaSectionName }) {
     }
     initialize();
     return () => { disposed = true; cleanup?.(); };
-  }, [name]);
-  return <div className="lola-fragment" ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: fragments[name] }} />;
+  }, [name, html]);
+  return <div className="lola-fragment" ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: html }} />;
 }
