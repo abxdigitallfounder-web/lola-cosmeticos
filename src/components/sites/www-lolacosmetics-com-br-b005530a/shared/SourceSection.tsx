@@ -21,9 +21,25 @@ export default function SourceSection({ name, html }: { name: string; html: stri
         if (!slider.hasClass("slick-initialized")) {
           const options = JSON.parse(slider.attr("data-lola-slider") || "{}");
           slider.slick(options);
+          if (slider.is(".wd-product-media-selector ul")) {
+            const slick = slider.slick("getSlick");
+            if (!slick.options.vertical && slick.$list?.[0] && slick.slideWidth != null) {
+              // jQuery 4 defers ready callbacks that the source's jQuery 1.7 ran
+              // synchronously. Hold the measured viewport through those callbacks
+              // so an inline-block track cannot expand its own viewport on startup.
+              const list = slick.$list[0] as HTMLElement;
+              const width = list.style.width;
+              list.style.width = `${Number(slick.slideWidth) * (slick.options.slidesToShow ?? 1)}px`;
+              window.setTimeout(() => { list.style.width = width; }, 0);
+            }
+          }
         }
       });
-      const resize = () => sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("setPosition"); });
+      // The source thumbnail rail is inline-block on phones. Repeated setPosition
+      // calls feed its track width back into its intrinsic width (150 → 180 → 216px).
+      // Slick already handles viewport changes; only product/banner rails need the
+      // extra image/font-load refresh, matching the source gallery's initialization.
+      const resize = () => sliders.not(".wd-product-media-selector ul").each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("setPosition"); });
       document.fonts.ready.then(() => { if (!disposed) resize(); });
       ref.current.querySelectorAll("img").forEach(img => img.addEventListener("load", resize));
       cleanup = () => { sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); }); };
