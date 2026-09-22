@@ -31,5 +31,8 @@ export default function SourceSection({ name, html }: { name: string; html: stri
     initialize();
     return () => { disposed = true; cleanup?.(); };
   }, [name, html]);
-  return <div className="lola-fragment" ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: html }} />;
+  // display:contents keeps this host out of the box tree. It still sits in the DOM, so the
+  // theme's child combinators (body.grid-products #middle #content-wrapper>.row) only
+  // survive when a fragment carries its own container — interior pages replay all of #middle.
+  return <div style={{ display: "contents" }} ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: html }} />;
 }

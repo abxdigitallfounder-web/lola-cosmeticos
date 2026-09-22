@@ -130,3 +130,10 @@
 }
 body.lola-clone { --background: #f8f8f8; --foreground: #424242; --primary: #ff067c; margin:0; font-family:Lato,sans-serif; }
 .lola-fragment{display:contents}
+
+/* The catch-all route for storefront paths that were not cloned. */
+.lola-uncloned { padding: 96px 24px 128px; text-align: center; font-family: var(--font-lola-body), sans-serif; }
+.lola-uncloned h1 { font-size: 28px; font-weight: 700; color: #3f3f3f; margin-bottom: 16px; }
+.lola-uncloned p { font-size: 16px; color: #6f6f6f; margin-bottom: 8px; }
+.lola-uncloned code { background: #f4f4f4; border-radius: 4px; padding: 2px 6px; }
+.lola-uncloned a { color: #ea136a; text-decoration: underline; }

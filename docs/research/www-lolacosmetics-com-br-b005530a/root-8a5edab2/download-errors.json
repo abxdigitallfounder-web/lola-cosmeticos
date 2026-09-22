@@ -6,5 +6,13 @@
   {
     "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content/Themes/Shared/#2f2f2f",
     "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://trustvox.com.br/widget/root?&code=46293&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fkit-a-formula-lamelar-p46345&name=Kit+A+F%C3%B3rmula+Lamelar&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F34%2F46345_kit-a-formula-lamelar_s1_639076958152907818.webp",
+    "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://trustvox.com.br/widget/root?&code=46389&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fvolumao-shampoo-250ml-ps-19629-321-p46389&name=Volum%C3%A3o+Shampoo+250ml&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F38%2F46389_volumao-shampoo-250ml-ps-19629-321_s1_639196480435432801.webp",
+    "error": "Error: HTTP 404"
   }
 ]

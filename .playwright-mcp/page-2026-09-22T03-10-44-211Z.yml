@@ -1,0 +1,1055 @@
+- generic [active] [ref=f109e1]:
+  - generic [ref=f109e2]:
+    - generic [ref=f109e6]:
+      - generic [ref=f109e7]:
+        - heading [level=1] [ref=f109e9]:
+          - link "Lola Cosmetics" [ref=f109e10] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f109e13]:
+          - textbox "O que você procura?" [ref=f109e15]
+          - button "Buscar" [ref=f109e16] [cursor=pointer]
+        - generic [ref=f109e17]:
+          - link "Rastrear pedido" [ref=f109e19] [cursor=pointer]:
+            - /url: https://lolacosmetics.cademeupedido.com.br
+          - link [ref=f109e32] [cursor=pointer]:
+            - /url: https://www.lolacosmetics.com.br/painel-do-cliente
+          - generic [ref=f109e37]:
+            - link [ref=f109e38] [cursor=pointer]:
+              - /url: https://www.lolacosmetics.com.br/carrinho
+              - emphasis [ref=f109e44]: "0"
+            - generic [ref=f109e45]:
+              - generic [ref=f109e46] [cursor=pointer]: x
+              - generic [ref=f109e53]:
+                - strong [ref=f109e54]: Minha sacola
+                - generic [ref=f109e55]: contém 0 itens
+              - generic [ref=f109e56]:
+                - generic [ref=f109e58]:
+                  - generic [ref=f109e59]: :(
+                  - paragraph [ref=f109e60]:
+                    - strong [ref=f109e61]: Não há produtos na sua sacola.
+                    - text: Que tal conferir algumas ofertas?
+                - generic [ref=f109e62]:
+                  - list [ref=f109e64]:
+                    - listitem [ref=f109e65]: Subtotal
+                    - listitem [ref=f109e66]: R$ 0,00
+                  - button "Finalizar Compra" [ref=f109e67] [cursor=pointer]
+                  - generic [ref=f109e68] [cursor=pointer]: Continuar comprando
+      - navigation [ref=f109e73]:
+        - list [ref=f109e74]:
+          - listitem [ref=f109e75]:
+            - heading [level=3] [ref=f109e76]:
+              - link "KITS" [ref=f109e77] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/kits
+          - listitem [ref=f109e78]:
+            - heading [level=3] [ref=f109e79]:
+              - link "TIPOS DE CABELO" [ref=f109e80] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/tipos-de-cabelo
+            - list:
+              - listitem [ref=f109e81]:
+                - heading [level=4] [ref=f109e82]:
+                  - link "Lisos" [ref=f109e83] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tipos-de-cabelo/liso
+              - listitem [ref=f109e84]:
+                - heading [level=4] [ref=f109e85]:
+                  - link "Cachos & Curvas" [ref=f109e86] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tipos-de-cabelo/cacheado
+              - listitem [ref=f109e87]:
+                - heading [level=4] [ref=f109e88]:
+                  - link "Todos os tipos de cabelos" [ref=f109e89] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tipos-de-cabelo/todos-os-tipos
+          - listitem [ref=f109e90]:
+            - heading [level=3] [ref=f109e91]:
+              - link "TRATAMENTOS" [ref=f109e92] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/tratamentos
+            - list:
+              - listitem [ref=f109e93]:
+                - heading [level=4] [ref=f109e94]:
+                  - link "Uso diário" [ref=f109e95] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/uso-diario
+              - listitem [ref=f109e96]:
+                - heading [level=4] [ref=f109e97]:
+                  - link "Cronograma Capilar" [ref=f109e98] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/cronograma-capilar
+                  - button [ref=f109e99] [cursor=pointer]
+              - listitem [ref=f109e103]:
+                - heading [level=4] [ref=f109e104]:
+                  - link "SOS Reparação" [ref=f109e105] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/sos-reparacao
+              - listitem [ref=f109e106]:
+                - heading [level=4] [ref=f109e107]:
+                  - link "Brilho" [ref=f109e108] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/brilho
+              - listitem [ref=f109e109]:
+                - heading [level=4] [ref=f109e110]:
+                  - link "Fortalecimento" [ref=f109e111] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/fortalecimento
+              - listitem [ref=f109e112]:
+                - heading [level=4] [ref=f109e113]:
+                  - link "Finalização" [ref=f109e114] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/finalizacao
+                  - button [ref=f109e115] [cursor=pointer]
+              - listitem [ref=f109e119]:
+                - heading [level=4] [ref=f109e120]:
+                  - link "Cuidados específicos" [ref=f109e121] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos/cuidados-especificos
+                  - button [ref=f109e122] [cursor=pointer]
+              - listitem [ref=f109e126]:
+                - heading [level=4] [ref=f109e127]:
+                  - link "Ver Tudo" [ref=f109e128] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/tratamentos
+          - listitem [ref=f109e129]:
+            - heading [level=3] [ref=f109e130]:
+              - link "Coleções" [ref=f109e131] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/colecoes
+            - list:
+              - listitem [ref=f109e132]:
+                - heading [level=4] [ref=f109e133]:
+                  - link "A Fórmula" [ref=f109e134] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/a-formula
+              - listitem [ref=f109e135]:
+                - heading [level=4] [ref=f109e136]:
+                  - link "Argan Oil" [ref=f109e137] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/argan-oil
+              - listitem [ref=f109e138]:
+                - heading [level=4] [ref=f109e139]:
+                  - link "Babados Da Lola" [ref=f109e140] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/babados-da-lola
+                  - button [ref=f109e141] [cursor=pointer]
+              - listitem [ref=f109e145]:
+                - heading [level=4] [ref=f109e146]:
+                  - link "Babados do Brasil" [ref=f109e147] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/babados-do-brasil
+              - listitem [ref=f109e148]:
+                - heading [level=4] [ref=f109e149]:
+                  - link "Banana Tropicana" [ref=f109e150] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/banana-tropicana
+              - listitem [ref=f109e151]:
+                - heading [level=4] [ref=f109e152]:
+                  - link "Basicão" [ref=f109e153] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/basicao
+              - listitem [ref=f109e154]:
+                - heading [level=4] [ref=f109e155]:
+                  - link "Be(m)dita Ghee" [ref=f109e156] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/be-m-dita-ghee
+              - listitem [ref=f109e157]:
+                - heading [level=4] [ref=f109e158]:
+                  - link "Be(m)dita Praia" [ref=f109e159] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/be-m-dita-praia
+              - listitem [ref=f109e160]:
+                - heading [level=4] [ref=f109e161]:
+                  - link "Bossa" [ref=f109e162] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/bossa
+              - listitem [ref=f109e163]:
+                - heading [level=4] [ref=f109e164]:
+                  - link "Brancos e Grisalhos" [ref=f109e165] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/brancos-e-grisalhos
+              - listitem [ref=f109e166]:
+                - heading [level=4] [ref=f109e167]:
+                  - link "Camomila" [ref=f109e168] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/camomila
+              - listitem [ref=f109e169]:
+                - heading [level=4] [ref=f109e170]:
+                  - link "Cereal Killer" [ref=f109e171] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/cereal-killer
+              - listitem [ref=f109e172]:
+                - heading [level=4] [ref=f109e173]:
+                  - link "Comigo Ninguém Pode" [ref=f109e174] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/comigo-ninguem-pode
+              - listitem [ref=f109e175]:
+                - heading [level=4] [ref=f109e176]:
+                  - link "Cuca Fresca" [ref=f109e177] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/cuca-fresca
+              - listitem [ref=f109e178]:
+                - heading [level=4] [ref=f109e179]:
+                  - link "Danos Vorazes" [ref=f109e180] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/danos-vorazes
+              - listitem [ref=f109e181]:
+                - heading [level=4] [ref=f109e182]:
+                  - link "Densidade" [ref=f109e183] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/densidade
+              - listitem [ref=f109e184]:
+                - heading [level=4] [ref=f109e185]:
+                  - link "Drama Queen" [ref=f109e186] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/drama-queen
+              - listitem [ref=f109e187]:
+                - heading [level=4] [ref=f109e188]:
+                  - link "Dream Cream" [ref=f109e189] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/dream-cream
+              - listitem [ref=f109e190]:
+                - heading [level=4] [ref=f109e191]:
+                  - link "Ela é Carioca" [ref=f109e192] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/ela-e-carioca
+              - listitem [ref=f109e193]:
+                - heading [level=4] [ref=f109e194]:
+                  - link "Eu sei o que você fez na química passada!" [ref=f109e195] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/eu-sei-o-que-voce-fez-na-quimica-passada
+              - listitem [ref=f109e196]:
+                - heading [level=4] [ref=f109e197]:
+                  - link "Exterminador de Frizz" [ref=f109e198] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/exterminador-de-frizz
+              - listitem [ref=f109e199]:
+                - heading [level=4] [ref=f109e200]:
+                  - link "Kit Celebridades" [ref=f109e201] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/kit-celebridades
+              - listitem [ref=f109e202]:
+                - heading [level=4] [ref=f109e203]:
+                  - link "Liso, leve e and solto" [ref=f109e204] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/liso-leve-e-and-solto
+              - listitem [ref=f109e205]:
+                - heading [level=4] [ref=f109e206]:
+                  - link "Loira de Farmácia" [ref=f109e207] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/loira-de-farmacia
+              - listitem [ref=f109e208]:
+                - heading [level=4] [ref=f109e209]:
+                  - link "Lola Kids" [ref=f109e210] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/lola-kids
+              - listitem [ref=f109e211]:
+                - heading [level=4] [ref=f109e212]:
+                  - link "Lola Vintage Girls" [ref=f109e213] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/lola-vintage-girls
+              - listitem [ref=f109e214]:
+                - heading [level=4] [ref=f109e215]:
+                  - link "Meu Cacho minha Vida" [ref=f109e216] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/meu-cacho-minha-vida
+              - listitem [ref=f109e217]:
+                - heading [level=4] [ref=f109e218]:
+                  - link "Milagre!" [ref=f109e219] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/milagre
+              - listitem [ref=f109e220]:
+                - heading [level=4] [ref=f109e221]:
+                  - link "Morte Súbita" [ref=f109e222] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/morte-subita
+              - listitem [ref=f109e223]:
+                - heading [level=4] [ref=f109e224]:
+                  - link "Papo Reto" [ref=f109e225] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/papo-reto
+              - listitem [ref=f109e226]:
+                - heading [level=4] [ref=f109e227]:
+                  - link "Pinga!" [ref=f109e228] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/pinga
+              - listitem [ref=f109e229]:
+                - heading [level=4] [ref=f109e230]:
+                  - link "Plot Twist" [ref=f109e231] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/plot-twist
+              - listitem [ref=f109e232]:
+                - heading [level=4] [ref=f109e233]:
+                  - link "Purple" [ref=f109e234] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/purple
+              - listitem [ref=f109e235]:
+                - heading [level=4] [ref=f109e236]:
+                  - link "Rapunzel" [ref=f109e237] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/rapunzel
+              - listitem [ref=f109e238]:
+                - heading [level=4] [ref=f109e239]:
+                  - link "Tannic Acid" [ref=f109e240] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/tannic-acid
+              - listitem [ref=f109e241]:
+                - heading [level=4] [ref=f109e242]:
+                  - link "Tarja Preta" [ref=f109e243] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/tarja-preta
+              - listitem [ref=f109e244]:
+                - heading [level=4] [ref=f109e245]:
+                  - link "Transição" [ref=f109e246] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/transicao
+              - listitem [ref=f109e247]:
+                - heading [level=4] [ref=f109e248]:
+                  - link "Umectação" [ref=f109e249] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/umectacao
+              - listitem [ref=f109e250]:
+                - heading [level=4] [ref=f109e251]:
+                  - link "Volumão" [ref=f109e252] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/volumao
+              - listitem [ref=f109e253]:
+                - heading [level=4] [ref=f109e254]:
+                  - link "Xapadinha" [ref=f109e255] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/xapadinha
+              - listitem [ref=f109e256]:
+                - heading [level=4] [ref=f109e257]:
+                  - link "Lolaterapia" [ref=f109e258] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes/lolaterapia
+              - listitem [ref=f109e259]:
+                - heading [level=4] [ref=f109e260]:
+                  - link "Ver Tudo" [ref=f109e261] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/colecoes
+          - listitem [ref=f109e262]:
+            - heading [level=3] [ref=f109e263]:
+              - link "LANÇAMENTOS" [ref=f109e264] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/lancamentos
+            - list:
+              - listitem [ref=f109e265]:
+                - heading [level=4] [ref=f109e266]:
+                  - link "Embaixadoras" [ref=f109e267] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/embaixadoras
+              - listitem [ref=f109e268]:
+                - heading [level=4] [ref=f109e269]:
+                  - link "Banana Tropicana" [ref=f109e270] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/banana-tropicana
+              - listitem [ref=f109e271]:
+                - heading [level=4] [ref=f109e272]:
+                  - link "Volumão" [ref=f109e273] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/volumao
+              - listitem [ref=f109e274]:
+                - heading [level=4] [ref=f109e275]:
+                  - link "Basicão" [ref=f109e276] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/basicao
+              - listitem [ref=f109e277]:
+                - heading [level=4] [ref=f109e278]:
+                  - link "Ghee Açaí" [ref=f109e279] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/ghee-acai
+              - listitem [ref=f109e280]:
+                - heading [level=4] [ref=f109e281]:
+                  - link "Tannic Acid" [ref=f109e282] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/tannic-acid
+              - listitem [ref=f109e283]:
+                - heading [level=4] [ref=f109e284]:
+                  - link "Cuca Fresca" [ref=f109e285] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/cuca-fresca
+              - listitem [ref=f109e286]:
+                - heading [level=4] [ref=f109e287]:
+                  - link "A Fórmula" [ref=f109e288] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/a-formula
+              - listitem [ref=f109e289]:
+                - heading [level=4] [ref=f109e290]:
+                  - link "Bossa" [ref=f109e291] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/bossa
+              - listitem [ref=f109e292]:
+                - heading [level=4] [ref=f109e293]:
+                  - link "Kits de presente" [ref=f109e294] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos/kits-de-presente
+              - listitem [ref=f109e295]:
+                - heading [level=4] [ref=f109e296]:
+                  - link "Ver Tudo" [ref=f109e297] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/lancamentos
+          - listitem [ref=f109e298]:
+            - heading [level=3] [ref=f109e299]:
+              - link "PROMOÇÃO" [ref=f109e300] [cursor=pointer]:
+                - /url: https://www.lolacosmetics.com.br/promocao
+            - list:
+              - listitem [ref=f109e301]:
+                - heading [level=4] [ref=f109e302]:
+                  - link "Achadinhos" [ref=f109e303] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/promocao/achadinhos
+              - listitem [ref=f109e304]:
+                - heading [level=4] [ref=f109e305]:
+                  - link "Semana da Lolete" [ref=f109e306] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/promocao/semana-da-lolete
+              - listitem [ref=f109e307]:
+                - heading [level=4] [ref=f109e308]:
+                  - link "Ver Tudo" [ref=f109e309] [cursor=pointer]:
+                    - /url: https://www.lolacosmetics.com.br/promocao
+    - generic [ref=f109e311]:
+      - navigation [ref=f109e313]:
+        - list [ref=f109e314]:
+          - listitem [ref=f109e315]:
+            - link "home Página Inicial" [ref=f109e316] [cursor=pointer]:
+              - /url: /
+            - text: ">"
+          - listitem [ref=f109e317]:
+            - strong [ref=f109e318]: TRATAMENTOS
+            - text: ">"
+      - generic [ref=f109e319]:
+        - heading "TRATAMENTOS ✨" [level=1] [ref=f109e323]
+        - generic [ref=f109e325]:
+          - generic [ref=f109e327]:
+            - generic [ref=f109e328]: Carregando...
+            - text: Filtros Selecionados Selecione um filtro abaixo
+            - generic [ref=f109e329]:
+              - generic [ref=f109e331]:
+                - generic [ref=f109e332] [cursor=pointer]:
+                  - text: "-"
+                  - heading "Categoria" [level=3] [ref=f109e333]
+                - list [ref=f109e334]:
+                  - listitem [ref=f109e335]:
+                    - generic [ref=f109e336]:
+                      - generic [ref=f109e337] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e338]:
+                        - link "Basicão(1)" [ref=f109e339] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--basicao
+                  - listitem [ref=f109e340]:
+                    - generic [ref=f109e341]:
+                      - generic [ref=f109e342] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e343]:
+                        - link "Cereal Killer(1)" [ref=f109e344] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--cereal-killer
+                  - listitem [ref=f109e345]:
+                    - generic [ref=f109e346]:
+                      - generic [ref=f109e347] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e348]:
+                        - link "Coleções(130)" [ref=f109e349] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--colecoes
+                  - listitem [ref=f109e350]:
+                    - generic [ref=f109e351]:
+                      - generic [ref=f109e352] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e353]:
+                        - link "CUCA FRESCA(1)" [ref=f109e354] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--cuca-fresca
+                  - listitem [ref=f109e355]:
+                    - heading [level=4] [ref=f109e356]:
+                      - link "DENSIDADE(1)" [ref=f109e357] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--densidade
+                  - listitem [ref=f109e358]:
+                    - generic [ref=f109e359]:
+                      - generic [ref=f109e360] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e361]:
+                        - link "DREAM CREAM(1)" [ref=f109e362] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--dream-cream
+                  - listitem [ref=f109e363]:
+                    - heading [level=4] [ref=f109e364]:
+                      - link "KITS(23)" [ref=f109e365] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--kits
+                  - listitem [ref=f109e366]:
+                    - generic [ref=f109e367]:
+                      - generic [ref=f109e368] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e369]:
+                        - link "LANÇAMENTOS(29)" [ref=f109e370] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--lancamentos
+                  - listitem [ref=f109e371]:
+                    - generic [ref=f109e372]:
+                      - generic [ref=f109e373] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e374]:
+                        - link "MORTE SÚBITA(1)" [ref=f109e375] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--morte-subita
+                  - listitem [ref=f109e376]:
+                    - generic [ref=f109e377]:
+                      - generic [ref=f109e378] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e379]:
+                        - link "PROMOÇÃO(30)" [ref=f109e380] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--promocao
+                  - listitem [ref=f109e381]:
+                    - generic [ref=f109e382]:
+                      - generic [ref=f109e383] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e384]:
+                        - link "Purple(5)" [ref=f109e385] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--purple
+                  - listitem [ref=f109e386]:
+                    - generic [ref=f109e387]:
+                      - generic [ref=f109e388] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e389]:
+                        - link "TANNIC(3)" [ref=f109e390] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tannic
+                  - listitem [ref=f109e391]:
+                    - generic [ref=f109e392]:
+                      - generic [ref=f109e393] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e394]:
+                        - link "TIPOS DE CABELO(123)" [ref=f109e395] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tipos-de-cabelo
+                  - listitem [ref=f109e396]:
+                    - generic [ref=f109e397]:
+                      - generic [ref=f109e398] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e399]:
+                        - link "TRATAMENTOS(136)" [ref=f109e400] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos
+                    - list [ref=f109e401]:
+                      - listitem [ref=f109e402]:
+                        - heading [level=4] [ref=f109e403]:
+                          - link "Brilho (6)" [ref=f109e404] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-brilho
+                      - listitem [ref=f109e405]:
+                        - generic [ref=f109e406] [cursor=pointer]: +
+                        - heading [level=4] [ref=f109e407]:
+                          - link "Cronograma Capilar (50)" [ref=f109e408] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-cronograma-capilar
+                      - listitem [ref=f109e409]:
+                        - generic [ref=f109e410] [cursor=pointer]: +
+                        - heading [level=4] [ref=f109e411]:
+                          - link "Cuidados específicos (6)" [ref=f109e412] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-cuidados-especificos
+                      - listitem [ref=f109e413]:
+                        - generic [ref=f109e414] [cursor=pointer]: +
+                        - heading [level=4] [ref=f109e415]:
+                          - link "Finalização (38)" [ref=f109e416] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-finalizacao
+                      - listitem [ref=f109e417]:
+                        - heading [level=4] [ref=f109e418]:
+                          - link "Fortalecimento (18)" [ref=f109e419] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-fortalecimento
+                      - listitem [ref=f109e420]:
+                        - heading [level=4] [ref=f109e421]:
+                          - link "SOS Reparação (13)" [ref=f109e422] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-sos-reparacao
+                      - listitem [ref=f109e423]:
+                        - heading [level=4] [ref=f109e424]:
+                          - link "Uso diário (44)" [ref=f109e425] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--tratamentos-uso-diario
+                  - listitem [ref=f109e426]:
+                    - generic [ref=f109e427]:
+                      - generic [ref=f109e428] [cursor=pointer]: +
+                      - heading [level=4] [ref=f109e429]:
+                        - link "Volumão(3)" [ref=f109e430] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tratamentos/#/categoria--volumao
+              - generic [ref=f109e432]:
+                - generic [ref=f109e433] [cursor=pointer]:
+                  - text: "-"
+                  - heading "Curvatura" [level=3] [ref=f109e434]
+                - list [ref=f109e435]:
+                  - listitem [ref=f109e436]:
+                    - heading [level=4] [ref=f109e437]:
+                      - link "Cacheado (104)" [ref=f109e438] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/curvatura-cacheado
+                  - listitem [ref=f109e439]:
+                    - heading [level=4] [ref=f109e440]:
+                      - link "Crespo (103)" [ref=f109e441] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/curvatura-crespo
+                  - listitem [ref=f109e442]:
+                    - heading [level=4] [ref=f109e443]:
+                      - link "Liso (88)" [ref=f109e444] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/curvatura-liso
+                  - listitem [ref=f109e445]:
+                    - heading [level=4] [ref=f109e446]:
+                      - link "Ondulado (88)" [ref=f109e447] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/curvatura-ondulado
+                  - listitem [ref=f109e448]:
+                    - heading [level=4] [ref=f109e449]:
+                      - link "Transição (94)" [ref=f109e450] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/curvatura-transicao
+              - generic [ref=f109e452]:
+                - generic [ref=f109e453] [cursor=pointer]:
+                  - text: "-"
+                  - heading "Tipo de produto" [level=3] [ref=f109e454]
+                - list [ref=f109e455]:
+                  - listitem [ref=f109e456]:
+                    - heading [level=4] [ref=f109e457]:
+                      - link "Acidificante (2)" [ref=f109e458] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-acidificante
+                  - listitem [ref=f109e459]:
+                    - heading [level=4] [ref=f109e460]:
+                      - link "Condicionador (12)" [ref=f109e461] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-condicionador
+                  - listitem [ref=f109e462]:
+                    - heading [level=4] [ref=f109e463]:
+                      - link "Creme de Pentear (10)" [ref=f109e464] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-creme-de-pentear
+                  - listitem [ref=f109e465]:
+                    - heading [level=4] [ref=f109e466]:
+                      - link "Finalizador (5)" [ref=f109e467] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-finalizador
+                  - listitem [ref=f109e468]:
+                    - heading [level=4] [ref=f109e469]:
+                      - link "Gel (2)" [ref=f109e470] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-gel
+                  - listitem [ref=f109e471]:
+                    - heading [level=4] [ref=f109e472]:
+                      - link "Leave in (2)" [ref=f109e473] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-leave-in
+                  - listitem [ref=f109e474]:
+                    - heading [level=4] [ref=f109e475]:
+                      - link "Máscara (21)" [ref=f109e476] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-mascara
+                  - listitem [ref=f109e477]:
+                    - heading [level=4] [ref=f109e478]:
+                      - link "Óleo (10)" [ref=f109e479] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-oleo
+                  - listitem [ref=f109e480]:
+                    - heading [level=4] [ref=f109e481]:
+                      - link "Shampoo (23)" [ref=f109e482] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-shampoo
+                  - listitem [ref=f109e483]:
+                    - heading [level=4] [ref=f109e484]:
+                      - link "Tônico (3)" [ref=f109e485] [cursor=pointer]:
+                        - /url: https://www.lolacosmetics.com.br/tratamentos/#/tipo-de-produto-tonico
+          - generic [ref=f109e489]:
+            - generic [ref=f109e491]:
+              - heading [level=2]
+            - generic [ref=f109e501]:
+              - generic:
+                - text: "-"
+                - generic [ref=f109e502]:
+                  - text: "Ordenar por:"
+                  - combobox [ref=f109e503]:
+                    - option "Mais Relevantes" [selected]
+                    - option "Mais Acessados"
+                    - option "Maior preço"
+                    - option "Menor Preço"
+                    - option "A-Z"
+                    - option "Novidades"
+                    - option "Mais Vendidos"
+              - article [ref=f109e504]:
+                - list [ref=f109e506]:
+                  - listitem [ref=f109e507]:
+                    - generic [ref=f109e508]:
+                      - generic [ref=f109e509]:
+                        - button [ref=f109e511] [cursor=pointer]
+                        - generic "-30%" [ref=f109e512]:
+                          - text: 30%
+                          - strong [ref=f109e513]: "OFF"
+                        - link [ref=f109e515] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-rapunzel-colecao-completa-p46395
+                          - img "Kit Rapunzel - Coleção Completa" [ref=f109e517]
+                      - generic [ref=f109e518]:
+                        - generic [ref=f109e519]: (15)
+                        - heading [level=3] [ref=f109e525]:
+                          - link "Kit Rapunzel - Coleção Completa" [ref=f109e526] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-rapunzel-colecao-completa-p46395
+                        - generic [ref=f109e527]:
+                          - paragraph [ref=f109e531]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e533]:
+                          - deletion [ref=f109e534]:
+                            - generic [ref=f109e535]: R$ 294,50
+                            - text: por
+                          - strong [ref=f109e536]: R$ 206,15À vista
+                          - term [ref=f109e537]: em até 3 x sem juros de R$ 68,72
+                        - link [ref=f109e539] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-rapunzel-colecao-completa-p46395
+                  - listitem [ref=f109e545]:
+                    - generic [ref=f109e546]:
+                      - generic [ref=f109e547]:
+                        - button [ref=f109e549] [cursor=pointer]
+                        - link [ref=f109e551] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-spray-250ml-ps-19629-322-p46391
+                          - img "Volumão Spray 250ml" [ref=f109e553]
+                      - generic [ref=f109e554]:
+                        - generic [ref=f109e555]: (2)
+                        - heading [level=3] [ref=f109e561]:
+                          - link "Volumão Spray 250ml" [ref=f109e562] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/volumao-spray-250ml-ps-19629-322-p46391
+                        - generic [ref=f109e563]:
+                          - paragraph [ref=f109e567]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e569]:
+                          - strong [ref=f109e570]: R$ 59,90À vista
+                          - term [ref=f109e571]: em até 1 x sem juros de R$ 59,90
+                        - link [ref=f109e574] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-spray-250ml-ps-19629-322-p46391
+                  - listitem [ref=f109e580]:
+                    - generic [ref=f109e581]:
+                      - generic [ref=f109e582]:
+                        - button [ref=f109e584] [cursor=pointer]
+                        - link [ref=f109e586] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-shampoo-250ml-ps-19629-321-p46389
+                          - img "Volumão Shampoo 250ml" [ref=f109e588]
+                      - generic [ref=f109e589]:
+                        - generic [ref=f109e590]: (5)
+                        - heading [level=3] [ref=f109e596]:
+                          - link "Volumão Shampoo 250ml" [ref=f109e597] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/volumao-shampoo-250ml-ps-19629-321-p46389
+                        - generic [ref=f109e598]:
+                          - paragraph [ref=f109e602]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e604]:
+                          - strong [ref=f109e605]: R$ 39,90À vista
+                          - term [ref=f109e606]: em até 1 x sem juros de R$ 39,90
+                        - link [ref=f109e609] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-shampoo-250ml-ps-19629-321-p46389
+                  - listitem [ref=f109e615]:
+                    - generic [ref=f109e616]:
+                      - generic [ref=f109e617]:
+                        - button [ref=f109e619] [cursor=pointer]
+                        - link [ref=f109e621] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-mascara-450g-ps-19629-320-p46387
+                          - img "Volumão Máscara 450g" [ref=f109e623]
+                      - generic [ref=f109e624]:
+                        - generic [ref=f109e625]: (2)
+                        - heading [level=3] [ref=f109e631]:
+                          - link "Volumão Máscara 450g" [ref=f109e632] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/volumao-mascara-450g-ps-19629-320-p46387
+                        - generic [ref=f109e633]:
+                          - paragraph [ref=f109e637]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e639]:
+                          - strong [ref=f109e640]: R$ 64,90À vista
+                          - term [ref=f109e641]: em até 2 x sem juros de R$ 32,45
+                        - link [ref=f109e644] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/volumao-mascara-450g-ps-19629-320-p46387
+                  - listitem [ref=f109e650]:
+                    - generic [ref=f109e651]:
+                      - generic [ref=f109e652]:
+                        - button [ref=f109e654] [cursor=pointer]
+                        - link [ref=f109e656] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/morte-subita-oleo-50ml-ps-19629-315-p46375
+                          - img "MORTE SÚBITA ÓLEO 50ML" [ref=f109e658]
+                      - generic [ref=f109e659]:
+                        - generic [ref=f109e660]: (12)
+                        - heading [level=3] [ref=f109e666]:
+                          - link "MORTE SÚBITA ÓLEO 50ML" [ref=f109e667] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/morte-subita-oleo-50ml-ps-19629-315-p46375
+                        - generic [ref=f109e668]:
+                          - paragraph [ref=f109e672]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e674]:
+                          - strong [ref=f109e675]: R$ 44,90À vista
+                          - term [ref=f109e676]: em até 1 x sem juros de R$ 44,90
+                        - link [ref=f109e679] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/morte-subita-oleo-50ml-ps-19629-315-p46375
+                  - listitem [ref=f109e685]:
+                    - generic [ref=f109e686]:
+                      - generic [ref=f109e687]:
+                        - button [ref=f109e689] [cursor=pointer]
+                        - link [ref=f109e691] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-bossa-crespos-cachos-ps-19629-303-p46348
+                          - img "Kit Bossa Crespos & Cachos" [ref=f109e693]
+                      - generic [ref=f109e694]:
+                        - generic [ref=f109e695]: (14)
+                        - heading [level=3] [ref=f109e701]:
+                          - link "Kit Bossa Crespos & Cachos" [ref=f109e702] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-bossa-crespos-cachos-ps-19629-303-p46348
+                        - generic [ref=f109e703]:
+                          - paragraph [ref=f109e707]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e709]:
+                          - strong [ref=f109e710]: R$ 99,90À vista
+                          - term [ref=f109e711]: em até 3 x sem juros de R$ 33,30
+                        - link [ref=f109e714] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-bossa-crespos-cachos-ps-19629-303-p46348
+                  - listitem [ref=f109e720]:
+                    - generic [ref=f109e721]:
+                      - generic [ref=f109e722]:
+                        - button [ref=f109e724] [cursor=pointer]
+                        - generic "-40%" [ref=f109e725]:
+                          - text: 40%
+                          - strong [ref=f109e726]: "OFF"
+                        - link [ref=f109e728] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-tannic-acid-linha-completa-p46347
+                          - img "Kit Tannic Acid - Linha Completa" [ref=f109e730]
+                      - generic [ref=f109e731]:
+                        - generic [ref=f109e732]: (1)
+                        - heading [level=3] [ref=f109e738]:
+                          - link "Kit Tannic Acid - Linha Completa" [ref=f109e739] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-tannic-acid-linha-completa-p46347
+                        - generic [ref=f109e740]:
+                          - paragraph [ref=f109e744]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e746]:
+                          - deletion [ref=f109e747]:
+                            - generic [ref=f109e748]: R$ 229,60
+                            - text: por
+                          - strong [ref=f109e749]: R$ 137,76À vista
+                          - term [ref=f109e750]: em até 3 x sem juros de R$ 45,92
+                        - link [ref=f109e752] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-tannic-acid-linha-completa-p46347
+                  - listitem [ref=f109e758]:
+                    - generic [ref=f109e759]:
+                      - generic [ref=f109e760]:
+                        - button [ref=f109e762] [cursor=pointer]
+                        - generic "-30%" [ref=f109e763]:
+                          - text: 30%
+                          - strong [ref=f109e764]: "OFF"
+                        - link [ref=f109e766] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-a-formula-lamelar-p46345
+                          - img "Kit A Fórmula Lamelar" [ref=f109e768]
+                      - generic [ref=f109e769]:
+                        - generic [ref=f109e770]: (6)
+                        - heading [level=3] [ref=f109e776]:
+                          - link "Kit A Fórmula Lamelar" [ref=f109e777] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-a-formula-lamelar-p46345
+                        - generic [ref=f109e778]:
+                          - paragraph [ref=f109e782]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e784]:
+                          - deletion [ref=f109e785]:
+                            - generic [ref=f109e786]: R$ 164,70
+                            - text: por
+                          - strong [ref=f109e787]: R$ 115,29À vista
+                          - term [ref=f109e788]: em até 3 x sem juros de R$ 38,43
+                        - link [ref=f109e790] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-a-formula-lamelar-p46345
+                  - listitem [ref=f109e796]:
+                    - generic [ref=f109e797]:
+                      - generic [ref=f109e798]:
+                        - button [ref=f109e800] [cursor=pointer]
+                        - link [ref=f109e802] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tannic-acid-leave-in-protetor-100ml-ps-19629-301-p46341
+                          - img "Tannic Acid Leave-In Protetor 100ml" [ref=f109e804]
+                      - generic [ref=f109e805]:
+                        - generic [ref=f109e806]: (2)
+                        - heading [level=3] [ref=f109e812]:
+                          - link "Tannic Acid Leave-In Protetor 100ml" [ref=f109e813] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/tannic-acid-leave-in-protetor-100ml-ps-19629-301-p46341
+                        - generic [ref=f109e814]:
+                          - paragraph [ref=f109e818]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e820]:
+                          - strong [ref=f109e821]: R$ 59,90À vista
+                          - term [ref=f109e822]: em até 1 x sem juros de R$ 59,90
+                        - link [ref=f109e825] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/tannic-acid-leave-in-protetor-100ml-ps-19629-301-p46341
+                  - listitem [ref=f109e831]:
+                    - generic [ref=f109e832]:
+                      - generic [ref=f109e833]:
+                        - button [ref=f109e835] [cursor=pointer]
+                        - generic "-10%" [ref=f109e836]:
+                          - text: 10%
+                          - strong [ref=f109e837]: "OFF"
+                        - link [ref=f109e839] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-controle-de-oleosidade-p46336
+                          - img "Kit Cuca Fresca Controle de Oleosidade" [ref=f109e841]
+                      - generic [ref=f109e842]:
+                        - generic [ref=f109e843]: (5)
+                        - heading [level=3] [ref=f109e849]:
+                          - link "Kit Cuca Fresca Controle de Oleosidade" [ref=f109e850] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-controle-de-oleosidade-p46336
+                        - generic [ref=f109e851]:
+                          - paragraph [ref=f109e855]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e857]:
+                          - deletion [ref=f109e858]:
+                            - generic [ref=f109e859]: R$ 79,80
+                            - text: por
+                          - strong [ref=f109e860]: R$ 71,82À vista
+                          - term [ref=f109e861]: em até 2 x sem juros de R$ 35,91
+                        - link [ref=f109e863] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-controle-de-oleosidade-p46336
+                  - listitem [ref=f109e869]:
+                    - generic [ref=f109e870]:
+                      - generic [ref=f109e871]:
+                        - button [ref=f109e873] [cursor=pointer]
+                        - generic "-10%" [ref=f109e874]:
+                          - text: 10%
+                          - strong [ref=f109e875]: "OFF"
+                        - link [ref=f109e877] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-anticaspa-p46335
+                          - img "Kit Cuca Fresca Anticaspa" [ref=f109e879]
+                      - generic [ref=f109e880]:
+                        - generic [ref=f109e881]: (10)
+                        - heading [level=3] [ref=f109e887]:
+                          - link "Kit Cuca Fresca Anticaspa" [ref=f109e888] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-anticaspa-p46335
+                        - generic [ref=f109e889]:
+                          - paragraph [ref=f109e893]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e895]:
+                          - deletion [ref=f109e896]:
+                            - generic [ref=f109e897]: R$ 124,70
+                            - text: por
+                          - strong [ref=f109e898]: R$ 112,23À vista
+                          - term [ref=f109e899]: em até 3 x sem juros de R$ 37,41
+                        - link [ref=f109e901] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/kit-cuca-fresca-anticaspa-p46335
+                  - listitem [ref=f109e907]:
+                    - generic [ref=f109e908]:
+                      - generic [ref=f109e909]:
+                        - button [ref=f109e911] [cursor=pointer]
+                        - link [ref=f109e913] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/cuca-fresca-condicionador-reequilibrante-250g-ps-19629-297-p46330
+                          - img "Cuca Fresca Condicionador Reequilibrante 250g" [ref=f109e915]
+                      - generic [ref=f109e916]:
+                        - generic [ref=f109e917]: (2)
+                        - heading [level=3] [ref=f109e923]:
+                          - link "Cuca Fresca Condicionador Reequilibrante 250g" [ref=f109e924] [cursor=pointer]:
+                            - /url: https://www.lolacosmetics.com.br/cuca-fresca-condicionador-reequilibrante-250g-ps-19629-297-p46330
+                        - generic [ref=f109e925]:
+                          - paragraph [ref=f109e929]: 10% de cashback
+                          - paragraph
+                        - generic [ref=f109e931]:
+                          - strong [ref=f109e932]: R$ 39,90À vista
+                          - term [ref=f109e933]: em até 1 x sem juros de R$ 39,90
+                        - link [ref=f109e936] [cursor=pointer]:
+                          - /url: https://www.lolacosmetics.com.br/cuca-fresca-condicionador-reequilibrante-250g-ps-19629-297-p46330
+              - generic [ref=f109e943]:
+                - paragraph [ref=f109e944]: Confira as opiniões de clientes satisfeitos
+                - region "Depoimentos de clientes" [ref=f109e945]:
+                  - generic [ref=f109e946]:
+                    - button "Anterior" [ref=f109e947] [cursor=pointer]
+                    - generic [ref=f109e951]:
+                      - group "Depoimento 1 de 7" [ref=f109e952]:
+                        - generic [ref=f109e953]:
+                          - paragraph [ref=f109e954]: Daniela G.
+                          - generic [ref=f109e955]:
+                            - img "Nota 5 de 5" [ref=f109e956]
+                            - paragraph [ref=f109e972]: 21/09/2026
+                          - paragraph [ref=f109e974]: Gosto muito:)
+                      - group "Depoimento 2 de 7" [ref=f109e975]:
+                        - generic [ref=f109e976]:
+                          - paragraph [ref=f109e977]: VANESSA F.
+                          - generic [ref=f109e978]:
+                            - img "Nota 5 de 5" [ref=f109e979]
+                            - paragraph [ref=f109e995]: 18/09/2026
+                          - paragraph [ref=f109e997]: Amei receber meus produtos perfeitamente embalados e as amostras grátis - até comprei o creme de pentear que veio de amostra.
+                      - group "Depoimento 3 de 7" [ref=f109e998]:
+                        - generic [ref=f109e999]:
+                          - paragraph [ref=f109e1000]: Joice S.
+                          - generic [ref=f109e1001]:
+                            - img "Nota 5 de 5" [ref=f109e1002]
+                            - paragraph [ref=f109e1018]: 14/09/2026
+                          - paragraph [ref=f109e1020]: São de excelente qualidade vale a pena comprar pois o investimento e eficaz e duradouro.
+                      - group "Depoimento 4 de 7" [ref=f109e1021]:
+                        - generic [ref=f109e1022]:
+                          - paragraph [ref=f109e1023]: Eliane S.
+                          - generic [ref=f109e1024]:
+                            - img "Nota 5 de 5" [ref=f109e1025]
+                            - paragraph [ref=f109e1041]: 10/09/2026
+                          - paragraph [ref=f109e1043]: cabelo muito cheiroso, soltinho. E rende muito.
+                      - group "Depoimento 5 de 7" [ref=f109e1044]:
+                        - generic [ref=f109e1045]:
+                          - paragraph [ref=f109e1046]: Sofia v.
+                          - generic [ref=f109e1047]:
+                            - img "Nota 5 de 5" [ref=f109e1048]
+                            - paragraph [ref=f109e1064]: 08/09/2026
+                          - paragraph [ref=f109e1066]: perfeição, produtos bem organizados e com muita informação sobre!
+                      - group "Depoimento 6 de 7" [ref=f109e1067]:
+                        - generic [ref=f109e1068]:
+                          - paragraph [ref=f109e1069]: SARA M.
+                          - generic [ref=f109e1070]:
+                            - img "Nota 5 de 5" [ref=f109e1071]
+                            - paragraph [ref=f109e1087]: 01/09/2026
+                          - paragraph [ref=f109e1089]: Produz os produtos que amo.
+                      - group "Depoimento 7 de 7" [ref=f109e1090]:
+                        - generic [ref=f109e1091]:
+                          - paragraph [ref=f109e1092]: Jéssica F.
+                          - generic [ref=f109e1093]:
+                            - img "Nota 5 de 5" [ref=f109e1094]
+                            - paragraph [ref=f109e1110]: 01/09/2026
+                          - paragraph [ref=f109e1112]: Incrível. Trata o cliente com muito carinho e entrega rápida e bem feita.
+                    - button "Próximo" [ref=f109e1113] [cursor=pointer]
+                    - generic [ref=f109e1117]:
+                      - button "Ir para o review 1" [ref=f109e1118] [cursor=pointer]
+                      - button "Ir para o review 2" [ref=f109e1119] [cursor=pointer]
+                      - button "Ir para o review 3" [ref=f109e1120] [cursor=pointer]
+                - link [ref=f109e1121] [cursor=pointer]:
+                  - /url: https://site.trustvox.com.br/conheca-a-trustvox?utm_source=widget-rareviews&utm_medium=pagina-principal&utm_campaign=www.lolacosmetics.com.br
+                  - paragraph [ref=f109e1129]: Avaliações confiáveis do
+              - generic [ref=f109e1133]:
+                - generic [ref=f109e1134]:
+                  - generic [ref=f109e1135]:
+                    - generic [ref=f109e1136]: Página 1 de 12
+                    - generic [ref=f109e1137]: "-136 produtos encontrados."
+                  - generic [ref=f109e1138]:
+                    - generic [ref=f109e1139]: Anterior
+                    - generic "1" [ref=f109e1140]
+                    - link "2" [ref=f109e1142] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-2
+                    - link "3" [ref=f109e1144] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-3
+                    - link "4" [ref=f109e1146] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-4
+                    - link "5" [ref=f109e1148] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-5
+                    - generic [ref=f109e1149]: ...
+                    - link "12" [ref=f109e1151] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-12
+                    - link "Próximo" [ref=f109e1153] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/tratamentos#/pagina-2
+                - generic [ref=f109e1154]:
+                  - text: "Ordenar por:"
+                  - combobox [ref=f109e1155]:
+                    - option "Mais Relevantes" [selected]
+                    - option "Mais Acessados"
+                    - option "Maior preço"
+                    - option "Menor Preço"
+                    - option "A-Z"
+                    - option "Novidades"
+                    - option "Mais Vendidos"
+    - generic [ref=f109e1157]:
+      - generic [ref=f109e1159]:
+        - paragraph [ref=f109e1160]:
+          - generic [ref=f109e1161]: Nós usamos cookies e outras tecnologias semelhantes para melhorar a experiência de navegação e recomendar conteúdo de seu interesse. Ao continuar navegando você concorda com a nossa
+          - link "política de privacidade" [ref=f109e1162] [cursor=pointer]:
+            - /url: https://www.lolacosmetics.com.br/conteudo/sobre/politica-de-privacidade
+          - text: .
+        - button "Concordo" [ref=f109e1164] [cursor=pointer]
+      - img "Lola Cosmetics" [ref=f109e1167]
+      - generic [ref=f109e1169]:
+        - generic [ref=f109e1170]:
+          - heading "Fique por dentro das nossas novidades" [level=4] [ref=f109e1171]
+          - generic [ref=f109e1176]:
+            - textbox "Email:" [ref=f109e1178]:
+              - /placeholder: Insira seu e-mail...
+            - button "Enviar" [ref=f109e1180] [cursor=pointer]
+          - list [ref=f109e1181]:
+            - listitem [ref=f109e1182]:
+              - link [ref=f109e1183] [cursor=pointer]:
+                - /url: https://www.instagram.com/lolacosmetics/
+            - listitem [ref=f109e1186]:
+              - link [ref=f109e1187] [cursor=pointer]:
+                - /url: https://www.facebook.com/lolacosmetics/
+            - listitem [ref=f109e1190]:
+              - link [ref=f109e1191] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/lolacosmetics/
+            - listitem [ref=f109e1195]:
+              - link [ref=f109e1196] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@lolacosmetics
+            - listitem [ref=f109e1199]:
+              - link [ref=f109e1200] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/2KPZDZu9BRJmPuCAyGM7NZ?si=e522b39a1fbf4813
+        - generic [ref=f109e1203]:
+          - generic [ref=f109e1204]:
+            - heading "Sobre" [level=4] [ref=f109e1205]
+            - list [ref=f109e1208]:
+              - listitem [ref=f109e1209]:
+                - list [ref=f109e1210]:
+                  - listitem [ref=f109e1211]:
+                    - link "Quem somos" [ref=f109e1212] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/quem-somos
+                  - listitem [ref=f109e1213]:
+                    - link "Este site é seguro?" [ref=f109e1214] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/este-site-e-seguro
+                  - listitem [ref=f109e1215]:
+                    - link "Política de Cookies" [ref=f109e1216] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/politica-de-cookies
+                  - listitem [ref=f109e1217]:
+                    - link "Política de Privacidade" [ref=f109e1218] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/politica-de-privacidade
+                  - listitem [ref=f109e1219]:
+                    - link "Nossa lojas" [ref=f109e1220] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/onde-encontrar
+                  - listitem [ref=f109e1221]:
+                    - link "Trabalhe Conosco" [ref=f109e1222] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/trabalhe-conosco
+                  - listitem [ref=f109e1223]:
+                    - link "Lola Lab" [ref=f109e1224] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/lola-lab
+                  - listitem [ref=f109e1225]:
+                    - link "Revenda" [ref=f109e1226] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/sobre/revenda
+          - generic [ref=f109e1227]:
+            - heading "Ajuda" [level=4] [ref=f109e1228]
+            - list [ref=f109e1231]:
+              - listitem [ref=f109e1232]:
+                - list [ref=f109e1233]:
+                  - listitem [ref=f109e1234]:
+                    - link "Prazos de atendimento" [ref=f109e1235] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/prazos-de-atendimento
+                  - listitem [ref=f109e1236]:
+                    - link "Entrega e envios" [ref=f109e1237] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/entrega-e-envios
+                  - listitem [ref=f109e1238]:
+                    - link "Pagamento" [ref=f109e1239] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/pagamento
+                  - listitem [ref=f109e1240]:
+                    - link "Trocas e devoluções" [ref=f109e1241] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/trocas-e-devolucoes
+                  - listitem [ref=f109e1242]:
+                    - link "Perguntas Frequentes" [ref=f109e1243] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/perguntas-frequentes
+                  - listitem [ref=f109e1244]:
+                    - link "Como rastrear pedidos" [ref=f109e1245] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/como-rastrear-pedidos
+                  - listitem [ref=f109e1246]:
+                    - link "Regulamento Promocional" [ref=f109e1247] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/regulamento-promocional
+                  - listitem [ref=f109e1248]:
+                    - link "Cashback" [ref=f109e1249] [cursor=pointer]:
+                      - /url: https://www.lolacosmetics.com.br/conteudo/ajuda/cashback
+        - generic [ref=f109e1250]:
+          - heading "Contato" [level=4] [ref=f109e1251]
+          - list [ref=f109e1252]:
+            - listitem [ref=f109e1253]: 0800 000 5521
+            - listitem [ref=f109e1254]:
+              - link "lolamail@farmativa.ind.br" [ref=f109e1255] [cursor=pointer]:
+                - /url: mailto:lolamail@farmativa.ind.br
+            - listitem [ref=f109e1256]: Segunda à Sexta-Feira das 9h às 18h
+          - heading "Segurança" [level=4] [ref=f109e1257]
+          - generic [ref=f109e1258]:
+            - img "Lola Cosmetics" [ref=f109e1259]
+            - generic [ref=f109e1260]: "4.7"
+        - generic [ref=f109e1304]:
+          - heading "Meus pedidos" [level=4] [ref=f109e1305]
+          - link "Acompanhe seus pedidos" [ref=f109e1306] [cursor=pointer]:
+            - /url: https://www.lolacosmetics.com.br/painel-do-cliente/pedidos
+          - heading "Formas de pagamento" [level=4] [ref=f109e1307]
+          - img "Forma Pagamento" [ref=f109e1308]
+      - generic [ref=f109e1310]:
+        - paragraph [ref=f109e1311]: AVENIDA CIVIT I 1795 ARMAZEM A GALPAO 4 E 5, SALA 33 - BARRO BRANCO, SERRA - ES | CEP 29170-740 |CNPJ 37.410.037/0002-89
+        - list [ref=f109e1313]:
+          - listitem [ref=f109e1314]:
+            - generic [ref=f109e1315]: "Plataforma:"
+            - link [ref=f109e1316] [cursor=pointer]:
+              - /url: https://www.linxcommerce.com.br/
+              - img "Plataforma Core" [ref=f109e1317]
+          - listitem [ref=f109e1318]:
+            - generic [ref=f109e1319]: "Projeto:"
+            - link [ref=f109e1320] [cursor=pointer]:
+              - /url: https://nairuz.com.br/
+      - link "Voltar ao topo" [ref=f109e1336] [cursor=pointer]:
+        - /url: "#"
+  - alert [ref=f109e1341]

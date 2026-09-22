@@ -17,40 +17,44 @@ import SocialLinks from "@/components/sites/www-lolacosmetics-com-br-b005530a/ro
 import Reviews from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/Reviews";
 import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/Footer";
 import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/ShopInteractions";
+import BodyClass from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/BodyClass";
 
 // Section order and nesting mirror the captured #main tree; see PAGE_TOPOLOGY.md.
 export default function Home() {
   return (
-    <section id="main" className="HomeRoute">
-      <Header />
-      <div id="bg-search" />
-      <section id="middle">
-        <div id="content">
-          <div id="content-wrapper">
-            <Hero />
-            <MediaStories variant="highlights" />
-            <BenefitsBanner />
-            <Categories />
-            <ReasonsToLove />
-            <div className="conteudo-home">
-              <Favorites />
-              <HairTypes />
-              <MediaStories variant="carousel" />
-              <DailyDeals />
-              <Benefits />
-              <Launches />
-              <Collector />
-              <BeforeAfter />
-              <Affiliate />
-              <Blog />
-              <SocialLinks />
+    <>
+      <BodyClass value="column-1 HomeRoute lola-clone" />
+      <section id="main" className="HomeRoute">
+        <Header />
+        <div id="bg-search" />
+        <section id="middle">
+          <div id="content">
+            <div id="content-wrapper">
+              <Hero />
+              <MediaStories variant="highlights" />
+              <BenefitsBanner />
+              <Categories />
+              <ReasonsToLove />
+              <div className="conteudo-home">
+                <Favorites />
+                <HairTypes />
+                <MediaStories variant="carousel" />
+                <DailyDeals />
+                <Benefits />
+                <Launches />
+                <Collector />
+                <BeforeAfter />
+                <Affiliate />
+                <Blog />
+                <SocialLinks />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <Reviews />
+        <Footer />
+        <ShopInteractions />
       </section>
-      <Reviews />
-      <Footer />
-      <ShopInteractions />
-    </section>
+    </>
   );
 }

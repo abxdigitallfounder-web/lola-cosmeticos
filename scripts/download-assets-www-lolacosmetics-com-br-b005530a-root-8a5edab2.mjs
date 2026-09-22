@@ -2,9 +2,17 @@ import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import path from 'node:path';
 const site='www-lolacosmetics-com-br-b005530a/root-8a5edab2';
-const research=`docs/research/${site}`;
 const root=`public/sites/${site}`;
-const datasets=await Promise.all(['desktop-extraction','loaded-extraction','mobile-extraction'].map(async n=>JSON.parse(await fs.readFile(`${research}/${n}.json`,'utf8'))));
+// The whole site shares one theme, so every captured page resolves into a single asset
+// store and manifest — the home page's namespace, which already holds them. Discovery
+// walks all of the pages' extractions; storage stays put.
+const research=`docs/research/${site}`;
+// `site` carries the home page's key because that namespace holds the shared store.
+const researchRoot=`docs/research/${site.split('/')[0]}`;
+const pageDirs=(await fs.readdir(researchRoot,{withFileTypes:true})).filter(e=>e.isDirectory()).map(e=>e.name);
+const datasetPaths=[];
+for(const dir of pageDirs)for(const name of ['desktop-extraction','loaded-extraction','mobile-extraction'])datasetPaths.push(`${researchRoot}/${dir}/${name}.json`);
+const datasets=(await Promise.all(datasetPaths.map(async p=>{try{return JSON.parse(await fs.readFile(p,'utf8'))}catch{return null}}))).filter(Boolean);
 // Seed from the previous run so a re-run only fills gaps: the origin serves some assets
 // intermittently, and starting empty would drop entries that are already on disk.
 const manifest=JSON.parse(await fs.readFile(`${research}/asset-manifest.json`,'utf8').catch(()=>'{}')); const errors=[];

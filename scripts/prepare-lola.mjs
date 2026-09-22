@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import {load} from 'cheerio';
+import {createSanitizer} from './lib/lola-sanitize.mjs';
 const site='www-lolacosmetics-com-br-b005530a/root-8a5edab2';
 const root=`docs/research/${site}`, out=`src/components/sites/${site}`;
 const shared='src/components/sites/www-lolacosmetics-com-br-b005530a/shared';
@@ -23,29 +24,38 @@ for(const name of documentOrder){
   // Recovered sections have no per-element computed capture; source.css governs them.
   sections[name]={selector:recovered[name],html:node.toString(),tree:{styles:{}}};
 }
-const local=s=>manifest[s]||s;
-// Longest URL first: one asset URL can be a prefix of another (a .woff next to the same
-// face's .woff2), and substituting the short one first would corrupt the longer path.
-const mappings=Object.entries(manifest).sort((a,b)=>b[0].length-a[0].length);
-function rewrite(s){for(const [u,l] of mappings)s=s.split(u).join(l);return s;}
+const {clean,rewrite,local}=createSanitizer(manifest,options);
+// source.css is the whole site's stylesheet, so it is assembled from every captured page:
+// the interior routes load bundles the home page never requests, and without them their
+// grid classes collapse into a single column. Home's sheets come first to keep its cascade.
+const siteResearch=`docs/research/${site.split('/')[0]}`;
+const captures=fs.readdirSync(siteResearch,{withFileTypes:true}).filter(e=>e.isDirectory())
+  .map(e=>`${siteResearch}/${e.name}/loaded-extraction.json`).filter(f=>fs.existsSync(f))
+  .map(f=>JSON.parse(fs.readFileSync(f,'utf8')));
 let css='';
-for(const sheet of raw.stylesheets){if(sheet.url&&manifest[sheet.url])css+='\n'+fs.readFileSync('public'+manifest[sheet.url],'utf8');else if(sheet.css)css+='\n'+sheet.css;}
-css+='\n'+d.inlineStyles.join('\n');
+const seenSheets=new Set();
+const addSheet=sheet=>{
+  if(!sheet)return;
+  if(sheet.url){if(seenSheets.has(sheet.url))return;seenSheets.add(sheet.url);}
+  if(sheet.url&&manifest[sheet.url])css+='\n'+fs.readFileSync('public'+manifest[sheet.url],'utf8');
+  else if(sheet.css)css+='\n'+sheet.css;
+};
+for(const sheet of raw.stylesheets)addSheet(sheet);
+for(const capture of captures)for(const sheet of capture.stylesheets||[])addSheet(sheet);
+const seenInline=new Set();
+for(const capture of [d,...captures])for(const style of capture.inlineStyles||[]){
+  if(!style||seenInline.has(style))continue;
+  seenInline.add(style);
+  css+='\n'+style;
+}
 css=rewrite(css).replace(/@import\s+[^;]+;/g,'').replace(/@charset\s+[^;]+;/g,'');
 fs.writeFileSync(`public/sites/${site}/source.css`,css);
-
 // The source bundles slick's stylesheet, whose url() references stay relative to wherever
 // that stylesheet sits. source.css is served from this directory, so slick's own runtime
 // assets are copied here under the exact names those references use.
 fs.copyFileSync('node_modules/slick-carousel/slick/ajax-loader.gif',`public/sites/${site}/ajax-loader.gif`);
 fs.mkdirSync(`public/sites/${site}/fonts`,{recursive:true});
 for(const font of fs.readdirSync('node_modules/slick-carousel/slick/fonts'))fs.copyFileSync(`node_modules/slick-carousel/slick/fonts/${font}`,`public/sites/${site}/fonts/${font}`);
-let sliderIndex=0;
-function clean(html){const $=load(html,{},false);$('script,iframe,style,noscript').remove();$('*').each((i,e)=>{for(const k of Object.keys(e.attribs||{})){if(/^on/i.test(k)||['data-bind','data-widget-js','data-messages'].includes(k))$(e).removeAttr(k);}if(e.tagName==='a'){const href=$(e).attr('href');if(href&&href!=='/'&&!href.startsWith('#')&&!/^(https?:|mailto:|tel:)/.test(href))$(e).attr('href',new URL(href,'https://www.lolacosmetics.com.br').href);if(/^javascript:/i.test(href||''))$(e).attr('href','#');}if(e.tagName==='form')$(e).removeAttr('action').removeAttr('method');});
-$('.slick-slider').each((i,e)=>{const sl=$(e);const contents=sl.find('> .slick-list > .slick-track > :not(.slick-cloned)').toArray().map(c=>$(c).children().children().toString()).join('');const opt=options[sliderIndex++]?.options||options[2].options;sl.html(contents).removeClass('slick-initialized slick-slider slick-dotted').attr('data-lola-slider',JSON.stringify(opt));sl.find('[tabindex]').removeAttr('tabindex');});
-$('img').each((i,e)=>{const image=$(e);const src=image.attr('data-src')||image.attr('src');if(src)image.attr('src',local(src));image.removeAttr('data-src').removeClass('lazyload fade animated');if(!image.attr('alt'))image.attr('alt','Lola Cosmetics');});
-$('[style]').each((i,e)=>$(e).attr('style',rewrite($(e).attr('style'))));
-return rewrite($.html()).replace(/<!--[^]*?-->/g,'');}
 const fragments={};for(const [name,s] of Object.entries(sections))fragments[name]=clean(s.html);
 const $m=load(mobile.html);fragments.HeaderMobile=clean($m('#header').toString());fragments.HeroMobile=clean($m('.fullbanner').toString());
 // Mobile slider options come from the same hero instance: one slide and four dots.
