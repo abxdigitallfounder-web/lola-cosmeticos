@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { mountMobileProductGalleries } from "./mobileProductGallery";
 
 /** Replays one captured source fragment and re-initializes the carousels inside it. */
 export default function SourceSection({ name, html }: { name: string; html: string }) {
@@ -15,6 +16,7 @@ export default function SourceSection({ name, html }: { name: string; html: stri
       const { default: registerSlick } = await import("slick-carousel");
       registerSlick(window, $);
       if (disposed || !ref.current) return;
+      const restoreGalleries = mountMobileProductGalleries(ref.current);
       const sliders = $(ref.current).find("[data-lola-slider]");
       sliders.each(function () {
         const slider = $(this);
@@ -41,8 +43,13 @@ export default function SourceSection({ name, html }: { name: string; html: stri
       // extra image/font-load refresh, matching the source gallery's initialization.
       const resize = () => sliders.not(".wd-product-media-selector ul").each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("setPosition"); });
       document.fonts.ready.then(() => { if (!disposed) resize(); });
-      ref.current.querySelectorAll("img").forEach(img => img.addEventListener("load", resize));
-      cleanup = () => { sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); }); };
+      const images = ref.current.querySelectorAll("img");
+      images.forEach(img => img.addEventListener("load", resize));
+      cleanup = () => {
+        images.forEach(img => img.removeEventListener("load", resize));
+        sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); });
+        restoreGalleries();
+      };
     }
     initialize();
     return () => { disposed = true; cleanup?.(); };

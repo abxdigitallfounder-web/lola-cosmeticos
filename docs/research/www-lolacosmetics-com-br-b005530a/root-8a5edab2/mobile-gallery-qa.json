@@ -1,0 +1,218 @@
+[
+  {
+    "device": "iphone",
+    "path": "/volumao-shampoo-250ml-ps-19629-321-p46389",
+    "source": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337.265625,
+          "height": 360
+        },
+        "image": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337,
+          "height": 337
+        },
+        "index": 0,
+        "dots": 6,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 3
+    },
+    "clone": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337.265625,
+          "height": 361
+        },
+        "image": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 338,
+          "height": 338
+        },
+        "index": 0,
+        "dots": 6,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 3
+    }
+  },
+  {
+    "device": "iphone",
+    "path": "/kit-rapunzel-colecao-completa-p46395",
+    "source": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337.265625,
+          "height": 360
+        },
+        "image": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337,
+          "height": 337
+        },
+        "index": 0,
+        "dots": 3,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 0
+    },
+    "clone": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 337.265625,
+          "height": 361
+        },
+        "image": {
+          "x": 26.359375,
+          "y": 207,
+          "width": 338,
+          "height": 338
+        },
+        "index": 0,
+        "dots": 3,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 0
+    }
+  },
+  {
+    "device": "android",
+    "path": "/volumao-shampoo-250ml-ps-19629-321-p46389",
+    "source": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356.28125,
+          "height": 379
+        },
+        "image": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356,
+          "height": 356
+        },
+        "index": 0,
+        "dots": 6,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 3
+    },
+    "clone": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356.28125,
+          "height": 380
+        },
+        "image": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 357,
+          "height": 357
+        },
+        "index": 0,
+        "dots": 6,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 3
+    }
+  },
+  {
+    "device": "android",
+    "path": "/kit-rapunzel-colecao-completa-p46395",
+    "source": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356.28125,
+          "height": 379
+        },
+        "image": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356,
+          "height": 356
+        },
+        "index": 0,
+        "dots": 3,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 0
+    },
+    "clone": {
+      "initial": {
+        "touch": 1,
+        "mobileUA": true,
+        "gallery": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 356.28125,
+          "height": 380
+        },
+        "image": {
+          "x": 27.84375,
+          "y": 207,
+          "width": 357,
+          "height": 357
+        },
+        "index": 0,
+        "dots": 3,
+        "desktopGallery": 0,
+        "broken": 0,
+        "overflow": 0
+      },
+      "afterDot": 2,
+      "afterSwipe": 0
+    }
+  }
+]

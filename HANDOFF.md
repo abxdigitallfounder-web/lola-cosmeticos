@@ -42,6 +42,7 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 | `qa-lola-mobile-nav.mjs` | gaveta, acordeão, busca e toque em produto a 390px |
 | `qa-lola-mobile-sweep.mjs` | overflow horizontal e saúde por rota a 390px |
 | `qa-lola-product-alignment.mjs` | posição e tamanho das imagens contra a origem em 1440, 768 e 390px |
+| `qa-lola-mobile-gallery.mjs` | galeria verdadeira de celular: UA mobile, toque, DPR, swipe e indicadores |
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
@@ -84,11 +85,36 @@ larguras, alturas de linha e alinhamento das imagens do tema original.
 O teste `qa-lola-product-alignment.mjs` compara coordenadas e dimensões reais da home,
 KITS e Volumão Shampoo, incluindo miniaturas, em 1440, 768 e 390px. Os screenshots
 `alignment-*-after.png` ficam em `docs/design-references/<site>/root-8a5edab2/`.
-Resultado: **0px de diferença nas nove combinações**, registrado em
+Resultado anterior: **0px de diferença nas nove combinações de navegador desktop**, registrado em
 `docs/research/<site>/root-8a5edab2/product-alignment-qa.json`. Build aprovado;
 menu mobile, acordeão, sublink de categoria, busca e toque no produto passaram.
+Esse teste apenas estreitava a janela: não valida a versão entregue a celulares.
 Não corrigir essas diferenças com offsets ou `overflow-x: hidden`: o tema original
 depende de `content-box` e de estilos específicos restritos às páginas de origem.
+
+### Correção da galeria entregue a celulares
+
+O original troca o HTML da galeria quando recebe um user agent mobile:
+`.wd-product-media-selector2` com uma foto por slide e indicadores, em vez de
+`figure.wd-product-medias` com miniaturas. A janela desktop estreitada mostrava
+justamente a versão incorreta relatada pelo usuário.
+
+`mobileProductGallery.ts` agora seleciona essa variante antes de inicializar o Slick,
+reutilizando as fotos locais e as opções capturadas do original. Aplica-se aos 79
+produtos. Das 335 fotos verificadas, 43 têm atributos de zoom inválidos na captura;
+esses casos usam a foto local de 450px. Nenhum caminho de imagem escolhido está ausente.
+
+QA final em contextos Chromium com perfis iPhone (390px) e Android (412px),
+`isMobile`, toque e DPR3: Volumão e Rapunzel passaram em toque nos indicadores,
+swipe e retorno à primeira foto. Sem miniaturas sobrepostas, imagens quebradas ou
+overflow. Posição x/y igual à origem; arredondamento do Slick/jQuery deixa a foto
+1px maior. Banana Tropicana e Purple também carregam as fotos de fallback.
+Desktop permaneceu com a galeria anterior (foto 566.09375px a 1440px).
+
+Evidências: `mobile-gallery-extraction.json`, `mobile-gallery-qa.json` e screenshots
+`mobile-gallery-*.png`. Isso é emulação de dispositivo, não teste em hardware iPhone
+nem execução do motor WebKit/Safari. O popup de marketing da origem é bloqueado apenas
+no teste de gesto para que não intercepte o toque durante a validação.
 
 ## Diferenças conhecidas, e que são fiéis
 
@@ -104,5 +130,6 @@ depende de `content-box` e de estilos específicos restritos às páginas de ori
 - 4 seções da home (`BenefitsBanner`, `ReasonsToLove`, `Benefits`, `SocialLinks`) estão
   `display:none` — o original também as esconde no desktop. O `BenefitsBanner` aparece no
   mobile, nos dois.
-- O header mobile parece apertado, mas bate com o original no mesmo viewport: altura 125px
-  e hambúrguer, campo e botão de busca dentro de 3px. Confere também sob user agent mobile.
+- A comparação antiga do header a 390px se referia ao desktop estreitado. A captura
+  com contexto mobile completo mostra outro header na origem (busca em uma segunda
+  linha). Essa diferença é separada da galeria e não foi alterada neste ajuste.
