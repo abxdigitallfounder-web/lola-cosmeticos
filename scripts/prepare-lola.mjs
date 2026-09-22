@@ -25,9 +25,8 @@ for(const name of documentOrder){
   sections[name]={selector:recovered[name],html:node.toString(),tree:{styles:{}}};
 }
 const {clean,rewrite,local}=createSanitizer(manifest,options);
-// source.css is the whole site's stylesheet, so it is assembled from every captured page:
-// the interior routes load bundles the home page never requests, and without them their
-// grid classes collapse into a single column. Home's sheets come first to keep its cascade.
+// Keep the shared home theme, but scope additional bundles and inline page styles to
+// the routes that actually loaded them. Landing-page resets must not resize product grids.
 const siteResearch=`docs/research/${site.split('/')[0]}`;
 const captures=fs.readdirSync(siteResearch,{withFileTypes:true}).filter(e=>e.isDirectory())
   .map(e=>`${siteResearch}/${e.name}/loaded-extraction.json`).filter(f=>fs.existsSync(f))
@@ -41,12 +40,29 @@ const addSheet=sheet=>{
   else if(sheet.css)css+='\n'+sheet.css;
 };
 for(const sheet of raw.stylesheets)addSheet(sheet);
-for(const capture of captures)for(const sheet of capture.stylesheets||[])addSheet(sheet);
-const seenInline=new Set();
-for(const capture of [d,...captures])for(const style of capture.inlineStyles||[]){
-  if(!style||seenInline.has(style))continue;
-  seenInline.add(style);
-  css+='\n'+style;
+const scopedSheets=new Map();
+const scopedInline=new Map();
+const seenInline=new Set(d.inlineStyles.filter(Boolean));
+for(const style of seenInline)css+='\n'+style;
+const remember=(map,key,value,pathname)=>{
+  if(!map.has(key))map.set(key,{value,paths:new Set()});
+  map.get(key).paths.add(pathname);
+};
+for(const capture of captures){
+  if(!capture.url)continue;
+  const pathname=new URL(capture.url).pathname;
+  for(const sheet of capture.stylesheets||[]){
+    if(sheet.url&&seenSheets.has(sheet.url))continue;
+    const content=sheet.url&&manifest[sheet.url]?fs.readFileSync('public'+manifest[sheet.url],'utf8'):sheet.css;
+    if(content)remember(scopedSheets,sheet.url||content,content,pathname);
+  }
+  for(const style of capture.inlineStyles||[]){
+    if(style&&!seenInline.has(style))remember(scopedInline,style,style,pathname);
+  }
+}
+for(const {value,paths} of [...scopedSheets.values(),...scopedInline.values()]){
+  const roots=[...paths].map(p=>`html[data-lola-path=${JSON.stringify(p)}]`).join(', ');
+  css+=`\n@scope (${roots}) {\n${value}\n}\n`;
 }
 css=rewrite(css).replace(/@import\s+[^;]+;/g,'').replace(/@charset\s+[^;]+;/g,'');
 fs.writeFileSync(`public/sites/${site}/source.css`,css);
@@ -71,7 +87,19 @@ chrome.HeaderInterior=chrome.Header.replace(/<h1(\s[^>]*)?>/,'<div class="logo-h
 if(chrome.HeaderInterior===chrome.Header)throw new Error('logo heading not found in captured header');
 const cartCapture=captures.find(c=>c.url&&new URL(c.url).pathname==='/carrinho');
 if(!cartCapture?.headerHtml)throw new Error('Cart header missing; recapture /carrinho before preparing shared chrome');
-chrome.HeaderCart=createSanitizer(manifest).clean(cartCapture.headerHtml);
+// The storefront's cart header is a bare logo bar: it drops the drawer entirely, leaving a
+// visitor with no way back into the catalogue. That dead end is not worth reproducing for
+// paid traffic, so the cart keeps the source's simplified bar and regains the drawer from
+// the full header. This is a deliberate departure from the source, not a capture artifact.
+const cartHeader=createSanitizer(manifest).clean(cartCapture.headerHtml);
+const $cart=load(cartHeader,{},false);
+const $full=load(chrome.Header,{},false);
+const drawer=$full('.hamburguer').first();
+if(!drawer.length)throw new Error('hamburger block not found in the captured header');
+const cartRow=$cart('.main-bar.simples .row').first();
+if(!cartRow.length)throw new Error('simplified bar row not found in the captured cart header');
+cartRow.prepend($full.html(drawer));
+chrome.HeaderCart=$cart.html();
 const pageFragments=Object.fromEntries(Object.entries(fragments).filter(([n])=>!chromeNames.includes(n)));
 fs.mkdirSync(shared,{recursive:true});
 fs.writeFileSync(`${shared}/chrome.json`,JSON.stringify(chrome,null,2));

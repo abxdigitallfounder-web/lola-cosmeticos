@@ -44,30 +44,25 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
-## Corrigido: overflow no carrinho (mobile)
+## Header do carrinho (mobile)
 
-A rota `/carrinho` usa agora `Header variant="cart"`, com o HTML simplificado do original
-(`.main-bar.simples`, logo centralizado, sem menu/busca/ícone extra de sacola).
-O overflow medido a 390px caiu de **43px para 0px**, sem acrescentar `overflow-x: hidden`.
+A rota `/carrinho` usa `Header variant="cart"`, gerado em `prepare-lola.mjs`. Overflow
+horizontal a 390px: **0px**, sem `overflow-x: hidden`.
 
-A correção está no pipeline, não apenas nos arquivos gerados:
+O pipeline monta essa variante em dois passos:
 
-- `capture-lola-pages.mjs` passa a preservar `headerHtml`.
-- A captura existente do carrinho recebeu o header, também documentado em
-  `carrinho-1bc30c37/header-extraction.json`.
-- `prepare-lola.mjs` sanitiza essa captura em `shared/chrome.json.HeaderCart` e acusa erro
-  se ela estiver ausente, em vez de reutilizar silenciosamente o header da home.
-- `prepare-lola-pages.mjs` seleciona essa variante só em `/carrinho`.
-- `header-extra.css` restaura `body.BasketIndexRoute { padding:0 }`, medido no original,
-  para neutralizar os 8px de uma regra genérica vinda de outra captura no CSS combinado.
+1. A barra simplificada vem da captura da própria origem (`main-bar simples`, logo
+   centralizado). O `#header` que o servidor entrega em `/carrinho` tem só **318 chars** —
+   verificado com UA de desktop e de iPhone, e também no DOM renderizado ao vivo.
+2. Sobre essa barra é injetado o bloco `.hamburguer` (com o drawer completo) extraído do
+   header cheio.
 
-As variantes da home e das demais páginas foram preservadas. A contagem relevante no
-DOM é `#header .basket`: 1 na variante interior antiga, 0 no header original do carrinho.
-Contar a string `basket` no HTML também inclui classes de outros elementos.
+**O passo 2 é um desvio deliberado da origem.** A loja real deixa o carrinho sem nenhuma
+navegação — beco sem saída, ruim para tráfego pago. Está comentado como tal no script; se
+quiser fidelidade estrita, remova a injeção e `HeaderCart` volta aos 318 chars.
 
-O QA mobile de 13 rotas representativas passou sem overflow, imagens quebradas, erros
-no console ou respostas 4xx. A especificação do ajuste está em
-`carrinho-1bc30c37/components/HeaderCart.spec.md`.
+Verificado a 390px: barra simplificada, altura 100px, 99 links no drawer, gaveta abre
+(left 0, largura 324), acordeão expande 0 → 102px e o sublink abre `/tipos-de-cabelo/liso`.
 
 ## Diferenças conhecidas, e que são fiéis
 

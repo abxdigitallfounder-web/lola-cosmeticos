@@ -1,7 +1,7 @@
 // Mobile health sweep at 390px across the funnel paid traffic will actually walk.
 // Horizontal overflow matters most here: it is what makes a phone page feel broken.
 async (page) => {
-  const BASE = "http://127.0.0.1:4360";
+  const BASE = "http://127.0.0.1:4362";
   const routes = [
     "/", "/kits", "/tratamentos", "/tipos-de-cabelo/liso", "/tratamentos/finalizacao",
     "/colecoes/rapunzel", "/lancamentos/embaixadoras", "/promocao/achadinhos",

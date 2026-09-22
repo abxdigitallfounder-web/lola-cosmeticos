@@ -9,8 +9,14 @@ import { useEffect } from "react";
 export default function BodyClass({ value }: { value: string }) {
   useEffect(() => {
     const previous = document.body.className;
+    const previousPath = document.documentElement.getAttribute("data-lola-path");
     document.body.className = value;
-    return () => { document.body.className = previous; };
+    document.documentElement.setAttribute("data-lola-path", window.location.pathname);
+    return () => {
+      document.body.className = previous;
+      if (previousPath === null) document.documentElement.removeAttribute("data-lola-path");
+      else document.documentElement.setAttribute("data-lola-path", previousPath);
+    };
   }, [value]);
   return null;
 }

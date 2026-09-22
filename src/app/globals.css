@@ -1,4 +1,8 @@
-@import "tailwindcss";
+/* The captured storefront supplies its own reset. Tailwind Preflight changes its
+   content-box widths, image baselines and line heights, displacing product imagery. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
