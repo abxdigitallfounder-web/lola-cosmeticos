@@ -32,6 +32,13 @@ for(const sheet of raw.stylesheets){if(sheet.url&&manifest[sheet.url])css+='\n'+
 css+='\n'+d.inlineStyles.join('\n');
 css=rewrite(css).replace(/@import\s+[^;]+;/g,'').replace(/@charset\s+[^;]+;/g,'');
 fs.writeFileSync(`public/sites/${site}/source.css`,css);
+
+// The source bundles slick's stylesheet, whose url() references stay relative to wherever
+// that stylesheet sits. source.css is served from this directory, so slick's own runtime
+// assets are copied here under the exact names those references use.
+fs.copyFileSync('node_modules/slick-carousel/slick/ajax-loader.gif',`public/sites/${site}/ajax-loader.gif`);
+fs.mkdirSync(`public/sites/${site}/fonts`,{recursive:true});
+for(const font of fs.readdirSync('node_modules/slick-carousel/slick/fonts'))fs.copyFileSync(`node_modules/slick-carousel/slick/fonts/${font}`,`public/sites/${site}/fonts/${font}`);
 let sliderIndex=0;
 function clean(html){const $=load(html,{},false);$('script,iframe,style,noscript').remove();$('*').each((i,e)=>{for(const k of Object.keys(e.attribs||{})){if(/^on/i.test(k)||['data-bind','data-widget-js','data-messages'].includes(k))$(e).removeAttr(k);}if(e.tagName==='a'){const href=$(e).attr('href');if(href&&href!=='/'&&!href.startsWith('#')&&!/^(https?:|mailto:|tel:)/.test(href))$(e).attr('href',new URL(href,'https://www.lolacosmetics.com.br').href);if(/^javascript:/i.test(href||''))$(e).attr('href','#');}if(e.tagName==='form')$(e).removeAttr('action').removeAttr('method');});
 $('.slick-slider').each((i,e)=>{const sl=$(e);const contents=sl.find('> .slick-list > .slick-track > :not(.slick-cloned)').toArray().map(c=>$(c).children().children().toString()).join('');const opt=options[sliderIndex++]?.options||options[2].options;sl.html(contents).removeClass('slick-initialized slick-slider slick-dotted').attr('data-lola-slider',JSON.stringify(opt));sl.find('[tabindex]').removeAttr('tabindex');});

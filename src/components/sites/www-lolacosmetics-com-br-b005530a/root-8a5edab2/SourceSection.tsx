@@ -10,7 +10,11 @@ export default function SourceSection({ name }: { name: LolaSectionName }) {
     let cleanup: (() => void) | undefined;
     async function initialize() {
       const { default: $ } = await import("jquery");
-      await import("slick-carousel");
+      // Under a bundler slick's UMD exports a factory instead of registering itself, so
+      // importing it decorates nothing; calling it is what defines $.fn.slick, and passing
+      // our instance keeps it off the separate copy its own require("jquery") would load.
+      const { default: registerSlick } = await import("slick-carousel");
+      registerSlick(window, $);
       if (disposed || !ref.current) return;
       const sliders = $(ref.current).find("[data-lola-slider]");
       sliders.each(function () {

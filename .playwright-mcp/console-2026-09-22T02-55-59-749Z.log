@@ -1,0 +1,3 @@
+[     470ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4322/:0
+[     472ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4322/:0
+[     841ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4322/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/ajax-loader.gif:0

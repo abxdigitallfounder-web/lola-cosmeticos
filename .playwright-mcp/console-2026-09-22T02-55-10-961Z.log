@@ -1,0 +1,32 @@
+[     500ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4321/:0
+[     503ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4321/:0
+[     997ms] TypeError: t.slick is not a function
+    at HTMLDivElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
+[     998ms] TypeError: t.slick is not a function
+    at HTMLDivElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
+[     998ms] TypeError: t.slick is not a function
+    at HTMLUListElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
+[     998ms] TypeError: t.slick is not a function
+    at HTMLUListElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
+[     998ms] TypeError: t.slick is not a function
+    at HTMLUListElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
+[     998ms] TypeError: t.slick is not a function
+    at HTMLUListElement.<anonymous> (http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:11025)
+    at C.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:2856)
+    at C.fn.init.each (http://127.0.0.1:4321/_next/static/chunks/2174j2_logrc2.js:1:1366)
+    at http://127.0.0.1:4321/_next/static/chunks/3k-04yhq463eq.js:1:10905
