@@ -1,0 +1,40 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * marvin:
+ *   - http://typekit.com/eulas/00000000000000007735cbe9
+ * marvin-round:
+ *   - http://typekit.com/eulas/00000000000000007735cbea
+ * marvin-shadow:
+ *   - http://typekit.com/eulas/00000000000000007735cbec
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2026-03-26 18:46:44 UTC"}*/
+
+@import url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/p-88a2775588.css");
+
+@font-face {
+font-family:"marvin";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-4dc699a525.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-ac058c4c85.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-34e6975e25.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"marvin-round";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-d476b8d201.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-c9dc763d09.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-ed39d9a3f3.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"marvin-shadow";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-fc78e5fef8.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-2dda7a294f.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-2d98d64230.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-marvin { font-family: "marvin",sans-serif; }
+.tk-marvin-round { font-family: "marvin-round",sans-serif; }
+.tk-marvin-shadow { font-family: "marvin-shadow",sans-serif; }

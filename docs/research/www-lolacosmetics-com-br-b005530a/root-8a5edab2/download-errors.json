@@ -48,19 +48,19 @@
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://trustvox.com.br/widget/root?&code=45642&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fbe-m-dita-ghee-cronograma-100g-p46049&name=Be(m)dita+Ghee+-+Cronograma+100g&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F04%2F46049_be-m-dita-ghee-cronograma-100g_s1_638654564301393702.webp",
-    "error": "Error: HTTP 404"
-  },
-  {
     "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content",
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Extratos-vegetais-1024x576.png",
+    "url": "https://trustvox.com.br/widget/root?&code=45642&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fbe-m-dita-ghee-cronograma-100g-p46049&name=Be(m)dita+Ghee+-+Cronograma+100g&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F04%2F46049_be-m-dita-ghee-cronograma-100g_s1_638654564301393702.webp",
     "error": "Error: HTTP 404"
   },
   {
     "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Acai-da-tradicao-indigena-ao-sucesso-internacional%20(1).png",
+    "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Extratos-vegetais-1024x576.png",
     "error": "Error: HTTP 404"
   },
   {
@@ -93,6 +93,14 @@
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=45637&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fchapada-sabonete-cremoso-280g-ps-19629-110-p45637&name=CHAPADA+QUE+J%C3%81+FOI+MAR+-+SABONETE+CREMOSO+280G&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F45%2F63%2F45637_chapada-sabonete-cremoso-280g-ps-19629-110_s3_638621808151955730.webp",
+    "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://www.lolacosmetics.com.br/Custom/Content/Themes/Lola/Templates/CronoLola%20LP/assets/etapa-02/stage-nutricao-texture.svg",
+    "error": "Error: HTTP 403"
+  },
+  {
+    "url": "https://static.lojalolacosmetics.com.br/biblioteca_media/paginas/20211021143954_1663998337.png",
     "error": "Error: HTTP 404"
   },
   {
@@ -140,7 +148,7 @@
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/coco.webp",
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/babosa.webp",
     "error": "Error: HTTP 404"
   },
   {
@@ -148,7 +156,7 @@
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/babosa.webp",
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/coco.webp",
     "error": "Error: HTTP 404"
   },
   {
@@ -345,6 +353,10 @@
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46391&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fvolumao-spray-250ml-ps-19629-322-p46391&name=Volum%C3%A3o+Spray+250ml&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F39%2F46391_volumao-spray-250ml-ps-19629-322_s1_639196480666432479.webp",
+    "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content/Themes/Lola/CSS/ttps://lolacosmetics.admin.core.dcg.com.br/Custom/Content/Themes/Lola/Imagens/anterior-pager-hover.svg",
     "error": "Error: HTTP 404"
   }
 ]

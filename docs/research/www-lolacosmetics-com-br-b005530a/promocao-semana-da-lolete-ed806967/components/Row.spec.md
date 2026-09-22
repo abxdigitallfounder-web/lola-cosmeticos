@@ -1,0 +1,34 @@
+# Row Specification
+
+## Overview
+- Target: src/components/sites/www-lolacosmetics-com-br-b005530a/promocao-semana-da-lolete-ed806967/Row.tsx
+- Route: /promocao/semana-da-lolete (category)
+- Source: https://www.lolacosmetics.com.br/promocao/semana-da-lolete
+- Screenshot: docs/design-references/www-lolacosmetics-com-br-b005530a/promocao-semana-da-lolete-ed806967/desktop-1440.png
+- Interaction: replayed source markup; links, hover and local UI controls
+
+## DOM Structure
+Sanitized source markup for `.row` is stored as fragments.Row
+in fragments.json and rendered through the shared SourceSection, which re-initializes any
+slick slider inside it. The original class names and inline SVGs are preserved so the
+theme's own CSS in source.css applies unchanged.
+
+## Computed Styles
+No per-element computed capture for this page; the original declarations in source.css
+govern it. The shell reproduces body class "column-1 context-category-1828 grid-products" and #main class "context-category-1828 grid-products",
+which the theme's descendant selectors depend on.
+
+## States & Behaviors
+Native scrolling and the shared fixed header. Forms are inert: the capture strips their
+action and method, and checkout, login and newsletter stay demo-only.
+
+## Assets
+URLs are rewritten through asset-manifest.json to /sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/, the
+shared store for this site's single theme.
+
+## Text Content (verbatim)
+$context = { Browsing: { Name: 'Semana da Lolete', FullPathName: '/PROMOÇÃO/Semana da Lolete', Grid: { Facets: [{"FieldName":"CS1_CategoryNames","PropertyMetadataID":35,"PropertyDisplayName":"Nome da categoria","SearchFacetID":11,"Alias":"category","Name":"Categoria","Priority":1,"Selection":"Multiples","Facet":"Dynamic","Sort":"AlphaAsc","ShowEmptyFacets":false,"WidgetName":"facet_type_levels","WidgetProperties":null,"InitClosed":false,"Limit":1000,"MaxOptions":null,"MinOptions":null,"MinRange":null,"UrlPattern":"categoria-{value}","UrlPatternRange":"","UrlPatternStart":"","UrlPatternEnd":"","LabelPattern":"{value}","LabelPatternRange":"","LabelPatternStart":"","LabelPatternEnd":"","Prefix":null,"Offset":null,"ParameterPatternFormatted":"p-categoria-{name}:{value}","Stats":null,"AvailableOptions":[{"Url":"categoria--colecoes","Label":"/Coleções","Count":33,"Value":"/Coleções","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-argan-oil","Label":"/Coleções/Argan Oil","Count":1,"Value":"/Coleções/Argan Oil","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-babados-do-brasil","Label":"/Coleções/Babados do Brasil","Count":3,"Value":"/Coleções/Babados do Brasil","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-be-m-dita-ghee","Label":"/Coleções/Be(m)dita Ghee","Count":3,"Value":"/Coleções/Be(m)dita Ghee","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-danos-vorazes","Label":"/Coleções/Danos Vorazes","Count":2,"Value":"/Coleções/Danos Vorazes","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-drama-queen","Label":"/Coleções/Drama Queen","Count":2,"Value":"/Coleções/Drama Queen","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-ela-e-carioca","Label":"/Coleções/Ela é Carioca","Count":4,"Value":"/Coleções/Ela é Carioca","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-eu-sei-o-que-voce-fez-na-quimica-passada-","Label":"/Coleções/Eu sei o que você fez na química passada!","Count":1,"Value":"/Coleções/Eu sei o que você fez na química passada!","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-loira-de-farmacia","Label":"/Coleções/Loira de Farmácia","Count":2,"Value":"/Coleções/Loira de Farmácia","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-lola-kids","Label":"/Coleções/Lola Kids","Count":1,"Value":"/Coleções/Lola Kids","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"GroupName":null},{"Url":"categoria--colecoes-meu-cacho-minha-vida","Label":"/Coleções/Meu Cacho minha Vida","Count":1,"Value":"/Coleções/Meu Cacho minha Vida","Start":null,"End":null,"MetadataPath":"","HasMetadataOption":false,"Title":"","Color":"","HasImage":false,"ImagePath":"","Reference":"","Order":0,"
+
+## Responsive Behavior
+Captured at 1440 with a 390 pass recorded in mobile-extraction.json. The theme's own media
+queries drive the layout; the header switches at 1100px.

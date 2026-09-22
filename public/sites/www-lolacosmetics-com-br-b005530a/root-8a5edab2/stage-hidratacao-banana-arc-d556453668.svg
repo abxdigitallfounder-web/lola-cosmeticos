@@ -1,0 +1,22 @@
+<svg width="137.6" height="145.4" preserveAspectRatio="xMidYMid meet" overflow="visible" style="display: block;" viewBox="0 0 137.6 145.4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="banana 2" filter="url(#filter0_d_0_142)">
+<g id="Vector">
+<path d="M113.002 3.7H98.6958L101.314 23.576L102.165 24.7212L117.421 21.0395V19.5493L113.002 3.7Z" fill="#A14603"/>
+<path d="M117.421 19.5493C117.421 19.5493 140.575 46.327 129.501 84.7824C115.45 133.576 50.5227 147.346 15.9338 119.388C12.5406 116.645 11.7177 111.802 13.9419 108.048C15.6134 105.228 18.707 103.569 21.9821 103.725C34.6441 104.326 67.4219 103.364 88.0259 79.9503C105.743 59.8166 101.314 23.576 101.314 23.576L117.421 19.5493Z" fill="#FFE470"/>
+<path d="M117.421 19.5493L113.002 3.7H105.761L109.839 22.8692L117.421 21.0395V19.5493Z" fill="#6F2E01"/>
+<path d="M117.421 19.5493L109.551 21.5169L115.277 48.4322C124.49 92.1117 83.9852 129.939 41.0367 117.764L13.1281 109.853C12.0333 113.247 13.0646 117.068 15.9338 119.388C50.5227 147.346 115.45 133.576 129.501 84.7824C140.575 46.327 117.421 19.5493 117.421 19.5493Z" fill="var(--fill-0, #FFD400)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_142" x="-5.09992" y="0" width="145.4" height="145.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-5" dy="4"/>
+<feGaussianBlur stdDeviation="3.85"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.592157 0 0 0 0 0.278431 0 0 0 0 1 0 0 0 0.3 0"/>
+<feBlend mode="color-burn" in2="BackgroundImageFix" result="effect1_dropShadow_0_142"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_142" result="shape"/>
+</filter>
+</defs>
+</svg>
