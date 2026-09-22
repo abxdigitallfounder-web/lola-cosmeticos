@@ -1,0 +1,705 @@
+- generic [active] [ref=f1046e1]:
+  - generic [ref=f1046e2]:
+    - generic [ref=f1046e6]:
+      - generic [ref=f1046e7]:
+        - heading [level=1] [ref=f1046e9]:
+          - link "Lola Cosmetics" [ref=f1046e10] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f1046e13]:
+          - textbox "O que você procura?" [ref=f1046e15]
+          - button "Buscar" [ref=f1046e16] [cursor=pointer]
+        - generic [ref=f1046e17]:
+          - link "Rastrear pedido" [ref=f1046e19] [cursor=pointer]:
+            - /url: https://lolacosmetics.cademeupedido.com.br/
+          - link [ref=f1046e32] [cursor=pointer]:
+            - /url: /painel-do-cliente
+          - generic [ref=f1046e37]:
+            - link [ref=f1046e38] [cursor=pointer]:
+              - /url: /carrinho
+              - emphasis [ref=f1046e44]: "0"
+            - generic [ref=f1046e45]:
+              - generic [ref=f1046e46] [cursor=pointer]: x
+              - generic [ref=f1046e53]:
+                - strong [ref=f1046e54]: Minha sacola
+                - generic [ref=f1046e55]: contém 0 itens
+              - generic [ref=f1046e56]:
+                - generic [ref=f1046e58]:
+                  - generic [ref=f1046e59]: :(
+                  - paragraph [ref=f1046e60]:
+                    - strong [ref=f1046e61]: Não há produtos na sua sacola.
+                    - text: Que tal conferir algumas ofertas?
+                - generic [ref=f1046e62]:
+                  - list [ref=f1046e64]:
+                    - listitem [ref=f1046e65]: Subtotal
+                    - listitem [ref=f1046e66]: R$ 0,00
+                  - button "Finalizar Compra" [ref=f1046e67] [cursor=pointer]
+                  - generic [ref=f1046e68] [cursor=pointer]: Continuar comprando
+      - navigation [ref=f1046e73]:
+        - list [ref=f1046e74]:
+          - listitem [ref=f1046e75]:
+            - heading [level=3] [ref=f1046e76]:
+              - link "KITS" [ref=f1046e77] [cursor=pointer]:
+                - /url: /kits
+          - listitem [ref=f1046e78]:
+            - heading [level=3] [ref=f1046e79]:
+              - link "TIPOS DE CABELO" [ref=f1046e80] [cursor=pointer]:
+                - /url: /tipos-de-cabelo
+            - list:
+              - listitem [ref=f1046e81]:
+                - heading [level=4] [ref=f1046e82]:
+                  - link "Lisos" [ref=f1046e83] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/liso
+              - listitem [ref=f1046e84]:
+                - heading [level=4] [ref=f1046e85]:
+                  - link "Cachos & Curvas" [ref=f1046e86] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/cacheado
+              - listitem [ref=f1046e87]:
+                - heading [level=4] [ref=f1046e88]:
+                  - link "Todos os tipos de cabelos" [ref=f1046e89] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/todos-os-tipos
+          - listitem [ref=f1046e90]:
+            - heading [level=3] [ref=f1046e91]:
+              - link "TRATAMENTOS" [ref=f1046e92] [cursor=pointer]:
+                - /url: /tratamentos
+            - list:
+              - listitem [ref=f1046e93]:
+                - heading [level=4] [ref=f1046e94]:
+                  - link "Uso diário" [ref=f1046e95] [cursor=pointer]:
+                    - /url: /tratamentos/uso-diario
+              - listitem [ref=f1046e96]:
+                - heading [level=4] [ref=f1046e97]:
+                  - link "Cronograma Capilar" [ref=f1046e98] [cursor=pointer]:
+                    - /url: /tratamentos/cronograma-capilar
+                  - button [ref=f1046e99] [cursor=pointer]
+              - listitem [ref=f1046e103]:
+                - heading [level=4] [ref=f1046e104]:
+                  - link "SOS Reparação" [ref=f1046e105] [cursor=pointer]:
+                    - /url: /tratamentos/sos-reparacao
+              - listitem [ref=f1046e106]:
+                - heading [level=4] [ref=f1046e107]:
+                  - link "Brilho" [ref=f1046e108] [cursor=pointer]:
+                    - /url: /tratamentos/brilho
+              - listitem [ref=f1046e109]:
+                - heading [level=4] [ref=f1046e110]:
+                  - link "Fortalecimento" [ref=f1046e111] [cursor=pointer]:
+                    - /url: /tratamentos/fortalecimento
+              - listitem [ref=f1046e112]:
+                - heading [level=4] [ref=f1046e113]:
+                  - link "Finalização" [ref=f1046e114] [cursor=pointer]:
+                    - /url: /tratamentos/finalizacao
+                  - button [ref=f1046e115] [cursor=pointer]
+              - listitem [ref=f1046e119]:
+                - heading [level=4] [ref=f1046e120]:
+                  - link "Cuidados específicos" [ref=f1046e121] [cursor=pointer]:
+                    - /url: /tratamentos/cuidados-especificos
+                  - button [ref=f1046e122] [cursor=pointer]
+              - listitem [ref=f1046e126]:
+                - heading [level=4] [ref=f1046e127]:
+                  - link "Ver Tudo" [ref=f1046e128] [cursor=pointer]:
+                    - /url: /tratamentos
+          - listitem [ref=f1046e129]:
+            - heading [level=3] [ref=f1046e130]:
+              - link "Coleções" [ref=f1046e131] [cursor=pointer]:
+                - /url: /colecoes
+            - list:
+              - listitem [ref=f1046e132]:
+                - heading [level=4] [ref=f1046e133]:
+                  - link "A Fórmula" [ref=f1046e134] [cursor=pointer]:
+                    - /url: /colecoes/a-formula
+              - listitem [ref=f1046e135]:
+                - heading [level=4] [ref=f1046e136]:
+                  - link "Argan Oil" [ref=f1046e137] [cursor=pointer]:
+                    - /url: /colecoes/argan-oil
+              - listitem [ref=f1046e138]:
+                - heading [level=4] [ref=f1046e139]:
+                  - link "Babados Da Lola" [ref=f1046e140] [cursor=pointer]:
+                    - /url: /colecoes/babados-da-lola
+                  - button [ref=f1046e141] [cursor=pointer]
+              - listitem [ref=f1046e145]:
+                - heading [level=4] [ref=f1046e146]:
+                  - link "Babados do Brasil" [ref=f1046e147] [cursor=pointer]:
+                    - /url: /colecoes/babados-do-brasil
+              - listitem [ref=f1046e148]:
+                - heading [level=4] [ref=f1046e149]:
+                  - link "Banana Tropicana" [ref=f1046e150] [cursor=pointer]:
+                    - /url: /colecoes/banana-tropicana
+              - listitem [ref=f1046e151]:
+                - heading [level=4] [ref=f1046e152]:
+                  - link "Basicão" [ref=f1046e153] [cursor=pointer]:
+                    - /url: /colecoes/basicao
+              - listitem [ref=f1046e154]:
+                - heading [level=4] [ref=f1046e155]:
+                  - link "Be(m)dita Ghee" [ref=f1046e156] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-ghee
+              - listitem [ref=f1046e157]:
+                - heading [level=4] [ref=f1046e158]:
+                  - link "Be(m)dita Praia" [ref=f1046e159] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-praia
+              - listitem [ref=f1046e160]:
+                - heading [level=4] [ref=f1046e161]:
+                  - link "Bossa" [ref=f1046e162] [cursor=pointer]:
+                    - /url: /colecoes/bossa
+              - listitem [ref=f1046e163]:
+                - heading [level=4] [ref=f1046e164]:
+                  - link "Brancos e Grisalhos" [ref=f1046e165] [cursor=pointer]:
+                    - /url: /colecoes/brancos-e-grisalhos
+              - listitem [ref=f1046e166]:
+                - heading [level=4] [ref=f1046e167]:
+                  - link "Camomila" [ref=f1046e168] [cursor=pointer]:
+                    - /url: /colecoes/camomila
+              - listitem [ref=f1046e169]:
+                - heading [level=4] [ref=f1046e170]:
+                  - link "Cereal Killer" [ref=f1046e171] [cursor=pointer]:
+                    - /url: /colecoes/cereal-killer
+              - listitem [ref=f1046e172]:
+                - heading [level=4] [ref=f1046e173]:
+                  - link "Comigo Ninguém Pode" [ref=f1046e174] [cursor=pointer]:
+                    - /url: /colecoes/comigo-ninguem-pode
+              - listitem [ref=f1046e175]:
+                - heading [level=4] [ref=f1046e176]:
+                  - link "Cuca Fresca" [ref=f1046e177] [cursor=pointer]:
+                    - /url: /colecoes/cuca-fresca
+              - listitem [ref=f1046e178]:
+                - heading [level=4] [ref=f1046e179]:
+                  - link "Danos Vorazes" [ref=f1046e180] [cursor=pointer]:
+                    - /url: /colecoes/danos-vorazes
+              - listitem [ref=f1046e181]:
+                - heading [level=4] [ref=f1046e182]:
+                  - link "Densidade" [ref=f1046e183] [cursor=pointer]:
+                    - /url: /colecoes/densidade
+              - listitem [ref=f1046e184]:
+                - heading [level=4] [ref=f1046e185]:
+                  - link "Drama Queen" [ref=f1046e186] [cursor=pointer]:
+                    - /url: /colecoes/drama-queen
+              - listitem [ref=f1046e187]:
+                - heading [level=4] [ref=f1046e188]:
+                  - link "Dream Cream" [ref=f1046e189] [cursor=pointer]:
+                    - /url: /colecoes/dream-cream
+              - listitem [ref=f1046e190]:
+                - heading [level=4] [ref=f1046e191]:
+                  - link "Ela é Carioca" [ref=f1046e192] [cursor=pointer]:
+                    - /url: /colecoes/ela-e-carioca
+              - listitem [ref=f1046e193]:
+                - heading [level=4] [ref=f1046e194]:
+                  - link "Eu sei o que você fez na química passada!" [ref=f1046e195] [cursor=pointer]:
+                    - /url: /colecoes/eu-sei-o-que-voce-fez-na-quimica-passada
+              - listitem [ref=f1046e196]:
+                - heading [level=4] [ref=f1046e197]:
+                  - link "Exterminador de Frizz" [ref=f1046e198] [cursor=pointer]:
+                    - /url: /colecoes/exterminador-de-frizz
+              - listitem [ref=f1046e199]:
+                - heading [level=4] [ref=f1046e200]:
+                  - link "Kit Celebridades" [ref=f1046e201] [cursor=pointer]:
+                    - /url: /colecoes/kit-celebridades
+              - listitem [ref=f1046e202]:
+                - heading [level=4] [ref=f1046e203]:
+                  - link "Liso, leve e and solto" [ref=f1046e204] [cursor=pointer]:
+                    - /url: /colecoes/liso-leve-e-and-solto
+              - listitem [ref=f1046e205]:
+                - heading [level=4] [ref=f1046e206]:
+                  - link "Loira de Farmácia" [ref=f1046e207] [cursor=pointer]:
+                    - /url: /colecoes/loira-de-farmacia
+              - listitem [ref=f1046e208]:
+                - heading [level=4] [ref=f1046e209]:
+                  - link "Lola Kids" [ref=f1046e210] [cursor=pointer]:
+                    - /url: /colecoes/lola-kids
+              - listitem [ref=f1046e211]:
+                - heading [level=4] [ref=f1046e212]:
+                  - link "Lola Vintage Girls" [ref=f1046e213] [cursor=pointer]:
+                    - /url: /colecoes/lola-vintage-girls
+              - listitem [ref=f1046e214]:
+                - heading [level=4] [ref=f1046e215]:
+                  - link "Meu Cacho minha Vida" [ref=f1046e216] [cursor=pointer]:
+                    - /url: /colecoes/meu-cacho-minha-vida
+              - listitem [ref=f1046e217]:
+                - heading [level=4] [ref=f1046e218]:
+                  - link "Milagre!" [ref=f1046e219] [cursor=pointer]:
+                    - /url: /colecoes/milagre
+              - listitem [ref=f1046e220]:
+                - heading [level=4] [ref=f1046e221]:
+                  - link "Morte Súbita" [ref=f1046e222] [cursor=pointer]:
+                    - /url: /colecoes/morte-subita
+              - listitem [ref=f1046e223]:
+                - heading [level=4] [ref=f1046e224]:
+                  - link "Papo Reto" [ref=f1046e225] [cursor=pointer]:
+                    - /url: /colecoes/papo-reto
+              - listitem [ref=f1046e226]:
+                - heading [level=4] [ref=f1046e227]:
+                  - link "Pinga!" [ref=f1046e228] [cursor=pointer]:
+                    - /url: /colecoes/pinga
+              - listitem [ref=f1046e229]:
+                - heading [level=4] [ref=f1046e230]:
+                  - link "Plot Twist" [ref=f1046e231] [cursor=pointer]:
+                    - /url: /colecoes/plot-twist
+              - listitem [ref=f1046e232]:
+                - heading [level=4] [ref=f1046e233]:
+                  - link "Purple" [ref=f1046e234] [cursor=pointer]:
+                    - /url: /colecoes/purple
+              - listitem [ref=f1046e235]:
+                - heading [level=4] [ref=f1046e236]:
+                  - link "Rapunzel" [ref=f1046e237] [cursor=pointer]:
+                    - /url: /colecoes/rapunzel
+              - listitem [ref=f1046e238]:
+                - heading [level=4] [ref=f1046e239]:
+                  - link "Tannic Acid" [ref=f1046e240] [cursor=pointer]:
+                    - /url: /colecoes/tannic-acid
+              - listitem [ref=f1046e241]:
+                - heading [level=4] [ref=f1046e242]:
+                  - link "Tarja Preta" [ref=f1046e243] [cursor=pointer]:
+                    - /url: /colecoes/tarja-preta
+              - listitem [ref=f1046e244]:
+                - heading [level=4] [ref=f1046e245]:
+                  - link "Transição" [ref=f1046e246] [cursor=pointer]:
+                    - /url: /colecoes/transicao
+              - listitem [ref=f1046e247]:
+                - heading [level=4] [ref=f1046e248]:
+                  - link "Umectação" [ref=f1046e249] [cursor=pointer]:
+                    - /url: /colecoes/umectacao
+              - listitem [ref=f1046e250]:
+                - heading [level=4] [ref=f1046e251]:
+                  - link "Volumão" [ref=f1046e252] [cursor=pointer]:
+                    - /url: /colecoes/volumao
+              - listitem [ref=f1046e253]:
+                - heading [level=4] [ref=f1046e254]:
+                  - link "Xapadinha" [ref=f1046e255] [cursor=pointer]:
+                    - /url: /colecoes/xapadinha
+              - listitem [ref=f1046e256]:
+                - heading [level=4] [ref=f1046e257]:
+                  - link "Lolaterapia" [ref=f1046e258] [cursor=pointer]:
+                    - /url: /colecoes/lolaterapia
+              - listitem [ref=f1046e259]:
+                - heading [level=4] [ref=f1046e260]:
+                  - link "Ver Tudo" [ref=f1046e261] [cursor=pointer]:
+                    - /url: /colecoes
+          - listitem [ref=f1046e262]:
+            - heading [level=3] [ref=f1046e263]:
+              - link "LANÇAMENTOS" [ref=f1046e264] [cursor=pointer]:
+                - /url: /lancamentos
+            - list:
+              - listitem [ref=f1046e265]:
+                - heading [level=4] [ref=f1046e266]:
+                  - link "Embaixadoras" [ref=f1046e267] [cursor=pointer]:
+                    - /url: /lancamentos/embaixadoras
+              - listitem [ref=f1046e268]:
+                - heading [level=4] [ref=f1046e269]:
+                  - link "Banana Tropicana" [ref=f1046e270] [cursor=pointer]:
+                    - /url: /lancamentos/banana-tropicana
+              - listitem [ref=f1046e271]:
+                - heading [level=4] [ref=f1046e272]:
+                  - link "Volumão" [ref=f1046e273] [cursor=pointer]:
+                    - /url: /lancamentos/volumao
+              - listitem [ref=f1046e274]:
+                - heading [level=4] [ref=f1046e275]:
+                  - link "Basicão" [ref=f1046e276] [cursor=pointer]:
+                    - /url: /lancamentos/basicao
+              - listitem [ref=f1046e277]:
+                - heading [level=4] [ref=f1046e278]:
+                  - link "Ghee Açaí" [ref=f1046e279] [cursor=pointer]:
+                    - /url: /lancamentos/ghee-acai
+              - listitem [ref=f1046e280]:
+                - heading [level=4] [ref=f1046e281]:
+                  - link "Tannic Acid" [ref=f1046e282] [cursor=pointer]:
+                    - /url: /lancamentos/tannic-acid
+              - listitem [ref=f1046e283]:
+                - heading [level=4] [ref=f1046e284]:
+                  - link "Cuca Fresca" [ref=f1046e285] [cursor=pointer]:
+                    - /url: /lancamentos/cuca-fresca
+              - listitem [ref=f1046e286]:
+                - heading [level=4] [ref=f1046e287]:
+                  - link "A Fórmula" [ref=f1046e288] [cursor=pointer]:
+                    - /url: /lancamentos/a-formula
+              - listitem [ref=f1046e289]:
+                - heading [level=4] [ref=f1046e290]:
+                  - link "Bossa" [ref=f1046e291] [cursor=pointer]:
+                    - /url: /lancamentos/bossa
+              - listitem [ref=f1046e292]:
+                - heading [level=4] [ref=f1046e293]:
+                  - link "Kits de presente" [ref=f1046e294] [cursor=pointer]:
+                    - /url: /lancamentos/kits-de-presente
+              - listitem [ref=f1046e295]:
+                - heading [level=4] [ref=f1046e296]:
+                  - link "Ver Tudo" [ref=f1046e297] [cursor=pointer]:
+                    - /url: /lancamentos
+          - listitem [ref=f1046e298]:
+            - heading [level=3] [ref=f1046e299]:
+              - link "PROMOÇÃO" [ref=f1046e300] [cursor=pointer]:
+                - /url: /promocao
+            - list:
+              - listitem [ref=f1046e301]:
+                - heading [level=4] [ref=f1046e302]:
+                  - link "Achadinhos" [ref=f1046e303] [cursor=pointer]:
+                    - /url: /promocao/achadinhos
+              - listitem [ref=f1046e304]:
+                - heading [level=4] [ref=f1046e305]:
+                  - link "Semana da Lolete" [ref=f1046e306] [cursor=pointer]:
+                    - /url: /promocao/semana-da-lolete
+              - listitem [ref=f1046e307]:
+                - heading [level=4] [ref=f1046e308]:
+                  - link "Ver Tudo" [ref=f1046e309] [cursor=pointer]:
+                    - /url: /promocao
+    - generic [ref=f1046e312]:
+      - navigation [ref=f1046e313]:
+        - list [ref=f1046e314]:
+          - listitem [ref=f1046e315]:
+            - link "Página Inicial" [ref=f1046e316] [cursor=pointer]:
+              - /url: /
+            - text: ">"
+          - listitem [ref=f1046e318]:
+            - link "Coleções" [ref=f1046e319] [cursor=pointer]:
+              - /url: /colecoes
+            - text: ">"
+          - listitem [ref=f1046e321]:
+            - link "Rapunzel" [ref=f1046e322] [cursor=pointer]:
+              - /url: /colecoes/rapunzel
+            - text: ">"
+          - listitem [ref=f1046e324]:
+            - strong [ref=f1046e325]: Kit Rapunzel - Coleção Completa
+            - text: ">"
+      - article [ref=f1046e328]:
+        - generic [ref=f1046e329]:
+          - generic [ref=f1046e330]:
+            - button "Adicionar à lista de desejos" [ref=f1046e331] [cursor=pointer]
+            - figure [ref=f1046e332]:
+              - img "Kit Rapunzel - Coleção Completa" [ref=f1046e335]
+              - list [ref=f1046e337]:
+                - generic [ref=f1046e339]:
+                  - listitem [ref=f1046e342]:
+                    - img "Kit Rapunzel - Coleção Completa" [ref=f1046e343] [cursor=pointer]
+                  - listitem [ref=f1046e346] [cursor=pointer]:
+                    - img "Kit Rapunzel - Coleção Completa" [ref=f1046e347]
+                  - listitem [ref=f1046e350] [cursor=pointer]:
+                    - img "Kit Rapunzel - Coleção Completa" [ref=f1046e351]
+            - generic [ref=f1046e352]:
+              - group [ref=f1046e353]:
+                - generic "Descrição" [ref=f1046e354] [cursor=pointer]
+                - generic [ref=f1046e356]:
+                  - generic: Descrição
+                  - generic [ref=f1046e357]:
+                    - text: Como usar
+                    - generic [ref=f1046e358]: "Ideal para cabelos frágeis, enfraquecidos, quebradiços ou com dificuldade de crescimento saudável. O Kit Rapunzel combina limpeza estimulante, acidificação fortificante, tratamento da fibra capilar, cuidado diário do couro cabeludo e proteção para comprimento e pontas. Com ativos como Ginkgo biloba, Cafeína, Sodium PCA, ácidos málico, láctico e cítrico, além de extratos vegetais fortalecedores, a rotina auxilia na redução da quebra, no fortalecimento da raiz às pontas e na melhora da resistência dos fios. O novo Rapunzel Acidificante complementa o protocolo ao reequilibrar o pH, reduzir a porosidade e preparar os fios para receber melhor a Máscara Fortificante. Benefícios • Rotina completa de crescimento e fortalecimento capilar; • Limpeza estimulante e refrescante para o couro cabeludo; • Reequilíbrio do pH dos fios; • Redução da porosidade; • Fortalecimento da fibra capilar; • Auxilia na prevenção da quebra; • Ajuda no crescimento saudável dos fios; • Hidratação, desembaraço e proteção para comprimento e pontas; • Fios mais fortes, macios, resistentes e brilhantes. Este kit contém • Rapunzel Shampoo Rejuvenescedor 250ml: limpeza estimulante e refrescante para o couro cabeludo; • Rapunzel Acidificante 250ml: reequilíbrio do pH, redução da porosidade e fortalecimento da fibra capilar; • Rapunzel Máscara 450g: fortalecimento da fibra capilar, brilho, maciez e redução da quebra; • Rapunzel Tônico do Crescimento 250ml: estímulo ao crescimento saudável e fortalecimento da raiz; • Rapunzel Milk Spray Leave-in 250ml: hidratação leve, desembaraço e proteção para fios frágeis."
+              - group [ref=f1046e360]:
+                - generic "Como usar" [ref=f1046e361] [cursor=pointer]
+          - generic [ref=f1046e362]:
+            - heading "Kit Rapunzel - Coleção Completa" [level=1] [ref=f1046e364]
+            - link "4.4 de 5 (15)" [ref=f1046e366] [cursor=pointer]:
+              - /url: /kit-rapunzel-colecao-completa-p46395#trustvox-reviews
+              - generic [ref=f1046e369]:
+                - generic [ref=f1046e370]: 4.4 de 5
+                - generic [ref=f1046e373]: (15)
+            - generic [ref=f1046e378]:
+              - list [ref=f1046e380]:
+                - listitem [ref=f1046e381]:
+                  - list [ref=f1046e382]:
+                    - listitem [ref=f1046e383]:
+                      - img "Lola Cosmetics" [ref=f1046e384]
+                    - listitem [ref=f1046e385]:
+                      - generic [ref=f1046e386]: RAPUNZEL SHAMPOO REJUVENESC 250mL
+                      - generic [ref=f1046e387]:
+                        - deletion [ref=f1046e388]:
+                          - emphasis [ref=f1046e389]: de
+                          - text: R$ 39,90 por
+                        - strong [ref=f1046e390]:
+                          - emphasis [ref=f1046e391]: Por
+                          - text: R$ 27,93
+                - listitem [ref=f1046e392]:
+                  - list [ref=f1046e393]:
+                    - listitem [ref=f1046e394]:
+                      - img "Lola Cosmetics" [ref=f1046e395]
+                    - listitem [ref=f1046e396]:
+                      - generic [ref=f1046e397]: RAPUNZEL MILK SPRAY 250mL
+                      - generic [ref=f1046e398]:
+                        - deletion [ref=f1046e399]:
+                          - emphasis [ref=f1046e400]: de
+                          - text: R$ 59,90 por
+                        - strong [ref=f1046e401]:
+                          - emphasis [ref=f1046e402]: Por
+                          - text: R$ 41,93
+                - listitem [ref=f1046e403]:
+                  - list [ref=f1046e404]:
+                    - listitem [ref=f1046e405]:
+                      - img "Lola Cosmetics" [ref=f1046e406]
+                    - listitem [ref=f1046e407]:
+                      - generic [ref=f1046e408]: RAPUNZEL ACIDIFICANTE 250ML
+                      - generic [ref=f1046e409]:
+                        - deletion [ref=f1046e410]:
+                          - emphasis [ref=f1046e411]: de
+                          - text: R$ 59,90 por
+                        - strong [ref=f1046e412]:
+                          - emphasis [ref=f1046e413]: Por
+                          - text: R$ 41,93
+                - listitem [ref=f1046e414]:
+                  - list [ref=f1046e415]:
+                    - listitem [ref=f1046e416]:
+                      - img "Lola Cosmetics" [ref=f1046e417]
+                    - listitem [ref=f1046e418]:
+                      - generic [ref=f1046e419]: Rapunzel - Máscara 450g
+                      - generic [ref=f1046e420]:
+                        - deletion [ref=f1046e421]:
+                          - emphasis [ref=f1046e422]: de
+                          - text: R$ 64,90 por
+                        - strong [ref=f1046e423]:
+                          - emphasis [ref=f1046e424]: Por
+                          - text: R$ 45,43
+                - listitem [ref=f1046e425]:
+                  - list [ref=f1046e426]:
+                    - listitem [ref=f1046e427]:
+                      - img "Lola Cosmetics" [ref=f1046e428]
+                    - listitem [ref=f1046e429]:
+                      - generic [ref=f1046e430]: RAPUNZEL TONICO DO CRESCIMENTO 250mL
+                      - generic [ref=f1046e431]:
+                        - deletion [ref=f1046e432]:
+                          - emphasis [ref=f1046e433]: de
+                          - text: R$ 69,90 por
+                        - strong [ref=f1046e434]:
+                          - emphasis [ref=f1046e435]: Por
+                          - text: R$ 48,93
+              - generic [ref=f1046e438]:
+                - generic [ref=f1046e440]:
+                  - generic [ref=f1046e441]:
+                    - deletion [ref=f1046e442]:
+                      - emphasis [ref=f1046e443]: de
+                      - generic [ref=f1046e444]: R$ 294,50
+                      - text: por
+                    - strong [ref=f1046e445]: R$ 206,15À vista
+                    - term [ref=f1046e446]: em até 3 x sem juros de R$ 68,72
+                  - generic "-30%" [ref=f1046e447]: 30%
+                - generic [ref=f1046e448]:
+                  - generic [ref=f1046e450]:
+                    - button "-" [disabled] [ref=f1046e451] [cursor=pointer]
+                    - textbox [ref=f1046e452]: "1"
+                    - button "+" [ref=f1046e453] [cursor=pointer]
+                  - button "Adicionar à sacola Comprar" [ref=f1046e460] [cursor=pointer]
+                - generic [ref=f1046e463]:
+                  - strong [ref=f1046e470]: Calcular frete e prazo de entrega
+                  - generic [ref=f1046e471]:
+                    - textbox "Digite seu CEP aqui..." [ref=f1046e473]
+                    - button "OK" [ref=f1046e475] [cursor=pointer]
+        - generic [ref=f1046e482]:
+          - generic [ref=f1046e483]:
+            - heading "Veja o que estão falando sobre este produto" [level=3] [ref=f1046e484]
+            - paragraph [ref=f1046e485]: 15 avaliações de clientes
+          - generic [ref=f1046e486]:
+            - generic [ref=f1046e487]:
+              - generic [ref=f1046e488]:
+                - generic [ref=f1046e489]:
+                  - generic [ref=f1046e490]:
+                    - generic [ref=f1046e491]:
+                      - text: "4.4"
+                      - generic [ref=f1046e492]: / 5
+                    - paragraph [ref=f1046e524]: (15)
+                  - generic [ref=f1046e525]:
+                    - generic [ref=f1046e526]: "5"
+                    - generic [ref=f1046e532]: "4"
+                    - generic [ref=f1046e538]: "3"
+                    - generic [ref=f1046e543]: "2"
+                    - generic [ref=f1046e548]: "1"
+                - generic [ref=f1046e555]:
+                  - generic [ref=f1046e556]: 100%
+                  - generic [ref=f1046e561]: dos clientes recomendam este produto
+              - link "Lola Cosmetics Avaliações confiáveis do Reclame AQUI" [ref=f1046e563] [cursor=pointer]:
+                - /url: https://site.trustvox.com.br/conheca-a-trustvox?utm_source=widget-rareviews&utm_medium=quizz&utm_campaign=www.lolacosmetics.com.br
+                - img "Lola Cosmetics" [ref=f1046e564]
+                - generic [ref=f1046e565]: Avaliações confiáveis do
+                - img "Reclame AQUI" [ref=f1046e566]
+            - generic [ref=f1046e567]:
+              - generic [ref=f1046e568]:
+                - generic [ref=f1046e569]: "Ordenar por:"
+                - navigation [ref=f1046e571]:
+                  - button "Mais recentes" [ref=f1046e573] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f1046e576]: expand_more
+              - list [ref=f1046e577]:
+                - listitem [ref=f1046e578]:
+                  - generic [ref=f1046e580]:
+                    - generic [ref=f1046e581]:
+                      - paragraph [ref=f1046e583]: IO
+                      - generic [ref=f1046e584]:
+                        - generic [ref=f1046e585]: Iohana O.
+                        - generic [ref=f1046e587]:
+                          - generic [aria-hidden] [ref=f1046e588]: ✓
+                          - text: Compra Verificada
+                    - generic [ref=f1046e589]: 10/04/2026
+                  - generic [ref=f1046e590]:
+                    - generic [ref=f1046e621]: Amei, moro na praia e antes de ir pro mar sempre uso ele para nao ressecar o cabelo. O cheiro é maravilhoooso e o cabelo não fica pesado!
+                    - paragraph [ref=f1046e626]: ✓ Recomendo este produto
+                    - button "Marcar avaliação como útil" [ref=f1046e628] [cursor=pointer]:
+                      - generic [ref=f1046e629]: Útil
+                      - generic [aria-hidden] [ref=f1046e630]: thumb_up
+                      - generic [ref=f1046e631]: "1"
+                - listitem [ref=f1046e632]:
+                  - generic [ref=f1046e634]:
+                    - generic [ref=f1046e635]:
+                      - paragraph [ref=f1046e637]: JB
+                      - generic [ref=f1046e638]:
+                        - generic [ref=f1046e639]: Julia B.
+                        - generic [ref=f1046e641]:
+                          - generic [aria-hidden] [ref=f1046e642]: ✓
+                          - text: Compra Verificada
+                    - generic [ref=f1046e643]: 01/04/2026
+                  - generic [ref=f1046e644]:
+                    - generic [ref=f1046e675]:
+                      - generic [ref=f1046e676]: Excelente qualidade e custo benefício. Entrega segura.
+                      - generic [ref=f1046e677]: Excelente qualidade e custo benefício. Hidrata muito o cabelo, e ainda dá pra usar como finalizador, caso seu fio seja muito fino, tipo um cabelo 2a.
+                    - paragraph [ref=f1046e681]: ✓ Recomendo este produto
+                    - button "Marcar avaliação como útil" [ref=f1046e683] [cursor=pointer]:
+                      - generic [ref=f1046e684]: Útil
+                      - generic [aria-hidden] [ref=f1046e685]: thumb_up
+                      - generic [ref=f1046e686]: "2"
+                - listitem [ref=f1046e687]:
+                  - generic [ref=f1046e689]:
+                    - generic [ref=f1046e690]:
+                      - paragraph [ref=f1046e692]: CQ
+                      - generic [ref=f1046e693]:
+                        - generic [ref=f1046e694]: Cássia q.
+                        - generic [ref=f1046e696]:
+                          - generic [aria-hidden] [ref=f1046e697]: ✓
+                          - text: Compra Verificada
+                    - generic [ref=f1046e698]: 14/10/2025
+                  - generic [ref=f1046e699]:
+                    - generic [ref=f1046e730]: Gostei, deixou meu cabelo bem sedoso
+                    - paragraph [ref=f1046e735]: ✓ Recomendo este produto
+                    - button "Marcar avaliação como útil" [ref=f1046e737] [cursor=pointer]:
+                      - generic [ref=f1046e738]: Útil
+                      - generic [aria-hidden] [ref=f1046e739]: thumb_up
+                      - generic [ref=f1046e740]: "3"
+                - listitem [ref=f1046e741]:
+                  - generic [ref=f1046e743]:
+                    - generic [ref=f1046e744]:
+                      - paragraph [ref=f1046e746]: MJ
+                      - generic [ref=f1046e747]:
+                        - generic [ref=f1046e748]: Maria J.
+                        - generic [ref=f1046e750]:
+                          - generic [aria-hidden] [ref=f1046e751]: ✓
+                          - text: Compra Verificada
+                    - generic [ref=f1046e752]: 23/09/2025
+                  - generic [ref=f1046e753]:
+                    - generic [ref=f1046e784]: Incrivelmente cheiroso! Achei que deixou meu cabelo meio duro, mas uso antes da academia pq sei que vou lavar depois
+                    - paragraph [ref=f1046e789]: ✓ Recomendo este produto
+                    - button "Marcar avaliação como útil" [ref=f1046e791] [cursor=pointer]:
+                      - generic [ref=f1046e792]: Útil
+                      - generic [aria-hidden] [ref=f1046e793]: thumb_up
+                      - generic [ref=f1046e794]: "4"
+              - generic [ref=f1046e795]: Carregar mais avaliações
+    - generic [ref=f1046e798]:
+      - generic [ref=f1046e800]:
+        - paragraph [ref=f1046e801]:
+          - generic [ref=f1046e802]: Nós usamos cookies e outras tecnologias semelhantes para melhorar a experiência de navegação e recomendar conteúdo de seu interesse. Ao continuar navegando você concorda com a nossa
+          - link "política de privacidade" [ref=f1046e803] [cursor=pointer]:
+            - /url: /conteudo/sobre/politica-de-privacidade
+          - text: .
+        - button "Concordo" [ref=f1046e805] [cursor=pointer]
+      - img "Lola Cosmetics" [ref=f1046e808]
+      - generic [ref=f1046e810]:
+        - generic [ref=f1046e811]:
+          - heading "Fique por dentro das nossas novidades" [level=4] [ref=f1046e812]
+          - generic [ref=f1046e817]:
+            - textbox "Email:" [ref=f1046e819]:
+              - /placeholder: Insira seu e-mail...
+            - button "Enviar" [ref=f1046e821] [cursor=pointer]
+          - list [ref=f1046e822]:
+            - listitem [ref=f1046e823]:
+              - link [ref=f1046e824] [cursor=pointer]:
+                - /url: https://www.instagram.com/lolacosmetics/
+            - listitem [ref=f1046e827]:
+              - link [ref=f1046e828] [cursor=pointer]:
+                - /url: https://www.facebook.com/lolacosmetics/
+            - listitem [ref=f1046e831]:
+              - link [ref=f1046e832] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/lolacosmetics/
+            - listitem [ref=f1046e836]:
+              - link [ref=f1046e837] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@lolacosmetics
+            - listitem [ref=f1046e840]:
+              - link [ref=f1046e841] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/2KPZDZu9BRJmPuCAyGM7NZ?si=e522b39a1fbf4813
+        - generic [ref=f1046e844]:
+          - generic [ref=f1046e845]:
+            - heading "Sobre" [level=4] [ref=f1046e846]
+            - list [ref=f1046e849]:
+              - listitem [ref=f1046e850]:
+                - list [ref=f1046e851]:
+                  - listitem [ref=f1046e852]:
+                    - link "Quem somos" [ref=f1046e853] [cursor=pointer]:
+                      - /url: /conteudo/sobre/quem-somos
+                  - listitem [ref=f1046e854]:
+                    - link "Este site é seguro?" [ref=f1046e855] [cursor=pointer]:
+                      - /url: /conteudo/sobre/este-site-e-seguro
+                  - listitem [ref=f1046e856]:
+                    - link "Política de Cookies" [ref=f1046e857] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-cookies
+                  - listitem [ref=f1046e858]:
+                    - link "Política de Privacidade" [ref=f1046e859] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-privacidade
+                  - listitem [ref=f1046e860]:
+                    - link "Nossa lojas" [ref=f1046e861] [cursor=pointer]:
+                      - /url: /onde-encontrar
+                  - listitem [ref=f1046e862]:
+                    - link "Trabalhe Conosco" [ref=f1046e863] [cursor=pointer]:
+                      - /url: /trabalhe-conosco
+                  - listitem [ref=f1046e864]:
+                    - link "Lola Lab" [ref=f1046e865] [cursor=pointer]:
+                      - /url: /conteudo/sobre/lola-lab
+                  - listitem [ref=f1046e866]:
+                    - link "Revenda" [ref=f1046e867] [cursor=pointer]:
+                      - /url: /conteudo/sobre/revenda
+          - generic [ref=f1046e868]:
+            - heading "Ajuda" [level=4] [ref=f1046e869]
+            - list [ref=f1046e872]:
+              - listitem [ref=f1046e873]:
+                - list [ref=f1046e874]:
+                  - listitem [ref=f1046e875]:
+                    - link "Prazos de atendimento" [ref=f1046e876] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/prazos-de-atendimento
+                  - listitem [ref=f1046e877]:
+                    - link "Entrega e envios" [ref=f1046e878] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/entrega-e-envios
+                  - listitem [ref=f1046e879]:
+                    - link "Pagamento" [ref=f1046e880] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/pagamento
+                  - listitem [ref=f1046e881]:
+                    - link "Trocas e devoluções" [ref=f1046e882] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/trocas-e-devolucoes
+                  - listitem [ref=f1046e883]:
+                    - link "Perguntas Frequentes" [ref=f1046e884] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/perguntas-frequentes
+                  - listitem [ref=f1046e885]:
+                    - link "Como rastrear pedidos" [ref=f1046e886] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/como-rastrear-pedidos
+                  - listitem [ref=f1046e887]:
+                    - link "Regulamento Promocional" [ref=f1046e888] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/regulamento-promocional
+                  - listitem [ref=f1046e889]:
+                    - link "Cashback" [ref=f1046e890] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/cashback
+        - generic [ref=f1046e891]:
+          - heading "Contato" [level=4] [ref=f1046e892]
+          - list [ref=f1046e893]:
+            - listitem [ref=f1046e894]: 0800 000 5521
+            - listitem [ref=f1046e895]:
+              - link "lolamail@farmativa.ind.br" [ref=f1046e896] [cursor=pointer]:
+                - /url: mailto:lolamail@farmativa.ind.br
+            - listitem [ref=f1046e897]: Segunda à Sexta-Feira das 9h às 18h
+          - heading "Segurança" [level=4] [ref=f1046e898]
+          - generic [ref=f1046e899]:
+            - img "Lola Cosmetics" [ref=f1046e900]
+            - generic [ref=f1046e901]: "4.7"
+        - generic [ref=f1046e945]:
+          - heading "Meus pedidos" [level=4] [ref=f1046e946]
+          - link "Acompanhe seus pedidos" [ref=f1046e947] [cursor=pointer]:
+            - /url: /painel-do-cliente/pedidos
+          - heading "Formas de pagamento" [level=4] [ref=f1046e948]
+          - img "Forma Pagamento" [ref=f1046e949]
+      - generic [ref=f1046e951]:
+        - paragraph [ref=f1046e952]: AVENIDA CIVIT I 1795 ARMAZEM A GALPAO 4 E 5, SALA 33 - BARRO BRANCO, SERRA - ES | CEP 29170-740 |CNPJ 37.410.037/0002-89
+        - list [ref=f1046e954]:
+          - listitem [ref=f1046e955]:
+            - generic [ref=f1046e956]: "Plataforma:"
+            - link [ref=f1046e957] [cursor=pointer]:
+              - /url: https://www.linxcommerce.com.br/
+              - img "Plataforma Core" [ref=f1046e958]
+          - listitem [ref=f1046e959]:
+            - generic [ref=f1046e960]: "Projeto:"
+            - link [ref=f1046e961] [cursor=pointer]:
+              - /url: https://nairuz.com.br/
+      - link "Voltar ao topo" [ref=f1046e977] [cursor=pointer]:
+        - /url: "#"
+  - alert [ref=f1046e982]

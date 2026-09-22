@@ -1,7 +1,7 @@
 // Audits where the clone's links actually go: nothing that belongs to the storefront may
 // point back at the live site, and every local target has to resolve to a real response.
 async (page) => {
-  const BASE = "http://127.0.0.1:4340";
+  const BASE = "http://127.0.0.1:4350";
   const routes = ["/", "/kits", "/tratamentos", "/colecoes", "/volumao-shampoo-250ml-ps-19629-321-p46389", "/login", "/carrinho"];
 
   const escaping = new Map();

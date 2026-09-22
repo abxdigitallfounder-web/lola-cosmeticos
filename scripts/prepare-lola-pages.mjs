@@ -24,16 +24,15 @@ for (const target of plan.targets.filter(t => t.pathname !== "/")) {
   if (!fs.existsSync(extraction)) { report.push(`${target.pathname}: no capture, skipped`); continue; }
   const d = JSON.parse(fs.readFileSync(extraction, "utf8"));
 
-  // Each page gets its own sanitizer so slider options are consumed per document.
-  const { clean } = createSanitizer(manifest);
-  const $ = load(d.html);
+  // Each page gets its own sanitizer so its slider options are consumed in its own order.
+  const { clean } = createSanitizer(manifest, d.sliderOptions || []);
 
   // The theme reaches into this markup with child combinators, so the whole #middle
   // subtree is replayed as one fragment instead of one component per block: any React
   // host element between #content-wrapper and .row would break `#content-wrapper>.row`.
-  const middle = $("#middle").first();
-  if (!middle.length) { report.push(`${target.pathname}: no #middle in capture, skipped`); continue; }
-  const fragments = { PageContent: clean($.html(middle)) };
+  const middleHtml = d.middleHtml || (d.html ? load(d.html)("#middle").first().toString() : "");
+  if (!middleHtml) { report.push(`${target.pathname}: no #middle in capture, skipped`); continue; }
+  const fragments = { PageContent: clean(middleHtml) };
 
   fs.mkdirSync(target.components, { recursive: true });
   fs.writeFileSync(path.join(target.components, "fragments.json"), JSON.stringify(fragments, null, 2));
@@ -81,7 +80,7 @@ export default function Page() {
   for (const name of names) {
     const specPath = path.join(specDir, `${name}.spec.md`);
     if (fs.existsSync(specPath)) continue;
-    const text = load(d.sections[name].html).text().replace(/\s+/g, " ").trim();
+    const text = d.sections[name].text || "";
     fs.writeFileSync(specPath, `# ${name} Specification
 
 ## Overview

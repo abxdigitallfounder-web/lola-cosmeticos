@@ -1,7 +1,7 @@
 // Walks every cloned route in the local build, recording console errors, failed requests
 // and a few layout signals, then screenshots each one next to its captured reference.
 async (page) => {
-  const BASE = "http://127.0.0.1:4340";
+  const BASE = "http://127.0.0.1:4350";
   const routes = [
     ["/", "root-8a5edab2"],
     ["/kits", "kits-05782adf"],
