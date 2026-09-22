@@ -23,7 +23,10 @@ for(const name of documentOrder){
   sections[name]={selector:recovered[name],html:node.toString(),tree:{styles:{}}};
 }
 const local=s=>manifest[s]||s;
-function rewrite(s){for(const [u,l] of Object.entries(manifest))s=s.split(u).join(l);return s;}
+// Longest URL first: one asset URL can be a prefix of another (a .woff next to the same
+// face's .woff2), and substituting the short one first would corrupt the longer path.
+const mappings=Object.entries(manifest).sort((a,b)=>b[0].length-a[0].length);
+function rewrite(s){for(const [u,l] of mappings)s=s.split(u).join(l);return s;}
 let css='';
 for(const sheet of raw.stylesheets){if(sheet.url&&manifest[sheet.url])css+='\n'+fs.readFileSync('public'+manifest[sheet.url],'utf8');else if(sheet.css)css+='\n'+sheet.css;}
 css+='\n'+d.inlineStyles.join('\n');
