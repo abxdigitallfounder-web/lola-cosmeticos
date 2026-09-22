@@ -1,0 +1,20 @@
+{
+  "source": "https://www.lolacosmetics.com.br/",
+  "appRoot": ".",
+  "siteKey": "www-lolacosmetics-com-br-b005530a",
+  "pageKey": "root-8a5edab2",
+  "route": "/",
+  "routeFile": "src/app/page.tsx",
+  "roots": {
+    "research": "docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2",
+    "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/root-8a5edab2",
+    "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2",
+    "assets": "public/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2"
+  },
+  "existingRoutes": [],
+  "foundationChanges": [
+    "src/app/layout.tsx",
+    "src/app/globals.css"
+  ],
+  "note": "Empty workspace; user explicitly authorized creating scaffold. No existing user output is replaced."
+}

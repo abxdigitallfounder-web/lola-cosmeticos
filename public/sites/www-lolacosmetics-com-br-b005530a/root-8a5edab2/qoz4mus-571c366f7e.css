@@ -1,0 +1,214 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * obviously:
+ *   - http://typekit.com/eulas/00000000000000007735c9da
+ *   - http://typekit.com/eulas/00000000000000007735c9e3
+ *   - http://typekit.com/eulas/00000000000000007735c9ec
+ *   - http://typekit.com/eulas/00000000000000007735c9fd
+ *   - http://typekit.com/eulas/00000000000000007735ca02
+ *   - http://typekit.com/eulas/00000000000000007735ca07
+ *   - http://typekit.com/eulas/00000000000000007735ca0b
+ * obviously-compressed:
+ *   - http://typekit.com/eulas/00000000000000007735c9d3
+ *   - http://typekit.com/eulas/00000000000000007735c9e6
+ *   - http://typekit.com/eulas/00000000000000007735ca00
+ *   - http://typekit.com/eulas/00000000000000007735ca06
+ * obviously-condensed:
+ *   - http://typekit.com/eulas/00000000000000007735c9c2
+ *   - http://typekit.com/eulas/00000000000000007735c9d6
+ *   - http://typekit.com/eulas/00000000000000007735c9e5
+ *   - http://typekit.com/eulas/00000000000000007735c9ed
+ * obviously-extended:
+ *   - http://typekit.com/eulas/00000000000000007735c9c6
+ *   - http://typekit.com/eulas/00000000000000007735c9ca
+ *   - http://typekit.com/eulas/00000000000000007735c9ef
+ *   - http://typekit.com/eulas/00000000000000007735c9f5
+ * obviously-narrow:
+ *   - http://typekit.com/eulas/00000000000000007735c9d9
+ *   - http://typekit.com/eulas/00000000000000007735c9e1
+ *   - http://typekit.com/eulas/00000000000000007735ca03
+ *   - http://typekit.com/eulas/00000000000000007735ca0a
+ * obviously-wide:
+ *   - http://typekit.com/eulas/00000000000000007735c9dc
+ *   - http://typekit.com/eulas/00000000000000007735c9e2
+ *   - http://typekit.com/eulas/00000000000000007735ca04
+ *   - http://typekit.com/eulas/00000000000000007735ca09
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2024-02-07 14:33:17 UTC"}*/
+
+@import url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/p-c7a30ca592.css");
+
+@font-face {
+font-family:"obviously-compressed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-9478fba397.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-b39769048d.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-3ab1425f10.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-compressed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-fb5a052ce7.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-636bd00864.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-54c59dda8f.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-compressed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-ae458d9256.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-d7cda842b2.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-c797aaf982.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-compressed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-c53bd19559.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-82862cfebc.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-2db8da6d59.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-condensed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-9237e19708.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-34614bde5e.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-cbdf3ec528.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-condensed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-a3fbfec991.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-d9adb92650.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-d5704d73a3.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-condensed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-5f3db269b5.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-1536bd5a71.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-84564ed6c6.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-condensed";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-238d7e51ff.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-9f50642420.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-594a6ae4ad.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-narrow";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-86d6a40968.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-db0d7108a2.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-a40624090d.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-narrow";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-7d75a91094.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-ac1f66c133.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-4e0d9870c3.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-narrow";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-50a135e11d.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-4fc2995412.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-d5bd07440d.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-narrow";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-55f98e7734.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-ed1064e49a.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-db191179f3.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-44ffb3c073.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-69f9c7e1a5.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-2fd04eab7a.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-6b8238f0b0.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-3225aa77dd.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-d40656c461.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-2bdcaace53.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-cf1938945c.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-0b64625db8.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-1f9c3d6f58.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-e0544373fe.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-2cbf274959.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-2a30cafab7.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-781e1e1304.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-1f16231d15.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-00db75daf6.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-9f7632d2b8.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-852d548994.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-9814a78f41.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-b1e0d9f16c.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-c05aa9f536.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:800;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-wide";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-dd78532bcc.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-d759daac23.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-15cffb4c77.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-wide";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-c0ab0a409f.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-8070522a1d.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-3ab34460db.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-wide";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-38722b33c0.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-919b74c0d3.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-5253a96d4f.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-wide";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-d9393f7a9b.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-84f09c31ef.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-5ea35c4cc4.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-extended";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-247efb51c9.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-d02134d66c.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-a698aed04f.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-extended";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-79ae1d307c.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-d090faa2ba.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-3453216bd8.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-extended";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-2315321e7f.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-ca8b1eaa20.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-caa66a6387.woff2") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obviously-extended";
+src:url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/l-78dc0e6954.woff2") format("woff2"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/d-6e9739a9fd.woff2") format("woff"),url("/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/a-626789d8b4.woff2") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+.tk-obviously-compressed { font-family: "obviously-compressed",sans-serif; }
+.tk-obviously-condensed { font-family: "obviously-condensed",sans-serif; }
+.tk-obviously-narrow { font-family: "obviously-narrow",sans-serif; }
+.tk-obviously { font-family: "obviously",sans-serif; }
+.tk-obviously-wide { font-family: "obviously-wide",sans-serif; }
+.tk-obviously-extended { font-family: "obviously-extended",sans-serif; }

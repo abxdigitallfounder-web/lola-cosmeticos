@@ -1,0 +1,5 @@
+﻿@media (min-width: 980px) { 
+    body.context-category-1577.grid-products #middle #content-wrapper>.row {
+        display:flex; 
+    }
+}

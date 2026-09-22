@@ -1,0 +1,1830 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - text:   
+        - heading [level=1] [ref=e9]:
+          - link "Lola Cosmetics" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - generic [ref=e13]:
+          - textbox "O que você procura?" [ref=e15]
+          - button "Buscar" [ref=e16] [cursor=pointer]
+        - generic [ref=e17]:
+          - link "Rastrear pedido" [ref=e19] [cursor=pointer]:
+            - /url: https://lolacosmetics.cademeupedido.com.br
+          - link [ref=e32] [cursor=pointer]:
+            - /url: /painel-do-cliente
+          - generic [ref=e37]:
+            - link [ref=e38] [cursor=pointer]:
+              - /url: /carrinho
+              - emphasis [ref=e44]: "0"
+            - generic [ref=e45]:
+              - generic [ref=e46] [cursor=pointer]: x
+              - generic [ref=e53]:
+                - strong [ref=e54]: Minha sacola
+                - generic [ref=e55]: contém 0 itens
+              - generic [ref=e56]:
+                - generic [ref=e58]:
+                  - generic [ref=e59]: :(
+                  - paragraph [ref=e60]:
+                    - strong [ref=e61]: Não há produtos na sua sacola.
+                    - text: Que tal conferir algumas ofertas?
+                - generic [ref=e62]:
+                  - list [ref=e64]:
+                    - listitem [ref=e65]: Subtotal
+                    - listitem [ref=e66]: R$ 0,00
+                  - button "Finalizar Compra" [ref=e67] [cursor=pointer]
+                  - generic [ref=e68] [cursor=pointer]: Continuar comprando
+      - navigation [ref=e73]:
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - heading [level=3] [ref=e76]:
+              - link "KITS" [ref=e77] [cursor=pointer]:
+                - /url: /kits
+          - listitem [ref=e78]:
+            - heading [level=3] [ref=e79]:
+              - link "TIPOS DE CABELO" [ref=e80] [cursor=pointer]:
+                - /url: /tipos-de-cabelo
+            - list:
+              - listitem [ref=e81]:
+                - heading [level=4] [ref=e82]:
+                  - link "Lisos" [ref=e83] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/liso
+              - listitem [ref=e84]:
+                - heading [level=4] [ref=e85]:
+                  - link "Cachos & Curvas" [ref=e86] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/cacheado
+              - listitem [ref=e87]:
+                - heading [level=4] [ref=e88]:
+                  - link "Todos os tipos de cabelos" [ref=e89] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/todos-os-tipos
+          - listitem [ref=e90]:
+            - heading [level=3] [ref=e91]:
+              - link "TRATAMENTOS" [ref=e92] [cursor=pointer]:
+                - /url: /tratamentos
+            - list:
+              - listitem [ref=e93]:
+                - heading [level=4] [ref=e94]:
+                  - link "Uso diário" [ref=e95] [cursor=pointer]:
+                    - /url: /tratamentos/uso-diario
+              - listitem [ref=e96]:
+                - heading [level=4] [ref=e97]:
+                  - link "Cronograma Capilar" [ref=e98] [cursor=pointer]:
+                    - /url: /tratamentos/cronograma-capilar
+                  - button [ref=e99] [cursor=pointer]
+              - listitem [ref=e103]:
+                - heading [level=4] [ref=e104]:
+                  - link "SOS Reparação" [ref=e105] [cursor=pointer]:
+                    - /url: /tratamentos/sos-reparacao
+              - listitem [ref=e106]:
+                - heading [level=4] [ref=e107]:
+                  - link "Brilho" [ref=e108] [cursor=pointer]:
+                    - /url: /tratamentos/brilho
+              - listitem [ref=e109]:
+                - heading [level=4] [ref=e110]:
+                  - link "Fortalecimento" [ref=e111] [cursor=pointer]:
+                    - /url: /tratamentos/fortalecimento
+              - listitem [ref=e112]:
+                - heading [level=4] [ref=e113]:
+                  - link "Finalização" [ref=e114] [cursor=pointer]:
+                    - /url: /tratamentos/finalizacao
+                  - button [ref=e115] [cursor=pointer]
+              - listitem [ref=e119]:
+                - heading [level=4] [ref=e120]:
+                  - link "Cuidados específicos" [ref=e121] [cursor=pointer]:
+                    - /url: /tratamentos/cuidados-especificos
+                  - button [ref=e122] [cursor=pointer]
+              - listitem [ref=e126]:
+                - heading [level=4] [ref=e127]:
+                  - link "Ver Tudo" [ref=e128] [cursor=pointer]:
+                    - /url: /tratamentos
+          - listitem [ref=e129]:
+            - heading [level=3] [ref=e130]:
+              - link "Coleções" [ref=e131] [cursor=pointer]:
+                - /url: /colecoes
+            - list:
+              - listitem [ref=e132]:
+                - heading [level=4] [ref=e133]:
+                  - link "A Fórmula" [ref=e134] [cursor=pointer]:
+                    - /url: /colecoes/a-formula
+              - listitem [ref=e135]:
+                - heading [level=4] [ref=e136]:
+                  - link "Argan Oil" [ref=e137] [cursor=pointer]:
+                    - /url: /colecoes/argan-oil
+              - listitem [ref=e138]:
+                - heading [level=4] [ref=e139]:
+                  - link "Babados Da Lola" [ref=e140] [cursor=pointer]:
+                    - /url: /colecoes/babados-da-lola
+                  - button [ref=e141] [cursor=pointer]
+              - listitem [ref=e145]:
+                - heading [level=4] [ref=e146]:
+                  - link "Babados do Brasil" [ref=e147] [cursor=pointer]:
+                    - /url: /colecoes/babados-do-brasil
+              - listitem [ref=e148]:
+                - heading [level=4] [ref=e149]:
+                  - link "Banana Tropicana" [ref=e150] [cursor=pointer]:
+                    - /url: /colecoes/banana-tropicana
+              - listitem [ref=e151]:
+                - heading [level=4] [ref=e152]:
+                  - link "Basicão" [ref=e153] [cursor=pointer]:
+                    - /url: /colecoes/basicao
+              - listitem [ref=e154]:
+                - heading [level=4] [ref=e155]:
+                  - link "Be(m)dita Ghee" [ref=e156] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-ghee
+              - listitem [ref=e157]:
+                - heading [level=4] [ref=e158]:
+                  - link "Be(m)dita Praia" [ref=e159] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-praia
+              - listitem [ref=e160]:
+                - heading [level=4] [ref=e161]:
+                  - link "Bossa" [ref=e162] [cursor=pointer]:
+                    - /url: /colecoes/bossa
+              - listitem [ref=e163]:
+                - heading [level=4] [ref=e164]:
+                  - link "Brancos e Grisalhos" [ref=e165] [cursor=pointer]:
+                    - /url: /colecoes/brancos-e-grisalhos
+              - listitem [ref=e166]:
+                - heading [level=4] [ref=e167]:
+                  - link "Camomila" [ref=e168] [cursor=pointer]:
+                    - /url: /colecoes/camomila
+              - listitem [ref=e169]:
+                - heading [level=4] [ref=e170]:
+                  - link "Cereal Killer" [ref=e171] [cursor=pointer]:
+                    - /url: /colecoes/cereal-killer
+              - listitem [ref=e172]:
+                - heading [level=4] [ref=e173]:
+                  - link "Comigo Ninguém Pode" [ref=e174] [cursor=pointer]:
+                    - /url: /colecoes/comigo-ninguem-pode
+              - listitem [ref=e175]:
+                - heading [level=4] [ref=e176]:
+                  - link "Cuca Fresca" [ref=e177] [cursor=pointer]:
+                    - /url: /colecoes/cuca-fresca
+              - listitem [ref=e178]:
+                - heading [level=4] [ref=e179]:
+                  - link "Danos Vorazes" [ref=e180] [cursor=pointer]:
+                    - /url: /colecoes/danos-vorazes
+              - listitem [ref=e181]:
+                - heading [level=4] [ref=e182]:
+                  - link "Densidade" [ref=e183] [cursor=pointer]:
+                    - /url: /colecoes/densidade
+              - listitem [ref=e184]:
+                - heading [level=4] [ref=e185]:
+                  - link "Drama Queen" [ref=e186] [cursor=pointer]:
+                    - /url: /colecoes/drama-queen
+              - listitem [ref=e187]:
+                - heading [level=4] [ref=e188]:
+                  - link "Dream Cream" [ref=e189] [cursor=pointer]:
+                    - /url: /colecoes/dream-cream
+              - listitem [ref=e190]:
+                - heading [level=4] [ref=e191]:
+                  - link "Ela é Carioca" [ref=e192] [cursor=pointer]:
+                    - /url: /colecoes/ela-e-carioca
+              - listitem [ref=e193]:
+                - heading [level=4] [ref=e194]:
+                  - link "Eu sei o que você fez na química passada!" [ref=e195] [cursor=pointer]:
+                    - /url: /colecoes/eu-sei-o-que-voce-fez-na-quimica-passada
+              - listitem [ref=e196]:
+                - heading [level=4] [ref=e197]:
+                  - link "Exterminador de Frizz" [ref=e198] [cursor=pointer]:
+                    - /url: /colecoes/exterminador-de-frizz
+              - listitem [ref=e199]:
+                - heading [level=4] [ref=e200]:
+                  - link "Kit Celebridades" [ref=e201] [cursor=pointer]:
+                    - /url: /colecoes/kit-celebridades
+              - listitem [ref=e202]:
+                - heading [level=4] [ref=e203]:
+                  - link "Liso, leve e and solto" [ref=e204] [cursor=pointer]:
+                    - /url: /colecoes/liso-leve-e-and-solto
+              - listitem [ref=e205]:
+                - heading [level=4] [ref=e206]:
+                  - link "Loira de Farmácia" [ref=e207] [cursor=pointer]:
+                    - /url: /colecoes/loira-de-farmacia
+              - listitem [ref=e208]:
+                - heading [level=4] [ref=e209]:
+                  - link "Lola Kids" [ref=e210] [cursor=pointer]:
+                    - /url: /colecoes/lola-kids
+              - listitem [ref=e211]:
+                - heading [level=4] [ref=e212]:
+                  - link "Lola Vintage Girls" [ref=e213] [cursor=pointer]:
+                    - /url: /colecoes/lola-vintage-girls
+              - listitem [ref=e214]:
+                - heading [level=4] [ref=e215]:
+                  - link "Meu Cacho minha Vida" [ref=e216] [cursor=pointer]:
+                    - /url: /colecoes/meu-cacho-minha-vida
+              - listitem [ref=e217]:
+                - heading [level=4] [ref=e218]:
+                  - link "Milagre!" [ref=e219] [cursor=pointer]:
+                    - /url: /colecoes/milagre
+              - listitem [ref=e220]:
+                - heading [level=4] [ref=e221]:
+                  - link "Morte Súbita" [ref=e222] [cursor=pointer]:
+                    - /url: /colecoes/morte-subita
+              - listitem [ref=e223]:
+                - heading [level=4] [ref=e224]:
+                  - link "Papo Reto" [ref=e225] [cursor=pointer]:
+                    - /url: /colecoes/papo-reto
+              - listitem [ref=e226]:
+                - heading [level=4] [ref=e227]:
+                  - link "Pinga!" [ref=e228] [cursor=pointer]:
+                    - /url: /colecoes/pinga
+              - listitem [ref=e229]:
+                - heading [level=4] [ref=e230]:
+                  - link "Plot Twist" [ref=e231] [cursor=pointer]:
+                    - /url: /colecoes/plot-twist
+              - listitem [ref=e232]:
+                - heading [level=4] [ref=e233]:
+                  - link "Purple" [ref=e234] [cursor=pointer]:
+                    - /url: /colecoes/purple
+              - listitem [ref=e235]:
+                - heading [level=4] [ref=e236]:
+                  - link "Rapunzel" [ref=e237] [cursor=pointer]:
+                    - /url: /colecoes/rapunzel
+              - listitem [ref=e238]:
+                - heading [level=4] [ref=e239]:
+                  - link "Tannic Acid" [ref=e240] [cursor=pointer]:
+                    - /url: /colecoes/tannic-acid
+              - listitem [ref=e241]:
+                - heading [level=4] [ref=e242]:
+                  - link "Tarja Preta" [ref=e243] [cursor=pointer]:
+                    - /url: /colecoes/tarja-preta
+              - listitem [ref=e244]:
+                - heading [level=4] [ref=e245]:
+                  - link "Transição" [ref=e246] [cursor=pointer]:
+                    - /url: /colecoes/transicao
+              - listitem [ref=e247]:
+                - heading [level=4] [ref=e248]:
+                  - link "Umectação" [ref=e249] [cursor=pointer]:
+                    - /url: /colecoes/umectacao
+              - listitem [ref=e250]:
+                - heading [level=4] [ref=e251]:
+                  - link "Volumão" [ref=e252] [cursor=pointer]:
+                    - /url: /colecoes/volumao
+              - listitem [ref=e253]:
+                - heading [level=4] [ref=e254]:
+                  - link "Xapadinha" [ref=e255] [cursor=pointer]:
+                    - /url: /colecoes/xapadinha
+              - listitem [ref=e256]:
+                - heading [level=4] [ref=e257]:
+                  - link "Lolaterapia" [ref=e258] [cursor=pointer]:
+                    - /url: /colecoes/lolaterapia
+              - listitem [ref=e259]:
+                - heading [level=4] [ref=e260]:
+                  - link "Ver Tudo" [ref=e261] [cursor=pointer]:
+                    - /url: /colecoes
+          - listitem [ref=e262]:
+            - heading [level=3] [ref=e263]:
+              - link "LANÇAMENTOS" [ref=e264] [cursor=pointer]:
+                - /url: /lancamentos
+            - list:
+              - listitem [ref=e265]:
+                - heading [level=4] [ref=e266]:
+                  - link "Embaixadoras" [ref=e267] [cursor=pointer]:
+                    - /url: /lancamentos/embaixadoras
+              - listitem [ref=e268]:
+                - heading [level=4] [ref=e269]:
+                  - link "Banana Tropicana" [ref=e270] [cursor=pointer]:
+                    - /url: /lancamentos/banana-tropicana
+              - listitem [ref=e271]:
+                - heading [level=4] [ref=e272]:
+                  - link "Volumão" [ref=e273] [cursor=pointer]:
+                    - /url: /lancamentos/volumao
+              - listitem [ref=e274]:
+                - heading [level=4] [ref=e275]:
+                  - link "Basicão" [ref=e276] [cursor=pointer]:
+                    - /url: /lancamentos/basicao
+              - listitem [ref=e277]:
+                - heading [level=4] [ref=e278]:
+                  - link "Ghee Açaí" [ref=e279] [cursor=pointer]:
+                    - /url: /lancamentos/ghee-acai
+              - listitem [ref=e280]:
+                - heading [level=4] [ref=e281]:
+                  - link "Tannic Acid" [ref=e282] [cursor=pointer]:
+                    - /url: /lancamentos/tannic-acid
+              - listitem [ref=e283]:
+                - heading [level=4] [ref=e284]:
+                  - link "Cuca Fresca" [ref=e285] [cursor=pointer]:
+                    - /url: /lancamentos/cuca-fresca
+              - listitem [ref=e286]:
+                - heading [level=4] [ref=e287]:
+                  - link "A Fórmula" [ref=e288] [cursor=pointer]:
+                    - /url: /lancamentos/a-formula
+              - listitem [ref=e289]:
+                - heading [level=4] [ref=e290]:
+                  - link "Bossa" [ref=e291] [cursor=pointer]:
+                    - /url: /lancamentos/bossa
+              - listitem [ref=e292]:
+                - heading [level=4] [ref=e293]:
+                  - link "Kits de presente" [ref=e294] [cursor=pointer]:
+                    - /url: /lancamentos/kits-de-presente
+              - listitem [ref=e295]:
+                - heading [level=4] [ref=e296]:
+                  - link "Ver Tudo" [ref=e297] [cursor=pointer]:
+                    - /url: /lancamentos
+          - listitem [ref=e298]:
+            - heading [level=3] [ref=e299]:
+              - link "PROMOÇÃO" [ref=e300] [cursor=pointer]:
+                - /url: /promocao
+            - list:
+              - listitem [ref=e301]:
+                - heading [level=4] [ref=e302]:
+                  - link "Achadinhos" [ref=e303] [cursor=pointer]:
+                    - /url: /promocao/achadinhos
+              - listitem [ref=e304]:
+                - heading [level=4] [ref=e305]:
+                  - link "Semana da Lolete" [ref=e306] [cursor=pointer]:
+                    - /url: /promocao/semana-da-lolete
+              - listitem [ref=e307]:
+                - heading [level=4] [ref=e308]:
+                  - link "Ver Tudo" [ref=e309] [cursor=pointer]:
+                    - /url: /promocao
+    - generic [ref=e312]:
+      - generic [ref=e314]:
+        - generic [ref=e316]:
+          - link [ref=e320] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=54&c=Home&cid=1&bpid=36
+          - tabpanel [ref=e321]:
+            - link [ref=e324] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=179&c=Home&cid=1&bpid=36
+          - tabpanel [aria-hidden] [ref=e325]:
+            - link [ref=e328] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=227&c=Home&cid=1&bpid=36
+          - tabpanel [aria-hidden] [ref=e329]:
+            - link [ref=e332] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=55&c=Home&cid=1&bpid=36
+          - tabpanel [aria-hidden] [ref=e333]:
+            - link [ref=e336] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=54&c=Home&cid=1&bpid=36
+          - link [ref=e340] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=179&c=Home&cid=1&bpid=36
+          - link [ref=e344] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=227&c=Home&cid=1&bpid=36
+          - link [ref=e348] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=55&c=Home&cid=1&bpid=36
+          - link [ref=e352] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=54&c=Home&cid=1&bpid=36
+        - tablist [ref=e353]:
+          - tab "1 of 4" [selected] [ref=e354] [cursor=pointer]: "1"
+          - tab "2 of 4" [ref=e355] [cursor=pointer]: "2"
+          - tab "3 of 4" [ref=e356] [cursor=pointer]: "3"
+          - tab "4 of 4" [ref=e357] [cursor=pointer]: "4"
+      - generic [ref=e358]:
+        - heading "Navegue por Categoria" [level=2] [ref=e365]
+        - generic [ref=e374]:
+          - link [ref=e378] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=64&c=Home&cid=1&bpid=38
+          - link [ref=e382] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=67&c=Home&cid=1&bpid=38
+          - link [ref=e386] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=68&c=Home&cid=1&bpid=38
+          - link [ref=e390] [cursor=pointer]:
+            - /url: /Shopping/Banner/Click?bid=69&c=Home&cid=1&bpid=38
+      - generic [ref=e391]:
+        - generic [ref=e396]:
+          - heading "Produtinhos preferidos das loletes" [level=2] [ref=e399]
+          - list [ref=e401]:
+            - generic [ref=e403]:
+              - listitem [ref=e406]:
+                - generic [ref=e407]:
+                  - generic [ref=e408]:
+                    - button [ref=e410] [cursor=pointer]
+                    - link [ref=e412] [cursor=pointer]:
+                      - /url: /kit-bossa-crespos-cachos-ps-19629-303-p46348
+                      - img "Kit Bossa Crespos & Cachos" [ref=e414]
+                  - generic [ref=e415]:
+                    - generic [ref=e416]: (14)
+                    - heading [level=3] [ref=e422]:
+                      - link "Kit Bossa Crespos & Cachos" [ref=e423] [cursor=pointer]:
+                        - /url: /kit-bossa-crespos-cachos-ps-19629-303-p46348
+                    - generic [ref=e424]:
+                      - paragraph [ref=e428]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e430]:
+                      - strong [ref=e431]: R$ 99,90À vista
+                      - term [ref=e432]: em até 3 x sem juros de R$ 33,30
+                    - link [ref=e435] [cursor=pointer]:
+                      - /url: /kit-bossa-crespos-cachos-ps-19629-303-p46348
+              - listitem [ref=e443]:
+                - generic [ref=e444]:
+                  - generic [ref=e445]:
+                    - button [ref=e447] [cursor=pointer]
+                    - link [ref=e449] [cursor=pointer]:
+                      - /url: /kit-feira-cronolola-ps-19629-250-p46131
+                      - img "Kit Feira Cronolola" [ref=e451]
+                  - generic [ref=e452]:
+                    - generic [ref=e453]: (10)
+                    - heading [level=3] [ref=e459]:
+                      - link "Kit Feira Cronolola" [ref=e460] [cursor=pointer]:
+                        - /url: /kit-feira-cronolola-ps-19629-250-p46131
+                    - generic [ref=e461]:
+                      - paragraph [ref=e465]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e467]:
+                      - strong [ref=e468]: R$ 99,90À vista
+                      - term [ref=e469]: em até 3 x sem juros de R$ 33,30
+                    - link [ref=e472] [cursor=pointer]:
+                      - /url: /kit-feira-cronolola-ps-19629-250-p46131
+              - listitem [ref=e480]:
+                - generic [ref=e481]:
+                  - generic [ref=e482]:
+                    - button [ref=e484] [cursor=pointer]
+                    - generic "-40%" [ref=e485]:
+                      - text: 40%
+                      - strong [ref=e486]: "OFF"
+                    - link [ref=e488] [cursor=pointer]:
+                      - /url: /kit-xapadinha-liso-perfeito-disciplina-anti-frizz-e-anti-quebra-p45750
+                      - img "Kit Xapadinha com Máscara de 450g - Linha Completa" [ref=e490]
+                  - generic [ref=e491]:
+                    - generic [ref=e492]: (17)
+                    - heading [level=3] [ref=e498]:
+                      - link "Kit Xapadinha com Máscara de 450g - Linha Completa" [ref=e499] [cursor=pointer]:
+                        - /url: /kit-xapadinha-liso-perfeito-disciplina-anti-frizz-e-anti-quebra-p45750
+                    - generic [ref=e500]:
+                      - paragraph [ref=e504]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e506]:
+                      - deletion [ref=e507]:
+                        - generic [ref=e508]: R$ 216,60
+                        - text: por
+                      - strong [ref=e509]: R$ 129,96À vista
+                      - term [ref=e510]: em até 3 x sem juros de R$ 43,32
+                    - link "Comprar o kit" [ref=e512] [cursor=pointer]:
+                      - /url: /kit-xapadinha-liso-perfeito-disciplina-anti-frizz-e-anti-quebra-p45750
+              - listitem [ref=e520]:
+                - generic [ref=e521]:
+                  - generic [ref=e522]:
+                    - button [ref=e524] [cursor=pointer]
+                    - generic "-30%" [ref=e525]:
+                      - text: 30%
+                      - strong [ref=e526]: "OFF"
+                    - link [ref=e528] [cursor=pointer]:
+                      - /url: /kit-a-formula-lamelar-p46345
+                      - img "Kit A Fórmula Lamelar" [ref=e530]
+                  - generic [ref=e531]:
+                    - generic [ref=e532]: (6)
+                    - heading [level=3] [ref=e538]:
+                      - link "Kit A Fórmula Lamelar" [ref=e539] [cursor=pointer]:
+                        - /url: /kit-a-formula-lamelar-p46345
+                    - generic [ref=e540]:
+                      - paragraph [ref=e544]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e546]:
+                      - deletion [ref=e547]:
+                        - generic [ref=e548]: R$ 164,70
+                        - text: por
+                      - strong [ref=e549]: R$ 115,29À vista
+                      - term [ref=e550]: em até 3 x sem juros de R$ 38,43
+                    - link "Comprar o kit" [ref=e552] [cursor=pointer]:
+                      - /url: /kit-a-formula-lamelar-p46345
+        - generic [ref=e559]:
+          - heading "Tipos de cabelo" [level=2] [ref=e566]
+          - list [ref=e571]:
+            - listitem [ref=e572]:
+              - generic [ref=e573]:
+                - link [ref=e575] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=78&c=Home&cid=1&bpid=39
+                  - heading [level=3]
+                - link [ref=e577] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=79&c=Home&cid=1&bpid=39
+                  - heading [level=3]
+            - listitem [ref=e578]:
+              - generic [ref=e579]:
+                - link [ref=e581] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=76&c=Home&cid=1&bpid=40
+                  - heading [level=3]
+                - link [ref=e583] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=77&c=Home&cid=1&bpid=40
+                  - heading [level=3]
+            - listitem [ref=e584]:
+              - generic [ref=e585]:
+                - link [ref=e587] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=74&c=Home&cid=1&bpid=41
+                  - heading [level=3]
+                - link [ref=e589] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=75&c=Home&cid=1&bpid=41
+                  - heading [level=3]
+            - listitem [ref=e590]:
+              - generic [ref=e591]:
+                - link [ref=e593] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=72&c=Home&cid=1&bpid=42
+                  - heading [level=3]
+                - link [ref=e595] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=73&c=Home&cid=1&bpid=42
+                  - heading [level=3]
+            - listitem [ref=e596]:
+              - generic [ref=e597]:
+                - link [ref=e599] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=70&c=Home&cid=1&bpid=43
+                  - heading [level=3]
+                - link [ref=e601] [cursor=pointer]:
+                  - /url: /Shopping/Banner/Click?bid=71&c=Home&cid=1&bpid=43
+                  - heading [level=3]
+        - generic [ref=e606]:
+          - heading "Todo dia uma promo babadeira✨" [level=2] [ref=e609]
+          - generic [ref=e610]:
+            - generic [ref=e611]:
+              - 'link "Acaba em: 11 horas : 54 min : 41 seg" [ref=e612] [cursor=pointer]':
+                - /url: /promocao
+                - generic [ref=e613]:
+                  - generic [ref=e615]: "Acaba em:"
+                  - generic [ref=e616]:
+                    - generic [ref=e617]:
+                      - generic [ref=e618]: "11"
+                      - generic [ref=e619]: horas
+                    - generic [ref=e620]: ":"
+                    - generic [ref=e621]:
+                      - generic [ref=e622]: "54"
+                      - generic [ref=e623]: min
+                    - generic [ref=e624]: ":"
+                    - generic [ref=e625]:
+                      - generic [ref=e626]: "41"
+                      - generic [ref=e627]: seg
+              - link [ref=e630] [cursor=pointer]:
+                - /url: /Shopping/Banner/Click?bid=82&c=Home&cid=1&bpid=45
+            - list [ref=e631]:
+              - button [ref=e632] [cursor=pointer]
+              - generic [ref=e639]:
+                - listitem [ref=e642]:
+                  - generic [ref=e643]:
+                    - generic [ref=e644]:
+                      - button [ref=e646] [cursor=pointer]
+                      - generic [ref=e647]:
+                        - text: 60%
+                        - strong [ref=e648]: "OFF"
+                      - link [ref=e650] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                    - generic [ref=e653]:
+                      - generic [ref=e654]: (3)
+                      - heading [level=3] [ref=e660]:
+                        - link [ref=e661] [cursor=pointer]:
+                          - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                          - text: SOL CARIOCA - MOUSSE 200ML
+                      - paragraph [ref=e666]: 10% de cashback
+                      - generic [ref=e668]:
+                        - deletion [ref=e669]:
+                          - emphasis [ref=e670]: de
+                          - generic [ref=e671]: R$ 69,90
+                          - text: por
+                        - strong [ref=e672]: R$ 27,96À vista
+                        - term [ref=e673]: em até 1 x sem juros de R$ 27,96
+                      - link [ref=e676] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                        - text: Comprar
+                - listitem [ref=e684]:
+                  - generic [ref=e685]:
+                    - generic [ref=e686]:
+                      - button [ref=e688] [cursor=pointer]
+                      - generic [ref=e689]:
+                        - text: 60%
+                        - strong [ref=e690]: "OFF"
+                      - link [ref=e692] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                    - generic [ref=e695]:
+                      - generic [ref=e696]: (3)
+                      - heading [level=3] [ref=e702]:
+                        - link [ref=e703] [cursor=pointer]:
+                          - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                          - text: CHAPADA QUE JÁ FOI MAR - SABONETE CREMOSO 280G
+                      - paragraph [ref=e708]: 10% de cashback
+                      - generic [ref=e710]:
+                        - deletion [ref=e711]:
+                          - emphasis [ref=e712]: de
+                          - generic [ref=e713]: R$ 74,90
+                          - text: por
+                        - strong [ref=e714]: R$ 29,96À vista
+                        - term [ref=e715]: em até 1 x sem juros de R$ 29,96
+                      - link [ref=e718] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                        - text: Comprar
+                - listitem [ref=e726]:
+                  - generic [ref=e727]:
+                    - generic [ref=e728]:
+                      - button [ref=e730] [cursor=pointer]
+                      - generic "-60%" [ref=e731]:
+                        - text: 60%
+                        - strong [ref=e732]: "OFF"
+                      - link [ref=e734] [cursor=pointer]:
+                        - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                        - img "BAHIA À VISTA MOUSSE 200ML" [ref=e736]
+                    - generic [ref=e737]:
+                      - generic [ref=e738]: (4)
+                      - heading [level=3] [ref=e744]:
+                        - link "BAHIA À VISTA MOUSSE 200ML" [ref=e745] [cursor=pointer]:
+                          - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                      - generic [ref=e746]:
+                        - paragraph [ref=e750]: 10% de cashback
+                        - paragraph
+                      - generic [ref=e752]:
+                        - deletion [ref=e753]:
+                          - emphasis [ref=e754]: de
+                          - generic [ref=e755]: R$ 69,90
+                          - text: por
+                        - strong [ref=e756]: R$ 27,96À vista
+                        - term [ref=e757]: em até 1 x sem juros de R$ 27,96
+                      - link [ref=e760] [cursor=pointer]:
+                        - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                - listitem [ref=e768]:
+                  - generic [ref=e769]:
+                    - generic [ref=e770]:
+                      - button [ref=e772] [cursor=pointer]
+                      - generic "-60%" [ref=e773]:
+                        - text: 60%
+                        - strong [ref=e774]: "OFF"
+                      - link [ref=e776] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                        - img "SOL CARIOCA - MOUSSE 200ML" [ref=e778]
+                    - generic [ref=e779]:
+                      - generic [ref=e780]: (3)
+                      - heading [level=3] [ref=e786]:
+                        - link "SOL CARIOCA - MOUSSE 200ML" [ref=e787] [cursor=pointer]:
+                          - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                      - generic [ref=e788]:
+                        - paragraph [ref=e792]: 10% de cashback
+                        - paragraph
+                      - generic [ref=e794]:
+                        - deletion [ref=e795]:
+                          - emphasis [ref=e796]: de
+                          - generic [ref=e797]: R$ 69,90
+                          - text: por
+                        - strong [ref=e798]: R$ 27,96À vista
+                        - term [ref=e799]: em até 1 x sem juros de R$ 27,96
+                      - link [ref=e802] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                - listitem [ref=e810]:
+                  - generic [ref=e811]:
+                    - generic [ref=e812]:
+                      - button [ref=e814] [cursor=pointer]
+                      - generic [ref=e815]:
+                        - text: 60%
+                        - strong [ref=e816]: "OFF"
+                      - link [ref=e818] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                    - generic [ref=e821]:
+                      - generic [ref=e822]: (3)
+                      - heading [level=3] [ref=e828]:
+                        - link [ref=e829] [cursor=pointer]:
+                          - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                          - text: CHAPADA QUE JÁ FOI MAR - SABONETE CREMOSO 280G
+                      - paragraph [ref=e834]: 10% de cashback
+                      - generic [ref=e836]:
+                        - deletion [ref=e837]:
+                          - emphasis [ref=e838]: de
+                          - generic [ref=e839]: R$ 74,90
+                          - text: por
+                        - strong [ref=e840]: R$ 29,96À vista
+                        - term [ref=e841]: em até 1 x sem juros de R$ 29,96
+                      - link [ref=e844] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                        - text: Comprar
+                - listitem [ref=e852]:
+                  - generic [ref=e853]:
+                    - generic [ref=e854]:
+                      - button [ref=e856] [cursor=pointer]
+                      - generic [ref=e857]:
+                        - text: 60%
+                        - strong [ref=e858]: "OFF"
+                      - link [ref=e860] [cursor=pointer]:
+                        - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                    - generic [ref=e863]:
+                      - generic [ref=e864]: (4)
+                      - heading [level=3] [ref=e870]:
+                        - link [ref=e871] [cursor=pointer]:
+                          - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                          - text: BAHIA À VISTA MOUSSE 200ML
+                      - paragraph [ref=e876]: 10% de cashback
+                      - generic [ref=e878]:
+                        - deletion [ref=e879]:
+                          - emphasis [ref=e880]: de
+                          - generic [ref=e881]: R$ 69,90
+                          - text: por
+                        - strong [ref=e882]: R$ 27,96À vista
+                        - term [ref=e883]: em até 1 x sem juros de R$ 27,96
+                      - link [ref=e886] [cursor=pointer]:
+                        - /url: /bahia-a-vista-mousse-200ml-ps-19629-90-p45529
+                        - text: Comprar
+                - listitem [ref=e894]:
+                  - generic [ref=e895]:
+                    - generic [ref=e896]:
+                      - button [ref=e898] [cursor=pointer]
+                      - generic [ref=e899]:
+                        - text: 60%
+                        - strong [ref=e900]: "OFF"
+                      - link [ref=e902] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                    - generic [ref=e905]:
+                      - generic [ref=e906]: (3)
+                      - heading [level=3] [ref=e912]:
+                        - link [ref=e913] [cursor=pointer]:
+                          - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                          - text: SOL CARIOCA - MOUSSE 200ML
+                      - paragraph [ref=e918]: 10% de cashback
+                      - generic [ref=e920]:
+                        - deletion [ref=e921]:
+                          - emphasis [ref=e922]: de
+                          - generic [ref=e923]: R$ 69,90
+                          - text: por
+                        - strong [ref=e924]: R$ 27,96À vista
+                        - term [ref=e925]: em até 1 x sem juros de R$ 27,96
+                      - link [ref=e928] [cursor=pointer]:
+                        - /url: /sol-carioca-mousse-200ml-ps-19629-40-p45410
+                        - text: Comprar
+                - listitem [ref=e936]:
+                  - generic [ref=e937]:
+                    - generic [ref=e938]:
+                      - button [ref=e940] [cursor=pointer]
+                      - generic [ref=e941]:
+                        - text: 60%
+                        - strong [ref=e942]: "OFF"
+                      - link [ref=e944] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                    - generic [ref=e947]:
+                      - generic [ref=e948]: (3)
+                      - heading [level=3] [ref=e954]:
+                        - link [ref=e955] [cursor=pointer]:
+                          - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                          - text: CHAPADA QUE JÁ FOI MAR - SABONETE CREMOSO 280G
+                      - paragraph [ref=e960]: 10% de cashback
+                      - generic [ref=e962]:
+                        - deletion [ref=e963]:
+                          - emphasis [ref=e964]: de
+                          - generic [ref=e965]: R$ 74,90
+                          - text: por
+                        - strong [ref=e966]: R$ 29,96À vista
+                        - term [ref=e967]: em até 1 x sem juros de R$ 29,96
+                      - link [ref=e970] [cursor=pointer]:
+                        - /url: /chapada-sabonete-cremoso-280g-ps-19629-110-p45637
+                        - text: Comprar
+              - button [ref=e976] [cursor=pointer]
+        - generic [ref=e987]:
+          - heading "Vem ver nossos últimos lançamentos ✨" [level=2] [ref=e990]
+          - list [ref=e992]:
+            - generic [ref=e994]:
+              - listitem [ref=e997]:
+                - generic [ref=e998]:
+                  - generic [ref=e999]:
+                    - button [ref=e1001] [cursor=pointer]
+                    - link [ref=e1003] [cursor=pointer]:
+                      - /url: /volumao-mascara-450g-ps-19629-320-p46387
+                      - img "Volumão Máscara 450g" [ref=e1005]
+                  - generic [ref=e1006]:
+                    - generic [ref=e1007]: (2)
+                    - heading [level=3] [ref=e1013]:
+                      - link "Volumão Máscara 450g" [ref=e1014] [cursor=pointer]:
+                        - /url: /volumao-mascara-450g-ps-19629-320-p46387
+                    - generic [ref=e1015]:
+                      - paragraph [ref=e1019]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e1021]:
+                      - strong [ref=e1022]: R$ 64,90À vista
+                      - term [ref=e1023]: em até 2 x sem juros de R$ 32,45
+                    - link [ref=e1026] [cursor=pointer]:
+                      - /url: /volumao-mascara-450g-ps-19629-320-p46387
+              - listitem [ref=e1034]:
+                - generic [ref=e1035]:
+                  - generic [ref=e1036]:
+                    - button [ref=e1038] [cursor=pointer]
+                    - link [ref=e1040] [cursor=pointer]:
+                      - /url: /volumao-shampoo-250ml-ps-19629-321-p46389
+                      - img "Volumão Shampoo 250ml" [ref=e1042]
+                  - generic [ref=e1043]:
+                    - generic [ref=e1044]: (5)
+                    - heading [level=3] [ref=e1050]:
+                      - link "Volumão Shampoo 250ml" [ref=e1051] [cursor=pointer]:
+                        - /url: /volumao-shampoo-250ml-ps-19629-321-p46389
+                    - generic [ref=e1052]:
+                      - paragraph [ref=e1056]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e1058]:
+                      - strong [ref=e1059]: R$ 39,90À vista
+                      - term [ref=e1060]: em até 1 x sem juros de R$ 39,90
+                    - link [ref=e1063] [cursor=pointer]:
+                      - /url: /volumao-shampoo-250ml-ps-19629-321-p46389
+              - listitem [ref=e1071]:
+                - generic [ref=e1072]:
+                  - generic [ref=e1073]:
+                    - button [ref=e1075] [cursor=pointer]
+                    - link [ref=e1077] [cursor=pointer]:
+                      - /url: /volumao-spray-250ml-ps-19629-322-p46391
+                      - img "Volumão Spray 250ml" [ref=e1079]
+                  - generic [ref=e1080]:
+                    - generic [ref=e1081]: (2)
+                    - heading [level=3] [ref=e1087]:
+                      - link "Volumão Spray 250ml" [ref=e1088] [cursor=pointer]:
+                        - /url: /volumao-spray-250ml-ps-19629-322-p46391
+                    - generic [ref=e1089]:
+                      - paragraph [ref=e1093]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e1095]:
+                      - strong [ref=e1096]: R$ 59,90À vista
+                      - term [ref=e1097]: em até 1 x sem juros de R$ 59,90
+                    - link [ref=e1100] [cursor=pointer]:
+                      - /url: /volumao-spray-250ml-ps-19629-322-p46391
+              - listitem [ref=e1108]:
+                - generic [ref=e1109]:
+                  - generic [ref=e1110]:
+                    - button [ref=e1112] [cursor=pointer]
+                    - link [ref=e1114] [cursor=pointer]:
+                      - /url: /morte-subita-oleo-50ml-ps-19629-315-p46375
+                      - img "MORTE SÚBITA ÓLEO 50ML" [ref=e1116]
+                  - generic [ref=e1117]:
+                    - generic [ref=e1118]: (12)
+                    - heading [level=3] [ref=e1124]:
+                      - link "MORTE SÚBITA ÓLEO 50ML" [ref=e1125] [cursor=pointer]:
+                        - /url: /morte-subita-oleo-50ml-ps-19629-315-p46375
+                    - generic [ref=e1126]:
+                      - paragraph [ref=e1130]: 10% de cashback
+                      - paragraph
+                    - generic [ref=e1132]:
+                      - strong [ref=e1133]: R$ 44,90À vista
+                      - term [ref=e1134]: em até 1 x sem juros de R$ 44,90
+                    - link [ref=e1137] [cursor=pointer]:
+                      - /url: /morte-subita-oleo-50ml-ps-19629-315-p46375
+        - generic [ref=e1147]:
+          - heading "Garanta sua edição de colecionador" [level=2] [ref=e1150]
+          - generic [ref=e1151]:
+            - link [ref=e1155] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=83&c=Home&cid=1&bpid=46
+            - list [ref=e1156]:
+              - button [ref=e1157] [cursor=pointer]
+              - generic [ref=e1164]:
+                - listitem [ref=e1167]:
+                  - generic [ref=e1168]:
+                    - generic [ref=e1169]:
+                      - button [ref=e1171] [cursor=pointer]
+                      - link [ref=e1173] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                    - generic [ref=e1176]:
+                      - generic [ref=e1177]: (23)
+                      - heading [level=3] [ref=e1183]:
+                        - link [ref=e1184] [cursor=pointer]:
+                          - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                          - text: Plot Twist Buriti Creme Ativador 480g
+                      - paragraph [ref=e1189]: 10% de cashback
+                      - generic [ref=e1191]:
+                        - strong [ref=e1192]: R$ 69,90À vista
+                        - term [ref=e1193]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1196] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                        - text: Comprar
+                - listitem [ref=e1204]:
+                  - generic [ref=e1205]:
+                    - generic [ref=e1206]:
+                      - button [ref=e1208] [cursor=pointer]
+                      - link [ref=e1210] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                    - generic [ref=e1213]:
+                      - generic [ref=e1214]: (19)
+                      - heading [level=3] [ref=e1220]:
+                        - link [ref=e1221] [cursor=pointer]:
+                          - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                          - text: Plot Twist Bio Nut Oil 90ml
+                      - paragraph [ref=e1226]: 10% de cashback
+                      - generic [ref=e1228]:
+                        - strong [ref=e1229]: R$ 59,90À vista
+                        - term [ref=e1230]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e1233] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                        - text: Comprar
+                - listitem [ref=e1241]:
+                  - generic [ref=e1242]:
+                    - generic [ref=e1243]:
+                      - button [ref=e1245] [cursor=pointer]
+                      - link [ref=e1247] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                        - img "MEU CACHO MINHA VIDA - CREME PENTEAR 500g" [ref=e1249]
+                    - generic [ref=e1250]:
+                      - generic [ref=e1251]: (15)
+                      - heading [level=3] [ref=e1257]:
+                        - link "MEU CACHO MINHA VIDA - CREME PENTEAR 500g" [ref=e1258] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                      - generic [ref=e1259]:
+                        - paragraph [ref=e1263]: 10% de cashback
+                        - paragraph
+                      - generic [ref=e1265]:
+                        - strong [ref=e1266]: R$ 64,90À vista
+                        - term [ref=e1267]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e1270] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                - listitem [ref=e1278]:
+                  - generic [ref=e1279]:
+                    - generic [ref=e1280]:
+                      - button [ref=e1282] [cursor=pointer]
+                      - link [ref=e1284] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                        - img "MEU CACHO MINHA VIDA - JELLY GEL 500g" [ref=e1286]
+                    - generic [ref=e1287]:
+                      - generic [ref=e1288]: (4)
+                      - heading [level=3] [ref=e1294]:
+                        - link "MEU CACHO MINHA VIDA - JELLY GEL 500g" [ref=e1295] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                      - generic [ref=e1296]:
+                        - paragraph [ref=e1300]: 10% de cashback
+                        - paragraph
+                      - generic [ref=e1302]:
+                        - strong [ref=e1303]: R$ 59,90À vista
+                        - term [ref=e1304]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e1307] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                - listitem [ref=e1315]:
+                  - generic [ref=e1316]:
+                    - generic [ref=e1317]:
+                      - button [ref=e1319] [cursor=pointer]
+                      - link [ref=e1321] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                    - generic [ref=e1324]:
+                      - generic [ref=e1325]: (16)
+                      - heading [level=3] [ref=e1331]:
+                        - link [ref=e1332] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                          - text: MEU CACHO MINHA VIDA - SHAMPOO 500mL
+                      - paragraph [ref=e1337]: 10% de cashback
+                      - generic [ref=e1339]:
+                        - strong [ref=e1340]: R$ 49,90À vista
+                        - term [ref=e1341]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e1344] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                        - text: Comprar
+                - listitem [ref=e1352]:
+                  - generic [ref=e1353]:
+                    - generic [ref=e1354]:
+                      - button [ref=e1356] [cursor=pointer]
+                      - link [ref=e1358] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                    - generic [ref=e1361]:
+                      - generic [ref=e1362]: (16)
+                      - heading [level=3] [ref=e1368]:
+                        - link [ref=e1369] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                          - text: MEU CACHO MINHA VIDA - CONDICIONADOR 500g
+                      - paragraph [ref=e1374]: 10% de cashback
+                      - generic [ref=e1376]:
+                        - strong [ref=e1377]: R$ 49,90À vista
+                        - term [ref=e1378]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e1381] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                        - text: Comprar
+                - listitem [ref=e1389]:
+                  - generic [ref=e1390]:
+                    - generic [ref=e1391]:
+                      - button [ref=e1393] [cursor=pointer]
+                      - link [ref=e1395] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                    - generic [ref=e1398]:
+                      - generic [ref=e1399]: (10)
+                      - heading [level=3] [ref=e1405]:
+                        - link [ref=e1406] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                          - text: MEU CACHO MINHA VIDA - MÁSCARA 450g
+                      - paragraph [ref=e1411]: 10% de cashback
+                      - generic [ref=e1413]:
+                        - strong [ref=e1414]: R$ 64,90À vista
+                        - term [ref=e1415]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e1418] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                        - text: Comprar
+                - listitem [ref=e1426]:
+                  - generic [ref=e1427]:
+                    - generic [ref=e1428]:
+                      - button [ref=e1430] [cursor=pointer]
+                      - link [ref=e1432] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                    - generic [ref=e1435]:
+                      - generic [ref=e1436]: (23)
+                      - heading [level=3] [ref=e1442]:
+                        - link [ref=e1443] [cursor=pointer]:
+                          - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                          - text: ONDULADOS LOLA INC. - CONDICIONADOR 500g
+                      - paragraph [ref=e1448]: 10% de cashback
+                      - generic [ref=e1450]:
+                        - strong [ref=e1451]: R$ 49,90À vista
+                        - term [ref=e1452]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e1455] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                        - text: Comprar
+                - listitem [ref=e1463]:
+                  - generic [ref=e1464]:
+                    - generic [ref=e1465]:
+                      - button [ref=e1467] [cursor=pointer]
+                      - link [ref=e1469] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                    - generic [ref=e1472]:
+                      - generic [ref=e1473]: (44)
+                      - heading [level=3] [ref=e1479]:
+                        - link [ref=e1480] [cursor=pointer]:
+                          - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                          - text: ONDULADOS LOLA INC. - SHAMPOO 500ML
+                      - paragraph [ref=e1485]: 10% de cashback
+                      - generic [ref=e1487]:
+                        - strong [ref=e1488]: R$ 49,90À vista
+                        - term [ref=e1489]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e1492] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                        - text: Comprar
+                - listitem [ref=e1500]:
+                  - generic [ref=e1501]:
+                    - generic [ref=e1502]:
+                      - button [ref=e1504] [cursor=pointer]
+                      - link [ref=e1506] [cursor=pointer]:
+                        - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                    - generic [ref=e1509]:
+                      - generic [ref=e1510]: (16)
+                      - heading [level=3] [ref=e1516]:
+                        - link [ref=e1517] [cursor=pointer]:
+                          - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                          - text: ONDULADOS CREME TEXTURIZADOR 450G
+                      - paragraph [ref=e1522]: 10% de cashback
+                      - generic [ref=e1524]:
+                        - strong [ref=e1525]: R$ 64,90À vista
+                        - term [ref=e1526]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e1529] [cursor=pointer]:
+                        - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                        - text: Comprar
+                - listitem [ref=e1537]:
+                  - generic [ref=e1538]:
+                    - generic [ref=e1539]:
+                      - button [ref=e1541] [cursor=pointer]
+                      - link [ref=e1543] [cursor=pointer]:
+                        - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                    - generic [ref=e1546]:
+                      - generic [ref=e1547]: (18)
+                      - heading [level=3] [ref=e1553]:
+                        - link [ref=e1554] [cursor=pointer]:
+                          - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                          - text: PLOT TWIST - NUT BUTTER CREAM 480G
+                      - paragraph [ref=e1559]: 10% de cashback
+                      - generic [ref=e1561]:
+                        - strong [ref=e1562]: R$ 69,90À vista
+                        - term [ref=e1563]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1566] [cursor=pointer]:
+                        - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                        - text: Comprar
+                - listitem [ref=e1574]:
+                  - generic [ref=e1575]:
+                    - generic [ref=e1576]:
+                      - button [ref=e1578] [cursor=pointer]
+                      - link [ref=e1580] [cursor=pointer]:
+                        - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                    - generic [ref=e1583]:
+                      - generic [ref=e1584]: (9)
+                      - heading [level=3] [ref=e1590]:
+                        - link [ref=e1591] [cursor=pointer]:
+                          - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                          - text: PLOT TWIST - GUAVA OIL 90 ML
+                      - paragraph [ref=e1596]: 10% de cashback
+                      - generic [ref=e1598]:
+                        - strong [ref=e1599]: R$ 55,00À vista
+                        - term [ref=e1600]: em até 1 x sem juros de R$ 55,00
+                      - link [ref=e1603] [cursor=pointer]:
+                        - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                        - text: Comprar
+                - listitem [ref=e1611]:
+                  - generic [ref=e1612]:
+                    - generic [ref=e1613]:
+                      - button [ref=e1615] [cursor=pointer]
+                      - link [ref=e1617] [cursor=pointer]:
+                        - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                    - generic [ref=e1620]:
+                      - generic [ref=e1621]: (13)
+                      - heading [level=3] [ref=e1627]:
+                        - link [ref=e1628] [cursor=pointer]:
+                          - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                          - text: PLOT TWIST - GUAVA BUTTER GEL 480G
+                      - paragraph [ref=e1633]: 10% de cashback
+                      - generic [ref=e1635]:
+                        - strong [ref=e1636]: R$ 64,90À vista
+                        - term [ref=e1637]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e1640] [cursor=pointer]:
+                        - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                        - text: Comprar
+                - listitem [ref=e1648]:
+                  - generic [ref=e1649]:
+                    - generic [ref=e1650]:
+                      - button [ref=e1652] [cursor=pointer]
+                      - link [ref=e1654] [cursor=pointer]:
+                        - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                    - generic [ref=e1657]:
+                      - generic [ref=e1658]: (23)
+                      - heading [level=3] [ref=e1664]:
+                        - link [ref=e1665] [cursor=pointer]:
+                          - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                          - text: PLOT TWIST - GUAVA MOUSSE 150 ML
+                      - paragraph [ref=e1670]: 10% de cashback
+                      - generic [ref=e1672]:
+                        - strong [ref=e1673]: R$ 49,90À vista
+                        - term [ref=e1674]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e1677] [cursor=pointer]:
+                        - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                        - text: Comprar
+                - listitem [ref=e1685]:
+                  - generic [ref=e1686]:
+                    - generic [ref=e1687]:
+                      - button [ref=e1689] [cursor=pointer]
+                      - link [ref=e1691] [cursor=pointer]:
+                        - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                    - generic [ref=e1694]:
+                      - generic [ref=e1695]: (14)
+                      - heading [level=3] [ref=e1701]:
+                        - link [ref=e1702] [cursor=pointer]:
+                          - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                          - text: PLOT TWIST - GUAVA CREAM 480G
+                      - paragraph [ref=e1707]: 10% de cashback
+                      - generic [ref=e1709]:
+                        - strong [ref=e1710]: R$ 69,90À vista
+                        - term [ref=e1711]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1714] [cursor=pointer]:
+                        - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                        - text: Comprar
+                - listitem [ref=e1722]:
+                  - generic [ref=e1723]:
+                    - generic [ref=e1724]:
+                      - button [ref=e1726] [cursor=pointer]
+                      - link [ref=e1728] [cursor=pointer]:
+                        - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                    - generic [ref=e1731]:
+                      - generic [ref=e1732]: (13)
+                      - heading [level=3] [ref=e1738]:
+                        - link [ref=e1739] [cursor=pointer]:
+                          - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                          - text: Plot Twist Guava Misturinha
+                      - paragraph [ref=e1744]: 10% de cashback
+                      - generic [ref=e1746]:
+                        - strong [ref=e1747]: R$ 59,90À vista
+                        - term [ref=e1748]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e1751] [cursor=pointer]:
+                        - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                        - text: Comprar
+                - listitem [ref=e1759]:
+                  - generic [ref=e1760]:
+                    - generic [ref=e1761]:
+                      - button [ref=e1763] [cursor=pointer]
+                      - link [ref=e1765] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                    - generic [ref=e1768]:
+                      - generic [ref=e1769]: (7)
+                      - heading [level=3] [ref=e1775]:
+                        - link [ref=e1776] [cursor=pointer]:
+                          - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                          - text: Plot Twist Buriti Pudding 480g
+                      - paragraph [ref=e1781]: 10% de cashback
+                      - generic [ref=e1783]:
+                        - strong [ref=e1784]: R$ 69,90À vista
+                        - term [ref=e1785]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1788] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                        - text: Comprar
+                - listitem [ref=e1796]:
+                  - generic [ref=e1797]:
+                    - generic [ref=e1798]:
+                      - button [ref=e1800] [cursor=pointer]
+                      - link [ref=e1802] [cursor=pointer]:
+                        - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                    - generic [ref=e1805]:
+                      - generic [ref=e1806]: (3)
+                      - heading [level=3] [ref=e1812]:
+                        - link [ref=e1813] [cursor=pointer]:
+                          - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                          - text: Plot Twist Shampoo Sem Enxágue 200ml
+                      - paragraph [ref=e1818]: 10% de cashback
+                      - generic [ref=e1820]:
+                        - strong [ref=e1821]: R$ 59,90À vista
+                        - term [ref=e1822]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e1825] [cursor=pointer]:
+                        - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                        - text: Comprar
+                - listitem [ref=e1833]:
+                  - generic [ref=e1834]:
+                    - generic [ref=e1835]:
+                      - button [ref=e1837] [cursor=pointer]
+                      - link [ref=e1839] [cursor=pointer]:
+                        - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                    - generic [ref=e1842]:
+                      - generic [ref=e1843]: (7)
+                      - heading [level=3] [ref=e1849]:
+                        - link [ref=e1850] [cursor=pointer]:
+                          - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                          - text: Plot Twist Nut Gel 230g
+                      - paragraph [ref=e1855]: 10% de cashback
+                      - generic [ref=e1857]:
+                        - strong [ref=e1858]: R$ 69,90À vista
+                        - term [ref=e1859]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1862] [cursor=pointer]:
+                        - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                        - text: Comprar
+                - listitem [ref=e1870]:
+                  - generic [ref=e1871]:
+                    - generic [ref=e1872]:
+                      - button [ref=e1874] [cursor=pointer]
+                      - link [ref=e1876] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                    - generic [ref=e1879]:
+                      - generic [ref=e1880]: (23)
+                      - heading [level=3] [ref=e1886]:
+                        - link [ref=e1887] [cursor=pointer]:
+                          - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                          - text: Plot Twist Buriti Creme Ativador 480g
+                      - paragraph [ref=e1892]: 10% de cashback
+                      - generic [ref=e1894]:
+                        - strong [ref=e1895]: R$ 69,90À vista
+                        - term [ref=e1896]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e1899] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                        - text: Comprar
+                - listitem [ref=e1907]:
+                  - generic [ref=e1908]:
+                    - generic [ref=e1909]:
+                      - button [ref=e1911] [cursor=pointer]
+                      - link [ref=e1913] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                    - generic [ref=e1916]:
+                      - generic [ref=e1917]: (19)
+                      - heading [level=3] [ref=e1923]:
+                        - link [ref=e1924] [cursor=pointer]:
+                          - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                          - text: Plot Twist Bio Nut Oil 90ml
+                      - paragraph [ref=e1929]: 10% de cashback
+                      - generic [ref=e1931]:
+                        - strong [ref=e1932]: R$ 59,90À vista
+                        - term [ref=e1933]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e1936] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                        - text: Comprar
+                - listitem [ref=e1944]:
+                  - generic [ref=e1945]:
+                    - generic [ref=e1946]:
+                      - button [ref=e1948] [cursor=pointer]
+                      - link [ref=e1950] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                    - generic [ref=e1953]:
+                      - generic [ref=e1954]: (15)
+                      - heading [level=3] [ref=e1960]:
+                        - link [ref=e1961] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                          - text: MEU CACHO MINHA VIDA - CREME PENTEAR 500g
+                      - paragraph [ref=e1966]: 10% de cashback
+                      - generic [ref=e1968]:
+                        - strong [ref=e1969]: R$ 64,90À vista
+                        - term [ref=e1970]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e1973] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-creme-pentear-500g-ps-19629-73-p45409
+                        - text: Comprar
+                - listitem [ref=e1981]:
+                  - generic [ref=e1982]:
+                    - generic [ref=e1983]:
+                      - button [ref=e1985] [cursor=pointer]
+                      - link [ref=e1987] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                    - generic [ref=e1990]:
+                      - generic [ref=e1991]: (4)
+                      - heading [level=3] [ref=e1997]:
+                        - link [ref=e1998] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                          - text: MEU CACHO MINHA VIDA - JELLY GEL 500g
+                      - paragraph [ref=e2003]: 10% de cashback
+                      - generic [ref=e2005]:
+                        - strong [ref=e2006]: R$ 59,90À vista
+                        - term [ref=e2007]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e2010] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-jelly-gel-500g-ps-19629-13-p45474
+                        - text: Comprar
+                - listitem [ref=e2018]:
+                  - generic [ref=e2019]:
+                    - generic [ref=e2020]:
+                      - button [ref=e2022] [cursor=pointer]
+                      - link [ref=e2024] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                    - generic [ref=e2027]:
+                      - generic [ref=e2028]: (16)
+                      - heading [level=3] [ref=e2034]:
+                        - link [ref=e2035] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                          - text: MEU CACHO MINHA VIDA - SHAMPOO 500mL
+                      - paragraph [ref=e2040]: 10% de cashback
+                      - generic [ref=e2042]:
+                        - strong [ref=e2043]: R$ 49,90À vista
+                        - term [ref=e2044]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e2047] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-shampoo-500ml-ps-19629-30-p45499
+                        - text: Comprar
+                - listitem [ref=e2055]:
+                  - generic [ref=e2056]:
+                    - generic [ref=e2057]:
+                      - button [ref=e2059] [cursor=pointer]
+                      - link [ref=e2061] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                    - generic [ref=e2064]:
+                      - generic [ref=e2065]: (16)
+                      - heading [level=3] [ref=e2071]:
+                        - link [ref=e2072] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                          - text: MEU CACHO MINHA VIDA - CONDICIONADOR 500g
+                      - paragraph [ref=e2077]: 10% de cashback
+                      - generic [ref=e2079]:
+                        - strong [ref=e2080]: R$ 49,90À vista
+                        - term [ref=e2081]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e2084] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-condicionador-500g-ps-19629-21-p45542
+                        - text: Comprar
+                - listitem [ref=e2092]:
+                  - generic [ref=e2093]:
+                    - generic [ref=e2094]:
+                      - button [ref=e2096] [cursor=pointer]
+                      - link [ref=e2098] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                    - generic [ref=e2101]:
+                      - generic [ref=e2102]: (10)
+                      - heading [level=3] [ref=e2108]:
+                        - link [ref=e2109] [cursor=pointer]:
+                          - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                          - text: MEU CACHO MINHA VIDA - MÁSCARA 450g
+                      - paragraph [ref=e2114]: 10% de cashback
+                      - generic [ref=e2116]:
+                        - strong [ref=e2117]: R$ 64,90À vista
+                        - term [ref=e2118]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e2121] [cursor=pointer]:
+                        - /url: /meu-cacho-minha-vida-mascara-450g-ps-19629-71-p45712
+                        - text: Comprar
+                - listitem [ref=e2129]:
+                  - generic [ref=e2130]:
+                    - generic [ref=e2131]:
+                      - button [ref=e2133] [cursor=pointer]
+                      - link [ref=e2135] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                    - generic [ref=e2138]:
+                      - generic [ref=e2139]: (23)
+                      - heading [level=3] [ref=e2145]:
+                        - link [ref=e2146] [cursor=pointer]:
+                          - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                          - text: ONDULADOS LOLA INC. - CONDICIONADOR 500g
+                      - paragraph [ref=e2151]: 10% de cashback
+                      - generic [ref=e2153]:
+                        - strong [ref=e2154]: R$ 49,90À vista
+                        - term [ref=e2155]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e2158] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-condicionador-500g-ps-19629-31-p45398
+                        - text: Comprar
+                - listitem [ref=e2166]:
+                  - generic [ref=e2167]:
+                    - generic [ref=e2168]:
+                      - button [ref=e2170] [cursor=pointer]
+                      - link [ref=e2172] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                    - generic [ref=e2175]:
+                      - generic [ref=e2176]: (44)
+                      - heading [level=3] [ref=e2182]:
+                        - link [ref=e2183] [cursor=pointer]:
+                          - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                          - text: ONDULADOS LOLA INC. - SHAMPOO 500ML
+                      - paragraph [ref=e2188]: 10% de cashback
+                      - generic [ref=e2190]:
+                        - strong [ref=e2191]: R$ 49,90À vista
+                        - term [ref=e2192]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e2195] [cursor=pointer]:
+                        - /url: /ondulados-lola-inc-shampoo-500ml-ps-19629-36-p45550
+                        - text: Comprar
+                - listitem [ref=e2203]:
+                  - generic [ref=e2204]:
+                    - generic [ref=e2205]:
+                      - button [ref=e2207] [cursor=pointer]
+                      - link [ref=e2209] [cursor=pointer]:
+                        - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                    - generic [ref=e2212]:
+                      - generic [ref=e2213]: (16)
+                      - heading [level=3] [ref=e2219]:
+                        - link [ref=e2220] [cursor=pointer]:
+                          - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                          - text: ONDULADOS CREME TEXTURIZADOR 450G
+                      - paragraph [ref=e2225]: 10% de cashback
+                      - generic [ref=e2227]:
+                        - strong [ref=e2228]: R$ 64,90À vista
+                        - term [ref=e2229]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e2232] [cursor=pointer]:
+                        - /url: /ondulados-creme-texturizador-450g-ps-19629-312-p46369
+                        - text: Comprar
+                - listitem [ref=e2240]:
+                  - generic [ref=e2241]:
+                    - generic [ref=e2242]:
+                      - button [ref=e2244] [cursor=pointer]
+                      - link [ref=e2246] [cursor=pointer]:
+                        - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                    - generic [ref=e2249]:
+                      - generic [ref=e2250]: (18)
+                      - heading [level=3] [ref=e2256]:
+                        - link [ref=e2257] [cursor=pointer]:
+                          - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                          - text: PLOT TWIST - NUT BUTTER CREAM 480G
+                      - paragraph [ref=e2262]: 10% de cashback
+                      - generic [ref=e2264]:
+                        - strong [ref=e2265]: R$ 69,90À vista
+                        - term [ref=e2266]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e2269] [cursor=pointer]:
+                        - /url: /plot-twist-nut-butter-cream-480g-ps-19629-148-p45399
+                        - text: Comprar
+                - listitem [ref=e2277]:
+                  - generic [ref=e2278]:
+                    - generic [ref=e2279]:
+                      - button [ref=e2281] [cursor=pointer]
+                      - link [ref=e2283] [cursor=pointer]:
+                        - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                    - generic [ref=e2286]:
+                      - generic [ref=e2287]: (9)
+                      - heading [level=3] [ref=e2293]:
+                        - link [ref=e2294] [cursor=pointer]:
+                          - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                          - text: PLOT TWIST - GUAVA OIL 90 ML
+                      - paragraph [ref=e2299]: 10% de cashback
+                      - generic [ref=e2301]:
+                        - strong [ref=e2302]: R$ 55,00À vista
+                        - term [ref=e2303]: em até 1 x sem juros de R$ 55,00
+                      - link [ref=e2306] [cursor=pointer]:
+                        - /url: /plot-twist-guava-oil-90-ml-ps-19629-151-p45413
+                        - text: Comprar
+                - listitem [ref=e2314]:
+                  - generic [ref=e2315]:
+                    - generic [ref=e2316]:
+                      - button [ref=e2318] [cursor=pointer]
+                      - link [ref=e2320] [cursor=pointer]:
+                        - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                    - generic [ref=e2323]:
+                      - generic [ref=e2324]: (13)
+                      - heading [level=3] [ref=e2330]:
+                        - link [ref=e2331] [cursor=pointer]:
+                          - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                          - text: PLOT TWIST - GUAVA BUTTER GEL 480G
+                      - paragraph [ref=e2336]: 10% de cashback
+                      - generic [ref=e2338]:
+                        - strong [ref=e2339]: R$ 64,90À vista
+                        - term [ref=e2340]: em até 2 x sem juros de R$ 32,45
+                      - link [ref=e2343] [cursor=pointer]:
+                        - /url: /plot-twist-guava-butter-gel-480g-ps-19629-146-p45431
+                        - text: Comprar
+                - listitem [ref=e2351]:
+                  - generic [ref=e2352]:
+                    - generic [ref=e2353]:
+                      - button [ref=e2355] [cursor=pointer]
+                      - link [ref=e2357] [cursor=pointer]:
+                        - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                    - generic [ref=e2360]:
+                      - generic [ref=e2361]: (23)
+                      - heading [level=3] [ref=e2367]:
+                        - link [ref=e2368] [cursor=pointer]:
+                          - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                          - text: PLOT TWIST - GUAVA MOUSSE 150 ML
+                      - paragraph [ref=e2373]: 10% de cashback
+                      - generic [ref=e2375]:
+                        - strong [ref=e2376]: R$ 49,90À vista
+                        - term [ref=e2377]: em até 1 x sem juros de R$ 49,90
+                      - link [ref=e2380] [cursor=pointer]:
+                        - /url: /plot-twist-guava-mousse-150-ml-ps-19629-149-p45527
+                        - text: Comprar
+                - listitem [ref=e2388]:
+                  - generic [ref=e2389]:
+                    - generic [ref=e2390]:
+                      - button [ref=e2392] [cursor=pointer]
+                      - link [ref=e2394] [cursor=pointer]:
+                        - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                    - generic [ref=e2397]:
+                      - generic [ref=e2398]: (14)
+                      - heading [level=3] [ref=e2404]:
+                        - link [ref=e2405] [cursor=pointer]:
+                          - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                          - text: PLOT TWIST - GUAVA CREAM 480G
+                      - paragraph [ref=e2410]: 10% de cashback
+                      - generic [ref=e2412]:
+                        - strong [ref=e2413]: R$ 69,90À vista
+                        - term [ref=e2414]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e2417] [cursor=pointer]:
+                        - /url: /plot-twist-guava-cream-480g-ps-19629-147-p45666
+                        - text: Comprar
+                - listitem [ref=e2425]:
+                  - generic [ref=e2426]:
+                    - generic [ref=e2427]:
+                      - button [ref=e2429] [cursor=pointer]
+                      - link [ref=e2431] [cursor=pointer]:
+                        - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                    - generic [ref=e2434]:
+                      - generic [ref=e2435]: (13)
+                      - heading [level=3] [ref=e2441]:
+                        - link [ref=e2442] [cursor=pointer]:
+                          - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                          - text: Plot Twist Guava Misturinha
+                      - paragraph [ref=e2447]: 10% de cashback
+                      - generic [ref=e2449]:
+                        - strong [ref=e2450]: R$ 59,90À vista
+                        - term [ref=e2451]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e2454] [cursor=pointer]:
+                        - /url: /plot-twist-guava-misturinha-ps-19629-243-p46078
+                        - text: Comprar
+                - listitem [ref=e2462]:
+                  - generic [ref=e2463]:
+                    - generic [ref=e2464]:
+                      - button [ref=e2466] [cursor=pointer]
+                      - link [ref=e2468] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                    - generic [ref=e2471]:
+                      - generic [ref=e2472]: (7)
+                      - heading [level=3] [ref=e2478]:
+                        - link [ref=e2479] [cursor=pointer]:
+                          - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                          - text: Plot Twist Buriti Pudding 480g
+                      - paragraph [ref=e2484]: 10% de cashback
+                      - generic [ref=e2486]:
+                        - strong [ref=e2487]: R$ 69,90À vista
+                        - term [ref=e2488]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e2491] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-pudding-ps-19629-254-p46166
+                        - text: Comprar
+                - listitem [ref=e2499]:
+                  - generic [ref=e2500]:
+                    - generic [ref=e2501]:
+                      - button [ref=e2503] [cursor=pointer]
+                      - link [ref=e2505] [cursor=pointer]:
+                        - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                    - generic [ref=e2508]:
+                      - generic [ref=e2509]: (3)
+                      - heading [level=3] [ref=e2515]:
+                        - link [ref=e2516] [cursor=pointer]:
+                          - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                          - text: Plot Twist Shampoo Sem Enxágue 200ml
+                      - paragraph [ref=e2521]: 10% de cashback
+                      - generic [ref=e2523]:
+                        - strong [ref=e2524]: R$ 59,90À vista
+                        - term [ref=e2525]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e2528] [cursor=pointer]:
+                        - /url: /plot-twist-shampoo-sem-enxague-200ml-ps-19629-255-p46170
+                        - text: Comprar
+                - listitem [ref=e2536]:
+                  - generic [ref=e2537]:
+                    - generic [ref=e2538]:
+                      - button [ref=e2540] [cursor=pointer]
+                      - link [ref=e2542] [cursor=pointer]:
+                        - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                    - generic [ref=e2545]:
+                      - generic [ref=e2546]: (7)
+                      - heading [level=3] [ref=e2552]:
+                        - link [ref=e2553] [cursor=pointer]:
+                          - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                          - text: Plot Twist Nut Gel 230g
+                      - paragraph [ref=e2558]: 10% de cashback
+                      - generic [ref=e2560]:
+                        - strong [ref=e2561]: R$ 69,90À vista
+                        - term [ref=e2562]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e2565] [cursor=pointer]:
+                        - /url: /plot-twist-nut-gel-230g-ps-19629-256-p46172
+                        - text: Comprar
+                - listitem [ref=e2573]:
+                  - generic [ref=e2574]:
+                    - generic [ref=e2575]:
+                      - button [ref=e2577] [cursor=pointer]
+                      - link [ref=e2579] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                    - generic [ref=e2582]:
+                      - generic [ref=e2583]: (23)
+                      - heading [level=3] [ref=e2589]:
+                        - link [ref=e2590] [cursor=pointer]:
+                          - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                          - text: Plot Twist Buriti Creme Ativador 480g
+                      - paragraph [ref=e2595]: 10% de cashback
+                      - generic [ref=e2597]:
+                        - strong [ref=e2598]: R$ 69,90À vista
+                        - term [ref=e2599]: em até 2 x sem juros de R$ 34,95
+                      - link [ref=e2602] [cursor=pointer]:
+                        - /url: /plot-twist-buriti-creme-ativador-480g-ps-19629-257-p46174
+                        - text: Comprar
+                - listitem [ref=e2610]:
+                  - generic [ref=e2611]:
+                    - generic [ref=e2612]:
+                      - button [ref=e2614] [cursor=pointer]
+                      - link [ref=e2616] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                    - generic [ref=e2619]:
+                      - generic [ref=e2620]: (19)
+                      - heading [level=3] [ref=e2626]:
+                        - link [ref=e2627] [cursor=pointer]:
+                          - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                          - text: Plot Twist Bio Nut Oil 90ml
+                      - paragraph [ref=e2632]: 10% de cashback
+                      - generic [ref=e2634]:
+                        - strong [ref=e2635]: R$ 59,90À vista
+                        - term [ref=e2636]: em até 1 x sem juros de R$ 59,90
+                      - link [ref=e2639] [cursor=pointer]:
+                        - /url: /plot-twist-bio-nut-oil-90ml-ps-19629-258-p46176
+                        - text: Comprar
+              - button [ref=e2645] [cursor=pointer]
+        - generic [ref=e2652]:
+          - heading "Antes x Depois" [level=2] [ref=e2659]
+          - generic [ref=e2664]:
+            - link [ref=e2666] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=201&c=Home&cid=1&bpid=63
+            - link [ref=e2668] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=202&c=Home&cid=1&bpid=63
+            - link [ref=e2670] [cursor=pointer]:
+              - /url: /Shopping/Banner/Click?bid=203&c=Home&cid=1&bpid=63
+        - link [ref=e2674] [cursor=pointer]:
+          - /url: /Shopping/Banner/Click?bid=272&c=Home&cid=1&bpid=108
+          - img "[Comprou Ganhou] Desktop" [ref=e2675]
+        - generic [ref=e2677]:
+          - heading "Conteúdos lolísticos para você!✨" [level=2] [ref=e2680]
+          - list [ref=e2681]:
+            - listitem [ref=e2682]:
+              - link "O que a Garota de Ipanema, a Blue Man e os seus cachos têm em comum? Vem descobrir! O que a Garota de Ipanema, a Blue Man e os seus cachos têm em comum? Vem descobrir! Loletes, sentem aqui que a gente tem uma fofoca daquelas de bastidores, envolvendo moda e um lançamento babadeiro para os seus fios! Se você esteve online nos últimos tempos, com certeza viu o vídeo da maravilhosa Helô P... QUERO LER!" [ref=e2683] [cursor=pointer]:
+                - /url: https://blog.lojalolacosmetics.com.br/o-que-a-garota-de-ipanema-a-blue-man-e-os-seus-cachos-tem-em-comum-vem-descobrir/
+                - img "O que a Garota de Ipanema, a Blue Man e os seus cachos têm em comum? Vem descobrir!" [ref=e2684]
+                - heading "O que a Garota de Ipanema, a Blue Man e os seus cachos têm em comum? Vem descobrir!" [level=3] [ref=e2685]
+                - paragraph [ref=e2686]: Loletes, sentem aqui que a gente tem uma fofoca daquelas de bastidores, envolvendo moda e um lançamento babadeiro para os seus fios! Se você esteve online nos últimos tempos, com certeza viu o vídeo da maravilhosa Helô P...
+                - generic [ref=e2687]: QUERO LER!
+            - listitem [ref=e2688]:
+              - 'link "Lançamento Lola: Banana Tropicana chegou servindo produtinhos babadeiros de nutrição Lançamento Lola: Banana Tropicana chegou servindo produtinhos babadeiros de nutrição Loletes e Lolitos, preparem-se para um banho de brasilidade, inovação e muito alto astral! Se você acha que já viu de tudo quando o assunto é cosmético de banana, a Lolinha veio provar que o clássico pode (e deve!) ser t... QUERO LER!" [ref=e2689] [cursor=pointer]':
+                - /url: https://blog.lojalolacosmetics.com.br/lancamento-lola-banana-tropicana-chegou-servindo-produtinhos-babadeiros-de-nutricao/
+                - 'img "Lançamento Lola: Banana Tropicana chegou servindo produtinhos babadeiros de nutrição" [ref=e2690]'
+                - 'heading "Lançamento Lola: Banana Tropicana chegou servindo produtinhos babadeiros de nutrição" [level=3] [ref=e2691]'
+                - paragraph [ref=e2692]: Loletes e Lolitos, preparem-se para um banho de brasilidade, inovação e muito alto astral! Se você acha que já viu de tudo quando o assunto é cosmético de banana, a Lolinha veio provar que o clássico pode (e deve!) ser t...
+                - generic [ref=e2693]: QUERO LER!
+            - listitem [ref=e2694]:
+              - 'link "Lançamento Lolístico: Conheça a Coleção Volumão e dê adeus ao caberlo murchinho! Lançamento Lolístico: Conheça a Coleção Volumão e dê adeus ao caberlo murchinho! Loletes e Lolitos, podem estender o tapete vermelho e preparar os flashes, porque um dos maiores lançamentos do ano acaba de desembarcar: chegou a linha Volumão! O Segredo por trás do Tapete Vermelho A gente sabe que tem... QUERO LER!" [ref=e2695] [cursor=pointer]':
+                - /url: https://blog.lojalolacosmetics.com.br/lancamento-lolistico-conheca-a-colecao-volumao-e-de-adeus-ao-caberlo-murchinho/
+                - 'img "Lançamento Lolístico: Conheça a Coleção Volumão e dê adeus ao caberlo murchinho!" [ref=e2696]'
+                - 'heading "Lançamento Lolístico: Conheça a Coleção Volumão e dê adeus ao caberlo murchinho!" [level=3] [ref=e2697]'
+                - paragraph [ref=e2698]: "Loletes e Lolitos, podem estender o tapete vermelho e preparar os flashes, porque um dos maiores lançamentos do ano acaba de desembarcar: chegou a linha Volumão! O Segredo por trás do Tapete Vermelho A gente sabe que tem..."
+                - generic [ref=e2699]: QUERO LER!
+    - generic [ref=e2701]:
+      - paragraph [ref=e2702]: Confira as opiniões de clientes satisfeitos
+      - region "Depoimentos de clientes" [ref=e2703]:
+        - generic [ref=e2704]:
+          - button "Anterior" [ref=e2705] [cursor=pointer]
+          - generic [ref=e2709]:
+            - group "Depoimento 1 de 7" [ref=e2710]:
+              - generic [ref=e2711]:
+                - paragraph [ref=e2712]: Daniela G.
+                - generic [ref=e2713]:
+                  - img "Nota 5 de 5" [ref=e2714]
+                  - paragraph [ref=e2730]: 21/09/2026
+                - paragraph [ref=e2732]: Gosto muito:)
+            - group "Depoimento 2 de 7" [ref=e2733]:
+              - generic [ref=e2734]:
+                - paragraph [ref=e2735]: VANESSA F.
+                - generic [ref=e2736]:
+                  - img "Nota 5 de 5" [ref=e2737]
+                  - paragraph [ref=e2753]: 18/09/2026
+                - paragraph [ref=e2755]: Amei receber meus produtos perfeitamente embalados e as amostras grátis - até comprei o creme de pentear que veio de amostra.
+            - group "Depoimento 3 de 7" [ref=e2756]:
+              - generic [ref=e2757]:
+                - paragraph [ref=e2758]: Joice S.
+                - generic [ref=e2759]:
+                  - img "Nota 5 de 5" [ref=e2760]
+                  - paragraph [ref=e2776]: 14/09/2026
+                - paragraph [ref=e2778]: São de excelente qualidade vale a pena comprar pois o investimento e eficaz e duradouro.
+            - group "Depoimento 4 de 7" [ref=e2779]:
+              - generic [ref=e2780]:
+                - paragraph [ref=e2781]: Eliane S.
+                - generic [ref=e2782]:
+                  - img "Nota 5 de 5" [ref=e2783]
+                  - paragraph [ref=e2799]: 10/09/2026
+                - paragraph [ref=e2801]: cabelo muito cheiroso, soltinho. E rende muito.
+            - group "Depoimento 5 de 7" [ref=e2802]:
+              - generic [ref=e2803]:
+                - paragraph [ref=e2804]: Sofia v.
+                - generic [ref=e2805]:
+                  - img "Nota 5 de 5" [ref=e2806]
+                  - paragraph [ref=e2822]: 08/09/2026
+                - paragraph [ref=e2824]: perfeição, produtos bem organizados e com muita informação sobre!
+            - group "Depoimento 6 de 7" [ref=e2825]:
+              - generic [ref=e2826]:
+                - paragraph [ref=e2827]: SARA M.
+                - generic [ref=e2828]:
+                  - img "Nota 5 de 5" [ref=e2829]
+                  - paragraph [ref=e2845]: 01/09/2026
+                - paragraph [ref=e2847]: Produz os produtos que amo.
+            - group "Depoimento 7 de 7" [ref=e2848]:
+              - generic [ref=e2849]:
+                - paragraph [ref=e2850]: Jéssica F.
+                - generic [ref=e2851]:
+                  - img "Nota 5 de 5" [ref=e2852]
+                  - paragraph [ref=e2868]: 01/09/2026
+                - paragraph [ref=e2870]: Incrível. Trata o cliente com muito carinho e entrega rápida e bem feita.
+          - button "Próximo" [ref=e2871] [cursor=pointer]
+          - generic [ref=e2875]:
+            - button "Ir para o review 1" [ref=e2876] [cursor=pointer]
+            - button "Ir para o review 2" [ref=e2877] [cursor=pointer]
+            - button "Ir para o review 3" [ref=e2878] [cursor=pointer]
+      - link [ref=e2879] [cursor=pointer]:
+        - /url: https://site.trustvox.com.br/conheca-a-trustvox?utm_source=widget-rareviews&utm_medium=pagina-principal&utm_campaign=www.lolacosmetics.com.br
+        - paragraph [ref=e2887]: Avaliações confiáveis do
+    - generic [ref=e2891]:
+      - generic [ref=e2893]:
+        - paragraph [ref=e2894]:
+          - generic [ref=e2895]: Nós usamos cookies e outras tecnologias semelhantes para melhorar a experiência de navegação e recomendar conteúdo de seu interesse. Ao continuar navegando você concorda com a nossa
+          - link "política de privacidade" [ref=e2896] [cursor=pointer]:
+            - /url: https://www.lolacosmetics.com.br/conteudo/sobre/politica-de-privacidade
+          - text: .
+        - button "Concordo" [ref=e2898] [cursor=pointer]
+      - generic [ref=e2902]:
+        - generic [ref=e2903]:
+          - heading "Fique por dentro das nossas novidades" [level=4] [ref=e2904]
+          - generic [ref=e2909]:
+            - textbox "Email:" [ref=e2911]:
+              - /placeholder: Insira seu e-mail...
+            - button "Enviar" [ref=e2913] [cursor=pointer]
+          - list [ref=e2914]:
+            - listitem [ref=e2915]:
+              - link [ref=e2916] [cursor=pointer]:
+                - /url: https://www.instagram.com/lolacosmetics/
+            - listitem [ref=e2919]:
+              - link [ref=e2920] [cursor=pointer]:
+                - /url: https://www.facebook.com/lolacosmetics/
+            - listitem [ref=e2923]:
+              - link [ref=e2924] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/lolacosmetics/
+            - listitem [ref=e2928]:
+              - link [ref=e2929] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@lolacosmetics
+            - listitem [ref=e2932]:
+              - link [ref=e2933] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/2KPZDZu9BRJmPuCAyGM7NZ?si=e522b39a1fbf4813
+        - generic [ref=e2936]:
+          - generic [ref=e2937]:
+            - heading "Sobre" [level=4] [ref=e2938]
+            - list [ref=e2941]:
+              - listitem [ref=e2942]:
+                - list [ref=e2943]:
+                  - listitem [ref=e2944]:
+                    - link "Quem somos" [ref=e2945] [cursor=pointer]:
+                      - /url: /conteudo/sobre/quem-somos
+                  - listitem [ref=e2946]:
+                    - link "Este site é seguro?" [ref=e2947] [cursor=pointer]:
+                      - /url: /conteudo/sobre/este-site-e-seguro
+                  - listitem [ref=e2948]:
+                    - link "Política de Cookies" [ref=e2949] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-cookies
+                  - listitem [ref=e2950]:
+                    - link "Política de Privacidade" [ref=e2951] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-privacidade
+                  - listitem [ref=e2952]:
+                    - link "Nossa lojas" [ref=e2953] [cursor=pointer]:
+                      - /url: /onde-encontrar
+                  - listitem [ref=e2954]:
+                    - link "Trabalhe Conosco" [ref=e2955] [cursor=pointer]:
+                      - /url: /trabalhe-conosco
+                  - listitem [ref=e2956]:
+                    - link "Lola Lab" [ref=e2957] [cursor=pointer]:
+                      - /url: /conteudo/sobre/lola-lab
+                  - listitem [ref=e2958]:
+                    - link "Revenda" [ref=e2959] [cursor=pointer]:
+                      - /url: /conteudo/sobre/revenda
+          - generic [ref=e2960]:
+            - heading "Ajuda" [level=4] [ref=e2961]
+            - list [ref=e2964]:
+              - listitem [ref=e2965]:
+                - list [ref=e2966]:
+                  - listitem [ref=e2967]:
+                    - link "Prazos de atendimento" [ref=e2968] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/prazos-de-atendimento
+                  - listitem [ref=e2969]:
+                    - link "Entrega e envios" [ref=e2970] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/entrega-e-envios
+                  - listitem [ref=e2971]:
+                    - link "Pagamento" [ref=e2972] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/pagamento
+                  - listitem [ref=e2973]:
+                    - link "Trocas e devoluções" [ref=e2974] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/trocas-e-devolucoes
+                  - listitem [ref=e2975]:
+                    - link "Perguntas Frequentes" [ref=e2976] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/perguntas-frequentes
+                  - listitem [ref=e2977]:
+                    - link "Como rastrear pedidos" [ref=e2978] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/como-rastrear-pedidos
+                  - listitem [ref=e2979]:
+                    - link "Regulamento Promocional" [ref=e2980] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/regulamento-promocional
+                  - listitem [ref=e2981]:
+                    - link "Cashback" [ref=e2982] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/cashback
+        - generic [ref=e2983]:
+          - heading "Contato" [level=4] [ref=e2984]
+          - list [ref=e2985]:
+            - listitem [ref=e2986]: 0800 000 5521
+            - listitem [ref=e2987]:
+              - link "lolamail@farmativa.ind.br" [ref=e2988] [cursor=pointer]:
+                - /url: mailto:lolamail@farmativa.ind.br
+            - listitem [ref=e2989]: Segunda à Sexta-Feira das 9h às 18h
+          - heading "Segurança" [level=4] [ref=e2990]
+          - generic [ref=e2991]: "4.7"
+        - generic [ref=e3037]:
+          - heading "Meus pedidos" [level=4] [ref=e3038]
+          - link "Acompanhe seus pedidos" [ref=e3039] [cursor=pointer]:
+            - /url: /painel-do-cliente/pedidos
+          - heading "Formas de pagamento" [level=4] [ref=e3040]
+          - img "Forma Pagamento" [ref=e3041]
+      - generic [ref=e3043]:
+        - paragraph [ref=e3044]: AVENIDA CIVIT I 1795 ARMAZEM A GALPAO 4 E 5, SALA 33 - BARRO BRANCO, SERRA - ES | CEP 29170-740 |CNPJ 37.410.037/0002-89
+        - list [ref=e3046]:
+          - listitem [ref=e3047]:
+            - generic [ref=e3048]: "Plataforma:"
+            - link [ref=e3049] [cursor=pointer]:
+              - /url: https://www.linxcommerce.com.br/
+              - img "Plataforma Core" [ref=e3050]
+          - listitem [ref=e3051]:
+            - generic [ref=e3052]: "Projeto:"
+            - link [ref=e3053] [cursor=pointer]:
+              - /url: https://nairuz.com.br/
+  - text: aguarde... aguarde... ×
