@@ -1,7 +1,7 @@
 // Walks every cloned route in the local build, recording console errors, failed requests
 // and a few layout signals, then screenshots each one next to its captured reference.
 async (page) => {
-  const BASE = "http://127.0.0.1:4350";
+  const BASE = "http://127.0.0.1:4351";
   const routes = [
     ["/", "root-8a5edab2"],
     ["/kits", "kits-05782adf"],
@@ -16,6 +16,10 @@ async (page) => {
     ["/kit-a-formula-lamelar-p46345", "kit-a-formula-lamelar-p46345-dcfe78d8"],
     ["/login", "login-7e93fba0"],
     ["/carrinho", "carrinho-1bc30c37"],
+    ["/kit-rapunzel-colecao-completa-p46395", "kit-rapunzel-colecao-completa-p46395-73b5c8ee"],
+    ["/plot-twist-guava-oil-90-ml-ps-19629-151-p45413", "plot-twist-guava-oil-90-ml-ps-19629-151-p45413-45c5209d"],
+    ["/touca-turbante-ps-19629-268-p46204", "touca-turbante-ps-19629-268-p46204-c1e162f4"],
+    ["/kit-feira-cronolola-ps-19629-250-p46131", "kit-feira-cronolola-ps-19629-250-p46131-ca1686e4"],
     ["/uma-rota-que-nao-foi-clonada", null],
   ];
 

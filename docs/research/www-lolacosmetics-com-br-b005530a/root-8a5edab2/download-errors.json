@@ -1,23 +1,7 @@
 [
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/estrutura-molecular-quimica-do-aminoacido-arginina_8071-62226.avif",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/chocolaterapia-capilar-mimos-para-tu-cabello.jpg",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/what-is-quinoa.jpg",
-    "error": "Error: HTTP 403"
-  },
-  {
     "url": "https://trustvox.com.br/widget/root?&code=46291&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fa-formula-100g-ps-19629-291-p46291&name=A+F%C3%B3rmula+M%C3%A1scara+Lamelar+100G&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F29%2F46291_a-formula-100g-ps-19629-291_s13_639208232261997909.webp",
     "error": "Error: HTTP 404"
-  },
-  {
-    "url": "https://accounts.google.com/gsi/style",
-    "error": "Error: HTTP 403"
   },
   {
     "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content/Themes/Shared/#2f2f2f",
@@ -28,20 +12,8 @@
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/azucar-1.jpg",
-    "error": "Error: HTTP 403"
-  },
-  {
     "url": "https://trustvox.com.br/widget/root?&code=46337&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fa-formula-brilho-lamelar-shampoo-250ml-ps-19629-299-p46337&name=A+F%C3%B3rmula+Shampoo+Brilho+Lamelar+250ml&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F33%2F46337_a-formula-brilho-lamelar-shampoo-250ml-ps-19629-299_s1_639071100319013619.webp",
     "error": "Error: HTTP 404"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Protein-Powder_Aleksey-Korchemkin-Shutterstock-1024x683.jpg",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/glicerina-1.jpg",
-    "error": "Error: HTTP 403"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46339&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fa-formula-primer-brilho-lamelar-200ml-ps-19629-300-p46339&name=A+F%C3%B3rmula+Primer+Brilho+Lamelar+200ml&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F33%2F46339_a-formula-primer-brilho-lamelar-200ml-ps-19629-300_s1_639071147610173817.webp",
@@ -76,24 +48,24 @@
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content",
-    "error": "Error: HTTP 404"
-  },
-  {
     "url": "https://trustvox.com.br/widget/root?&code=45642&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fbe-m-dita-ghee-cronograma-100g-p46049&name=Be(m)dita+Ghee+-+Cronograma+100g&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F04%2F46049_be-m-dita-ghee-cronograma-100g_s1_638654564301393702.webp",
     "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Extratos-vegetais-1024x576.png",
-    "error": "Error: HTTP 403"
+    "url": "https://d1hjvew1n9ss7u.cloudfront.net/Custom/Content",
+    "error": "Error: HTTP 404"
   },
   {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/oleo%20pequi.jpg",
-    "error": "Error: HTTP 403"
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Extratos-vegetais-1024x576.png",
+    "error": "Error: HTTP 404"
   },
   {
     "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/Acai-da-tradicao-indigena-ao-sucesso-internacional%20(1).png",
-    "error": "Error: HTTP 403"
+    "error": "Error: HTTP 404"
+  },
+  {
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/oleo%20pequi.jpg",
+    "error": "Error: HTTP 404"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46279&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fbossa-creme-modelador-1kg-ps-19629-284-p46279&name=BOSSA+CREME+MODELADOR+1KG&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F27%2F46279_bossa-creme-modelador-1kg-ps-19629-284_s1_638930343190962625.webp",
@@ -122,18 +94,6 @@
   {
     "url": "https://trustvox.com.br/widget/root?&code=45637&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fchapada-sabonete-cremoso-280g-ps-19629-110-p45637&name=CHAPADA+QUE+J%C3%81+FOI+MAR+-+SABONETE+CREMOSO+280G&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F45%2F63%2F45637_chapada-sabonete-cremoso-280g-ps-19629-110_s3_638621808151955730.webp",
     "error": "Error: HTTP 404"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/comment-ralentir-la-chute-des-cheveux-2.jpeg",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/guiaparacabelohidratado-128-6220.png",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/gengibre-beneficios.jpg",
-    "error": "Error: HTTP 403"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46330&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fcuca-fresca-condicionador-reequilibrante-250g-ps-19629-297-p46330&name=Cuca+Fresca+Condicionador+Reequilibrante+250g&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F33%2F46330_cuca-fresca-condicionador-reequilibrante-250g-ps-19629-297_s1_639059656734326401.webp",
@@ -180,16 +140,16 @@
     "error": "Error: HTTP 404"
   },
   {
+    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/coco.webp",
+    "error": "Error: HTTP 404"
+  },
+  {
     "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/amino.jpg",
-    "error": "Error: HTTP 403"
+    "error": "Error: HTTP 404"
   },
   {
     "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/babosa.webp",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/coco.webp",
-    "error": "Error: HTTP 403"
+    "error": "Error: HTTP 404"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46358&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fkit-morte-subita-trio-ps-19629-308-p46358&name=KIT+MORTE+S%C3%9ABITA+TRIO&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F35%2F46358_kit-morte-subita-trio-ps-19629-308_s6_639144388289604077.webp",
@@ -214,18 +174,6 @@
   {
     "url": "https://trustvox.com.br/widget/root?&code=46387&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fkit-volumao-linha-completa-p46393&name=Kit+Volum%C3%A3o+-+Linha+Completa&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F39%2F46393_kit-volumao-linha-completa_s1_639214381420830782.webp",
     "error": "Error: HTTP 404"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/linho%20dourado.jpg",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/sodium%20pca.webp",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/arginine.jpg",
-    "error": "Error: HTTP 403"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=45566&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fkit-xapadinha-liso-perfeito-disciplina-anti-frizz-e-anti-quebra-p45750&name=Kit+Xapadinha+com+M%C3%A1scara+de+450g+-+Linha+Completa&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F45%2F75%2F45750_kit-completo-xapadinha-com-mascara-de-450g_s7_638632879878801415.webp",
@@ -362,18 +310,6 @@
   {
     "url": "https://trustvox.com.br/widget/root?&code=45410&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Fsol-carioca-mousse-200ml-ps-19629-40-p45410&name=SOL+CARIOCA+-+MOUSSE+200ML&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F45%2F41%2F45410_sol-carioca-mousse-200ml-ps-19629-40_s4_638621807452983422.webp",
     "error": "Error: HTTP 404"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/acido%20tanico.ppm",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes/image-4-1024x682.png",
-    "error": "Error: HTTP 403"
-  },
-  {
-    "url": "https://lolacosmetics.admin.linxcommerce.com.br/Custom/Content/Themes/Lola/Imagens/Principais_Ingredientes//vegetais.png",
-    "error": "Error: HTTP 403"
   },
   {
     "url": "https://trustvox.com.br/widget/root?&code=46341&store_id=124669&url=https:%2F%2Fwww.lolacosmetics.com.br%2Ftannic-acid-leave-in-protetor-100ml-ps-19629-301-p46341&name=Tannic+Acid+Leave-In+Protetor+100ml&photos_urls[]=https:%2F%2Fd2l4mdyojly1ma.cloudfront.net%2FCustom%2FContent%2FProducts%2F46%2F34%2F46341_tannic-acid-leave-in-protetor-100ml-ps-19629-301_s1_639071153771825034.webp",
