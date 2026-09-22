@@ -35,6 +35,19 @@
       "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-root-8a5edab2.mjs"
     },
     {
+      "url": "https://www.lolacosmetics.com.br/kits",
+      "pathname": "/kits",
+      "template": "category",
+      "status": "done",
+      "pageKey": "kits-05782adf",
+      "routeFile": "src/app/kits/page.tsx",
+      "research": "docs/research/www-lolacosmetics-com-br-b005530a/kits-05782adf/",
+      "screenshots": "docs/design-references/www-lolacosmetics-com-br-b005530a/kits-05782adf/",
+      "components": "src/components/sites/www-lolacosmetics-com-br-b005530a/kits-05782adf/",
+      "assets": "public/sites/www-lolacosmetics-com-br-b005530a/kits-05782adf/",
+      "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-kits-05782adf.mjs"
+    },
+    {
       "url": "https://www.lolacosmetics.com.br/tratamentos",
       "pathname": "/tratamentos",
       "template": "category",
@@ -178,5 +191,6 @@
       "downloader": "scripts/download-assets-www-lolacosmetics-com-br-b005530a-carrinho-1bc30c37.mjs"
     }
   ],
-  "collisionCheck": "Every pageKey, route file, artifact root, component root, asset root and downloader filename below is distinct; no target's pathname collides with an existing route."
+  "collisionCheck": "Every pageKey, route file, artifact root, component root, asset root and downloader filename below is distinct; no target's pathname collides with an existing route.",
+  "linkPolicy": "Anchors that resolve to the source origin are rewritten to bare pathnames so navigation stays inside the clone: a cloned route renders, anything else falls through to the catch-all. Other hosts, mail and phone links are left as the source had them."
 }

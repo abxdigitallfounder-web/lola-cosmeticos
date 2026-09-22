@@ -1,0 +1,898 @@
+- generic [active] [ref=f239e1]:
+  - generic [ref=f239e2]:
+    - generic [ref=f239e6]:
+      - generic [ref=f239e7]:
+        - heading [level=1] [ref=f239e9]:
+          - link "Lola Cosmetics" [ref=f239e10] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f239e13]:
+          - textbox "O que você procura?" [ref=f239e15]
+          - button "Buscar" [ref=f239e16] [cursor=pointer]
+        - generic [ref=f239e17]:
+          - link "Rastrear pedido" [ref=f239e19] [cursor=pointer]:
+            - /url: https://lolacosmetics.cademeupedido.com.br/
+          - link [ref=f239e32] [cursor=pointer]:
+            - /url: /painel-do-cliente
+          - generic [ref=f239e37]:
+            - link [ref=f239e38] [cursor=pointer]:
+              - /url: /carrinho
+              - emphasis [ref=f239e44]: "0"
+            - generic [ref=f239e45]:
+              - generic [ref=f239e46] [cursor=pointer]: x
+              - generic [ref=f239e53]:
+                - strong [ref=f239e54]: Minha sacola
+                - generic [ref=f239e55]: contém 0 itens
+              - generic [ref=f239e56]:
+                - generic [ref=f239e58]:
+                  - generic [ref=f239e59]: :(
+                  - paragraph [ref=f239e60]:
+                    - strong [ref=f239e61]: Não há produtos na sua sacola.
+                    - text: Que tal conferir algumas ofertas?
+                - generic [ref=f239e62]:
+                  - list [ref=f239e64]:
+                    - listitem [ref=f239e65]: Subtotal
+                    - listitem [ref=f239e66]: R$ 0,00
+                  - button "Finalizar Compra" [ref=f239e67] [cursor=pointer]
+                  - generic [ref=f239e68] [cursor=pointer]: Continuar comprando
+      - navigation [ref=f239e73]:
+        - list [ref=f239e74]:
+          - listitem [ref=f239e75]:
+            - heading [level=3] [ref=f239e76]:
+              - link "KITS" [ref=f239e77] [cursor=pointer]:
+                - /url: /kits
+          - listitem [ref=f239e78]:
+            - heading [level=3] [ref=f239e79]:
+              - link "TIPOS DE CABELO" [ref=f239e80] [cursor=pointer]:
+                - /url: /tipos-de-cabelo
+            - list:
+              - listitem [ref=f239e81]:
+                - heading [level=4] [ref=f239e82]:
+                  - link "Lisos" [ref=f239e83] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/liso
+              - listitem [ref=f239e84]:
+                - heading [level=4] [ref=f239e85]:
+                  - link "Cachos & Curvas" [ref=f239e86] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/cacheado
+              - listitem [ref=f239e87]:
+                - heading [level=4] [ref=f239e88]:
+                  - link "Todos os tipos de cabelos" [ref=f239e89] [cursor=pointer]:
+                    - /url: /tipos-de-cabelo/todos-os-tipos
+          - listitem [ref=f239e90]:
+            - heading [level=3] [ref=f239e91]:
+              - link "TRATAMENTOS" [ref=f239e92] [cursor=pointer]:
+                - /url: /tratamentos
+            - list:
+              - listitem [ref=f239e93]:
+                - heading [level=4] [ref=f239e94]:
+                  - link "Uso diário" [ref=f239e95] [cursor=pointer]:
+                    - /url: /tratamentos/uso-diario
+              - listitem [ref=f239e96]:
+                - heading [level=4] [ref=f239e97]:
+                  - link "Cronograma Capilar" [ref=f239e98] [cursor=pointer]:
+                    - /url: /tratamentos/cronograma-capilar
+                  - button [ref=f239e99] [cursor=pointer]
+              - listitem [ref=f239e103]:
+                - heading [level=4] [ref=f239e104]:
+                  - link "SOS Reparação" [ref=f239e105] [cursor=pointer]:
+                    - /url: /tratamentos/sos-reparacao
+              - listitem [ref=f239e106]:
+                - heading [level=4] [ref=f239e107]:
+                  - link "Brilho" [ref=f239e108] [cursor=pointer]:
+                    - /url: /tratamentos/brilho
+              - listitem [ref=f239e109]:
+                - heading [level=4] [ref=f239e110]:
+                  - link "Fortalecimento" [ref=f239e111] [cursor=pointer]:
+                    - /url: /tratamentos/fortalecimento
+              - listitem [ref=f239e112]:
+                - heading [level=4] [ref=f239e113]:
+                  - link "Finalização" [ref=f239e114] [cursor=pointer]:
+                    - /url: /tratamentos/finalizacao
+                  - button [ref=f239e115] [cursor=pointer]
+              - listitem [ref=f239e119]:
+                - heading [level=4] [ref=f239e120]:
+                  - link "Cuidados específicos" [ref=f239e121] [cursor=pointer]:
+                    - /url: /tratamentos/cuidados-especificos
+                  - button [ref=f239e122] [cursor=pointer]
+              - listitem [ref=f239e126]:
+                - heading [level=4] [ref=f239e127]:
+                  - link "Ver Tudo" [ref=f239e128] [cursor=pointer]:
+                    - /url: /tratamentos
+          - listitem [ref=f239e129]:
+            - heading [level=3] [ref=f239e130]:
+              - link "Coleções" [ref=f239e131] [cursor=pointer]:
+                - /url: /colecoes
+            - list:
+              - listitem [ref=f239e132]:
+                - heading [level=4] [ref=f239e133]:
+                  - link "A Fórmula" [ref=f239e134] [cursor=pointer]:
+                    - /url: /colecoes/a-formula
+              - listitem [ref=f239e135]:
+                - heading [level=4] [ref=f239e136]:
+                  - link "Argan Oil" [ref=f239e137] [cursor=pointer]:
+                    - /url: /colecoes/argan-oil
+              - listitem [ref=f239e138]:
+                - heading [level=4] [ref=f239e139]:
+                  - link "Babados Da Lola" [ref=f239e140] [cursor=pointer]:
+                    - /url: /colecoes/babados-da-lola
+                  - button [ref=f239e141] [cursor=pointer]
+              - listitem [ref=f239e145]:
+                - heading [level=4] [ref=f239e146]:
+                  - link "Babados do Brasil" [ref=f239e147] [cursor=pointer]:
+                    - /url: /colecoes/babados-do-brasil
+              - listitem [ref=f239e148]:
+                - heading [level=4] [ref=f239e149]:
+                  - link "Banana Tropicana" [ref=f239e150] [cursor=pointer]:
+                    - /url: /colecoes/banana-tropicana
+              - listitem [ref=f239e151]:
+                - heading [level=4] [ref=f239e152]:
+                  - link "Basicão" [ref=f239e153] [cursor=pointer]:
+                    - /url: /colecoes/basicao
+              - listitem [ref=f239e154]:
+                - heading [level=4] [ref=f239e155]:
+                  - link "Be(m)dita Ghee" [ref=f239e156] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-ghee
+              - listitem [ref=f239e157]:
+                - heading [level=4] [ref=f239e158]:
+                  - link "Be(m)dita Praia" [ref=f239e159] [cursor=pointer]:
+                    - /url: /colecoes/be-m-dita-praia
+              - listitem [ref=f239e160]:
+                - heading [level=4] [ref=f239e161]:
+                  - link "Bossa" [ref=f239e162] [cursor=pointer]:
+                    - /url: /colecoes/bossa
+              - listitem [ref=f239e163]:
+                - heading [level=4] [ref=f239e164]:
+                  - link "Brancos e Grisalhos" [ref=f239e165] [cursor=pointer]:
+                    - /url: /colecoes/brancos-e-grisalhos
+              - listitem [ref=f239e166]:
+                - heading [level=4] [ref=f239e167]:
+                  - link "Camomila" [ref=f239e168] [cursor=pointer]:
+                    - /url: /colecoes/camomila
+              - listitem [ref=f239e169]:
+                - heading [level=4] [ref=f239e170]:
+                  - link "Cereal Killer" [ref=f239e171] [cursor=pointer]:
+                    - /url: /colecoes/cereal-killer
+              - listitem [ref=f239e172]:
+                - heading [level=4] [ref=f239e173]:
+                  - link "Comigo Ninguém Pode" [ref=f239e174] [cursor=pointer]:
+                    - /url: /colecoes/comigo-ninguem-pode
+              - listitem [ref=f239e175]:
+                - heading [level=4] [ref=f239e176]:
+                  - link "Cuca Fresca" [ref=f239e177] [cursor=pointer]:
+                    - /url: /colecoes/cuca-fresca
+              - listitem [ref=f239e178]:
+                - heading [level=4] [ref=f239e179]:
+                  - link "Danos Vorazes" [ref=f239e180] [cursor=pointer]:
+                    - /url: /colecoes/danos-vorazes
+              - listitem [ref=f239e181]:
+                - heading [level=4] [ref=f239e182]:
+                  - link "Densidade" [ref=f239e183] [cursor=pointer]:
+                    - /url: /colecoes/densidade
+              - listitem [ref=f239e184]:
+                - heading [level=4] [ref=f239e185]:
+                  - link "Drama Queen" [ref=f239e186] [cursor=pointer]:
+                    - /url: /colecoes/drama-queen
+              - listitem [ref=f239e187]:
+                - heading [level=4] [ref=f239e188]:
+                  - link "Dream Cream" [ref=f239e189] [cursor=pointer]:
+                    - /url: /colecoes/dream-cream
+              - listitem [ref=f239e190]:
+                - heading [level=4] [ref=f239e191]:
+                  - link "Ela é Carioca" [ref=f239e192] [cursor=pointer]:
+                    - /url: /colecoes/ela-e-carioca
+              - listitem [ref=f239e193]:
+                - heading [level=4] [ref=f239e194]:
+                  - link "Eu sei o que você fez na química passada!" [ref=f239e195] [cursor=pointer]:
+                    - /url: /colecoes/eu-sei-o-que-voce-fez-na-quimica-passada
+              - listitem [ref=f239e196]:
+                - heading [level=4] [ref=f239e197]:
+                  - link "Exterminador de Frizz" [ref=f239e198] [cursor=pointer]:
+                    - /url: /colecoes/exterminador-de-frizz
+              - listitem [ref=f239e199]:
+                - heading [level=4] [ref=f239e200]:
+                  - link "Kit Celebridades" [ref=f239e201] [cursor=pointer]:
+                    - /url: /colecoes/kit-celebridades
+              - listitem [ref=f239e202]:
+                - heading [level=4] [ref=f239e203]:
+                  - link "Liso, leve e and solto" [ref=f239e204] [cursor=pointer]:
+                    - /url: /colecoes/liso-leve-e-and-solto
+              - listitem [ref=f239e205]:
+                - heading [level=4] [ref=f239e206]:
+                  - link "Loira de Farmácia" [ref=f239e207] [cursor=pointer]:
+                    - /url: /colecoes/loira-de-farmacia
+              - listitem [ref=f239e208]:
+                - heading [level=4] [ref=f239e209]:
+                  - link "Lola Kids" [ref=f239e210] [cursor=pointer]:
+                    - /url: /colecoes/lola-kids
+              - listitem [ref=f239e211]:
+                - heading [level=4] [ref=f239e212]:
+                  - link "Lola Vintage Girls" [ref=f239e213] [cursor=pointer]:
+                    - /url: /colecoes/lola-vintage-girls
+              - listitem [ref=f239e214]:
+                - heading [level=4] [ref=f239e215]:
+                  - link "Meu Cacho minha Vida" [ref=f239e216] [cursor=pointer]:
+                    - /url: /colecoes/meu-cacho-minha-vida
+              - listitem [ref=f239e217]:
+                - heading [level=4] [ref=f239e218]:
+                  - link "Milagre!" [ref=f239e219] [cursor=pointer]:
+                    - /url: /colecoes/milagre
+              - listitem [ref=f239e220]:
+                - heading [level=4] [ref=f239e221]:
+                  - link "Morte Súbita" [ref=f239e222] [cursor=pointer]:
+                    - /url: /colecoes/morte-subita
+              - listitem [ref=f239e223]:
+                - heading [level=4] [ref=f239e224]:
+                  - link "Papo Reto" [ref=f239e225] [cursor=pointer]:
+                    - /url: /colecoes/papo-reto
+              - listitem [ref=f239e226]:
+                - heading [level=4] [ref=f239e227]:
+                  - link "Pinga!" [ref=f239e228] [cursor=pointer]:
+                    - /url: /colecoes/pinga
+              - listitem [ref=f239e229]:
+                - heading [level=4] [ref=f239e230]:
+                  - link "Plot Twist" [ref=f239e231] [cursor=pointer]:
+                    - /url: /colecoes/plot-twist
+              - listitem [ref=f239e232]:
+                - heading [level=4] [ref=f239e233]:
+                  - link "Purple" [ref=f239e234] [cursor=pointer]:
+                    - /url: /colecoes/purple
+              - listitem [ref=f239e235]:
+                - heading [level=4] [ref=f239e236]:
+                  - link "Rapunzel" [ref=f239e237] [cursor=pointer]:
+                    - /url: /colecoes/rapunzel
+              - listitem [ref=f239e238]:
+                - heading [level=4] [ref=f239e239]:
+                  - link "Tannic Acid" [ref=f239e240] [cursor=pointer]:
+                    - /url: /colecoes/tannic-acid
+              - listitem [ref=f239e241]:
+                - heading [level=4] [ref=f239e242]:
+                  - link "Tarja Preta" [ref=f239e243] [cursor=pointer]:
+                    - /url: /colecoes/tarja-preta
+              - listitem [ref=f239e244]:
+                - heading [level=4] [ref=f239e245]:
+                  - link "Transição" [ref=f239e246] [cursor=pointer]:
+                    - /url: /colecoes/transicao
+              - listitem [ref=f239e247]:
+                - heading [level=4] [ref=f239e248]:
+                  - link "Umectação" [ref=f239e249] [cursor=pointer]:
+                    - /url: /colecoes/umectacao
+              - listitem [ref=f239e250]:
+                - heading [level=4] [ref=f239e251]:
+                  - link "Volumão" [ref=f239e252] [cursor=pointer]:
+                    - /url: /colecoes/volumao
+              - listitem [ref=f239e253]:
+                - heading [level=4] [ref=f239e254]:
+                  - link "Xapadinha" [ref=f239e255] [cursor=pointer]:
+                    - /url: /colecoes/xapadinha
+              - listitem [ref=f239e256]:
+                - heading [level=4] [ref=f239e257]:
+                  - link "Lolaterapia" [ref=f239e258] [cursor=pointer]:
+                    - /url: /colecoes/lolaterapia
+              - listitem [ref=f239e259]:
+                - heading [level=4] [ref=f239e260]:
+                  - link "Ver Tudo" [ref=f239e261] [cursor=pointer]:
+                    - /url: /colecoes
+          - listitem [ref=f239e262]:
+            - heading [level=3] [ref=f239e263]:
+              - link "LANÇAMENTOS" [ref=f239e264] [cursor=pointer]:
+                - /url: /lancamentos
+            - list:
+              - listitem [ref=f239e265]:
+                - heading [level=4] [ref=f239e266]:
+                  - link "Embaixadoras" [ref=f239e267] [cursor=pointer]:
+                    - /url: /lancamentos/embaixadoras
+              - listitem [ref=f239e268]:
+                - heading [level=4] [ref=f239e269]:
+                  - link "Banana Tropicana" [ref=f239e270] [cursor=pointer]:
+                    - /url: /lancamentos/banana-tropicana
+              - listitem [ref=f239e271]:
+                - heading [level=4] [ref=f239e272]:
+                  - link "Volumão" [ref=f239e273] [cursor=pointer]:
+                    - /url: /lancamentos/volumao
+              - listitem [ref=f239e274]:
+                - heading [level=4] [ref=f239e275]:
+                  - link "Basicão" [ref=f239e276] [cursor=pointer]:
+                    - /url: /lancamentos/basicao
+              - listitem [ref=f239e277]:
+                - heading [level=4] [ref=f239e278]:
+                  - link "Ghee Açaí" [ref=f239e279] [cursor=pointer]:
+                    - /url: /lancamentos/ghee-acai
+              - listitem [ref=f239e280]:
+                - heading [level=4] [ref=f239e281]:
+                  - link "Tannic Acid" [ref=f239e282] [cursor=pointer]:
+                    - /url: /lancamentos/tannic-acid
+              - listitem [ref=f239e283]:
+                - heading [level=4] [ref=f239e284]:
+                  - link "Cuca Fresca" [ref=f239e285] [cursor=pointer]:
+                    - /url: /lancamentos/cuca-fresca
+              - listitem [ref=f239e286]:
+                - heading [level=4] [ref=f239e287]:
+                  - link "A Fórmula" [ref=f239e288] [cursor=pointer]:
+                    - /url: /lancamentos/a-formula
+              - listitem [ref=f239e289]:
+                - heading [level=4] [ref=f239e290]:
+                  - link "Bossa" [ref=f239e291] [cursor=pointer]:
+                    - /url: /lancamentos/bossa
+              - listitem [ref=f239e292]:
+                - heading [level=4] [ref=f239e293]:
+                  - link "Kits de presente" [ref=f239e294] [cursor=pointer]:
+                    - /url: /lancamentos/kits-de-presente
+              - listitem [ref=f239e295]:
+                - heading [level=4] [ref=f239e296]:
+                  - link "Ver Tudo" [ref=f239e297] [cursor=pointer]:
+                    - /url: /lancamentos
+          - listitem [ref=f239e298]:
+            - heading [level=3] [ref=f239e299]:
+              - link "PROMOÇÃO" [ref=f239e300] [cursor=pointer]:
+                - /url: /promocao
+            - list:
+              - listitem [ref=f239e301]:
+                - heading [level=4] [ref=f239e302]:
+                  - link "Achadinhos" [ref=f239e303] [cursor=pointer]:
+                    - /url: /promocao/achadinhos
+              - listitem [ref=f239e304]:
+                - heading [level=4] [ref=f239e305]:
+                  - link "Semana da Lolete" [ref=f239e306] [cursor=pointer]:
+                    - /url: /promocao/semana-da-lolete
+              - listitem [ref=f239e307]:
+                - heading [level=4] [ref=f239e308]:
+                  - link "Ver Tudo" [ref=f239e309] [cursor=pointer]:
+                    - /url: /promocao
+    - generic [ref=f239e312]:
+      - navigation [ref=f239e313]:
+        - list [ref=f239e314]:
+          - listitem [ref=f239e315]:
+            - link "home Página Inicial" [ref=f239e316] [cursor=pointer]:
+              - /url: /
+            - text: ">"
+          - listitem [ref=f239e317]:
+            - strong [ref=f239e318]: KITS
+            - text: ">"
+      - generic [ref=f239e319]:
+        - img "Lola Cosmetics" [ref=f239e324]
+        - heading "KITS ✨" [level=1] [ref=f239e327]
+        - generic [ref=f239e328]:
+          - generic [ref=f239e330]:
+            - generic [ref=f239e331]: Carregando...
+            - text: "Filtros Selecionados: Selecione um filtro abaixo"
+            - generic [ref=f239e332]:
+              - text: Filtrar
+              - generic [ref=f239e334]:
+                - heading "Categoria" [level=3] [ref=f239e336] [cursor=pointer]
+                - list [ref=f239e337]
+              - generic [ref=f239e339]:
+                - heading "Curvatura" [level=3] [ref=f239e341] [cursor=pointer]
+                - list [ref=f239e342]:
+                  - listitem [ref=f239e343]:
+                    - heading [level=4] [ref=f239e344]:
+                      - link "Cacheado" [ref=f239e345] [cursor=pointer]:
+                        - /url: /kits/#/curvatura-cacheado
+                  - listitem [ref=f239e347]:
+                    - heading [level=4] [ref=f239e348]:
+                      - link "Crespo" [ref=f239e349] [cursor=pointer]:
+                        - /url: /kits/#/curvatura-crespo
+                  - listitem [ref=f239e351]:
+                    - heading [level=4] [ref=f239e352]:
+                      - link "Liso" [ref=f239e353] [cursor=pointer]:
+                        - /url: /kits/#/curvatura-liso
+                  - listitem [ref=f239e355]:
+                    - heading [level=4] [ref=f239e356]:
+                      - link "Ondulado" [ref=f239e357] [cursor=pointer]:
+                        - /url: /kits/#/curvatura-ondulado
+                  - listitem [ref=f239e359]:
+                    - heading [level=4] [ref=f239e360]:
+                      - link "Transição" [ref=f239e361] [cursor=pointer]:
+                        - /url: /kits/#/curvatura-transicao
+              - generic [ref=f239e364]:
+                - heading "Tipo de produto" [level=3] [ref=f239e366] [cursor=pointer]
+                - list [ref=f239e367]:
+                  - listitem [ref=f239e368]:
+                    - heading [level=4] [ref=f239e369]:
+                      - link "Óleo" [ref=f239e370] [cursor=pointer]:
+                        - /url: /kits/#/tipo-de-produto-oleo
+          - generic [ref=f239e376]:
+            - generic [ref=f239e377]:
+              - text: "-"
+              - generic [ref=f239e378]:
+                - generic [ref=f239e379]: "Ordenar por:"
+                - combobox [ref=f239e380]:
+                  - option "Mais Relevantes" [selected]
+                  - option "Mais Acessados"
+                  - option "Maior preço"
+                  - option "Menor Preço"
+                  - option "A-Z"
+                  - option "Novidades"
+                  - option "Mais Vendidos"
+            - article [ref=f239e381]:
+              - list [ref=f239e383]:
+                - listitem [ref=f239e384]:
+                  - generic [ref=f239e385]:
+                    - generic [ref=f239e386]:
+                      - button [ref=f239e388] [cursor=pointer]
+                      - link [ref=f239e390] [cursor=pointer]:
+                        - /url: /kit-completo-banana-tropicana-p46408
+                        - img "Kit Completo - Banana Tropicana" [ref=f239e392]
+                    - generic [ref=f239e393]:
+                      - generic [ref=f239e394]: (0)
+                      - heading [level=3] [ref=f239e399]:
+                        - link "Kit Completo - Banana Tropicana" [ref=f239e400] [cursor=pointer]:
+                          - /url: /kit-completo-banana-tropicana-p46408
+                      - generic [ref=f239e401]:
+                        - paragraph [ref=f239e405]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e407]:
+                        - strong [ref=f239e408]: R$ 219,50À vista
+                        - term [ref=f239e409]: em até 3 x sem juros de R$ 73,17
+                      - link [ref=f239e411] [cursor=pointer]:
+                        - /url: /kit-completo-banana-tropicana-p46408
+                - listitem [ref=f239e417]:
+                  - generic [ref=f239e418]:
+                    - generic [ref=f239e419]:
+                      - button [ref=f239e421] [cursor=pointer]
+                      - link [ref=f239e423] [cursor=pointer]:
+                        - /url: /kit-celebridades-ps-19629-316-p46377
+                        - img "KIT CELEBRIDADES" [ref=f239e425]
+                    - generic [ref=f239e426]:
+                      - generic [ref=f239e427]: (1)
+                      - heading [level=3] [ref=f239e433]:
+                        - link "KIT CELEBRIDADES" [ref=f239e434] [cursor=pointer]:
+                          - /url: /kit-celebridades-ps-19629-316-p46377
+                      - generic [ref=f239e435]:
+                        - paragraph [ref=f239e439]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e441]:
+                        - strong [ref=f239e442]: R$ 99,90À vista
+                        - term [ref=f239e443]: em até 3 x sem juros de R$ 33,30
+                      - link [ref=f239e446] [cursor=pointer]:
+                        - /url: /kit-celebridades-ps-19629-316-p46377
+                - listitem [ref=f239e452]:
+                  - generic [ref=f239e453]:
+                    - generic [ref=f239e454]:
+                      - button [ref=f239e456] [cursor=pointer]
+                      - generic "-40%" [ref=f239e457]:
+                        - text: 40%
+                        - strong [ref=f239e458]: "OFF"
+                      - link [ref=f239e460] [cursor=pointer]:
+                        - /url: /kit-tannic-acid-linha-completa-p46347
+                        - img "Kit Tannic Acid - Linha Completa" [ref=f239e462]
+                    - generic [ref=f239e463]:
+                      - generic [ref=f239e464]: (1)
+                      - heading [level=3] [ref=f239e470]:
+                        - link "Kit Tannic Acid - Linha Completa" [ref=f239e471] [cursor=pointer]:
+                          - /url: /kit-tannic-acid-linha-completa-p46347
+                      - generic [ref=f239e472]:
+                        - paragraph [ref=f239e476]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e478]:
+                        - strong [ref=f239e479]: R$ 229,60À vista
+                        - term [ref=f239e480]: em até 3 x sem juros de R$ 76,53
+                      - link [ref=f239e482] [cursor=pointer]:
+                        - /url: /kit-tannic-acid-linha-completa-p46347
+                - listitem [ref=f239e488]:
+                  - generic [ref=f239e489]:
+                    - generic [ref=f239e490]:
+                      - button [ref=f239e492] [cursor=pointer]
+                      - generic "-30%" [ref=f239e493]:
+                        - text: 30%
+                        - strong [ref=f239e494]: "OFF"
+                      - link [ref=f239e496] [cursor=pointer]:
+                        - /url: /kit-a-formula-lamelar-p46345
+                        - img "Kit A Fórmula Lamelar" [ref=f239e498]
+                    - generic [ref=f239e499]:
+                      - generic [ref=f239e500]: (6)
+                      - heading [level=3] [ref=f239e506]:
+                        - link "Kit A Fórmula Lamelar" [ref=f239e507] [cursor=pointer]:
+                          - /url: /kit-a-formula-lamelar-p46345
+                      - generic [ref=f239e508]:
+                        - paragraph [ref=f239e512]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e514]:
+                        - deletion [ref=f239e515]:
+                          - generic [ref=f239e516]: R$ 164,70
+                          - text: por
+                        - strong [ref=f239e517]: R$ 115,29À vista
+                        - term [ref=f239e518]: em até 3 x sem juros de R$ 38,43
+                      - link [ref=f239e520] [cursor=pointer]:
+                        - /url: /kit-a-formula-lamelar-p46345
+                - listitem [ref=f239e526]:
+                  - generic [ref=f239e527]:
+                    - generic [ref=f239e528]:
+                      - button [ref=f239e530] [cursor=pointer]
+                      - generic "-10%" [ref=f239e531]:
+                        - text: 10%
+                        - strong [ref=f239e532]: "OFF"
+                      - link [ref=f239e534] [cursor=pointer]:
+                        - /url: /kit-cuca-fresca-controle-de-oleosidade-p46336
+                        - img "Kit Cuca Fresca Controle de Oleosidade" [ref=f239e536]
+                    - generic [ref=f239e537]:
+                      - generic [ref=f239e538]: (5)
+                      - heading [level=3] [ref=f239e544]:
+                        - link "Kit Cuca Fresca Controle de Oleosidade" [ref=f239e545] [cursor=pointer]:
+                          - /url: /kit-cuca-fresca-controle-de-oleosidade-p46336
+                      - generic [ref=f239e546]:
+                        - paragraph [ref=f239e550]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e552]:
+                        - deletion [ref=f239e553]:
+                          - generic [ref=f239e554]: R$ 79,80
+                          - text: por
+                        - strong [ref=f239e555]: R$ 71,82À vista
+                        - term [ref=f239e556]: em até 2 x sem juros de R$ 35,91
+                      - link [ref=f239e558] [cursor=pointer]:
+                        - /url: /kit-cuca-fresca-controle-de-oleosidade-p46336
+                - listitem [ref=f239e564]:
+                  - generic [ref=f239e565]:
+                    - generic [ref=f239e566]:
+                      - button [ref=f239e568] [cursor=pointer]
+                      - generic "-10%" [ref=f239e569]:
+                        - text: 10%
+                        - strong [ref=f239e570]: "OFF"
+                      - link [ref=f239e572] [cursor=pointer]:
+                        - /url: /kit-cuca-fresca-anticaspa-p46335
+                        - img "Kit Cuca Fresca Anticaspa" [ref=f239e574]
+                    - generic [ref=f239e575]:
+                      - generic [ref=f239e576]: (10)
+                      - heading [level=3] [ref=f239e582]:
+                        - link "Kit Cuca Fresca Anticaspa" [ref=f239e583] [cursor=pointer]:
+                          - /url: /kit-cuca-fresca-anticaspa-p46335
+                      - generic [ref=f239e584]:
+                        - paragraph [ref=f239e588]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e590]:
+                        - deletion [ref=f239e591]:
+                          - generic [ref=f239e592]: R$ 124,70
+                          - text: por
+                        - strong [ref=f239e593]: R$ 112,23À vista
+                        - term [ref=f239e594]: em até 3 x sem juros de R$ 37,41
+                      - link [ref=f239e596] [cursor=pointer]:
+                        - /url: /kit-cuca-fresca-anticaspa-p46335
+                - listitem [ref=f239e602]:
+                  - generic [ref=f239e603]:
+                    - generic [ref=f239e604]:
+                      - button [ref=f239e606] [cursor=pointer]
+                      - generic "-60%" [ref=f239e607]:
+                        - text: 60%
+                        - strong [ref=f239e608]: "OFF"
+                      - link [ref=f239e610] [cursor=pointer]:
+                        - /url: /kit-purple-linha-completa-p46314
+                        - img "Kit Purple - Linha Completa" [ref=f239e612]
+                    - generic [ref=f239e613]:
+                      - generic [ref=f239e614]: (7)
+                      - heading [level=3] [ref=f239e620]:
+                        - link "Kit Purple - Linha Completa" [ref=f239e621] [cursor=pointer]:
+                          - /url: /kit-purple-linha-completa-p46314
+                      - generic [ref=f239e622]:
+                        - paragraph [ref=f239e626]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e628]:
+                        - deletion [ref=f239e629]:
+                          - generic [ref=f239e630]: R$ 179,60
+                          - text: por
+                        - strong [ref=f239e631]: R$ 71,84À vista
+                        - term [ref=f239e632]: em até 2 x sem juros de R$ 35,92
+                      - link [ref=f239e634] [cursor=pointer]:
+                        - /url: /kit-purple-linha-completa-p46314
+                - listitem [ref=f239e640]:
+                  - generic [ref=f239e641]:
+                    - generic [ref=f239e642]:
+                      - button [ref=f239e644] [cursor=pointer]
+                      - generic "-10%" [ref=f239e645]:
+                        - text: 10%
+                        - strong [ref=f239e646]: "OFF"
+                      - link [ref=f239e648] [cursor=pointer]:
+                        - /url: /kit-bossa-linha-completa-500g-p46297
+                        - img "Kit Bossa - Linha Completa (Creme 500g)" [ref=f239e650]
+                    - generic [ref=f239e651]:
+                      - generic [ref=f239e652]: (11)
+                      - heading [level=3] [ref=f239e658]:
+                        - link "Kit Bossa - Linha Completa (Creme 500g)" [ref=f239e659] [cursor=pointer]:
+                          - /url: /kit-bossa-linha-completa-500g-p46297
+                      - generic [ref=f239e660]:
+                        - paragraph [ref=f239e664]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e666]:
+                        - deletion [ref=f239e667]:
+                          - generic [ref=f239e668]: R$ 224,60
+                          - text: por
+                        - strong [ref=f239e669]: R$ 202,14À vista
+                        - term [ref=f239e670]: em até 3 x sem juros de R$ 67,38
+                      - link [ref=f239e672] [cursor=pointer]:
+                        - /url: /kit-bossa-linha-completa-500g-p46297
+                - listitem [ref=f239e678]:
+                  - generic [ref=f239e679]:
+                    - generic [ref=f239e680]:
+                      - button [ref=f239e682] [cursor=pointer]
+                      - generic "-10%" [ref=f239e683]:
+                        - text: 10%
+                        - strong [ref=f239e684]: "OFF"
+                      - link [ref=f239e686] [cursor=pointer]:
+                        - /url: /kit-be-m-dita-praia-geleia-e-bronze-p46241
+                        - img "Kit Be(m)dita Praia - Geleia e Bronze" [ref=f239e688]
+                    - generic [ref=f239e689]:
+                      - generic [ref=f239e690]: (4)
+                      - heading [level=3] [ref=f239e696]:
+                        - link "Kit Be(m)dita Praia - Geleia e Bronze" [ref=f239e697] [cursor=pointer]:
+                          - /url: /kit-be-m-dita-praia-geleia-e-bronze-p46241
+                      - generic [ref=f239e698]:
+                        - paragraph [ref=f239e702]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e704]:
+                        - deletion [ref=f239e705]:
+                          - generic [ref=f239e706]: R$ 109,80
+                          - text: por
+                        - strong [ref=f239e707]: R$ 98,82À vista
+                        - term [ref=f239e708]: em até 3 x sem juros de R$ 32,94
+                      - link [ref=f239e710] [cursor=pointer]:
+                        - /url: /kit-be-m-dita-praia-geleia-e-bronze-p46241
+                - listitem [ref=f239e716]:
+                  - generic [ref=f239e717]:
+                    - generic [ref=f239e718]:
+                      - button [ref=f239e720] [cursor=pointer]
+                      - generic "-30%" [ref=f239e721]:
+                        - text: 30%
+                        - strong [ref=f239e722]: "OFF"
+                      - link [ref=f239e724] [cursor=pointer]:
+                        - /url: /kit-pinga-p46133
+                        - img "Kit Óleos Pinga" [ref=f239e726]
+                    - generic [ref=f239e727]:
+                      - generic [ref=f239e728]: (0)
+                      - heading [level=3] [ref=f239e733]:
+                        - link "Kit Óleos Pinga" [ref=f239e734] [cursor=pointer]:
+                          - /url: /kit-pinga-p46133
+                      - generic [ref=f239e735]:
+                        - paragraph [ref=f239e739]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e741]:
+                        - strong [ref=f239e742]: R$ 134,70À vista
+                        - term [ref=f239e743]: em até 3 x sem juros de R$ 44,90
+                      - link [ref=f239e745] [cursor=pointer]:
+                        - /url: /kit-pinga-p46133
+                - listitem [ref=f239e751]:
+                  - generic [ref=f239e752]:
+                    - generic [ref=f239e753]:
+                      - button [ref=f239e755] [cursor=pointer]
+                      - generic "-10%" [ref=f239e756]:
+                        - text: 10%
+                        - strong [ref=f239e757]: "OFF"
+                      - link [ref=f239e759] [cursor=pointer]:
+                        - /url: /be-m-dita-ghee-cronograma-100g-p46049
+                        - img "Be(m)dita Ghee - Cronograma 100g" [ref=f239e761]
+                    - generic [ref=f239e762]:
+                      - generic [ref=f239e763]: (0)
+                      - heading [level=3] [ref=f239e768]:
+                        - link "Be(m)dita Ghee - Cronograma 100g" [ref=f239e769] [cursor=pointer]:
+                          - /url: /be-m-dita-ghee-cronograma-100g-p46049
+                      - generic [ref=f239e770]:
+                        - paragraph [ref=f239e774]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e776]:
+                        - deletion [ref=f239e777]:
+                          - generic [ref=f239e778]: R$ 104,70
+                          - text: por
+                        - strong [ref=f239e779]: R$ 94,23À vista
+                        - term [ref=f239e780]: em até 3 x sem juros de R$ 31,41
+                      - link [ref=f239e782] [cursor=pointer]:
+                        - /url: /be-m-dita-ghee-cronograma-100g-p46049
+                - listitem [ref=f239e788]:
+                  - generic [ref=f239e789]:
+                    - generic [ref=f239e790]:
+                      - button [ref=f239e792] [cursor=pointer]
+                      - generic "-10%" [ref=f239e793]:
+                        - text: 10%
+                        - strong [ref=f239e794]: "OFF"
+                      - link [ref=f239e796] [cursor=pointer]:
+                        - /url: /trio-be-m-dita-ghee-reconstrucao-350g-p46048
+                        - img "Trio Be(M)dita Ghee Reconstrução 350g" [ref=f239e798]
+                    - generic [ref=f239e799]:
+                      - generic [ref=f239e800]: (0)
+                      - heading [level=3] [ref=f239e805]:
+                        - link "Trio Be(M)dita Ghee Reconstrução 350g" [ref=f239e806] [cursor=pointer]:
+                          - /url: /trio-be-m-dita-ghee-reconstrucao-350g-p46048
+                      - generic [ref=f239e807]:
+                        - paragraph [ref=f239e811]: 10% de cashback
+                        - paragraph
+                      - generic [ref=f239e813]:
+                        - deletion [ref=f239e814]:
+                          - generic [ref=f239e815]: R$ 154,70
+                          - text: por
+                        - strong [ref=f239e816]: R$ 139,23À vista
+                        - term [ref=f239e817]: em até 3 x sem juros de R$ 46,41
+                      - link [ref=f239e819] [cursor=pointer]:
+                        - /url: /trio-be-m-dita-ghee-reconstrucao-350g-p46048
+            - generic [ref=f239e826]:
+              - paragraph [ref=f239e827]: Confira as opiniões de clientes satisfeitos
+              - region "Depoimentos de clientes" [ref=f239e828]:
+                - generic [ref=f239e829]:
+                  - button "Anterior" [ref=f239e830] [cursor=pointer]
+                  - generic [ref=f239e834]:
+                    - group "Depoimento 1 de 7" [ref=f239e835]:
+                      - generic [ref=f239e836]:
+                        - paragraph [ref=f239e837]: Daniela G.
+                        - generic [ref=f239e838]:
+                          - img "Nota 5 de 5" [ref=f239e839]
+                          - paragraph [ref=f239e855]: 21/09/2026
+                        - paragraph [ref=f239e857]: Gosto muito:)
+                    - group "Depoimento 2 de 7" [ref=f239e858]:
+                      - generic [ref=f239e859]:
+                        - paragraph [ref=f239e860]: VANESSA F.
+                        - generic [ref=f239e861]:
+                          - img "Nota 5 de 5" [ref=f239e862]
+                          - paragraph [ref=f239e878]: 18/09/2026
+                        - paragraph [ref=f239e880]: Amei receber meus produtos perfeitamente embalados e as amostras grátis - até comprei o creme de pentear que veio de amostra.
+                    - group "Depoimento 3 de 7" [ref=f239e881]:
+                      - generic [ref=f239e882]:
+                        - paragraph [ref=f239e883]: Joice S.
+                        - generic [ref=f239e884]:
+                          - img "Nota 5 de 5" [ref=f239e885]
+                          - paragraph [ref=f239e901]: 14/09/2026
+                        - paragraph [ref=f239e903]: São de excelente qualidade vale a pena comprar pois o investimento e eficaz e duradouro.
+                    - group "Depoimento 4 de 7" [ref=f239e904]:
+                      - generic [ref=f239e905]:
+                        - paragraph [ref=f239e906]: Eliane S.
+                        - generic [ref=f239e907]:
+                          - img "Nota 5 de 5" [ref=f239e908]
+                          - paragraph [ref=f239e924]: 10/09/2026
+                        - paragraph [ref=f239e926]: cabelo muito cheiroso, soltinho. E rende muito.
+                    - group "Depoimento 5 de 7" [ref=f239e927]:
+                      - generic [ref=f239e928]:
+                        - paragraph [ref=f239e929]: Sofia v.
+                        - generic [ref=f239e930]:
+                          - img "Nota 5 de 5" [ref=f239e931]
+                          - paragraph [ref=f239e947]: 08/09/2026
+                        - paragraph [ref=f239e949]: perfeição, produtos bem organizados e com muita informação sobre!
+                    - group "Depoimento 6 de 7" [ref=f239e950]:
+                      - generic [ref=f239e951]:
+                        - paragraph [ref=f239e952]: SARA M.
+                        - generic [ref=f239e953]:
+                          - img "Nota 5 de 5" [ref=f239e954]
+                          - paragraph [ref=f239e970]: 01/09/2026
+                        - paragraph [ref=f239e972]: Produz os produtos que amo.
+                    - group "Depoimento 7 de 7" [ref=f239e973]:
+                      - generic [ref=f239e974]:
+                        - paragraph [ref=f239e975]: Jéssica F.
+                        - generic [ref=f239e976]:
+                          - img "Nota 5 de 5" [ref=f239e977]
+                          - paragraph [ref=f239e993]: 01/09/2026
+                        - paragraph [ref=f239e995]: Incrível. Trata o cliente com muito carinho e entrega rápida e bem feita.
+                  - button "Próximo" [ref=f239e996] [cursor=pointer]
+                  - generic [ref=f239e1000]:
+                    - button "Ir para o review 1" [ref=f239e1001] [cursor=pointer]
+                    - button "Ir para o review 2" [ref=f239e1002] [cursor=pointer]
+                    - button "Ir para o review 3" [ref=f239e1003] [cursor=pointer]
+              - link [ref=f239e1004] [cursor=pointer]:
+                - /url: https://site.trustvox.com.br/conheca-a-trustvox?utm_source=widget-rareviews&utm_medium=pagina-principal&utm_campaign=www.lolacosmetics.com.br
+                - paragraph [ref=f239e1012]: Avaliações confiáveis do
+            - generic [ref=f239e1017]:
+              - text: "-"
+              - generic [ref=f239e1018]:
+                - generic [ref=f239e1019]: Anterior
+                - generic "1" [ref=f239e1020]
+                - link "2" [ref=f239e1022] [cursor=pointer]:
+                  - /url: /kits#/pagina-2
+                - link "3" [ref=f239e1024] [cursor=pointer]:
+                  - /url: /kits#/pagina-3
+                - link "Próximo" [ref=f239e1026] [cursor=pointer]:
+                  - /url: /kits#/pagina-2
+    - generic [ref=f239e1028]:
+      - generic [ref=f239e1030]:
+        - paragraph [ref=f239e1031]:
+          - generic [ref=f239e1032]: Nós usamos cookies e outras tecnologias semelhantes para melhorar a experiência de navegação e recomendar conteúdo de seu interesse. Ao continuar navegando você concorda com a nossa
+          - link "política de privacidade" [ref=f239e1033] [cursor=pointer]:
+            - /url: /conteudo/sobre/politica-de-privacidade
+          - text: .
+        - button "Concordo" [ref=f239e1035] [cursor=pointer]
+      - img "Lola Cosmetics" [ref=f239e1038]
+      - generic [ref=f239e1040]:
+        - generic [ref=f239e1041]:
+          - heading "Fique por dentro das nossas novidades" [level=4] [ref=f239e1042]
+          - generic [ref=f239e1047]:
+            - textbox "Email:" [ref=f239e1049]:
+              - /placeholder: Insira seu e-mail...
+            - button "Enviar" [ref=f239e1051] [cursor=pointer]
+          - list [ref=f239e1052]:
+            - listitem [ref=f239e1053]:
+              - link [ref=f239e1054] [cursor=pointer]:
+                - /url: https://www.instagram.com/lolacosmetics/
+            - listitem [ref=f239e1057]:
+              - link [ref=f239e1058] [cursor=pointer]:
+                - /url: https://www.facebook.com/lolacosmetics/
+            - listitem [ref=f239e1061]:
+              - link [ref=f239e1062] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/lolacosmetics/
+            - listitem [ref=f239e1066]:
+              - link [ref=f239e1067] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@lolacosmetics
+            - listitem [ref=f239e1070]:
+              - link [ref=f239e1071] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/2KPZDZu9BRJmPuCAyGM7NZ?si=e522b39a1fbf4813
+        - generic [ref=f239e1074]:
+          - generic [ref=f239e1075]:
+            - heading "Sobre" [level=4] [ref=f239e1076]
+            - list [ref=f239e1079]:
+              - listitem [ref=f239e1080]:
+                - list [ref=f239e1081]:
+                  - listitem [ref=f239e1082]:
+                    - link "Quem somos" [ref=f239e1083] [cursor=pointer]:
+                      - /url: /conteudo/sobre/quem-somos
+                  - listitem [ref=f239e1084]:
+                    - link "Este site é seguro?" [ref=f239e1085] [cursor=pointer]:
+                      - /url: /conteudo/sobre/este-site-e-seguro
+                  - listitem [ref=f239e1086]:
+                    - link "Política de Cookies" [ref=f239e1087] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-cookies
+                  - listitem [ref=f239e1088]:
+                    - link "Política de Privacidade" [ref=f239e1089] [cursor=pointer]:
+                      - /url: /conteudo/sobre/politica-de-privacidade
+                  - listitem [ref=f239e1090]:
+                    - link "Nossa lojas" [ref=f239e1091] [cursor=pointer]:
+                      - /url: /onde-encontrar
+                  - listitem [ref=f239e1092]:
+                    - link "Trabalhe Conosco" [ref=f239e1093] [cursor=pointer]:
+                      - /url: /trabalhe-conosco
+                  - listitem [ref=f239e1094]:
+                    - link "Lola Lab" [ref=f239e1095] [cursor=pointer]:
+                      - /url: /conteudo/sobre/lola-lab
+                  - listitem [ref=f239e1096]:
+                    - link "Revenda" [ref=f239e1097] [cursor=pointer]:
+                      - /url: /conteudo/sobre/revenda
+          - generic [ref=f239e1098]:
+            - heading "Ajuda" [level=4] [ref=f239e1099]
+            - list [ref=f239e1102]:
+              - listitem [ref=f239e1103]:
+                - list [ref=f239e1104]:
+                  - listitem [ref=f239e1105]:
+                    - link "Prazos de atendimento" [ref=f239e1106] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/prazos-de-atendimento
+                  - listitem [ref=f239e1107]:
+                    - link "Entrega e envios" [ref=f239e1108] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/entrega-e-envios
+                  - listitem [ref=f239e1109]:
+                    - link "Pagamento" [ref=f239e1110] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/pagamento
+                  - listitem [ref=f239e1111]:
+                    - link "Trocas e devoluções" [ref=f239e1112] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/trocas-e-devolucoes
+                  - listitem [ref=f239e1113]:
+                    - link "Perguntas Frequentes" [ref=f239e1114] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/perguntas-frequentes
+                  - listitem [ref=f239e1115]:
+                    - link "Como rastrear pedidos" [ref=f239e1116] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/como-rastrear-pedidos
+                  - listitem [ref=f239e1117]:
+                    - link "Regulamento Promocional" [ref=f239e1118] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/regulamento-promocional
+                  - listitem [ref=f239e1119]:
+                    - link "Cashback" [ref=f239e1120] [cursor=pointer]:
+                      - /url: /conteudo/ajuda/cashback
+        - generic [ref=f239e1121]:
+          - heading "Contato" [level=4] [ref=f239e1122]
+          - list [ref=f239e1123]:
+            - listitem [ref=f239e1124]: 0800 000 5521
+            - listitem [ref=f239e1125]:
+              - link "lolamail@farmativa.ind.br" [ref=f239e1126] [cursor=pointer]:
+                - /url: mailto:lolamail@farmativa.ind.br
+            - listitem [ref=f239e1127]: Segunda à Sexta-Feira das 9h às 18h
+          - heading "Segurança" [level=4] [ref=f239e1128]
+          - generic [ref=f239e1129]:
+            - img "Lola Cosmetics" [ref=f239e1130]
+            - generic [ref=f239e1131]: "4.7"
+        - generic [ref=f239e1175]:
+          - heading "Meus pedidos" [level=4] [ref=f239e1176]
+          - link "Acompanhe seus pedidos" [ref=f239e1177] [cursor=pointer]:
+            - /url: /painel-do-cliente/pedidos
+          - heading "Formas de pagamento" [level=4] [ref=f239e1178]
+          - img "Forma Pagamento" [ref=f239e1179]
+      - generic [ref=f239e1181]:
+        - paragraph [ref=f239e1182]: AVENIDA CIVIT I 1795 ARMAZEM A GALPAO 4 E 5, SALA 33 - BARRO BRANCO, SERRA - ES | CEP 29170-740 |CNPJ 37.410.037/0002-89
+        - list [ref=f239e1184]:
+          - listitem [ref=f239e1185]:
+            - generic [ref=f239e1186]: "Plataforma:"
+            - link [ref=f239e1187] [cursor=pointer]:
+              - /url: https://www.linxcommerce.com.br/
+              - img "Plataforma Core" [ref=f239e1188]
+          - listitem [ref=f239e1189]:
+            - generic [ref=f239e1190]: "Projeto:"
+            - link [ref=f239e1191] [cursor=pointer]:
+              - /url: https://nairuz.com.br/
+      - link "Voltar ao topo" [ref=f239e1207] [cursor=pointer]:
+        - /url: "#"
+  - alert [ref=f239e1212]

@@ -3,6 +3,22 @@ import { load } from "cheerio";
 const ORIGIN = "https://www.lolacosmetics.com.br";
 
 /**
+ * Keeps navigation inside the clone. Anything that resolves to the source origin becomes
+ * the bare pathname, so a cloned route renders it and everything else falls through to the
+ * catch-all; other hosts, mail and phone links are left exactly as the source had them.
+ */
+export function localHref(href) {
+  if (!href) return href;
+  if (/^javascript:/i.test(href)) return "#";
+  if (href.startsWith("#") || /^(mailto:|tel:)/i.test(href)) return href;
+  let url;
+  try { url = new URL(href, ORIGIN); } catch { return href; }
+  if (url.protocol !== "http:" && url.protocol !== "https:") return href;
+  if (url.hostname !== "www.lolacosmetics.com.br" && url.hostname !== "lolacosmetics.com.br") return url.href;
+  return (url.pathname || "/") + url.search + url.hash;
+}
+
+/**
  * Builds the sanitizer both prepare scripts use to turn captured markup into a fragment
  * that can be replayed locally: scripts and handlers stripped, asset URLs pointed at the
  * downloaded copies, and slick sliders returned to plain markup carrying the options the
@@ -29,11 +45,7 @@ export function createSanitizer(manifest, sliderOptions = []) {
       for (const attr of Object.keys(el.attribs || {})) {
         if (/^on/i.test(attr) || ["data-bind", "data-widget-js", "data-messages"].includes(attr)) $(el).removeAttr(attr);
       }
-      if (el.tagName === "a") {
-        const href = $(el).attr("href");
-        if (href && href !== "/" && !href.startsWith("#") && !/^(https?:|mailto:|tel:)/.test(href)) $(el).attr("href", new URL(href, ORIGIN).href);
-        if (/^javascript:/i.test(href || "")) $(el).attr("href", "#");
-      }
+      if (el.tagName === "a") $(el).attr("href", localHref($(el).attr("href")));
       if (el.tagName === "form") $(el).removeAttr("action").removeAttr("method");
     });
     $(".slick-slider").each((i, el) => {

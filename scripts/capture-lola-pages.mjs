@@ -6,6 +6,7 @@ async (page) => {
   const SINK = "http://127.0.0.1:4599/?path=";
   const site = "www-lolacosmetics-com-br-b005530a";
   const targets = [
+    ["/kits", "kits-05782adf"],
     ["/tratamentos", "tratamentos-8a17264f"],
     ["/tipos-de-cabelo", "tipos-de-cabelo-c8d37892"],
     ["/colecoes", "colecoes-b8394c56"],

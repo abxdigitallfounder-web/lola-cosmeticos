@@ -18,7 +18,8 @@ const meaningful = value => (value || "").split(/\s+/).filter(Boolean)
   .filter(c => !/^chrome\d*$/.test(c) && !/^r\d+$/.test(c) && c !== "chrome").join(" ");
 
 const report = [];
-for (const target of plan.targets.filter(t => t.status === "todo")) {
+// Every interior route is regenerated on each run; the home page has its own script.
+for (const target of plan.targets.filter(t => t.pathname !== "/")) {
   const extraction = path.join(target.research, "loaded-extraction.json");
   if (!fs.existsSync(extraction)) { report.push(`${target.pathname}: no capture, skipped`); continue; }
   const d = JSON.parse(fs.readFileSync(extraction, "utf8"));
