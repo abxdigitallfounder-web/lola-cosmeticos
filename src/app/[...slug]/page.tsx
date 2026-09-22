@@ -17,7 +17,7 @@ export default async function CatchAll({ params }: { params: Promise<{ slug: str
     <>
       <BodyClass value="column-1 lola-clone" />
       <section id="main">
-        <Header />
+        <Header variant="interior" />
         <div id="bg-search" />
         <section id="middle" className="wrapper">
           <div id="content">

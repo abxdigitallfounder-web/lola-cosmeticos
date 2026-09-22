@@ -5,7 +5,11 @@ import chrome from "./chrome.json";
 import "./header-extra.css";
 
 /** Preserve the captured header DOM while replacing the storefront's remote scripts. */
-export default function Header() {
+/**
+ * `variant` picks which captured markup to replay: the source makes the logo the page
+ * heading on the home page only, so interior routes get the variant without the <h1>.
+ */
+export default function Header({ variant = "home" }: { variant?: "home" | "interior" } = {}) {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -153,5 +157,5 @@ export default function Header() {
     };
   }, []);
 
-  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: chrome.Header }} />;
+  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: variant === "interior" ? chrome.HeaderInterior : chrome.Header }} />;
 }

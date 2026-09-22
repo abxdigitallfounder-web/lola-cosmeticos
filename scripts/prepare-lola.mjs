@@ -64,6 +64,11 @@ fragments.HeroMobile=fragments.HeroMobile.replace(/data-lola-slider="[^"]*"/g,`d
 // namespace and are left out of each page's own fragment set.
 const chromeNames=['Header','HeaderMobile','Footer'];
 const chrome=Object.fromEntries(chromeNames.map(n=>[n,fragments[n]]));
+// The storefront marks the logo up as the page heading only on the home page; every
+// interior route uses a plain container, so a second variant keeps them from shipping a
+// stray <h1> that the source does not have.
+chrome.HeaderInterior=chrome.Header.replace(/<h1(\s[^>]*)?>/,'<div class="logo-heading">').replace('</h1>','</div>');
+if(chrome.HeaderInterior===chrome.Header)throw new Error('logo heading not found in captured header');
 const pageFragments=Object.fromEntries(Object.entries(fragments).filter(([n])=>!chromeNames.includes(n)));
 fs.mkdirSync(shared,{recursive:true});
 fs.writeFileSync(`${shared}/chrome.json`,JSON.stringify(chrome,null,2));

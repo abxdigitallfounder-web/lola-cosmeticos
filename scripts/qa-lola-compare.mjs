@@ -23,7 +23,7 @@ async (page) => {
   };
 
   const out = {};
-  for (const [label, url] of [["clone", "http://127.0.0.1:4351" + path], ["source", "https://www.lolacosmetics.com.br" + path]]) {
+  for (const [label, url] of [["clone", "http://127.0.0.1:4352" + path], ["source", "https://www.lolacosmetics.com.br" + path]]) {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(url, { waitUntil: "load", timeout: 90000 });
     await page.evaluate(async () => {

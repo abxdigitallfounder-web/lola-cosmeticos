@@ -63,7 +63,7 @@ export default function Page() {
     <>
       <BodyClass value=${JSON.stringify(bodyClass)} />
       <section id="main"${attr("className", mainClass)}>
-        <Header />
+        <Header variant="interior" />
         <div id="bg-search" />
         <PageContent />
         <Footer />

@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <BodyClass value="column-1 context-category-1456 grid-products" />
       <section id="main" className="context-category-1456 grid-products">
-        <Header />
+        <Header variant="interior" />
         <div id="bg-search" />
         <PageContent />
         <Footer />

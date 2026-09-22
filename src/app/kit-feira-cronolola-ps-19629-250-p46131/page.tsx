@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <BodyClass value="column-1 context-product-46131 ts-theme-light" />
       <section id="main" className="context-product-46131">
-        <Header />
+        <Header variant="interior" />
         <div id="bg-search" />
         <PageContent />
         <Footer />

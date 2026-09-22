@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <BodyClass value="column-1 LoginRoute area-profile page-login" />
       <section id="main" className="LoginRoute">
-        <Header />
+        <Header variant="interior" />
         <div id="bg-search" />
         <PageContent />
         <Footer />
