@@ -1,0 +1,11 @@
+#header .hamburguer > svg { cursor: pointer; }
+#header .suggestion-box:empty { display: none; }
+#header .suggestion-box:has(.lola-local-suggestions) { display: block; }
+#header .lola-local-suggestions { max-height: min(460px, 65vh); overflow-y: auto; box-shadow: 0 8px 20px #0002; }
+#header .lola-local-suggestions .suggestion-product { display: flex; align-items: center; gap: 12px; padding: 10px; color: #3f3f3f; font: 14px Lato, sans-serif; text-decoration: none; }
+#header .lola-local-suggestions .suggestion-product img { width: 55px; height: 55px; object-fit: contain; }
+#header .lola-local-suggestions .suggestion-product small { display: block; color: #ea136a; margin-top: 4px; }
+#header .lola-local-suggestions > p { padding: 14px; }
+@media (max-width: 1100px) {
+  #header .suggestion-box:has(.lola-local-suggestions) { position: fixed; top: 140px; left: 15px; width: calc(100vw - 30px); margin: 0; }
+}
