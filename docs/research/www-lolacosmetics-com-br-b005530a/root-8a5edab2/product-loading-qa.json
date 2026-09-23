@@ -1,0 +1,102 @@
+[
+  {
+    "width": 390,
+    "path": "/necessaire-doce-vida-ps-19629-293-p46295",
+    "first": {
+      "t": 272,
+      "width": 337.265625,
+      "height": 337.265625,
+      "x": 26.359375,
+      "y": 207,
+      "phone": false
+    },
+    "last": {
+      "t": 7055,
+      "width": 338,
+      "height": 338,
+      "x": 26.359375,
+      "y": 207,
+      "phone": true
+    },
+    "maxWidth": 338,
+    "minWidth": 337.265625,
+    "overflow": 0,
+    "initialized": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "path": "/kit-completo-banana-tropicana-p46408",
+    "first": {
+      "t": 210,
+      "width": 337.265625,
+      "height": 337.265625,
+      "x": 26.359375,
+      "y": 207,
+      "phone": false
+    },
+    "last": {
+      "t": 7023,
+      "width": 338,
+      "height": 338,
+      "x": -311.640625,
+      "y": 207,
+      "phone": true
+    },
+    "maxWidth": 338,
+    "minWidth": 337.265625,
+    "overflow": 0,
+    "initialized": true,
+    "errors": []
+  },
+  {
+    "width": 412,
+    "path": "/necessaire-doce-vida-ps-19629-293-p46295",
+    "first": {
+      "t": 230,
+      "width": 356.28125,
+      "height": 356.28125,
+      "x": 27.84375,
+      "y": 207,
+      "phone": false
+    },
+    "last": {
+      "t": 7011,
+      "width": 357,
+      "height": 357,
+      "x": 27.84375,
+      "y": 207,
+      "phone": true
+    },
+    "maxWidth": 357,
+    "minWidth": 356.28125,
+    "overflow": 0,
+    "initialized": true,
+    "errors": []
+  },
+  {
+    "width": 412,
+    "path": "/kit-completo-banana-tropicana-p46408",
+    "first": {
+      "t": 225,
+      "width": 356.28125,
+      "height": 356.28125,
+      "x": 27.84375,
+      "y": 207,
+      "phone": false
+    },
+    "last": {
+      "t": 6993,
+      "width": 357,
+      "height": 357,
+      "x": -329.15625,
+      "y": 207,
+      "phone": true
+    },
+    "maxWidth": 357,
+    "minWidth": 356.28125,
+    "overflow": 0,
+    "initialized": true,
+    "errors": []
+  }
+]

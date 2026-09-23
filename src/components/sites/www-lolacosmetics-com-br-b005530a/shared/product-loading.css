@@ -1,0 +1,21 @@
+/* The static desktop capture is the first-photo fallback until the phone slider
+   initializes. Give it the final phone geometry before any JS chunks arrive. */
+html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-medias {
+  display: block !important;
+  margin: 0;
+  padding-bottom: 20px;
+}
+html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-medias .wd-product-medias-displayer {
+  width: 100% !important;
+}
+html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-medias .wd-product-media-selector,
+html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-medias .wd-product-medias-enlarger {
+  display: none !important;
+}
+html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-medias .zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 10px;
+}

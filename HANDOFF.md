@@ -166,3 +166,19 @@ http://192.168.3.44:4360. Não foi teste em aparelho físico.
 
 Evidências e detalhes: docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/PHONE_HOME_PLAN.md
 e phone-home-qa.json; screenshots phone-home-* em docs/design-references.
+
+## Abertura do produto sem zoom transitório — 2026-09-23
+
+Reproduzido com UA de iPhone, screen390×844, DPR3 e toque: clone mostrava
+imagem1200px, depois273px e finalmente338px; original já mostrava337.27px.
+A classe de página agora é aplicada durante o parse do HTML, antes da hidratação.
+A identificação de dispositivo também ocorre no head. product-loading.css dá à
+primeira foto estática a geometria mobile definitiva enquanto Slick carrega;
+não esconde a página nem usa overflow-x:hidden.
+
+Build aprovado. qa-lola-product-loading.mjs atrasa cada chunk JS em2s e amostra
+cada frame: dois produtos em390/412 mantiveram variação de largura inferior a1px,
+sem overflow/erros, até a galeria interativa estar pronta (~7s sob atraso).
+Dados em docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/product-loading-qa.json.
+Clique real na home abriu Kit Bossa corretamente em mobile e desktop; templates
+corretos e sem overflow. Emulação Chromium, não teste em aparelho físico.

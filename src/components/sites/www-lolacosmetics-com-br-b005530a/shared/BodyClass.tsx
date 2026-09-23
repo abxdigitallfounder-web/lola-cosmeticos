@@ -23,5 +23,9 @@ export default function BodyClass({ value }: { value: string }) {
       else document.documentElement.setAttribute("data-lola-device", previousDevice);
     };
   }, [value]);
-  return null;
+  // Run while parsing the static document, before the captured content can paint.
+  // The effect still handles client-side route changes; this avoids waiting for
+  // hydration to apply the theme's product layout on a cold navigation.
+  const initialClass = JSON.stringify(value).replace(/</g, "\\u003c");
+  return <script dangerouslySetInnerHTML={{ __html: `document.body.className = ${initialClass}; document.documentElement.dataset.lolaPath = location.pathname;` }} />;
 }
