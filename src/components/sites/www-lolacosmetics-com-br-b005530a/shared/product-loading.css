@@ -19,3 +19,19 @@ html[data-lola-device="phone"] .product-detail .head .medias figure.wd-product-m
   aspect-ratio: 1;
   border-radius: 10px;
 }
+
+/* Above the theme's 430px breakpoint, width:100% plus 30px of padding
+   enlarged the phone gallery and the visual viewport. Include that padding
+   in the declared width instead of clipping horizontal page overflow. */
+html[data-lola-device="phone"] .product-detail .head .medias {
+  box-sizing: border-box;
+}
+@media (min-width: 431px) and (max-width: 767px) {
+  /* Related-product arrows used a negative offset larger than the page gutter. */
+  html[data-lola-device="phone"] body[class*="context-product-"] #middle .slick-next {
+    right: 0;
+  }
+  html[data-lola-device="phone"] body[class*="context-product-"] #middle .slick-prev {
+    left: 0;
+  }
+}

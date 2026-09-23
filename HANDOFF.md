@@ -182,3 +182,21 @@ sem overflow/erros, até a galeria interativa estar pronta (~7s sob atraso).
 Dados em docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/product-loading-qa.json.
 Clique real na home abriu Kit Bossa corretamente em mobile e desktop; templates
 corretos e sem overflow. Emulação Chromium, não teste em aparelho físico.
+
+## Arraste lateral do produto em celulares largos — 2026-09-23
+
+Reproduzido no Kit Feira Cronolola a440px com toque/UA/screen mobile:
+documento459px e visualViewport440px permitiam offsetLeft19px. No original,
+a ausência de initial-scale fazia o navegador reduzir a escala para0.9607.
+A auditoria anterior a360/390/412 não atravessava o breakpoint430 e não detectava isso.
+
+Causa: .medias recebe width100% mais padding lateral30px acima de430.
+product-loading.css agora inclui padding na largura (border-box) apenas em
+dispositivos mobile. Setas relacionadas com offset negativo também foram trazidas
+para dentro do carrossel entre431 e767. Não foi adicionado overflow-x:hidden
+nem desabilitado pinch zoom.
+
+Build passou. qa-lola-product-pan.mjs testa gestos CDP nos dois sentidos e
+visualViewport em390/412/430/440/480: largura igual à tela, scale1,
+offsetLeft0 e scrollX0. Navegação das fotos aprovada. Desktop1440 preservado.
+Resultado: docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/product-pan-qa.json.
