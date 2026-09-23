@@ -1,0 +1,540 @@
+[
+  {
+    "device": "iphone",
+    "source": {
+      "sections": {
+        "Header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 125.25
+        },
+        "Search": {
+          "x": 15,
+          "y": 125.25,
+          "width": 360,
+          "height": 43
+        },
+        "Hero": {
+          "x": 0,
+          "y": 182,
+          "width": 390,
+          "height": 510
+        },
+        "Highlights": {
+          "x": 0,
+          "y": 777,
+          "width": 390,
+          "height": 214
+        },
+        "Categories": {
+          "x": 0,
+          "y": 991,
+          "width": 390,
+          "height": 321.5
+        },
+        "Favorites": {
+          "x": 11.703125,
+          "y": 1312.5,
+          "width": 366.59375,
+          "height": 649
+        },
+        "HairTypes": {
+          "x": 0,
+          "y": 1991.5,
+          "width": 390,
+          "height": 537
+        },
+        "Videos": {
+          "x": 0,
+          "y": 2528.5,
+          "width": 390,
+          "height": 546.5
+        },
+        "DailyDeals": {
+          "x": 11.703125,
+          "y": 3075,
+          "width": 366.59375,
+          "height": 1115
+        },
+        "Launches": {
+          "x": 0,
+          "y": 4190,
+          "width": 390,
+          "height": 718
+        },
+        "Collector": {
+          "x": 11.703125,
+          "y": 4908,
+          "width": 366.59375,
+          "height": 1113.59375
+        },
+        "BeforeAfter": {
+          "x": 11.703125,
+          "y": 6021.59375,
+          "width": 366.59375,
+          "height": 1039.703125
+        },
+        "Affiliate": {
+          "x": 0,
+          "y": 7061.296875,
+          "width": 390,
+          "height": 347
+        },
+        "Blog": {
+          "x": 0,
+          "y": 7456.296875,
+          "width": 390,
+          "height": 777.421875
+        },
+        "Reviews": {
+          "x": 0,
+          "y": 182,
+          "width": 390,
+          "height": 8317.71875
+        },
+        "Footer": {
+          "x": 0,
+          "y": 8549.71875,
+          "width": 390,
+          "height": 1171.15625
+        }
+      },
+      "docHeight": 9721,
+      "overflow": 0,
+      "broken": [],
+      "sliders": [
+        {
+          "slides": 4,
+          "visible": 1
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 19,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 1
+        }
+      ]
+    },
+    "clone": {
+      "sections": {
+        "Header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 125.25
+        },
+        "Search": {
+          "x": 15,
+          "y": 125.25,
+          "width": 360,
+          "height": 43
+        },
+        "Hero": {
+          "x": 0,
+          "y": 182,
+          "width": 390,
+          "height": 510
+        },
+        "Highlights": {
+          "x": 0,
+          "y": 777,
+          "width": 390,
+          "height": 214
+        },
+        "Categories": {
+          "x": 0,
+          "y": 991,
+          "width": 390,
+          "height": 321.5
+        },
+        "Favorites": {
+          "x": 11.703125,
+          "y": 1312.5,
+          "width": 366.59375,
+          "height": 649
+        },
+        "HairTypes": {
+          "x": 0,
+          "y": 1991.5,
+          "width": 390,
+          "height": 537
+        },
+        "Videos": {
+          "x": 0,
+          "y": 2528.5,
+          "width": 390,
+          "height": 546.5
+        },
+        "DailyDeals": {
+          "x": 11.703125,
+          "y": 3075,
+          "width": 366.59375,
+          "height": 1115
+        },
+        "Launches": {
+          "x": 0,
+          "y": 4190,
+          "width": 390,
+          "height": 718
+        },
+        "Collector": {
+          "x": 11.703125,
+          "y": 4908,
+          "width": 366.59375,
+          "height": 1113.59375
+        },
+        "BeforeAfter": {
+          "x": 11.703125,
+          "y": 6021.59375,
+          "width": 366.59375,
+          "height": 1039.703125
+        },
+        "Affiliate": {
+          "x": 0,
+          "y": 7061.296875,
+          "width": 390,
+          "height": 347
+        },
+        "Blog": {
+          "x": 0,
+          "y": 7456.296875,
+          "width": 390,
+          "height": 777.421875
+        },
+        "Reviews": {
+          "x": 0,
+          "y": 182,
+          "width": 390,
+          "height": 8317.71875
+        },
+        "Footer": {
+          "x": 0,
+          "y": 8549.71875,
+          "width": 390,
+          "height": 1171.15625
+        }
+      },
+      "docHeight": 9721,
+      "overflow": 0,
+      "broken": [],
+      "sliders": [
+        {
+          "slides": 4,
+          "visible": 1
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 19,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 1
+        }
+      ]
+    }
+  },
+  {
+    "device": "android",
+    "source": {
+      "sections": {
+        "Header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 126.890625
+        },
+        "Search": {
+          "x": 15,
+          "y": 126.890625,
+          "width": 382,
+          "height": 43
+        },
+        "Hero": {
+          "x": 0,
+          "y": 182,
+          "width": 412,
+          "height": 538.59375
+        },
+        "Highlights": {
+          "x": 0,
+          "y": 805.59375,
+          "width": 412,
+          "height": 214
+        },
+        "Categories": {
+          "x": 0,
+          "y": 1019.59375,
+          "width": 412,
+          "height": 337.453125
+        },
+        "Favorites": {
+          "x": 12.359375,
+          "y": 1357.046875,
+          "width": 387.265625,
+          "height": 649
+        },
+        "HairTypes": {
+          "x": 0,
+          "y": 2036.046875,
+          "width": 412,
+          "height": 537
+        },
+        "Videos": {
+          "x": 0,
+          "y": 2573.046875,
+          "width": 412,
+          "height": 567.5
+        },
+        "DailyDeals": {
+          "x": 12.359375,
+          "y": 3140.546875,
+          "width": 387.265625,
+          "height": 1175
+        },
+        "Launches": {
+          "x": 0,
+          "y": 4315.546875,
+          "width": 412,
+          "height": 718
+        },
+        "Collector": {
+          "x": 12.359375,
+          "y": 5033.546875,
+          "width": 387.265625,
+          "height": 1137.515625
+        },
+        "BeforeAfter": {
+          "x": 12.359375,
+          "y": 6171.0625,
+          "width": 387.265625,
+          "height": 1094.078125
+        },
+        "Affiliate": {
+          "x": 0,
+          "y": 7265.140625,
+          "width": 412,
+          "height": 347
+        },
+        "Blog": {
+          "x": 0,
+          "y": 7660.140625,
+          "width": 412,
+          "height": 766.6875
+        },
+        "Reviews": {
+          "x": 0,
+          "y": 182,
+          "width": 412,
+          "height": 8510.828125
+        },
+        "Footer": {
+          "x": 0,
+          "y": 8742.828125,
+          "width": 412,
+          "height": 1142.296875
+        }
+      },
+      "docHeight": 9885,
+      "overflow": 0,
+      "broken": [],
+      "sliders": [
+        {
+          "slides": 4,
+          "visible": 1
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 19,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 1
+        }
+      ]
+    },
+    "clone": {
+      "sections": {
+        "Header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 126.890625
+        },
+        "Search": {
+          "x": 15,
+          "y": 126.890625,
+          "width": 382,
+          "height": 43
+        },
+        "Hero": {
+          "x": 0,
+          "y": 182,
+          "width": 412,
+          "height": 538.59375
+        },
+        "Highlights": {
+          "x": 0,
+          "y": 805.59375,
+          "width": 412,
+          "height": 214
+        },
+        "Categories": {
+          "x": 0,
+          "y": 1019.59375,
+          "width": 412,
+          "height": 337.453125
+        },
+        "Favorites": {
+          "x": 12.359375,
+          "y": 1357.046875,
+          "width": 387.265625,
+          "height": 649
+        },
+        "HairTypes": {
+          "x": 0,
+          "y": 2036.046875,
+          "width": 412,
+          "height": 537
+        },
+        "Videos": {
+          "x": 0,
+          "y": 2573.046875,
+          "width": 412,
+          "height": 567.5
+        },
+        "DailyDeals": {
+          "x": 12.359375,
+          "y": 3140.546875,
+          "width": 387.265625,
+          "height": 1175
+        },
+        "Launches": {
+          "x": 0,
+          "y": 4315.546875,
+          "width": 412,
+          "height": 718
+        },
+        "Collector": {
+          "x": 12.359375,
+          "y": 5033.546875,
+          "width": 387.265625,
+          "height": 1137.515625
+        },
+        "BeforeAfter": {
+          "x": 12.359375,
+          "y": 6171.0625,
+          "width": 387.265625,
+          "height": 1094.078125
+        },
+        "Affiliate": {
+          "x": 0,
+          "y": 7265.140625,
+          "width": 412,
+          "height": 347
+        },
+        "Blog": {
+          "x": 0,
+          "y": 7660.140625,
+          "width": 412,
+          "height": 767.359375
+        },
+        "Reviews": {
+          "x": 0,
+          "y": 182,
+          "width": 412,
+          "height": 8511.5
+        },
+        "Footer": {
+          "x": 0,
+          "y": 8743.5,
+          "width": 412,
+          "height": 1142.296875
+        }
+      },
+      "docHeight": 9886,
+      "overflow": 0,
+      "broken": [],
+      "sliders": [
+        {
+          "slides": 4,
+          "visible": 1
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 2
+        },
+        {
+          "slides": 4,
+          "visible": 2
+        },
+        {
+          "slides": 19,
+          "visible": 2
+        },
+        {
+          "slides": 3,
+          "visible": 1
+        }
+      ]
+    }
+  }
+]

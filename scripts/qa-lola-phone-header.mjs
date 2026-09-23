@@ -46,13 +46,19 @@ async (page) => {
       await mobile.locator("#header .close-hamburguer").tap();
       await mobile.waitForTimeout(400);
       await mobile.locator("#header .search-field").fill("volumao");
+      await mobile.locator("#header .suggestion-product").first().waitFor({ state: "visible" });
       const suggestions = await mobile.locator("#header .suggestion-product").count();
+      const searchRect = await mobile.locator("#header .search-field").boundingBox();
+      const suggestionRect = await mobile.locator("#header .suggestion-box").boundingBox();
+      const suggestionsBelowInput = suggestionRect.y >= searchRect.y + searchRect.height;
+      if (!suggestionsBelowInput) throw new Error("Search suggestions cover the mobile header");
       await mobile.locator("#header #logo a").tap();
       await mobile.waitForTimeout(800);
       await mobile.locator("#header .basket > a").tap();
+      await mobile.locator("dialog.lola-cart").waitFor({ state: "visible" });
       const cart = await mobile.locator("dialog.lola-cart").isVisible();
       if (!menuOpen || expanded !== "true" || !suggestions || !cart) throw new Error(JSON.stringify({ device: device.name, menuOpen, expanded, suggestions, cart }));
-      results.push({ device: device.name, interactions: { menuOpen, expanded, suggestions, cart } });
+      results.push({ device: device.name, interactions: { menuOpen, expanded, suggestions, suggestionsBelowInput, cart } });
     } finally { await context.close(); }
   }
   return results;

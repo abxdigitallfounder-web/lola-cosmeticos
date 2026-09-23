@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import captures from "./media-data.json";
+import phoneCaptures from "./phone-media-data.json";
+import { isMobileBrowser } from "../shared/mobileDevice";
 
 type Variant = "highlights" | "carousel";
 
@@ -11,14 +13,15 @@ export default function MediaStories({ variant }: { variant: Variant }) {
 
   useEffect(() => {
     if (!host.current) return;
+    const phone = isMobileBrowser();
     const shadow = host.current.shadowRoot ?? host.current.attachShadow({ mode: "open" });
-    shadow.innerHTML = captures[variant === "highlights" ? 0 : 1].html;
+    shadow.innerHTML = (phone ? phoneCaptures : captures)[variant === "highlights" ? 0 : 1].html;
     const controller = new AbortController();
     const { signal } = controller;
     const extra = document.createElement("style");
     extra.textContent = `
       :host { display:block; width:100%; min-width:0; }
-      .LIMITER { max-width:100%!important; width:calc(100% - 2px)!important; }
+      ${phone ? "" : ".LIMITER { max-width:100%!important; width:calc(100% - 2px)!important; }"}
       [role=button]:focus-visible { outline:2px solid #ea136a; outline-offset:3px; }
       dialog.story-dialog { position:fixed; inset:0; padding:0; margin:auto; border:0; border-radius:15px; background:#131313; color:#fff; width:min(420px,100vw); max-width:100vw; height:min(760px,95dvh); max-height:95dvh; overflow:hidden; }
       dialog.story-dialog::backdrop { background:rgba(0,0,0,.8); }
@@ -26,7 +29,7 @@ export default function MediaStories({ variant }: { variant: Variant }) {
       .story-control { position:absolute; z-index:2; border:0; border-radius:50%; width:38px; height:38px; background:#13131380; color:white; display:grid; place-items:center; cursor:pointer; font:24px Arial,sans-serif; }
       .story-close { right:12px; top:12px; } .story-previous { left:8px; top:50%; } .story-next { right:8px; top:50%; }
       .story-caption { position:absolute; left:16px; right:16px; bottom:40px; padding:8px; text-align:center; background:#13131380; border-radius:8px; pointer-events:none; }
-      @media(max-width:767px) { #widde-pro > div { gap:8px; } }
+      ${phone ? "" : "@media(max-width:767px) { #widde-pro > div { gap:8px; } }"}
     `;
     shadow.append(extra);
     const rail = shadow.querySelector<HTMLElement>(variant === "highlights" ? ".overflow-x-auto" : "#card-container");
@@ -133,10 +136,21 @@ export default function MediaStories({ variant }: { variant: Variant }) {
     });
     // The source widget positions the central card at full size and its neighbors at 86%.
     const layoutCarousel = () => {
+      if (phone && variant === "highlights" && host.current) {
+        const limiter = shadow.querySelector<HTMLElement>(".LIMITER");
+        if (limiter) {
+          const available = host.current.clientWidth;
+          limiter.style.maxWidth = `${available - 1}px`;
+          limiter.style.width = `min(${available - 2}px, 100%)`;
+        }
+      }
       if (!rail || variant !== "carousel") return;
       const mobile = window.innerWidth < 768;
-      const width = mobile ? Math.min(250, Math.max(160, (rail.clientWidth - 32) / 2)) : 299.09909909909913;
-      rail.style.height = mobile ? `${width * 436 / 255 + 95}px` : "592px";
+      const width = mobile ? (phone ? Math.floor((rail.clientWidth - 32) / 2) : Math.min(250, Math.max(160, (rail.clientWidth - 32) / 2))) : 299.09909909909913;
+      // The source reserves mobile rail space with its mobile rectangle ratio,
+      // independently of the 255/436 aspect ratio used to render the video.
+      const mobileHeight = phone ? Math.ceil(width * 438 / 229) + 58 : width * 436 / 255 + 95;
+      rail.style.height = mobile ? `${mobileHeight}px` : "592px";
       cards.forEach((card, index) => {
         const offset = index - active;
         const x = (rail.clientWidth - width) / 2 + offset * (width * .86 + 16) + Math.sign(offset) * width * .07;
@@ -161,7 +175,8 @@ export default function MediaStories({ variant }: { variant: Variant }) {
       });
     };
     const resize = new ResizeObserver(layoutCarousel);
-    if (rail) resize.observe(rail);
+    if (phone && variant === "highlights") resize.observe(host.current);
+    else if (rail) resize.observe(rail);
     layoutCarousel();
     let startX = 0;
     let startScroll = 0;

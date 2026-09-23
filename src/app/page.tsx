@@ -18,11 +18,13 @@ import Reviews from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8
 import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/Footer";
 import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/ShopInteractions";
 import BodyClass from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/BodyClass";
+import phone from "@/components/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/phone-fragments.json";
 
 // Section order and nesting mirror the captured #main tree; see PAGE_TOPOLOGY.md.
 export default function Home() {
   return (
     <>
+      <link rel="stylesheet" href="/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/phone-home.css" />
       <BodyClass value="column-1 HomeRoute lola-clone" />
       <section id="main" className="HomeRoute">
         <Header />
@@ -52,7 +54,7 @@ export default function Home() {
           </div>
         </section>
         <Reviews />
-        <Footer />
+        <Footer mobileHtml={phone.Footer} />
         <ShopInteractions />
       </section>
     </>

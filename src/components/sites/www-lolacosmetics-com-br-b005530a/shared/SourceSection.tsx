@@ -1,9 +1,13 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { mountMobileProductGalleries } from "./mobileProductGallery";
+import { useMobileBrowser } from "./useMobileBrowser";
+import { mountCapturedReviews } from "./capturedReviews";
 
 /** Replays one captured source fragment and re-initializes the carousels inside it. */
-export default function SourceSection({ name, html }: { name: string; html: string }) {
+export default function SourceSection({ name, html, mobileHtml }: { name: string; html: string; mobileHtml?: string }) {
+  const mobile = useMobileBrowser();
+  const renderedHtml = mobile && mobileHtml !== undefined ? mobileHtml : html;
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let disposed = false;
@@ -17,6 +21,7 @@ export default function SourceSection({ name, html }: { name: string; html: stri
       registerSlick(window, $);
       if (disposed || !ref.current) return;
       const restoreGalleries = mountMobileProductGalleries(ref.current);
+      const restoreReviews = name === "Reviews" && mobile ? mountCapturedReviews(ref.current) : () => {};
       const sliders = $(ref.current).find("[data-lola-slider]");
       sliders.each(function () {
         const slider = $(this);
@@ -49,13 +54,14 @@ export default function SourceSection({ name, html }: { name: string; html: stri
         images.forEach(img => img.removeEventListener("load", resize));
         sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); });
         restoreGalleries();
+        restoreReviews();
       };
     }
     initialize();
     return () => { disposed = true; cleanup?.(); };
-  }, [name, html]);
+  }, [name, renderedHtml, mobile]);
   // display:contents keeps this host out of the box tree. It still sits in the DOM, so the
   // theme's child combinators (body.grid-products #middle #content-wrapper>.row) only
   // survive when a fragment carries its own container — interior pages replay all of #middle.
-  return <div style={{ display: "contents" }} ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div style={{ display: "contents" }} ref={ref} data-section={name} dangerouslySetInnerHTML={{ __html: renderedHtml }} />;
 }

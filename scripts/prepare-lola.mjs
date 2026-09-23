@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import {load} from 'cheerio';
 import {createSanitizer} from './lib/lola-sanitize.mjs';
+import './prepare-lola-phone-home.mjs';
 const site='www-lolacosmetics-com-br-b005530a/root-8a5edab2';
 const root=`docs/research/${site}`, out=`src/components/sites/${site}`;
 const shared='src/components/sites/www-lolacosmetics-com-br-b005530a/shared';
@@ -76,9 +77,9 @@ const fragments={};for(const [name,s] of Object.entries(sections))fragments[name
 const $m=load(mobile.html);
 // A narrow desktop capture is not the phone template: the source renders a separate
 // mobile header when requested with a mobile UA. Preserve that actual DOM separately.
-const phoneHeader=JSON.parse(fs.readFileSync(`${root}/header-phone-extraction.json`));
+const phoneHeader=JSON.parse(fs.readFileSync(`${out}/phone-fragments.json`));
 const phoneInterior=JSON.parse(fs.readFileSync(`${root}/header-phone-interior-extraction.json`));
-fragments.HeaderMobile=createSanitizer(manifest).clean(phoneHeader.html);
+fragments.HeaderMobile=phoneHeader.Header;
 fragments.HeroMobile=clean($m('.fullbanner').toString());
 // Mobile slider options come from the same hero instance: one slide and four dots.
 fragments.HeroMobile=fragments.HeroMobile.replace(/data-lola-slider="[^"]*"/g,`data-lola-slider="${JSON.stringify(options[0].options).replaceAll('"','&quot;')}"`);
@@ -116,7 +117,7 @@ fs.writeFileSync(`${out}/media-data.json`,JSON.stringify(shadows.map(x=>({tag:x.
 // One thin wrapper per section, generated so a new page only has to be captured.
 // Mobile variants are alternates of a section already wrapped, not sections of their own.
 for(const name of Object.keys(pageFragments).filter(n=>!n.endsWith('Mobile')))
-  fs.writeFileSync(`${out}/${name}.tsx`,`import SourceSection from "../shared/SourceSection";\nimport fragments from "./fragments.json";\nexport default function ${name}() { return <SourceSection name="${name}" html={fragments.${name}} />; }\n`);
+  fs.writeFileSync(`${out}/${name}.tsx`,`import SourceSection from "../shared/SourceSection";\nimport fragments from "./fragments.json";\nimport phone from "./phone-fragments.json";\nexport default function ${name}() { return <SourceSection name="${name}" html={fragments.${name}} mobileHtml={phone.${name}} />; }\n`);
 // The only shared contract left is the demo cart's product shape: SourceSection takes the
 // fragment HTML directly, so the per-page section union it used to need is gone.
 fs.writeFileSync(`${shared}/types.ts`,'export interface LolaProduct { id: string; name: string; image: string; price: number; quantity: number; }\n');

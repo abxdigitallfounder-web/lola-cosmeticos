@@ -1,0 +1,124 @@
+{
+  "html": "<div class=\"banners fullbanner\" style=\"margin-bottom: 85px\"> \t  \t  \t<div class=\"wd-marketing-banner banner-full-mobile     wd-widget wd-widget-js slick-initialized slick-slider slick-dotted\" data-widget-js=\"{ &quot;handler&quot;: &quot;MarketingBanner&quot;, &quot;options&quot;: {} }\" data-slider=\"{ \t\t\t&quot;sliderDelay&quot;: 7000, \t\t\t&quot;sliderFadeDelay&quot;: 300 \t\t}\"><div class=\"slick-list draggable\"><div class=\"slick-track\" style=\"opacity: 1; width: 3510px; transform: translate3d(-390px, 0px, 0px);\"><div class=\"slick-slide slick-cloned\" data-slick-index=\"-1\" aria-hidden=\"true\" tabindex=\"-1\" style=\"width: 390px;\"><div><div id=\"\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"9\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=59&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide slick-current slick-active\" data-slick-index=\"0\" aria-hidden=\"false\" role=\"tabpanel\" id=\"slick-slide00\" style=\"width: 390px;\" aria-describedby=\"slick-slide-control00\"><div><div id=\"banner-180\" class=\"banner-wrapper banner-show banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"12\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=180&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"0\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/18/180_banner639247420954811367.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide\" data-slick-index=\"1\" aria-hidden=\"true\" role=\"tabpanel\" id=\"slick-slide01\" style=\"width: 390px;\" aria-describedby=\"slick-slide-control01\" tabindex=\"-1\"><div><div id=\"banner-228\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"11\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=228&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/22/228_banner639247382752293793.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide\" data-slick-index=\"2\" aria-hidden=\"true\" tabindex=\"-1\" role=\"tabpanel\" id=\"slick-slide02\" style=\"width: 390px;\" aria-describedby=\"slick-slide-control02\"><div><div id=\"banner-63\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"10\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=63&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/63/63_banner639231577545230161.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide\" data-slick-index=\"3\" aria-hidden=\"true\" tabindex=\"-1\" role=\"tabpanel\" id=\"slick-slide03\" style=\"width: 390px;\" aria-describedby=\"slick-slide-control03\"><div><div id=\"banner-59\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"9\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=59&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide slick-cloned\" data-slick-index=\"4\" aria-hidden=\"true\" tabindex=\"-1\" style=\"width: 390px;\"><div><div id=\"\" class=\"banner-wrapper banner-show banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"12\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=180&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/18/180_banner639247420954811367.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide slick-cloned\" data-slick-index=\"5\" aria-hidden=\"true\" tabindex=\"-1\" style=\"width: 390px;\"><div><div id=\"\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"11\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=228&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/22/228_banner639247382752293793.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide slick-cloned\" data-slick-index=\"6\" aria-hidden=\"true\" tabindex=\"-1\" style=\"width: 390px;\"><div><div id=\"\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"10\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=63&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/63/63_banner639231577545230161.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div><div class=\"slick-slide slick-cloned\" data-slick-index=\"7\" aria-hidden=\"true\" tabindex=\"-1\" style=\"width: 390px;\"><div><div id=\"\" class=\"banner-wrapper  banner-default\" style=\"height: 780px; text-align: center; width: 100%; display: inline-block;\" data-weight=\"9\"> \t\t\t\t \t\t\t\t\t \t\t\t\t\t  <a class=\"banner-link \" href=\"/Shopping/Banner/Click?bid=59&amp;c=Home&amp;cid=1&amp;bpid=37\" title=\"\" style=\"height:780px;*width:600px;\" target=\"_self\" tabindex=\"-1\"> \t\t\t\t\t \t\t\t\t  \t\t<img src=\"https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp\" width=\"600\" height=\"780\" title=\"\" alt=\"\"> \t\t\t\t\t</a> \t\t\t\t  \t\t\t</div></div></div></div></div><ul class=\"slick-dots\" role=\"tablist\" style=\"display: block;\"><li class=\"slick-active\" role=\"presentation\"><button type=\"button\" role=\"tab\" id=\"slick-slide-control00\" aria-controls=\"slick-slide00\" aria-label=\"1 of 4\" tabindex=\"0\" aria-selected=\"true\">1</button></li><li role=\"presentation\" class=\"\"><button type=\"button\" role=\"tab\" id=\"slick-slide-control01\" aria-controls=\"slick-slide01\" aria-label=\"2 of 4\" tabindex=\"-1\">2</button></li><li role=\"presentation\"><button type=\"button\" role=\"tab\" id=\"slick-slide-control02\" aria-controls=\"slick-slide02\" aria-label=\"3 of 4\" tabindex=\"-1\">3</button></li><li role=\"presentation\"><button type=\"button\" role=\"tab\" id=\"slick-slide-control03\" aria-controls=\"slick-slide03\" aria-label=\"4 of 4\" tabindex=\"-1\">4</button></li></ul></div>    \t </div>",
+  "selector": ".fullbanner",
+  "display": "block",
+  "rect": {
+    "x": 0,
+    "y": 182,
+    "width": 390,
+    "height": 510,
+    "top": 182,
+    "right": 390,
+    "bottom": 692,
+    "left": 0
+  },
+  "sliders": [
+    {
+      "options": {
+        "accessibility": true,
+        "adaptiveHeight": false,
+        "arrows": false,
+        "asNavFor": null,
+        "prevArrow": "<button class=\"slick-prev\" aria-label=\"Previous\" type=\"button\">Previous</button>",
+        "nextArrow": "<button class=\"slick-next\" aria-label=\"Next\" type=\"button\">Next</button>",
+        "autoplay": true,
+        "autoplaySpeed": 5000,
+        "centerMode": false,
+        "centerPadding": "50px",
+        "cssEase": "ease",
+        "dots": true,
+        "dotsClass": "slick-dots",
+        "draggable": true,
+        "easing": "linear",
+        "edgeFriction": 0.35,
+        "fade": false,
+        "focusOnSelect": false,
+        "focusOnChange": false,
+        "infinite": true,
+        "initialSlide": 0,
+        "lazyLoad": "ondemand",
+        "mobileFirst": false,
+        "pauseOnHover": true,
+        "pauseOnFocus": true,
+        "pauseOnDotsHover": false,
+        "respondTo": "window",
+        "responsive": null,
+        "rows": 1,
+        "rtl": false,
+        "slide": "",
+        "slidesPerRow": 1,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "speed": 500,
+        "swipe": true,
+        "swipeToSlide": false,
+        "touchMove": true,
+        "touchThreshold": 5,
+        "useCSS": true,
+        "useTransform": true,
+        "variableWidth": false,
+        "vertical": false,
+        "verticalSwiping": false,
+        "waitForAnimate": true,
+        "zIndex": 1000
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/18/180_banner639247420954811367.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/22/228_banner639247382752293793.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/63/63_banner639231577545230161.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/18/180_banner639247420954811367.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/22/228_banner639247382752293793.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/63/63_banner639231577545230161.webp"
+    },
+    {
+      "src": "https://d2l4mdyojly1ma.cloudfront.net/Custom/Content/Banners/59/59_banner639241412676694984.webp"
+    }
+  ],
+  "links": [
+    "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=180&c=Home&cid=1&bpid=37",
+    "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=228&c=Home&cid=1&bpid=37",
+    "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=63&c=Home&cid=1&bpid=37",
+    "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=59&c=Home&cid=1&bpid=37"
+  ],
+  "destinations": [
+    {
+      "href": "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=180&c=Home&cid=1&bpid=37",
+      "url": "https://www.lolacosmetics.com.br/promocao/semana-da-lolete",
+      "status": 200
+    },
+    {
+      "href": "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=228&c=Home&cid=1&bpid=37",
+      "url": "https://www.lolacosmetics.com.br/promocao",
+      "status": 200
+    },
+    {
+      "href": "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=63&c=Home&cid=1&bpid=37",
+      "url": "https://www.lolacosmetics.com.br/colecoes/morte-subita",
+      "status": 200
+    },
+    {
+      "href": "https://www.lolacosmetics.com.br/Shopping/Banner/Click?bid=59&c=Home&cid=1&bpid=37",
+      "url": "https://www.lolacosmetics.com.br/banana-tropicana",
+      "status": 200
+    }
+  ]
+}

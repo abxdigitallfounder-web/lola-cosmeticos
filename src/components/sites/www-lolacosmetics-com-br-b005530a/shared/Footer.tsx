@@ -2,11 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import chrome from "./chrome.json";
+import { useMobileBrowser } from "./useMobileBrowser";
 
 const consentKey = "lola-demo-cookie-consent";
 
-export default function Footer() {
+export default function Footer({ mobileHtml }: { mobileHtml?: string } = {}) {
   const root = useRef<HTMLDivElement>(null);
+  const mobile = useMobileBrowser();
+  const html = mobile && mobileHtml !== undefined ? mobileHtml : chrome.Footer;
 
   useEffect(() => {
     const wrapper = root.current;
@@ -109,7 +112,7 @@ export default function Footer() {
       wrapper.removeEventListener("keydown", onKeyDown);
       feedback.remove();
     };
-  }, []);
+  }, [html]);
 
-  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: chrome.Footer }} />;
+  return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: html }} />;
 }

@@ -144,3 +144,25 @@ desktop não ativa o template que a origem entrega aos celulares.
 - 4 seções da home (`BenefitsBanner`, `ReasonsToLove`, `Benefits`, `SocialLinks`) estão
   `display:none` — o original também as esconde no desktop. O `BenefitsBanner` aparece no
   mobile, nos dois.
+
+## Home mobile refeita — 2026-09-23
+
+A home agora seleciona os fragmentos reais servidos ao user agent de celular,
+incluindo banners, carrosséis, imagens, vídeos, avaliações e rodapé. Desktop
+continua usando a captura anterior. O header mobile mantém a busca abaixo do logo;
+sugestões agora ficam ancoradas ao campo.
+
+Captura e geração: scripts/capture-lola-phone-home.mjs e
+scripts/prepare-lola-phone-home.mjs. O prepare principal inclui essa etapa.
+Assets locais: 1389. Hero atualizado para os quatro banners de 23/09.
+Os destinos dos banners foram resolvidos para rotas locais existentes.
+
+Build aprovado, 187 rotas preservadas. Comparação completa com Chromium emulado
+(UA + screen + viewport + toque + DPR3): iPhone390 com delta geométrico0;
+Android412 com delta máximo0.671875px; sem overflow ou imagens quebradas.
+Interações do header, vídeos, avaliações, rodapé e navegação dos banners aprovadas.
+Servidor de produção em http://localhost:4360, acessível na rede em
+http://192.168.3.44:4360. Não foi teste em aparelho físico.
+
+Evidências e detalhes: docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/PHONE_HOME_PLAN.md
+e phone-home-qa.json; screenshots phone-home-* em docs/design-references.

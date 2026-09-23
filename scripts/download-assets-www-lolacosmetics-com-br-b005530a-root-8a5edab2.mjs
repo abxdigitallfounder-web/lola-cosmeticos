@@ -11,7 +11,7 @@ const research=`docs/research/${site}`;
 const researchRoot=`docs/research/${site.split('/')[0]}`;
 const pageDirs=(await fs.readdir(researchRoot,{withFileTypes:true})).filter(e=>e.isDirectory()).map(e=>e.name);
 const datasetPaths=[];
-for(const dir of pageDirs)for(const name of ['desktop-extraction','loaded-extraction','mobile-extraction'])datasetPaths.push(`${researchRoot}/${dir}/${name}.json`);
+for(const dir of pageDirs)for(const name of (process.argv.includes('--phone-only')?['phone-home-extraction']:['desktop-extraction','loaded-extraction','mobile-extraction','phone-home-extraction']))datasetPaths.push(`${researchRoot}/${dir}/${name}.json`);
 const datasets=(await Promise.all(datasetPaths.map(async p=>{try{return JSON.parse(await fs.readFile(p,'utf8'))}catch{return null}}))).filter(Boolean);
 // Seed from the previous run so a re-run only fills gaps: the origin serves some assets
 // intermittently, and starting empty would drop entries that are already on disk.

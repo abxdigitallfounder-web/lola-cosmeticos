@@ -9,6 +9,5 @@ body.BasketIndexRoute { padding: 0; }
 #header .lola-local-suggestions .suggestion-product img { width: 55px; height: 55px; object-fit: contain; }
 #header .lola-local-suggestions .suggestion-product small { display: block; color: #ea136a; margin-top: 4px; }
 #header .lola-local-suggestions > p { padding: 14px; }
-@media (max-width: 1100px) {
-  #header .suggestion-box:has(.lola-local-suggestions) { position: fixed; top: 140px; left: 15px; width: calc(100vw - 30px); margin: 0; }
-}
+/* Keep the captured search panel anchored to its form. A fixed position uses
+   the theme's mobile top offset relative to the viewport and covers the logo. */
