@@ -2,67 +2,24 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { useCart, changeQuantity, removeFromCart, countItems, sumItems, money } from "./cartStore";
+import { useCart, changeQuantity, removeFromCart, sumItems, money } from "./cartStore";
 import "./cart-screen.css";
-
-// The captured /carrinho page ships the source's own widget shell: an <h1>, the
-// .wd-checkout-basket container and, inside it, the "seu carrinho está vazio"
-// block. The real basket is rendered into that container so the theme's
-// selectors and spacing keep applying, and the captured empty state is left in
-// place to be shown whenever the bag is actually empty.
-// The captured widget is plain DOM, not React state, so it is read through
-// useSyncExternalStore: querySelector hands back the same node every call, and
-// the server snapshot is null so nothing is portalled during SSR.
-const keepHost = () => () => {};
 const findHost = () => document.querySelector<HTMLElement>(".basket-content .wd-checkout-basket");
 const noHost = () => null;
-
 export default function CartScreen() {
-  const cart = useCart();
-  const host = useSyncExternalStore(keepHost, findHost, noHost);
-
-  useEffect(() => {
-    const empty = document.querySelector<HTMLElement>(".basket-content .wd-checkout-basket > .empty");
-    // The captured block carries its own display rule, so toggling `hidden`
-    // alone would not hide it.
-    if (empty) empty.style.display = cart.length ? "none" : "";
-  }, [cart]);
-
+  const cart = useCart(); const host = useSyncExternalStore(() => () => {}, findHost, noHost);
+  useEffect(() => { const empty = document.querySelector<HTMLElement>(".basket-content .wd-checkout-basket > .empty"); if (empty) empty.style.display = cart.length ? "none" : ""; }, [cart]);
   if (!host || !cart.length) return null;
   const subtotal = sumItems(cart);
-  return createPortal(
-    <div className="lola-basket">
-      <p className="lola-basket-count">{countItems(cart)} {countItems(cart) === 1 ? "item" : "itens"} na sacola</p>
-      <ul className="lola-basket-list">
-        {cart.map((product) => (
-          <li key={product.id} className="lola-basket-row">
-            {/* Captured product photos, already local under /sites. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={product.image} alt={product.name} />
-            <div className="lola-basket-info">
-              <h2>{product.name}</h2>
-              <span className="lola-basket-unit">{money(product.price)} cada</span>
-            </div>
-            <div className="lola-basket-qty">
-              <button type="button" aria-label={`Diminuir ${product.name}`} onClick={() => changeQuantity(product.id, -1)}>−</button>
-              <span aria-live="polite">{product.quantity}</span>
-              <button type="button" aria-label={`Aumentar ${product.name}`} onClick={() => changeQuantity(product.id, 1)}>+</button>
-            </div>
-            <strong className="lola-basket-line">{money(product.price * product.quantity)}</strong>
-            <button type="button" className="lola-basket-remove" onClick={() => removeFromCart(product.id)}>Remover</button>
-          </li>
-        ))}
-      </ul>
-      <div className="lola-basket-summary">
-        <div className="lola-basket-totals">
-          <p><span>Subtotal</span><span>{money(subtotal)}</span></p>
-          <p className="lola-basket-shipping"><span>Frete</span><span>calculado no checkout</span></p>
-          <p className="lola-basket-grand"><span>Total</span><strong>{money(subtotal)}</strong></p>
-        </div>
-        <Link className="lola-basket-checkout" href="/checkout/easy">Finalizar Compra</Link>
-        <Link className="lola-basket-back" href="/">Voltar à loja</Link>
-      </div>
-    </div>,
-    host,
-  );
+  return createPortal(<div className="row grid no-gutters lola-basket-original">
+    <div className="col col-12 col-lg-8 grid"><div className="wd-checkout-basket-grid wd-widget"><div className="grid">
+      <ul className="grid-title row"><li className="product col col-md-6 col-sm-12"><span className="icon">Produtos</span></li><li className="quantity col col-md-2 no-medium"><span className="icon">Quantidade</span></li><li className="price col col-md-2 no-medium"><span className="icon">Preço Unitário</span></li><li className="subtotal col col-md-2 no-medium"><span className="icon">Subtotal</span></li></ul>
+      <ul className="grid-informations row">{cart.map((p) => <li key={p.id} className="col item col-12"><ul className="row">
+        <li className="product col col-lg-6 col-md-6 col-sm-8 col-12"><div className="row no-gutters"><a className="photo col col-md-3 col-sm-3 col-3" href="#"><img height="90" src={p.image} alt={p.name} /></a><div className="data col col-md-9 col-sm-9 col-9"><a href="#"><strong>{p.name}</strong></a></div></div></li>
+        <li className="quantity col col-lg-2 col-md-3 col-sm-2 col-12"><div><div className="change"><button className="js-qty-less btn" disabled={p.quantity <= 1} onClick={() => changeQuantity(p.id, -1)}>-</button><input className="js-qty" value={p.quantity} readOnly /><button className="js-qty-more btn" onClick={() => changeQuantity(p.id, 1)}>+</button></div><button className="btn remove js-remove btn-remove" onClick={() => removeFromCart(p.id)}>×</button></div></li>
+        <li className="price col col-lg-2 col-md-3 col-sm-2 col-12"><div>{money(p.price)}</div></li><li className="subtotal col col-lg-2 no-medium"><strong>{money(p.price * p.quantity)}</strong></li>
+      </ul></li>)}</ul>
+    </div></div></div>
+    <aside id="summary" className="col col-12 col-lg-4 basket-summary"><div className="row row-discount-delivery no-gutters"><div className="col-12 col-lg-6"><div className="row row-discount no-gutters"><div className="wd-checkout-basket-discount wd-widget"><div className="content"><label>Insira o seu cupom para calcular o desconto:</label><input type="text" name="CouponCode" id="CouponCode" placeholder="Insira o seu código aqui" /><button className="js-coupon-calc btn">Aplicar</button></div></div></div></div><div className="col-12 col-lg-6"><div className="row row-delivery no-gutters"><div className="wd-checkout-basket-deliveryoptions-oms wd-checkout-basket-deliveryoptions wd-widget"><div className="content"><div className="description"><label>Informe seu CEP para definir a forma de entrega</label><input id="DeliveryPostalCode" name="DeliveryPostalCode" maxLength={9} placeholder="Digite seu CEP aqui..." /><button className="js-shipping-calc btn">OK</button></div><div className="types delivery-options"><div className="location"><strong>Selecione abaixo uma das opções de frete:</strong><div className="time"><strong>Prazo Previsto: <span>2 dia(s) útil(eis)</span></strong></div></div><ul><li className="js-delivery-choice"><input type="radio" defaultChecked name="DeliveryChoice" /><p><b><span className="name">JT - Normal - </span></b><br /><span className="eta">2 dia(s) útil(eis)</span><span className="quote">R$ 11,08</span></p></li><li className="js-delivery-choice"><input type="radio" name="DeliveryChoice" /><p><b><span className="name">JT - Normal - </span></b><br /><span className="eta">2 dia(s) útil(eis)</span><span className="quote">R$ 11,08</span></p></li></ul></div></div></div></div></div></div><div id="totla-lola"><div className="row subtotal no-gutters"><div className="col col-12"><span>Subtotal</span><span>{money(subtotal)}</span></div></div><div className="row row-total no-gutters"><div className="header col col-md-4 col-12">Total:</div><div className="content col col-md-8 col-12"><div className="price"><small className="savings"><span className="instant-price">{money(subtotal + 11.08)}</span></small><dfn className="condition">em até <span className="parcels">3x</span> de <span className="parcel-value">{money((subtotal + 11.08) / 3)}</span> (sem juros).</dfn></div></div></div><div className="bottom"><div className="wd-checkout-basket-buttons wd-widget"><Link className="bt-checkout btn-big btn-buy" href="/checkout/easy?step=delivery">Finalizar compra</Link><Link className="bt-keep-buying btn-outline" href="/">Continuar comprando</Link></div></div><div id="compra-segura" className="d-flex">Compra 100% segura</div></div></aside>
+  </div>, host);
 }

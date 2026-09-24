@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/product-reviews.css";
 import "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/product-loading.css";
 import "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/slider-init.css";
+import "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/delivery-fee.css";
 import Tracking from "@/components/Tracking";
 const lato = localFont({ src: "../../public/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/S6uyw4BMUTPHjx4wXiWtFCc-0d7407373c.woff2", variable: "--font-lola-body", display: "swap" });
 // Keep the phone layout at its intended scale while preserving user pinch zoom.

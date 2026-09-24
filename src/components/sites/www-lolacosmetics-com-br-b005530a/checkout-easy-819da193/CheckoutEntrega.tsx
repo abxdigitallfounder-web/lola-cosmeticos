@@ -5,40 +5,36 @@ import { useCart, countItems, sumItems, money } from "../shared/cartStore";
 import PixPanel, { type PixCharge } from "./PixPanel";
 import "./checkout.css";
 
-// Demo clone: no address or payment data is submitted anywhere. Shipping is a
-// flat demo value; the delivery option (JT - Normal) sets it to R$ 11,08.
+// Demo clone: no address or payment data is submitted anywhere. Delivery
+// options are shown after a valid CEP and use the store's normal 2-day range.
 const FRETE_PLACEHOLDER = 24.2;
 const DELIVERY = [
-  { id: "jt-1", name: "JT - Normal", price: 11.08, eta: "2 dias úteis" },
-  { id: "jt-2", name: "JT - Normal", price: 11.08, eta: "2 dias úteis" },
+  { id: "jt-1", name: "JT - Normal", price: 7.90, eta: "2 dias úteis" },
+  { id: "pac-1", name: "PAC - Normal", price: 9.20, eta: "4 dias úteis" },
 ];
 const PAYMENTS = [
   { id: "card", label: "Cartao de crédito", icon: "card" as const },
   { id: "pix", label: "PIX", icon: "pix" as const },
-  { id: "pixp", label: "PIX Parcelado", icon: "flower" as const },
 ];
 
 type Address = { nome: string; email: string; cpf: string; cep: string; endereco: string; numero: string; bairro: string; cidade: string; uf: string };
 const EMPTY_ADDR: Address = { nome: "", email: "", cpf: "", cep: "", endereco: "", numero: "", bairro: "", cidade: "", uf: "" };
+const formatCep = (value: string) => { const digits = value.replace(/\D/g, "").slice(0, 8); return digits.length > 5 ? `${digits.slice(0, 5)}-${digits.slice(5)}` : digits; };
+const formatCpf = (value: string) => {
+  const d = value.replace(/\D/g, "").slice(0, 11);
+  if (d.length > 9) return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6, 9)}-${d.slice(9)}`;
+  if (d.length > 6) return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6)}`;
+  if (d.length > 3) return `${d.slice(0, 3)}.${d.slice(3)}`;
+  return d;
+};
 
 function PlusIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" /><path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>; }
 function BagIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M9 8a3 3 0 0 1 6 0" stroke="currentColor" strokeWidth="2" /></svg>; }
 function LockIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" /></svg>; }
 function QIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="co-q"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.7.25-1.2.9-1.2 1.6v.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /><circle cx="12" cy="17" r="1" fill="currentColor" /></svg>; }
-function PayIcon({ kind }: { kind: "card" | "pix" | "flower" }) {
+function PayIcon({ kind }: { kind: "card" | "pix" }) {
   if (kind === "card") return <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className="co-pay-icon"><rect x="6" y="12" width="36" height="24" rx="3" stroke="#333" strokeWidth="2.4" /><path d="M6 19h36" stroke="#333" strokeWidth="2.4" /><path d="M11 29h9" stroke="#333" strokeWidth="2.4" strokeLinecap="round" /></svg>;
   if (kind === "pix") return <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className="co-pay-icon"><g fill="#4b9ce2"><path d="M24 5.5 32 13.5a4 4 0 0 1-5.7 0L24 11.2l-2.3 2.3a4 4 0 0 1-5.7 0L24 5.5Z" /><path d="M24 42.5 16 34.5a4 4 0 0 1 5.7 0l2.3 2.3 2.3-2.3a4 4 0 0 1 5.7 0L24 42.5Z" /><path d="M5.5 24 13.5 16a4 4 0 0 1 0 5.7L11.2 24l2.3 2.3a4 4 0 0 1 0 5.7L5.5 24Z" /><path d="M42.5 24 34.5 32a4 4 0 0 1 0-5.7L36.8 24l-2.3-2.3a4 4 0 0 1 0-5.7L42.5 24Z" /></g></svg>;
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className="co-pay-icon">
-      <g transform="translate(24 24)">
-        <ellipse cx="0" cy="-9" rx="6" ry="9" fill="#ff2b5a" />
-        <ellipse cx="0" cy="9" rx="6" ry="9" fill="#2fc46b" />
-        <ellipse cx="-9" cy="0" rx="9" ry="6" fill="#4b9ce2" />
-        <ellipse cx="9" cy="0" rx="9" ry="6" fill="#f5a623" />
-        <circle cx="0" cy="0" r="4.5" fill="#fff" />
-      </g>
-    </svg>
-  );
 }
 
 function OrderSummary({ children, subtotal, frete, count }: { children?: React.ReactNode; subtotal: number; frete: number; count: number }) {
@@ -60,7 +56,9 @@ function OrderSummary({ children, subtotal, frete, count }: { children?: React.R
 export default function CheckoutEntrega() {
   const cart = useCart();
   const [step, setStep] = useState<"entrega" | "pagamento">("entrega");
-  const [addrOpen, setAddrOpen] = useState(false);
+  // The delivery step should start ready for the customer's address instead
+  // of hiding the form behind an extra "Cadastrar endereço" click.
+  const [addrOpen, setAddrOpen] = useState(true);
   const [address, setAddress] = useState<Address | null>(null);
   // Controlled form state. Controlled inputs are authoritative from React, so
   // the tracking scripts (Utmify/Meta) that mutate DOM fields — they were
@@ -76,6 +74,29 @@ export default function CheckoutEntrega() {
   const [pix, setPix] = useState<PixCharge | null>(null);
   const [generating, setGenerating] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
+  const [cepBusy, setCepBusy] = useState(false);
+  const [cepError, setCepError] = useState<string | null>(null);
+
+  const lookupCep = async (value = form.cep) => {
+    const cep = value.replace(/\D/g, "");
+    setCepError(null);
+    if (cep.length !== 8) { setCepError("Digite um CEP válido com 8 dígitos."); return; }
+    setCepBusy(true);
+    try {
+      const response = await fetch(`/api/cep/${cep}`, { cache: "no-store" });
+      const data = await response.json() as { erro?: boolean; logradouro?: string; bairro?: string; localidade?: string; uf?: string };
+      if (!response.ok || data.erro) throw new Error("CEP não encontrado. Confira o número.");
+      setForm((current) => ({ ...current, cep: formatCep(cep), endereco: data.logradouro || current.endereco, bairro: data.bairro || current.bairro, cidade: data.localidade || current.cidade, uf: data.uf || current.uf }));
+    } catch (error) { setCepError(error instanceof Error ? error.message : "Não foi possível consultar o CEP agora."); }
+    finally { setCepBusy(false); }
+  };
+
+  useEffect(() => {
+    const cep = form.cep.replace(/\D/g, "");
+    if (cep.length !== 8) return;
+    const timer = window.setTimeout(() => { void lookupCep(cep); }, 250);
+    return () => window.clearTimeout(timer);
+  }, [form.cep]);
 
   // The step follows the hash so #payment deep-links to the payment screen and
   // the header's active step stays in sync.
@@ -92,7 +113,9 @@ export default function CheckoutEntrega() {
 
   const count = countItems(cart);
   const subtotal = sumItems(cart);
-  const frete = address || step === "pagamento" ? DELIVERY[delivery].price : FRETE_PLACEHOLDER;
+  const cepReady = form.cep.replace(/\D/g, "").length === 8;
+  const hasDeliveryContext = Boolean(address || cepReady || step === "pagamento");
+  const frete = hasDeliveryContext ? DELIVERY[delivery].price : FRETE_PLACEHOLDER;
 
   const generatePix = async () => {
     if (!address?.email || !address?.cpf) {
@@ -127,6 +150,23 @@ export default function CheckoutEntrega() {
     if (payMethod === "card") { setPlaced(true); return; }
     generatePix();
   };
+
+  const saveAddress = () => {
+    const t = (s: string) => s.trim();
+    setAddress({
+      nome: t(form.nome) || "Visitante",
+      email: t(form.email),
+      cpf: t(form.cpf),
+      cep: t(form.cep) || "00000-000",
+      endereco: t(form.endereco) || "Rua",
+      numero: t(form.numero) || "0",
+      bairro: t(form.bairro),
+      cidade: t(form.cidade) || "Cidade",
+      uf: t(form.uf).toUpperCase() || "UF",
+    });
+    setAddrOpen(false);
+  };
+  const onFieldEnter = (e: React.KeyboardEvent<HTMLInputElement>) => { if (e.key === "Enter") { e.preventDefault(); saveAddress(); } };
 
   if (!cart.length) {
     return (
@@ -239,42 +279,27 @@ export default function CheckoutEntrega() {
           )}
 
           {addrOpen && (
-            <form
-              className="co-form"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const t = (s: string) => s.trim();
-                setAddress({
-                  nome: t(form.nome) || "Visitante",
-                  email: t(form.email),
-                  cpf: t(form.cpf),
-                  cep: t(form.cep) || "00000-000",
-                  endereco: t(form.endereco) || "Rua",
-                  numero: t(form.numero) || "0",
-                  bairro: t(form.bairro),
-                  cidade: t(form.cidade) || "Cidade",
-                  uf: t(form.uf).toUpperCase() || "UF",
-                });
-                setAddrOpen(false);
-              }}
-            >
+            // Not a <form>: the Utmify/Meta tracking scripts hijack real form
+            // fields (they inject utm_* inputs and, on real phones, block typing).
+            // A plain div with neutral field names keeps the checkout inputs usable.
+            <div className="co-form" role="group" aria-label="Endereço de entrega">
               <h3>Novo endereço</h3>
               <div className="co-grid">
-                <label className="co-wide">Nome completo<input name="nome" autoComplete="off" value={form.nome} onChange={setField("nome")} /></label>
-                <label>E-mail<input name="lola_email" type="text" inputMode="email" autoComplete="off" value={form.email} onChange={setField("email")} /></label>
-                <label>CPF<input name="cpf" inputMode="numeric" autoComplete="off" value={form.cpf} onChange={setField("cpf")} /></label>
-                <label>CEP<input name="cep" inputMode="numeric" autoComplete="off" value={form.cep} onChange={setField("cep")} /></label>
-                <label>Número<input name="numero" inputMode="numeric" autoComplete="off" value={form.numero} onChange={setField("numero")} /></label>
-                <label className="co-wide">Endereço<input name="endereco" autoComplete="off" value={form.endereco} onChange={setField("endereco")} /></label>
-                <label>Bairro<input name="bairro" autoComplete="off" value={form.bairro} onChange={setField("bairro")} /></label>
-                <label>Cidade<input name="cidade" autoComplete="off" value={form.cidade} onChange={setField("cidade")} /></label>
-                <label>UF<input name="uf" maxLength={2} autoComplete="off" value={form.uf} onChange={setField("uf")} /></label>
+                <label className="co-wide">Nome completo<input name="lola_nome" autoComplete="off" value={form.nome} onChange={setField("nome")} onKeyDown={onFieldEnter} /></label>
+                <label>E-mail<input name="lola_email" type="text" inputMode="email" autoComplete="off" value={form.email} onChange={setField("email")} onKeyDown={onFieldEnter} /></label>
+                <label>CPF<input name="lola_doc" inputMode="numeric" autoComplete="off" maxLength={14} value={form.cpf} onChange={(e) => setForm((f) => ({ ...f, cpf: formatCpf(e.target.value) }))} onKeyDown={onFieldEnter} /></label>
+                <label>CEP<div className="co-cep-field"><input name="lola_zip" inputMode="numeric" autoComplete="off" maxLength={9} value={form.cep} onChange={(e) => { setCepError(null); setForm((f) => ({ ...f, cep: formatCep(e.target.value) })); }} onKeyDown={onFieldEnter} /></div>{cepBusy && <small className="co-cep-status">Buscando endereço…</small>}{cepError && <small className="co-cep-error" role="alert">{cepError}</small>}</label>
+                <label>Número<input name="lola_num" inputMode="numeric" autoComplete="off" value={form.numero} onChange={setField("numero")} onKeyDown={onFieldEnter} /></label>
+                <label className="co-wide">Endereço<input name="lola_rua" autoComplete="off" value={form.endereco} onChange={setField("endereco")} onKeyDown={onFieldEnter} /></label>
+                <label>Bairro<input name="lola_bairro" autoComplete="off" value={form.bairro} onChange={setField("bairro")} onKeyDown={onFieldEnter} /></label>
+                <label>Cidade<input name="lola_cidade" autoComplete="off" value={form.cidade} onChange={setField("cidade")} onKeyDown={onFieldEnter} /></label>
+                <label>UF<input name="lola_uf" maxLength={2} autoComplete="off" value={form.uf} onChange={setField("uf")} onKeyDown={onFieldEnter} /></label>
               </div>
               <div className="co-form-actions">
-                <button type="submit" className="co-btn-save">Salvar endereço</button>
+                <button type="button" className="co-btn-save" onClick={saveAddress}>Salvar endereço</button>
                 {address && <button type="button" className="co-btn-cancel" onClick={() => setAddrOpen(false)}>Cancelar</button>}
               </div>
-            </form>
+            </div>
           )}
 
           {address && !addrOpen ? (
@@ -301,7 +326,7 @@ export default function CheckoutEntrega() {
             </div>
             <div className="co-card-ship">
               <p className="co-ship-title">Forma de entrega</p>
-              {address ? (
+              {hasDeliveryContext ? (
                 <div className="co-opts">
                   {DELIVERY.map((o, i) => (
                     <div

@@ -1,0 +1,48 @@
+/* CEP lookup result on the product page (deliveryFee.ts renders into
+   .delivery-response / .error-delivery). */
+.wd-product-deliveryfee .error-delivery.lola-cep-error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.wd-product-deliveryfee .delivery-response .lola-cep-loading {
+  color: #777;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.wd-product-deliveryfee .cep-controle .input-wrapper {
+  width: 100%;
+}
+.wd-product-deliveryfee .cep-controle .button-wrapper {
+  display: none;
+}
+.lola-cep-result {
+  margin-top: 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: Lato, sans-serif;
+}
+.lola-cep-addr {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.lola-cep-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lola-cep-options li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name price" "eta price";
+  gap: 2px 12px;
+  padding: 12px 0;
+  border-top: 1px solid #ededed;
+}
+.lola-cep-name { grid-area: name; font-weight: 700; color: #222; font-size: 14px; }
+.lola-cep-price { grid-area: price; align-self: center; color: #ff2b5a; font-weight: 700; white-space: nowrap; }
+.lola-cep-eta { grid-area: eta; color: #2f9d57; font-size: 13px; }
+.lola-cep-note { margin: 12px 0 0; color: #999; font-size: 11px; }

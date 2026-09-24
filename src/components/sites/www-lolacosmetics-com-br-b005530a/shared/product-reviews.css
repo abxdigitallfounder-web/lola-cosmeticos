@@ -1,0 +1,32 @@
+/* Captured reviews must not depend on the external Material Icons font. */
+.ts-product-reviews-list-item-voting button.ts-thumb-up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  min-height: 40px;
+  width: auto;
+  white-space: nowrap;
+}
+
+.ts-thumb-up .ts-vote-question,
+.ts-thumb-up .ts-count {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ts-thumb-up i.material-icons.thumb_up {
+  display: inline-block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background: currentColor;
+  -webkit-mask: url('/icons/review-thumb-up.svg') center / contain no-repeat;
+  mask: url('/icons/review-thumb-up.svg') center / contain no-repeat;
+}

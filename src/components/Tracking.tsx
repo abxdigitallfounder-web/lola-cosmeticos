@@ -10,6 +10,13 @@ const META_PIXEL_ID = "1734208590789662";
 export default function Tracking() {
   return (
     <>
+      <Script id="microsoft-clarity" strategy="afterInteractive">
+        {`(function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window,document,"clarity","script","yn68pxrvg5");`}
+      </Script>
       {/* Utmify reads window.pixelId when pixel.js evaluates, so the global has
           to exist first. beforeInteractive runs ahead of every other strategy
           and is injected into <head> wherever the component sits. The lint rule

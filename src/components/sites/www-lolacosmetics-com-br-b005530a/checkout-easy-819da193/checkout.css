@@ -186,3 +186,7 @@
 .co-pix-check{width:56px;height:56px;border-radius:50%;background:#2fc46b;color:#fff;font-size:30px;line-height:56px;margin:0 auto 14px}
 .co-pix-paid h3{color:#1f9d57}
 .co-pix-paid p{color:#2f6d33;font-size:14px;margin:0}
+.co-cep-field { display: flex; gap: 8px; align-items: stretch; }
+.co-cep-field input { min-width: 0; flex: 1; }
+.co-cep-status { display: block; color: #777; margin-top: 5px; font-size: 12px; }
+.co-cep-error { display: block; color: #c0392b; margin-top: 5px; font-size: 12px; }

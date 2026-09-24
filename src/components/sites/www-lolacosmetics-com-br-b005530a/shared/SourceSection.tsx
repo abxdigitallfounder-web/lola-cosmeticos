@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { mountMobileProductGalleries } from "./mobileProductGallery";
 import { useMobileBrowser } from "./useMobileBrowser";
 import { mountCapturedReviews } from "./capturedReviews";
+import { mountDeliveryFee } from "./deliveryFee";
 
 /** Replays one captured source fragment and re-initializes the carousels inside it. */
 export default function SourceSection({ name, html, mobileHtml }: { name: string; html: string; mobileHtml?: string }) {
@@ -22,6 +23,7 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
       if (disposed || !ref.current) return;
       const restoreGalleries = mountMobileProductGalleries(ref.current);
       const restoreReviews = name === "Reviews" && mobile ? mountCapturedReviews(ref.current) : () => {};
+      const restoreDeliveryFee = mountDeliveryFee(ref.current);
       const sliders = $(ref.current).find("[data-lola-slider]");
       sliders.each(function () {
         const slider = $(this);
@@ -55,6 +57,7 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
         sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); });
         restoreGalleries();
         restoreReviews();
+        restoreDeliveryFee();
       };
     }
     initialize();
