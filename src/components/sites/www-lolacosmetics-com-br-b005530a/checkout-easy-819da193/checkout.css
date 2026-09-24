@@ -112,3 +112,56 @@
   .co-badge{max-width:none;width:100%;box-sizing:border-box}
   .co-badge-line{display:none}
 }
+
+/* Selected address (after saving) */
+.co-addr-selected{margin-top:18px;border:1px solid var(--co-border);border-left:5px solid #2fc46b;border-radius:4px;padding:22px 24px}
+.co-addr-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.co-addr-name{font-weight:700;color:#1f9d57;text-transform:uppercase;letter-spacing:.3px}
+.co-addr-pill{border:1px solid #cfcfcf;border-radius:20px;padding:6px 14px;font-size:12px;text-transform:uppercase;color:#555;letter-spacing:.3px}
+.co-addr-text{margin:16px 0 18px;color:#444;line-height:1.5}
+.co-addr-change{background:var(--co-pink);color:#fff;border:0;border-radius:4px;padding:12px 20px;font-weight:700;cursor:pointer;transition:background .18s ease}
+.co-addr-change:hover{background:var(--co-pink-dark)}
+
+/* Delivery options */
+.co-opts{display:flex;flex-direction:column;gap:14px}
+.co-opt{display:flex;align-items:flex-start;gap:14px;text-align:left;background:#fff;border:1px solid var(--co-border);border-left:3px solid var(--co-border);border-radius:4px;padding:16px 18px;cursor:pointer;transition:border-color .15s ease}
+.co-opt:hover{border-color:#c7c7c7}
+.co-opt.sel{border-color:#d8efdd;border-left-color:#2fc46b}
+.co-opt-radio{width:18px;height:18px;border-radius:50%;border:2px solid #cfcfcf;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.co-opt.sel .co-opt-radio{border-color:#2fc46b}
+.co-opt.sel .co-opt-radio::after{content:"";width:9px;height:9px;border-radius:50%;background:#2fc46b}
+.co-opt-body{display:flex;flex-direction:column;gap:3px}
+.co-opt-name{font-weight:700;color:#333}
+.co-opt.sel .co-opt-name{color:#1f9d57}
+.co-opt-price{color:#333;font-size:13px}
+.co-opt-eta{color:var(--co-muted);font-size:13px}
+
+/* CRM label with help icon */
+.co-crm{display:inline-flex;align-items:center;gap:6px}
+.co-q{width:15px;height:15px;color:#9a9a9a}
+
+/* Finalizar (payment) */
+.co-finalizar{min-height:auto;padding:16px;font-size:18px}
+
+/* Order details toggle (payment top) */
+.co-order-toggle{text-align:center;padding:18px 20px 14px}
+.co-order-link{background:none;border:0;color:var(--co-blue);font-weight:700;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.co-caret{transition:transform .18s ease}
+.co-caret.up{transform:rotate(180deg)}
+.co-order-count{display:block;color:var(--co-muted);font-size:13px;margin-top:4px}
+.co-preview-top{max-width:520px;margin:12px auto 0;text-align:left}
+
+/* Payment method grid */
+.co-pay-head{position:relative;margin-bottom:22px;padding-right:78px}
+.co-pay-head .co-h1{margin:0;font-size:24px}
+.co-voltar{position:absolute;right:0;top:4px;background:none;border:0;color:var(--co-muted);font-size:15px;cursor:pointer;white-space:nowrap}
+.co-pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.co-pay-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:150px;background:#fff;border:1px solid var(--co-border);border-radius:6px;padding:22px 14px;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease}
+.co-pay-card:hover{border-color:var(--co-pink);box-shadow:0 4px 14px rgba(255,43,90,.12)}
+.co-pay-icon{width:46px;height:36px}
+.co-pay-label{font-weight:700;font-size:16px;color:#333;text-align:center;line-height:1.25}
+
+@media (max-width:767px){
+  .co-pay-grid{grid-template-columns:1fr 1fr}
+  .co-pay-head .co-h1{font-size:20px}
+}

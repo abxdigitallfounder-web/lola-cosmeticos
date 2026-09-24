@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const LOGO = "/sites/www-lolacosmetics-com-br-b005530a/root-8a5edab2/logo-lola-15anos.svg-944cf132.svg";
@@ -10,7 +12,6 @@ function LockIcon() {
     </svg>
   );
 }
-
 function SairIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="13" height="13">
@@ -20,9 +21,16 @@ function SairIcon() {
   );
 }
 
-// Checkout has its own minimal chrome: logo, the three steps with Entrega
-// active, the visitor block and the "site seguro" seal.
+// Minimal checkout chrome. The active step follows the hash: #payment marks
+// Pagamento active and Entrega done; otherwise Entrega is active.
 export default function CheckoutHeader() {
+  const [payment, setPayment] = useState(false);
+  useEffect(() => {
+    const read = () => setPayment(window.location.hash === "#payment");
+    read();
+    window.addEventListener("hashchange", read);
+    return () => window.removeEventListener("hashchange", read);
+  }, []);
   return (
     <>
       <header className="co-head">
@@ -32,8 +40,12 @@ export default function CheckoutHeader() {
         </Link>
         <nav className="co-steps" aria-label="Etapas do checkout">
           <span className="co-step done"><span className="co-dot">✓</span>Carrinho</span>
-          <span className="co-step active" aria-current="step"><span className="co-dot" />Entrega</span>
-          <span className="co-step"><span className="co-dot" />Pagamento</span>
+          <span className={`co-step ${payment ? "done" : "active"}`} aria-current={payment ? undefined : "step"}>
+            <span className="co-dot">{payment ? "✓" : null}</span>Entrega
+          </span>
+          <span className={`co-step ${payment ? "active" : ""}`} aria-current={payment ? "step" : undefined}>
+            <span className="co-dot" />Pagamento
+          </span>
         </nav>
         <div className="co-account">
           <span className="co-hi">Olá, <strong>Visitante</strong></span>

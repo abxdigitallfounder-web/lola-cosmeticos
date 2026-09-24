@@ -294,3 +294,24 @@ Verificado com `qa-lola-checkout.mjs` em iPhone 390 emulado real (`data-lola-dev
 = phone) e desktop 1440: overflow horizontal 0, logo e miniatura carregam, o link
 do carrinho aponta para `/checkout/easy`, o formulário de endereço abre/salva e o
 "Continuar" mostra o aviso de demonstração.
+
+**Atualização — fluxo completo em etapas.** O checkout agora é um fluxo dirigido
+por hash em `CheckoutEntrega`:
+
+- **Entrega, sem endereço** (`#delivery`): botão "Cadastrar endereço", caixa creme,
+  card com "Forma de entrega" esqueleto, frete placeholder R$ 24,20.
+- **Entrega, com endereço**: ao salvar o formulário aparece o bloco de endereço
+  selecionado (borda verde à esquerda, nome, pill "Endereço selecionado", texto do
+  endereço e botão "Alterar endereço do pedido"), e o card mostra as opções reais
+  de entrega ("JT - Normal / R$ 11,08 / 2 dias úteis", a primeira selecionada). O
+  frete passa a R$ 11,08 → total R$ 110,98. CRM BONUS vira "Ganhe Cashback".
+- **Pagamento** (`#payment`): topo "Ver detalhes do pedido" + contagem, "Escolha o
+  meio de pagamento / ‹ Voltar", três métodos (Cartão de crédito, PIX, PIX
+  Parcelado com a florzinha da Lola em SVG inline), resumo e "Finalizar compra"
+  (mostra o aviso de demonstração). O header marca Entrega como concluída e
+  Pagamento ativo. "Continuar (Pagamento)" da etapa de entrega leva aqui.
+
+O cabeçalho de pagamento usa título em bloco (largura total) com "‹ Voltar"
+posicionado no canto — flexbox encolhia o título e quebrava palavra a palavra.
+Verificado em iPhone emulado real e desktop: overflow 0, R$ 110,98, ícones e
+etapas corretos.
