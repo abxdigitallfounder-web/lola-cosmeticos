@@ -1,8 +1,7 @@
 "use client";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import type { LolaProduct } from "./types";
 import { useCart, changeQuantity, removeFromCart, countItems, sumItems, money } from "./cartStore";
 import "./cart-screen.css";
 
@@ -21,11 +20,6 @@ const noHost = () => null;
 export default function CartScreen() {
   const cart = useCart();
   const host = useSyncExternalStore(keepHost, findHost, noHost);
-  // The store hands back the same array until the cart actually changes, so
-  // holding the snapshot that was checked out makes the demo notice clear
-  // itself the moment anything is added or removed.
-  const [placedFor, setPlacedFor] = useState<LolaProduct[] | null>(null);
-  const placed = placedFor === cart;
 
   useEffect(() => {
     const empty = document.querySelector<HTMLElement>(".basket-content .wd-checkout-basket > .empty");
@@ -65,11 +59,7 @@ export default function CartScreen() {
           <p className="lola-basket-shipping"><span>Frete</span><span>calculado no checkout</span></p>
           <p className="lola-basket-grand"><span>Total</span><strong>{money(subtotal)}</strong></p>
         </div>
-        {placed ? (
-          <p role="status" className="lola-demo-notice">Esta é uma sacola de demonstração. Nenhum pedido foi enviado e nenhum pagamento será cobrado.</p>
-        ) : (
-          <button type="button" className="lola-basket-checkout" onClick={() => setPlacedFor(cart)}>Finalizar Compra</button>
-        )}
+        <Link className="lola-basket-checkout" href="/checkout/easy">Finalizar Compra</Link>
         <Link className="lola-basket-back" href="/">Voltar à loja</Link>
       </div>
     </div>,

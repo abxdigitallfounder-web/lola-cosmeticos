@@ -45,6 +45,7 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 | `qa-lola-mobile-gallery.mjs` | galeria verdadeira de celular: UA mobile, toque, DPR, swipe e indicadores |
 | `qa-lola-phone-header.mjs` | header mobile real, posições e interações em iPhone/Android emulados |
 | `qa-lola-cart.mjs` | adicionar à sacola e tela de carrinho em iPhone/Android emulados e desktop |
+| `qa-lola-checkout.mjs` | passo Entrega do /checkout/easy em iPhone emulado e desktop |
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
@@ -258,3 +259,38 @@ R$ 209,70`, e o contador do header acompanha.
 
 `Finalizar Compra` mostra o aviso de demonstração — não há checkout real nem
 pedido enviado.
+
+## Checkout /checkout/easy — passo Entrega — 2026-09-24
+
+Clone do passo **Entrega** de `https://www.lolacosmetics.com.br/checkout/easy`
+(skill clone-website). O checkout da origem é uma SPA em JS atrás de um gate de
+identificação (email/CPF), então a referência mestre é a screenshot do usuário
+do passo Entrega como Visitante; os tokens vieram da extração ao vivo (título em
+`obviously`, rosa `#ff2b5a`) e do restante do clone.
+
+Chaves: site-key `www-lolacosmetics-com-br-b005530a`, page-key
+`checkout-easy-819da193` (sha256("/checkout/easy")[:8]). Componentes em
+`src/components/sites/.../checkout-easy-819da193/`:
+
+- `CheckoutHeader.tsx` — chrome mínima própria do checkout (logo, 3 passos com
+  Entrega ativo, "Olá, Visitante / Sair", "Site seguro"). Não usa o header/footer
+  da loja.
+- `CheckoutEntrega.tsx` (client) — lê o carrinho de `cartStore`. Coluna esquerda:
+  H1 Entrega, botão rosa "Cadastrar endereço" (abre um formulário de demonstração,
+  só client), caixa creme, e o card produto + "Forma de entrega" com radios
+  esqueleto. Coluna direita: Resumo do pedido, "Ver pedido completo", linhas
+  (N produto(s), Frete, Cupons, CRM BONUS), total e "Continuar (Pagamento)".
+- `checkout.css` — tokens e layout; grid 2 colunas ≥992px, 1 coluna ≤991px.
+
+Fluxo: o "Finalizar Compra" da tela de carrinho (`CartScreen`) agora leva a
+`/checkout/easy` — antes mostrava o aviso de demonstração.
+
+**É um checkout de demonstração.** Nenhum dado de endereço ou pagamento é
+enviado a lugar nenhum; "Cadastrar endereço" e "Continuar" são só client-side.
+Frete fixo de `R$ 24,20` (igual à referência). Com a sacola do Kit Feira
+Cronolola: `R$ 99,90 + R$ 24,20 = R$ 124,10`, batendo com a screenshot.
+
+Verificado com `qa-lola-checkout.mjs` em iPhone 390 emulado real (`data-lola-device`
+= phone) e desktop 1440: overflow horizontal 0, logo e miniatura carregam, o link
+do carrinho aponta para `/checkout/easy`, o formulário de endereço abre/salva e o
+"Continuar" mostra o aviso de demonstração.

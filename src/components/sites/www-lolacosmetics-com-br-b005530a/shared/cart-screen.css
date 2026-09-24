@@ -16,7 +16,7 @@
 .lola-basket-shipping{color:#777;font-size:12px}
 .lola-basket-grand{border-top:1px solid #ddd;margin-top:8px!important;padding-top:16px!important;font-size:19px}
 .lola-basket-grand strong{color:#f07}
-.lola-basket-checkout{display:block;width:100%;margin-top:18px;padding:16px;background:#2dca27;border:0;border-radius:5px;color:#fff;font-weight:700;font-size:15px}
+.lola-basket-checkout{display:block;width:100%;margin-top:18px;padding:16px;background:#2dca27;border:0;border-radius:5px;color:#fff;font-weight:700;font-size:15px;text-align:center;text-decoration:none;box-sizing:border-box}
 .lola-basket-back{display:block;text-align:center;padding:18px;color:#666;text-decoration:underline}
 .lola-basket .lola-demo-notice{margin-top:18px}
 /* The phone template is the narrow one; from tablet up the row becomes a single

@@ -1,0 +1,114 @@
+.co-page{--co-pink:#ff2b5a;--co-pink-dark:#e81f4c;--co-blue:#2f80ed;--co-cream:#fff6e6;--co-cream-border:#f6dca8;--co-orange:#c8791b;--co-skel:#ececec;--co-total:#f4f4f4;--co-border:#e3e3e3;--co-hair:#ededed;--co-text:#333;--co-muted:#777;font:14px Lato,sans-serif;color:var(--co-text);background:#fff;min-height:100vh}
+
+/* Header (minimal checkout chrome) */
+.co-head{display:flex;align-items:center;gap:24px;max-width:1180px;margin:0 auto;padding:22px 20px;box-sizing:border-box}
+.co-logo{width:110px;flex:none}
+.co-logo img{width:100%;height:auto;display:block}
+.co-steps{display:flex;align-items:center;gap:26px;flex:1;justify-content:center}
+.co-step{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--co-muted);font-size:15px}
+.co-step .co-dot{width:22px;height:22px;border-radius:50%;border:2px solid #c9c9c9;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;box-sizing:border-box}
+.co-step.done{color:#333}
+.co-step.done .co-dot{border-color:var(--co-blue);color:var(--co-blue)}
+.co-step.active{color:var(--co-blue);position:relative}
+.co-step.active .co-dot{border-color:var(--co-blue)}
+.co-step.active .co-dot::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--co-blue)}
+.co-step.active::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-14px;width:64px;height:2px;background:var(--co-blue)}
+.co-account{display:flex;flex-direction:column;align-items:flex-end;line-height:1.45;flex:none}
+.co-account .co-hi strong{font-weight:700}
+.co-account .co-sair{color:var(--co-muted);display:inline-flex;align-items:center;gap:5px}
+.co-secure{display:inline-flex;align-items:center;gap:7px;font-weight:700;flex:none}
+.co-secure svg{width:15px;height:15px}
+.co-spacer{height:44px;background:var(--co-skel)}
+
+/* Body */
+.co-body{max-width:1180px;margin:0 auto;padding:34px 20px 60px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1.6fr) 360px;gap:40px;align-items:start}
+.co-h1{font:700 30px/1.1 obviously,Lato,sans-serif;margin:0 0 22px;color:#222;letter-spacing:.2px}
+.co-h2{font:700 24px/1.1 obviously,Lato,sans-serif;margin:0 0 18px;color:#222}
+
+/* Left column */
+.co-addr-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:86px;background:var(--co-pink);color:#fff;border:0;border-radius:4px;font:700 22px Lato,sans-serif;cursor:pointer;transition:background .18s ease}
+.co-addr-btn:hover{background:var(--co-pink-dark)}
+.co-addr-btn svg{width:24px;height:24px}
+.co-info{margin-top:18px;background:var(--co-cream);border:1px solid var(--co-cream-border);border-radius:4px;padding:20px 22px;font-size:15px;color:#5a4a2a}
+.co-info a{color:var(--co-orange);font-weight:700;text-decoration:underline}
+.co-confirm{margin-top:18px;background:#eef7ee;border:1px solid #cfe6cf;border-radius:4px;padding:18px 22px;font-size:15px;color:#2f6d33}
+
+.co-card{margin-top:26px;border:1px solid var(--co-border);border-radius:4px;display:grid;grid-template-columns:1fr 1fr}
+.co-card-item{display:flex;align-items:center;gap:18px;padding:26px 24px;border-right:1px solid var(--co-hair)}
+.co-card-item img{width:78px;height:78px;object-fit:contain;flex:none}
+.co-card-item .co-item-name{font-weight:700;font-size:15px;line-height:1.35}
+.co-card-item .co-qtde{margin-left:auto;text-align:center;color:#555;flex:none}
+.co-card-item .co-qtde b{display:block;font-weight:400;font-size:13px;color:var(--co-muted)}
+.co-card-ship{padding:26px 24px}
+.co-card-ship .co-ship-title{color:var(--co-muted);font-size:15px;margin-bottom:18px}
+.co-skel-row{display:flex;align-items:center;gap:16px;padding:14px 0}
+.co-skel-radio{width:18px;height:18px;border-radius:50%;border:2px solid #cfcfcf;flex:none}
+.co-skel-bar{flex:1;height:8px;border-radius:4px;background:var(--co-skel)}
+
+/* Address demo form */
+.co-form{margin-top:18px;border:1px solid var(--co-border);border-radius:4px;padding:22px}
+.co-form h3{font:700 17px Lato,sans-serif;margin:0 0 16px}
+.co-form .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.co-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--co-muted)}
+.co-form .co-wide{grid-column:1/-1}
+.co-form input{border:1px solid #d7d7d7;border-radius:4px;padding:11px 12px;font:15px Lato,sans-serif;color:#333}
+.co-form input:focus{outline:none;border-color:var(--co-blue)}
+.co-form-actions{display:flex;gap:12px;margin-top:18px}
+.co-btn-save{background:var(--co-pink);color:#fff;border:0;border-radius:4px;padding:13px 26px;font-weight:700;cursor:pointer;transition:background .18s ease}
+.co-btn-save:hover{background:var(--co-pink-dark)}
+.co-btn-cancel{background:none;border:0;color:var(--co-muted);text-decoration:underline;cursor:pointer}
+
+/* Right summary */
+.co-summary{border:0}
+.co-see{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#fff;color:var(--co-pink);border:2px solid var(--co-pink);border-radius:4px;padding:13px;font-weight:700;font-size:15px;cursor:pointer;transition:background .18s ease,color .18s ease}
+.co-see:hover{background:var(--co-pink);color:#fff}
+.co-see svg{width:16px;height:16px}
+.co-sum-list{margin:8px 0 0}
+.co-sum-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 2px;border-bottom:1px solid var(--co-hair);font-size:15px}
+.co-sum-row .co-sum-label{font-weight:700;color:#222}
+.co-sum-row .co-sum-val{color:#222}
+.co-sum-row .co-sum-link{color:var(--co-muted)}
+.co-preview{padding:6px 2px 2px;border-bottom:1px solid var(--co-hair)}
+.co-preview-item{display:flex;align-items:center;gap:12px;padding:10px 0;font-size:13px}
+.co-preview-item img{width:44px;height:44px;object-fit:contain}
+.co-preview-item .co-pv-name{flex:1;line-height:1.3}
+.co-preview-item .co-pv-qty{color:var(--co-muted)}
+.co-total{margin-top:20px;background:var(--co-total);border-radius:4px;padding:20px 22px;display:flex;align-items:baseline;justify-content:center;gap:8px}
+.co-total span{font-size:20px;color:#333}
+.co-total strong{font-size:24px;color:var(--co-pink);font-weight:700}
+.co-continue{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:100%;min-height:74px;margin-top:16px;background:var(--co-pink);color:#fff;border:0;border-radius:4px;padding:14px 16px;font-weight:700;font-size:18px;line-height:1.2;cursor:pointer;transition:background .18s ease;text-decoration:none}
+.co-continue:hover{background:var(--co-pink-dark)}
+.co-continue small{display:block;font-size:13px;font-weight:400;line-height:1.2;opacity:.92}
+.co-continue:disabled,.co-continue.co-disabled{opacity:.45;cursor:default;pointer-events:none}
+.co-secure-foot{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;color:#555}
+.co-secure-foot svg{width:14px;height:14px}
+.co-demo-notice{margin-top:16px;background:#fff0f5;border:1px solid #ffd0e0;border-radius:4px;padding:16px;font-size:14px;line-height:1.5;color:#8a2f4d}
+
+/* Empty */
+.co-empty{grid-column:1/-1;text-align:center;padding:80px 0}
+.co-empty strong{display:block;font-size:22px;margin-bottom:10px}
+.co-empty a{color:var(--co-pink);font-weight:700;text-decoration:underline}
+
+/* Help badges band */
+.co-badges{max-width:1180px;margin:0 auto;padding:0 20px 60px;display:flex;align-items:center;justify-content:center;gap:0;position:relative}
+.co-badge{border:2px solid var(--co-pink);color:var(--co-pink);border-radius:8px;background:#fff;padding:16px 26px;text-align:center;font:700 15px/1.15 obviously,Lato,sans-serif;text-transform:uppercase;max-width:280px;z-index:1}
+.co-badge-line{flex:1;height:2px;background:var(--co-pink);max-width:120px}
+
+@media (max-width:991px){
+  .co-body{grid-template-columns:1fr;gap:28px}
+  .co-steps{gap:16px}
+}
+@media (max-width:767px){
+  .co-head{flex-wrap:wrap;gap:14px;padding:16px}
+  .co-logo{width:84px}
+  .co-steps{order:3;flex-basis:100%;justify-content:space-between;gap:8px}
+  .co-account{margin-left:auto}
+  .co-h1{font-size:24px}
+  .co-addr-btn{font-size:18px;min-height:70px}
+  .co-card{grid-template-columns:1fr}
+  .co-card-item{border-right:0;border-bottom:1px solid var(--co-hair)}
+  .co-form .co-grid{grid-template-columns:1fr}
+  .co-badges{flex-direction:column;gap:14px}
+  .co-badge{max-width:none;width:100%;box-sizing:border-box}
+  .co-badge-line{display:none}
+}
