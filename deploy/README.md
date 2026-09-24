@@ -1,5 +1,9 @@
 # Publicar Lola na Oracle Cloud
 
+> A VPS atual `lola-site-2` usa Oracle Linux 9, Node.js e systemd.
+> Consulte [a implantação efetiva](ORACLE-LINUX.md) para operar `lojapink.shop`.
+> As instruções abaixo são uma alternativa para uma VM Ubuntu com Docker.
+
 Projeto: Next.js. Repositório: https://github.com/abxdigitallfounder-web/lola-cosmeticos
 Arquitetura: Nginx no Ubuntu → Docker em127.0.0.1:3000 → Next.js standalone.
 Não há banco de dados nem backend de pagamentos nesta versão do clone.

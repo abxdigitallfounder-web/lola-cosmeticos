@@ -1,0 +1,26 @@
+[Unit]
+Description=Lola Next.js storefront
+After=network.target
+
+[Service]
+Type=simple
+User=lola
+Group=lola
+WorkingDirectory=/opt/lola/current
+Environment=NODE_ENV=production
+Environment=NEXT_TELEMETRY_DISABLED=1
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=3000
+# Secrets (Jungle PIX + Meta CAPI). Root-owned 0640 file, NOT versioned.
+EnvironmentFile=/etc/lola/lola.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target
