@@ -200,3 +200,24 @@ Build passou. qa-lola-product-pan.mjs testa gestos CDP nos dois sentidos e
 visualViewport em390/412/430/440/480: largura igual à tela, scale1,
 offsetLeft0 e scrollX0. Navegação das fotos aprovada. Desktop1440 preservado.
 Resultado: docs/research/www-lolacosmetics-com-br-b005530a/root-8a5edab2/product-pan-qa.json.
+
+## Rastreamento — 2026-09-24
+
+`src/components/Tracking.tsx`, montado no layout raiz, carrega:
+
+- **Utmify UTM** (`cdn.utmify.com.br/scripts/utms/latest.js`) com os atributos
+  `data-utmify-prevent-xcod-sck` e `data-utmify-prevent-subids` do fornecedor.
+- **Utmify pixel** (`.../pixel/pixel.js`), pixel `6aaf1dfcacd70d7371f48e78`.
+  O script lê `window.pixelId` na avaliação, por isso o global é definido em um
+  inline `beforeInteractive` — trocar a estratégia quebra a ordem e o pixel sobe
+  sem id.
+- **Meta Pixel** `1734208590789662`, com `PageView` e o `noscript` de fallback.
+
+Em `localhost` o pixel da Utmify aponta sozinho para `http://localhost:3001/tracking/v1`
+e os `ERR_CONNECTION_REFUSED` no console são esperados; com domínio real ele usa
+`tracking.utmify.com.br`.
+
+O token da Conversions API do Meta **não fica no repositório**: vive em
+`.env.local` como `META_CAPI_ACCESS_TOKEN` (ignorado pelo git), com o nome
+documentado em `.env.example`. Sem prefixo `NEXT_PUBLIC_`, ou vaza para o browser.
+Ainda não há rota server-side consumindo esse token.
