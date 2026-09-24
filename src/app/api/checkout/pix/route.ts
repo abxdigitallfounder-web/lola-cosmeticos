@@ -9,6 +9,7 @@ interface CartItem { id: string; name: string; quantity: number; price: number }
 interface Body {
   items: CartItem[];
   frete?: number;
+  discount?: number;
   customer: { name?: string; email?: string; doc?: string; phone?: string };
   metadata?: Record<string, unknown>;
 }
@@ -38,8 +39,10 @@ export async function POST(request: Request) {
 
   const subtotal = items.reduce((n, i) => n + Number(i.price) * Number(i.quantity), 0);
   const frete = Number.isFinite(body.frete) ? Number(body.frete) : 0;
+  const discount = Number.isFinite(body.discount) ? Math.max(0, Number(body.discount)) : 0;
   // The gateway charges a single product.value; round to 2 decimals (reais).
-  const value = Math.round((subtotal + frete) * 100) / 100;
+  // Never let a coupon drive the charge to zero or below.
+  const value = Math.max(0.01, Math.round((subtotal + frete - discount) * 100) / 100);
   const productName = items.length === 1 ? items[0].name : `Pedido Lola (${items.reduce((n, i) => n + i.quantity, 0)} itens)`;
 
   // Forward the buyer's IP/User-Agent (attribution + Meta CAPI), never the server's.

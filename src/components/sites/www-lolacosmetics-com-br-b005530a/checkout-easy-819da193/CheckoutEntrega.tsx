@@ -31,22 +31,70 @@ const formatCpf = (value: string) => {
 function PlusIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" /><path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>; }
 function BagIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M9 8a3 3 0 0 1 6 0" stroke="currentColor" strokeWidth="2" /></svg>; }
 function LockIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" /></svg>; }
-function QIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="co-q"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.7.25-1.2.9-1.2 1.6v.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /><circle cx="12" cy="17" r="1" fill="currentColor" /></svg>; }
-function PayIcon({ kind }: { kind: "card" | "pix" }) {
-  if (kind === "card") return <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className="co-pay-icon"><rect x="6" y="12" width="36" height="24" rx="3" stroke="#333" strokeWidth="2.4" /><path d="M6 19h36" stroke="#333" strokeWidth="2.4" /><path d="M11 29h9" stroke="#333" strokeWidth="2.4" strokeLinecap="round" /></svg>;
-  if (kind === "pix") return <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className="co-pay-icon"><g fill="#4b9ce2"><path d="M24 5.5 32 13.5a4 4 0 0 1-5.7 0L24 11.2l-2.3 2.3a4 4 0 0 1-5.7 0L24 5.5Z" /><path d="M24 42.5 16 34.5a4 4 0 0 1 5.7 0l2.3 2.3 2.3-2.3a4 4 0 0 1 5.7 0L24 42.5Z" /><path d="M5.5 24 13.5 16a4 4 0 0 1 0 5.7L11.2 24l2.3 2.3a4 4 0 0 1 0 5.7L5.5 24Z" /><path d="M42.5 24 34.5 32a4 4 0 0 1 0-5.7L36.8 24l-2.3-2.3a4 4 0 0 1 0-5.7L42.5 24Z" /></g></svg>;
+
+// Demo coupons — this is a demo checkout, so a small fixed set is honored.
+const DEMO_COUPONS: Record<string, { percent?: number; freeShipping?: boolean }> = {
+  LOLA10: { percent: 10 },
+  BEMVINDA15: { percent: 15 },
+  FRETEGRATIS: { freeShipping: true },
+};
+
+function CouponRow({ subtotal, frete, code, onApply, onRemove }: { subtotal: number; frete: number; code: string; onApply: (discount: number, code: string) => void; onRemove: () => void }) {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const apply = () => {
+    const c = value.trim().toUpperCase();
+    const rule = DEMO_COUPONS[c];
+    if (!rule) { setError("Cupom inválido."); return; }
+    const discount = rule.freeShipping ? frete : Math.round(subtotal * (rule.percent || 0)) / 100;
+    onApply(discount, c);
+    setOpen(false); setError(null); setValue("");
+  };
+  if (code) {
+    return (
+      <div className="co-sum-row"><span className="co-sum-label">Cupons</span>
+        <span className="co-coupon-applied">{code} <button type="button" onClick={onRemove}>remover</button></span>
+      </div>
+    );
+  }
+  return (
+    <div className="co-coupon">
+      <div className="co-sum-row"><span className="co-sum-label">Cupons</span>
+        {!open && <button type="button" className="co-sum-link co-coupon-open" onClick={() => setOpen(true)}>Aplicar cupom</button>}
+      </div>
+      {open && (
+        <div className="co-coupon-field">
+          <input name="cupomCode" value={value} inputMode="text" autoComplete="off" onChange={(e) => { setValue(e.target.value); setError(null); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); apply(); } }} />
+          <button type="button" className="btn-default" onClick={apply}>Confirmar</button>
+        </div>
+      )}
+      {error && <p className="co-coupon-error" role="alert">{error}</p>}
+    </div>
+  );
+}
+// Real payment icons captured from the source theme (same PNG/SVG assets).
+const PAY_ICONS: Record<"card" | "pix" | "flower", string> = {
+  card: "/sites/www-lolacosmetics-com-br-b005530a/checkout-easy-819da193/icons/creditcard.svg",
+  pix: "/sites/www-lolacosmetics-com-br-b005530a/checkout-easy-819da193/icons/pix.svg",
+  flower: "/sites/www-lolacosmetics-com-br-b005530a/checkout-easy-819da193/icons/pixparcelado.png",
+};
+function PayIcon({ kind }: { kind: "card" | "pix" | "flower" }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img className="co-pay-icon" src={PAY_ICONS[kind]} alt="" width={36} height={36} />;
 }
 
-function OrderSummary({ children, subtotal, frete, count }: { children?: React.ReactNode; subtotal: number; frete: number; count: number }) {
+function OrderSummary({ children, subtotal, frete, discount, count, coupon }: { children?: React.ReactNode; subtotal: number; frete: number; discount: number; count: number; coupon: React.ReactNode }) {
+  const total = Math.max(0, subtotal + frete - discount);
   return (
     <>
       <div className="co-sum-list">
         <div className="co-sum-row"><span className="co-sum-label">{count} {count === 1 ? "produto" : "produtos"}</span><span className="co-sum-val">{money(subtotal)}</span></div>
         <div className="co-sum-row"><span className="co-sum-label">Frete</span><span className="co-sum-val">{money(frete)}</span></div>
-        <div className="co-sum-row"><span className="co-sum-label">Cupons</span><span className="co-sum-link">Aplicar cupom</span></div>
-        <div className="co-sum-row"><span className="co-sum-label co-crm">CRM BONUS <QIcon /></span><span className="co-sum-link">Ganhe Cashback</span></div>
+        {coupon}
+        {discount > 0 && <div className="co-sum-row"><span className="co-sum-label">Desconto</span><span className="co-sum-val co-sum-desc">- {money(discount)}</span></div>}
       </div>
-      <div className="co-total"><span>Total:</span><strong>{money(subtotal + frete)}</strong></div>
+      <div className="co-total"><span>Total:</span><strong>{money(total)}</strong></div>
       {children}
       <p className="co-secure-foot"><LockIcon /> Site 100% seguro</p>
     </>
@@ -70,12 +118,14 @@ export default function CheckoutEntrega() {
   const [seeAll, setSeeAll] = useState(false);
   const [seeDetails, setSeeDetails] = useState(false);
   const [placed, setPlaced] = useState(false);
-  const [payMethod, setPayMethod] = useState<string>("pix");
+  const [payMethod, setPayMethod] = useState<string>("");
   const [pix, setPix] = useState<PixCharge | null>(null);
   const [generating, setGenerating] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
   const [cepBusy, setCepBusy] = useState(false);
   const [cepError, setCepError] = useState<string | null>(null);
+  const [discount, setDiscount] = useState(0);
+  const [couponCode, setCouponCode] = useState("");
 
   const lookupCep = async (value = form.cep) => {
     const cep = value.replace(/\D/g, "");
@@ -116,6 +166,15 @@ export default function CheckoutEntrega() {
   const cepReady = form.cep.replace(/\D/g, "").length === 8;
   const hasDeliveryContext = Boolean(address || cepReady || step === "pagamento");
   const frete = hasDeliveryContext ? DELIVERY[delivery].price : FRETE_PLACEHOLDER;
+  const couponRow = (
+    <CouponRow
+      subtotal={subtotal}
+      frete={frete}
+      code={couponCode}
+      onApply={(d, c) => { setDiscount(d); setCouponCode(c); }}
+      onRemove={() => { setDiscount(0); setCouponCode(""); }}
+    />
+  );
 
   const generatePix = async () => {
     if (!address?.email || !address?.cpf) {
@@ -131,8 +190,9 @@ export default function CheckoutEntrega() {
         body: JSON.stringify({
           items: cart.map((p) => ({ id: p.id, name: p.name, quantity: p.quantity, price: p.price })),
           frete,
+          discount,
           customer: { name: address.nome, email: address.email, doc: address.cpf },
-          metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined },
+          metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined, cupom: couponCode || undefined },
         }),
       });
       const j = await r.json();
@@ -146,6 +206,8 @@ export default function CheckoutEntrega() {
   };
 
   const finalize = () => {
+    // No method chosen yet (the source pre-selects none either).
+    if (!payMethod) { setPayError("Escolha um meio de pagamento."); return; }
     // This gateway integration is PIX. Card stays a demo placeholder.
     if (payMethod === "card") { setPlaced(true); return; }
     generatePix();
@@ -248,7 +310,7 @@ export default function CheckoutEntrega() {
                 ))}
               </div>
             )}
-            <OrderSummary subtotal={subtotal} frete={frete} count={count}>
+            <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={couponRow}>
               {pix ? (
                 <p className="co-secure-foot" style={{ marginTop: 0 }}>Aguardando o pagamento do PIX…</p>
               ) : placed ? (
@@ -372,7 +434,7 @@ export default function CheckoutEntrega() {
               ))}
             </div>
           )}
-          <OrderSummary subtotal={subtotal} frete={frete} count={count}>
+          <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={couponRow}>
             {address ? (
               <button type="button" className="co-continue" onClick={() => goTo("pagamento")}>Continuar →<small>(Pagamento)</small></button>
             ) : (

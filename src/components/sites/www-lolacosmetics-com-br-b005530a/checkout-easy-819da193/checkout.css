@@ -152,22 +152,22 @@
 .co-preview-top{max-width:520px;margin:12px auto 0;text-align:left}
 
 /* Payment method grid */
-.co-pay-head{position:relative;margin-bottom:22px;padding-right:78px}
-.co-pay-head .co-h1{margin:0;font-size:24px}
-.co-voltar{position:absolute;right:0;top:4px;background:none;border:0;color:var(--co-muted);font-size:15px;cursor:pointer;white-space:nowrap}
-.co-pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.co-pay-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:150px;background:#fff;border:1px solid var(--co-border);border-radius:6px;padding:22px 14px;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease}
-.co-pay-card:hover{border-color:var(--co-pink);box-shadow:0 4px 14px rgba(255,43,90,.12)}
-.co-pay-icon{width:46px;height:36px}
-.co-pay-label{font-weight:700;font-size:16px;color:#333;text-align:center;line-height:1.25}
+.co-pay-head{display:flex;align-items:baseline;justify-content:flex-start;gap:16px;margin-bottom:18px}
+.co-pay-head .co-h1{margin:0;font-size:24px;white-space:nowrap}
+.co-voltar{background:none;border:0;color:var(--co-muted);font-size:15px;cursor:pointer;white-space:nowrap;flex:none;align-self:baseline}
+.co-pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.co-pay-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:132px;background:#fff;border:1px solid #ddd;border-radius:0;padding:14px;cursor:pointer;transition:border-color .15s ease}
+.co-pay-card:hover{border-color:#bdbdbd}
+.co-pay-icon{width:36px;height:36px;object-fit:contain}
+.co-pay-label{font-weight:700;font-size:20px;color:#2f2f2f;text-align:center;line-height:1.15}
 
 @media (max-width:767px){
   .co-pay-grid{grid-template-columns:1fr 1fr}
-  .co-pay-head .co-h1{font-size:20px}
+  .co-pay-head .co-h1{font-size:18px}
 }
 
 /* Payment method selected + hints */
-.co-pay-card.sel{border-color:var(--co-pink);box-shadow:0 0 0 1px var(--co-pink) inset}
+.co-pay-card.sel{border-color:#459ee6;box-shadow:0 0 0 1px #459ee6 inset}
 .co-pay-hint{margin-top:14px;color:var(--co-muted);font-size:13px}
 .co-pay-error{margin-top:14px;background:#fff0f5;border:1px solid #ffd0e0;border-radius:4px;padding:12px 14px;color:#8a2f4d;font-size:14px}
 
@@ -190,3 +190,17 @@
 .co-cep-field input { min-width: 0; flex: 1; }
 .co-cep-status { display: block; color: #777; margin-top: 5px; font-size: 12px; }
 .co-cep-error { display: block; color: #c0392b; margin-top: 5px; font-size: 12px; }
+
+/* Coupon (functional) */
+.co-coupon{padding:0}
+.co-coupon .co-sum-row{border-bottom:0}
+.co-coupon-open{background:none;border:0;color:var(--co-muted);cursor:pointer;font-size:15px;text-decoration:underline;padding:0}
+.co-coupon-field{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;padding:4px 2px 16px}
+.co-coupon-field input{min-width:0;height:48px;border:1px solid #dcdcdc;border-right:0;border-radius:4px 0 0 4px;padding:0 14px;font:15px Lato,sans-serif;color:#333;box-sizing:border-box}
+.co-coupon-field input:focus{outline:none;border-color:#dcdcdc}
+.co-coupon-field button{height:48px;border:0;background:var(--co-pink);color:#fff;font-weight:700;font-size:16px;border-radius:0 4px 4px 0;padding:0 30px;cursor:pointer}
+.co-coupon-field button:hover{background:var(--co-pink-dark)}
+.co-coupon-error{margin:8px 2px 12px;color:#c0392b;font-size:13px;border-bottom:1px solid var(--co-hair);padding-bottom:12px}
+.co-coupon-applied{display:inline-flex;align-items:center;gap:10px;color:#1f9d57;font-weight:700}
+.co-coupon-applied button{border:0;background:none;color:var(--co-muted);text-decoration:underline;font-weight:400;font-size:13px;cursor:pointer}
+.co-sum-desc{color:#1f9d57;font-weight:700}
