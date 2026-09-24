@@ -1,0 +1,16 @@
+/* Banner carousel FOUC.
+   Slick initializes client-side (SourceSection useEffect), so for a fraction of
+   a second the source markup shows all five home banners stacked before the
+   carousel takes over. Until the slider gains .slick-initialized, show only the
+   first banner so the home opens as a carousel, never as a stack. Scoped to the
+   marketing banner and gated by :not(.slick-initialized), so once slick wraps
+   the slides these rules stop applying and slick owns the layout. */
+.wd-marketing-banner[data-lola-slider]:not(.slick-initialized) {
+  overflow: hidden !important;
+}
+.wd-marketing-banner[data-lola-slider]:not(.slick-initialized) > * {
+  display: none !important;
+}
+.wd-marketing-banner[data-lola-slider]:not(.slick-initialized) > *:first-child {
+  display: block !important;
+}
