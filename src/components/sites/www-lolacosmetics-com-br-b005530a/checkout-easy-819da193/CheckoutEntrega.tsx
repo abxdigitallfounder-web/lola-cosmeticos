@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart, countItems, sumItems, money } from "../shared/cartStore";
+import PixPanel, { type PixCharge } from "./PixPanel";
 import "./checkout.css";
 
 // Demo clone: no address or payment data is submitted anywhere. Shipping is a
@@ -17,7 +18,8 @@ const PAYMENTS = [
   { id: "pixp", label: "PIX Parcelado", icon: "flower" as const },
 ];
 
-type Address = { nome: string; cep: string; endereco: string; numero: string; bairro: string; cidade: string; uf: string };
+type Address = { nome: string; email: string; cpf: string; cep: string; endereco: string; numero: string; bairro: string; cidade: string; uf: string };
+const EMPTY_ADDR: Address = { nome: "", email: "", cpf: "", cep: "", endereco: "", numero: "", bairro: "", cidade: "", uf: "" };
 
 function PlusIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" /><path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>; }
 function BagIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M9 8a3 3 0 0 1 6 0" stroke="currentColor" strokeWidth="2" /></svg>; }
@@ -60,10 +62,20 @@ export default function CheckoutEntrega() {
   const [step, setStep] = useState<"entrega" | "pagamento">("entrega");
   const [addrOpen, setAddrOpen] = useState(false);
   const [address, setAddress] = useState<Address | null>(null);
+  // Controlled form state. Controlled inputs are authoritative from React, so
+  // the tracking scripts (Utmify/Meta) that mutate DOM fields — they were
+  // eating the "@" from the e-mail field — can't corrupt what we submit.
+  const [form, setForm] = useState<Address>(EMPTY_ADDR);
+  const openAddr = () => { setForm(address ?? EMPTY_ADDR); setAddrOpen(true); };
+  const setField = (k: keyof Address) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const [delivery, setDelivery] = useState(0);
   const [seeAll, setSeeAll] = useState(false);
   const [seeDetails, setSeeDetails] = useState(false);
   const [placed, setPlaced] = useState(false);
+  const [payMethod, setPayMethod] = useState<string>("pix");
+  const [pix, setPix] = useState<PixCharge | null>(null);
+  const [generating, setGenerating] = useState(false);
+  const [payError, setPayError] = useState<string | null>(null);
 
   // The step follows the hash so #payment deep-links to the payment screen and
   // the header's active step stays in sync.
@@ -81,6 +93,40 @@ export default function CheckoutEntrega() {
   const count = countItems(cart);
   const subtotal = sumItems(cart);
   const frete = address || step === "pagamento" ? DELIVERY[delivery].price : FRETE_PLACEHOLDER;
+
+  const generatePix = async () => {
+    if (!address?.email || !address?.cpf) {
+      setPayError("Para pagar com PIX, cadastre e-mail e CPF no endereço (etapa Entrega).");
+      return;
+    }
+    setGenerating(true);
+    setPayError(null);
+    try {
+      const r = await fetch("/api/checkout/pix", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: cart.map((p) => ({ id: p.id, name: p.name, quantity: p.quantity, price: p.price })),
+          frete,
+          customer: { name: address.nome, email: address.email, doc: address.cpf },
+          metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined },
+        }),
+      });
+      const j = await r.json();
+      if (!j.success) throw new Error(j.error || "Falha ao gerar o PIX.");
+      setPix(j.data as PixCharge);
+    } catch (e) {
+      setPayError(e instanceof Error ? e.message : "Falha ao gerar o PIX.");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const finalize = () => {
+    // This gateway integration is PIX. Card stays a demo placeholder.
+    if (payMethod === "card") { setPlaced(true); return; }
+    generatePix();
+  };
 
   if (!cart.length) {
     return (
@@ -123,14 +169,28 @@ export default function CheckoutEntrega() {
               <h1 className="co-h1">Escolha o meio de pagamento</h1>
               <button type="button" className="co-voltar" onClick={() => goTo("entrega")}>‹ Voltar</button>
             </div>
-            <div className="co-pay-grid">
-              {PAYMENTS.map((m) => (
-                <button type="button" key={m.id} className="co-pay-card">
-                  <PayIcon kind={m.icon} />
-                  <span className="co-pay-label">{m.label}</span>
-                </button>
-              ))}
-            </div>
+            {pix ? (
+              <PixPanel charge={pix} onPaid={() => {}} />
+            ) : (
+              <>
+                <div className="co-pay-grid">
+                  {PAYMENTS.map((m) => (
+                    <button
+                      type="button"
+                      key={m.id}
+                      className={`co-pay-card ${payMethod === m.id ? "sel" : ""}`}
+                      aria-pressed={payMethod === m.id}
+                      onClick={() => { setPayMethod(m.id); setPayError(null); }}
+                    >
+                      <PayIcon kind={m.icon} />
+                      <span className="co-pay-label">{m.label}</span>
+                    </button>
+                  ))}
+                </div>
+                {payMethod === "card" && <p className="co-pay-hint">Pagamento com cartão é demonstração. Use PIX para pagar de verdade.</p>}
+                {payError && <p role="alert" className="co-pay-error">{payError}</p>}
+              </>
+            )}
           </section>
 
           <aside className="co-summary">
@@ -149,10 +209,14 @@ export default function CheckoutEntrega() {
               </div>
             )}
             <OrderSummary subtotal={subtotal} frete={frete} count={count}>
-              {placed ? (
-                <p role="status" className="co-demo-notice">Checkout de demonstração — nenhum pagamento é processado e nenhum pedido é enviado.</p>
+              {pix ? (
+                <p className="co-secure-foot" style={{ marginTop: 0 }}>Aguardando o pagamento do PIX…</p>
+              ) : placed ? (
+                <p role="status" className="co-demo-notice">Pagamento com cartão é apenas demonstração — nenhum valor é cobrado. Volte e escolha PIX para pagar.</p>
               ) : (
-                <button type="button" className="co-continue co-finalizar" onClick={() => setPlaced(true)}>Finalizar compra</button>
+                <button type="button" className="co-continue co-finalizar" disabled={generating} onClick={finalize}>
+                  {generating ? "Gerando PIX…" : "Finalizar compra"}
+                </button>
               )}
             </OrderSummary>
           </aside>
@@ -169,7 +233,7 @@ export default function CheckoutEntrega() {
           <h1 className="co-h1">Entrega</h1>
 
           {!address && !addrOpen && (
-            <button type="button" className="co-addr-btn" onClick={() => setAddrOpen(true)}>
+            <button type="button" className="co-addr-btn" onClick={openAddr}>
               <PlusIcon /> Cadastrar endereço
             </button>
           )}
@@ -179,21 +243,32 @@ export default function CheckoutEntrega() {
               className="co-form"
               onSubmit={(e) => {
                 e.preventDefault();
-                const f = new FormData(e.currentTarget);
-                const g = (k: string) => (f.get(k) as string | null)?.trim() || "";
-                setAddress({ nome: g("nome") || "Visitante", cep: g("cep") || "00000-000", endereco: g("endereco") || "Rua", numero: g("numero") || "0", bairro: g("bairro"), cidade: g("cidade") || "Cidade", uf: g("uf").toUpperCase() || "UF" });
+                const t = (s: string) => s.trim();
+                setAddress({
+                  nome: t(form.nome) || "Visitante",
+                  email: t(form.email),
+                  cpf: t(form.cpf),
+                  cep: t(form.cep) || "00000-000",
+                  endereco: t(form.endereco) || "Rua",
+                  numero: t(form.numero) || "0",
+                  bairro: t(form.bairro),
+                  cidade: t(form.cidade) || "Cidade",
+                  uf: t(form.uf).toUpperCase() || "UF",
+                });
                 setAddrOpen(false);
               }}
             >
               <h3>Novo endereço</h3>
               <div className="co-grid">
-                <label className="co-wide">Nome completo<input name="nome" autoComplete="off" /></label>
-                <label>CEP<input name="cep" inputMode="numeric" autoComplete="off" /></label>
-                <label>Número<input name="numero" inputMode="numeric" autoComplete="off" /></label>
-                <label className="co-wide">Endereço<input name="endereco" autoComplete="off" /></label>
-                <label>Bairro<input name="bairro" autoComplete="off" /></label>
-                <label>Cidade<input name="cidade" autoComplete="off" /></label>
-                <label>UF<input name="uf" maxLength={2} autoComplete="off" /></label>
+                <label className="co-wide">Nome completo<input name="nome" autoComplete="off" value={form.nome} onChange={setField("nome")} /></label>
+                <label>E-mail<input name="lola_email" type="text" inputMode="email" autoComplete="off" value={form.email} onChange={setField("email")} /></label>
+                <label>CPF<input name="cpf" inputMode="numeric" autoComplete="off" value={form.cpf} onChange={setField("cpf")} /></label>
+                <label>CEP<input name="cep" inputMode="numeric" autoComplete="off" value={form.cep} onChange={setField("cep")} /></label>
+                <label>Número<input name="numero" inputMode="numeric" autoComplete="off" value={form.numero} onChange={setField("numero")} /></label>
+                <label className="co-wide">Endereço<input name="endereco" autoComplete="off" value={form.endereco} onChange={setField("endereco")} /></label>
+                <label>Bairro<input name="bairro" autoComplete="off" value={form.bairro} onChange={setField("bairro")} /></label>
+                <label>Cidade<input name="cidade" autoComplete="off" value={form.cidade} onChange={setField("cidade")} /></label>
+                <label>UF<input name="uf" maxLength={2} autoComplete="off" value={form.uf} onChange={setField("uf")} /></label>
               </div>
               <div className="co-form-actions">
                 <button type="submit" className="co-btn-save">Salvar endereço</button>
@@ -209,11 +284,11 @@ export default function CheckoutEntrega() {
                 <span className="co-addr-pill">Endereço selecionado</span>
               </div>
               <p className="co-addr-text">{address.endereco}, {address.numero}.{address.bairro ? ` ${address.bairro},` : ""} {address.cidade} - {address.uf}. CEP {address.cep}</p>
-              <button type="button" className="co-addr-change" onClick={() => setAddrOpen(true)}>Alterar endereço do pedido</button>
+              <button type="button" className="co-addr-change" onClick={openAddr}>Alterar endereço do pedido</button>
             </div>
           ) : !addrOpen && (
             <div className="co-info">
-              <a onClick={(e) => { e.preventDefault(); setAddrOpen(true); }} href="#">Cadastre um endereço</a> para escolher a forma de entrega.
+              <a onClick={(e) => { e.preventDefault(); openAddr(); }} href="#">Cadastre um endereço</a> para escolher a forma de entrega.
             </div>
           )}
 

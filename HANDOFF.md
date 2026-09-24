@@ -315,3 +315,48 @@ O cabeçalho de pagamento usa título em bloco (largura total) com "‹ Voltar"
 posicionado no canto — flexbox encolhia o título e quebrava palavra a palavra.
 Verificado em iPhone emulado real e desktop: overflow 0, R$ 110,98, ícones e
 etapas corretos.
+
+## Pagamento PIX real — Jungle Pagamentos — 2026-09-24
+
+Integração da API do seller (PIX) da Jungle Pagamentos no checkout. Contrato:
+seções 1–7 do guia. Valores sempre em reais; status em MAIÚSCULAS.
+
+**Segredos** (só em `.env.local`, gitignored; nomes em `.env.example`):
+`JUNGLE_API_BASE`, `JUNGLE_API_KEY`, `JUNGLE_WEBHOOK_SECRET`, `JUNGLE_CALLBACK_URL`.
+Nunca commitados. A chave é a do dashboard **Principal** (a usada pelo checkout).
+
+**Server-only** `src/lib/jungle.ts` (import `server-only` — falha se importado no
+client): `createCharge`, `findTransaction` (varre `GET /gateway/transactions` por
+não haver banco), `verifyWebhook` (HMAC-SHA256 do corpo bruto, `timingSafeEqual`).
+
+**Rotas** (App Router, `runtime=nodejs`, `dynamic=force-dynamic`):
+- `POST /api/checkout/pix` — cria a cobrança a partir da sacola + cliente, gera o
+  QR (pacote `qrcode`, data URI) e devolve `{transactionId, pixCode, qrImage,
+  expiresAt, amount}`. Repassa IP/User-Agent do comprador. 5xx do gateway viram
+  mensagem amigável.
+- `GET /api/checkout/pix/status?transactionId=` — consulta o status (só `PAID` = pago).
+- `POST /api/webhooks/jungle` — valida `X-Signature` (401 se inválida, 200 se ok).
+  Sem banco aqui: valida e confirma; o TODO marca onde liberar o pedido de forma
+  idempotente por `transactionId` quando houver persistência de pedidos.
+
+**Frontend**: a etapa de pagamento (`CheckoutEntrega`) tem seleção de método; PIX
+(pré-selecionado) e PIX Parcelado geram a cobrança e mostram `PixPanel` (QR,
+copia-e-cola com botão Copiar, contador de expiração e polling de status até
+aprovar). Cartão segue como demonstração. O formulário de endereço ganhou **e-mail
+e CPF** (exigidos pela API).
+
+**Inputs controlados (importante):** os scripts de rastreamento (Utmify/Meta que
+adicionamos) mexem em campos do DOM — o de e-mail perdia o "@". Por isso o
+formulário é controlado pelo React (estado é a fonte da verdade) e o campo de
+e-mail usa `type="text"` + `inputMode="email"` com `name="lola_email"` para não
+ser alvo de scripts que miram `type=email`. Não reverter para uncontrolled/type=email.
+
+Verificado ao vivo (cria cobrança PIX real e pendente, que expira sem pagamento):
+criação `POST /gateway/charges` OK (R$ 110,98), status `PENDING`, webhook 401/200,
+e o painel PIX renderizando QR + copia-e-cola em iPhone 390 emulado e desktop 1440,
+overflow 0. Não há script de QA automático para o PIX porque cada execução geraria
+cobrança real; validar manualmente.
+
+`GET /api/checkout/pix/status` sem banco varre as transações do workspace — para
+produção, persista o pedido e leia o status do webhook (idempotente por
+`transactionId`), usando a rota de status/reconciliação só como rede de segurança.

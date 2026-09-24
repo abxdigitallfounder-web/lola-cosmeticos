@@ -165,3 +165,24 @@
   .co-pay-grid{grid-template-columns:1fr 1fr}
   .co-pay-head .co-h1{font-size:20px}
 }
+
+/* Payment method selected + hints */
+.co-pay-card.sel{border-color:var(--co-pink);box-shadow:0 0 0 1px var(--co-pink) inset}
+.co-pay-hint{margin-top:14px;color:var(--co-muted);font-size:13px}
+.co-pay-error{margin-top:14px;background:#fff0f5;border:1px solid #ffd0e0;border-radius:4px;padding:12px 14px;color:#8a2f4d;font-size:14px}
+
+/* PIX panel */
+.co-pix{border:1px solid var(--co-border);border-radius:8px;padding:26px;text-align:center;max-width:420px}
+.co-pix h3{font:700 20px obviously,Lato,sans-serif;margin:0 0 6px;color:#222}
+.co-pix-sub{color:#555;font-size:14px;margin:0 0 18px;line-height:1.5}
+.co-pix-qr{width:220px;height:220px;display:block;margin:0 auto 18px;border:1px solid var(--co-hair);border-radius:6px}
+.co-pix-code{display:grid;grid-template-columns:minmax(0,1fr) auto;border:1px solid var(--co-border);border-radius:6px;overflow:hidden}
+.co-pix-code input{min-width:0;border:0;padding:12px;font:13px Lato,sans-serif;color:#444;background:#fafafa;text-overflow:ellipsis}
+.co-pix-code input:focus{outline:none}
+.co-pix-code button{flex:none;border:0;background:var(--co-pink);color:#fff;font-weight:700;padding:0 18px;cursor:pointer}
+.co-pix-code button:hover{background:var(--co-pink-dark)}
+.co-pix-timer{margin:16px 0 0;color:var(--co-muted);font-size:13px}
+.co-pix-paid{border-color:#cfe6cf;background:#f4fbf4}
+.co-pix-check{width:56px;height:56px;border-radius:50%;background:#2fc46b;color:#fff;font-size:30px;line-height:56px;margin:0 auto 14px}
+.co-pix-paid h3{color:#1f9d57}
+.co-pix-paid p{color:#2f6d33;font-size:14px;margin:0}
