@@ -4,6 +4,7 @@ import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/
 import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/ShopInteractions";
 import BodyClass from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/BodyClass";
 import PageContent from "@/components/sites/www-lolacosmetics-com-br-b005530a/carrinho-1bc30c37/PageContent";
+import CartScreen from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/CartScreen";
 
 export const metadata: Metadata = {"title":"Carrinho de compras -"};
 
@@ -17,6 +18,7 @@ export default function Page() {
         <Header variant="cart" />
         <div id="bg-search" />
         <PageContent />
+        <CartScreen />
         <Footer />
         <ShopInteractions />
       </section>

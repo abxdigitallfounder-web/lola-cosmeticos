@@ -44,6 +44,7 @@ Sanitização compartilhada em `scripts/lib/lola-sanitize.mjs`.
 | `qa-lola-product-alignment.mjs` | posição e tamanho das imagens contra a origem em 1440, 768 e 390px |
 | `qa-lola-mobile-gallery.mjs` | galeria verdadeira de celular: UA mobile, toque, DPR, swipe e indicadores |
 | `qa-lola-phone-header.mjs` | header mobile real, posições e interações em iPhone/Android emulados |
+| `qa-lola-cart.mjs` | adicionar à sacola e tela de carrinho em iPhone/Android emulados e desktop |
 
 Todos apontam para `http://127.0.0.1:4360` — ajuste a porta no topo se mudar.
 
@@ -221,3 +222,39 @@ O token da Conversions API do Meta **não fica no repositório**: vive em
 `.env.local` como `META_CAPI_ACCESS_TOKEN` (ignorado pelo git), com o nome
 documentado em `.env.example`. Sem prefixo `NEXT_PUBLIC_`, ou vaza para o browser.
 Ainda não há rota server-side consumindo esse token.
+
+## Sacola e tela de carrinho — 2026-09-24
+
+Antes só o card de listagem adicionava à sacola: o handler casava apenas
+`.wd-product-line .btn-buy`, e a página de produto ficava de fora. E `/carrinho`
+servia o estado "vazio" capturado, sem nunca mostrar o que havia na sacola.
+
+`cartStore.ts` passou a ser a fonte única. O drawer (`ShopInteractions`) e a tela
+(`CartScreen`) são duas vistas do mesmo carrinho, via `useSyncExternalStore`, e o
+`localStorage` continua sendo `lola-demo-cart`. A quantidade mudada num lado
+aparece no outro sem recarregar, e outras abas entram pelo evento `storage`.
+
+Adicionar à sacola:
+
+- **Card de listagem** — o card traz **dois** `.btn-buy`: `ADICIONAR À SACOLA`,
+  que fica 0×0, e `Comprar`, o visível. Quem clica define o alvo, então ambos os
+  tamanhos funcionam; em teste, filtre por `:visible` ou você pega o oculto.
+- **Página de produto** — `.product-buy-button-custom`, com o id vindo do input
+  escondido `Products[0].ProductID` que o formulário da origem postaria. Nome sai
+  do `h1`, preço de `.sale-price`, imagem de `.medias img`, quantidade de
+  `input.js-qty`. `.btn-oneclickbuy` é deixado de fora: compartilha `.btn-buy`
+  mas é compra direta.
+
+A tela é montada **dentro** de `.wd-checkout-basket`, por portal, para o
+espaçamento e os seletores do tema seguirem valendo; o bloco `.empty` capturado
+continua ali e volta a aparecer quando a sacola esvazia. O widget centraliza
+texto, por isso `.lola-basket` declara o próprio `text-align`. A partir de 769px
+a linha vira uma só (imagem, nome, quantidade, total, remover); abaixo disso
+empilha.
+
+Verificado com `qa-lola-cart.mjs` em iPhone 390, Android 412 e desktop 1440:
+overflow horizontal 0 nos três, imagens carregam, `R$ 99,90 + 2 × R$ 54,90 =
+R$ 209,70`, e o contador do header acompanha.
+
+`Finalizar Compra` mostra o aviso de demonstração — não há checkout real nem
+pedido enviado.

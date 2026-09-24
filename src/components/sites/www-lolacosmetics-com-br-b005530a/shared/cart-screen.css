@@ -1,0 +1,29 @@
+.lola-basket{font:14px Lato,sans-serif;color:#333;margin:10px 0 40px;text-align:left}
+.lola-basket-count{color:#666;margin-bottom:6px}
+.lola-basket-list{list-style:none;margin:0;padding:0}
+.lola-basket-row{display:grid;grid-template-columns:80px minmax(0,1fr) auto;grid-template-areas:"img info info" "img qty line" "img rem rem";column-gap:14px;row-gap:10px;align-items:center;padding:20px 0;border-bottom:1px solid #eee}
+.lola-basket-row>img{grid-area:img;align-self:start;width:80px;height:80px;object-fit:contain}
+.lola-basket-info{grid-area:info;min-width:0}
+.lola-basket-info h2{font:700 15px Lato,sans-serif;margin:0 0 4px;line-height:1.35}
+.lola-basket-unit{color:#777;font-size:12px}
+.lola-basket-qty{grid-area:qty;display:flex;align-items:center;gap:12px}
+.lola-basket-qty button{width:32px;height:32px;background:#f5f5f5;color:#333;border:1px solid #ddd;border-radius:3px;font-size:16px;line-height:1}
+.lola-basket-qty span{min-width:20px;text-align:center}
+.lola-basket-line{grid-area:line;text-align:right;white-space:nowrap;color:#f07;font-size:16px}
+.lola-basket-remove{grid-area:rem;justify-self:start;width:fit-content;text-align:left;border:0;background:none;padding:0;font-size:11px;color:#666;text-decoration:underline}
+.lola-basket-summary{margin-top:28px}
+.lola-basket-totals p{display:flex;justify-content:space-between;gap:20px;padding:9px 0;margin:0}
+.lola-basket-shipping{color:#777;font-size:12px}
+.lola-basket-grand{border-top:1px solid #ddd;margin-top:8px!important;padding-top:16px!important;font-size:19px}
+.lola-basket-grand strong{color:#f07}
+.lola-basket-checkout{display:block;width:100%;margin-top:18px;padding:16px;background:#2dca27;border:0;border-radius:5px;color:#fff;font-weight:700;font-size:15px}
+.lola-basket-back{display:block;text-align:center;padding:18px;color:#666;text-decoration:underline}
+.lola-basket .lola-demo-notice{margin-top:18px}
+/* The phone template is the narrow one; from tablet up the row becomes a single
+   line, the way the source's basket table reads on desktop. */
+@media (min-width:769px){
+ .lola-basket-row{grid-template-columns:96px minmax(0,1fr) auto 120px auto;grid-template-areas:"img info qty line rem";column-gap:22px;padding:24px 0}
+ .lola-basket-row>img{width:96px;height:96px;align-self:center}
+ .lola-basket-info h2{font-size:16px}
+ .lola-basket-summary{max-width:420px;margin-left:auto}
+}
