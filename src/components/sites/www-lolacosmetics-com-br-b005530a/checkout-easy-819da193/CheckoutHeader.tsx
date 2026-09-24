@@ -12,15 +12,6 @@ function LockIcon() {
     </svg>
   );
 }
-function SairIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="13" height="13">
-      <path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4" stroke="currentColor" strokeWidth="2" />
-      <path d="M10 12h9m0 0-3-3m3 3-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 // Minimal checkout chrome. The active step follows the hash: #payment marks
 // Pagamento active and Entrega done; otherwise Entrega is active.
 export default function CheckoutHeader() {
@@ -47,10 +38,6 @@ export default function CheckoutHeader() {
             <span className="co-dot" />Pagamento
           </span>
         </nav>
-        <div className="co-account">
-          <span className="co-hi">Olá, <strong>Visitante</strong></span>
-          <span className="co-sair">Sair <SairIcon /></span>
-        </div>
         <span className="co-secure"><LockIcon /> Site seguro</span>
       </header>
       <div className="co-spacer" />
