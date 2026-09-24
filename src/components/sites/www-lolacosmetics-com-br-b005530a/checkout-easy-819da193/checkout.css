@@ -204,3 +204,21 @@
 .co-coupon-applied{display:inline-flex;align-items:center;gap:10px;color:#1f9d57;font-weight:700}
 .co-coupon-applied button{border:0;background:none;color:var(--co-muted);text-decoration:underline;font-weight:400;font-size:13px;cursor:pointer}
 .co-sum-desc{color:#1f9d57;font-weight:700}
+
+/* Credit-card form + declined state */
+.co-cardform{margin-top:20px;border:1px solid var(--co-border);border-radius:4px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.co-card-brands{display:flex;flex-wrap:wrap;gap:8px}
+.co-brand{border:1px solid #ddd;border-radius:4px;background:#fff;padding:8px 14px;font-weight:700;font-size:13px;color:#666;cursor:pointer}
+.co-brand.sel{border-color:#459ee6;color:#459ee6;box-shadow:0 0 0 1px #459ee6 inset}
+.co-cf-field{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--co-muted)}
+.co-cf-field small{color:#999;font-weight:400}
+.co-cf-field input,.co-cf-field select{border:1px solid #d7d7d7;border-radius:4px;padding:11px 12px;font:15px Lato,sans-serif;color:#333;background:#fff;box-sizing:border-box}
+.co-cf-field input:focus,.co-cf-field select:focus{outline:none;border-color:var(--co-blue)}
+.co-cf-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.co-cf-exp{display:flex;align-items:center;gap:8px}
+.co-cf-exp select{flex:1;min-width:0}
+.co-cf-sep{color:#999}
+.co-card-declined{margin-top:20px;border:1px solid #ffd0d0;background:#fff5f5;border-radius:6px;padding:20px}
+.co-card-declined strong{display:block;color:#c0392b;font-size:16px;margin-bottom:8px}
+.co-card-declined p{color:#7a3b3b;font-size:14px;line-height:1.5;margin:0 0 16px}
+.co-card-declined .co-continue{margin-top:0;min-height:auto;font-size:16px}

