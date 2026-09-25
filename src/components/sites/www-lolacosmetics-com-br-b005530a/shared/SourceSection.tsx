@@ -44,6 +44,21 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
           }
         }
       });
+      // Pause each carousel's autoplay while it's off-screen and resume when it
+      // returns. Measured cause of mobile jank: the ~7 rails kept animating and
+      // repainting continuously in the background (105 DOM mutations / 4s while
+      // idle, all .slick-*). Visually identical — an off-screen rail isn't seen.
+      const visObservers: IntersectionObserver[] = [];
+      if (typeof IntersectionObserver !== "undefined") {
+        sliders.each(function () {
+          const el = this as Element;
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => { try { $(el).slick(e.isIntersecting ? "slickPlay" : "slickPause"); } catch {} });
+          }, { rootMargin: "200px 0px" });
+          io.observe(el);
+          visObservers.push(io);
+        });
+      }
       // The source thumbnail rail is inline-block on phones. Repeated setPosition
       // calls feed its track width back into its intrinsic width (150 → 180 → 216px).
       // Slick already handles viewport changes; only product/banner rails need the
@@ -53,6 +68,7 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
       const images = ref.current.querySelectorAll("img");
       images.forEach(img => img.addEventListener("load", resize));
       cleanup = () => {
+        visObservers.forEach((o) => o.disconnect());
         images.forEach(img => img.removeEventListener("load", resize));
         sliders.each(function () { if ($(this).hasClass("slick-initialized")) $(this).slick("unslick"); });
         restoreGalleries();
@@ -68,14 +84,16 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
     let observer: IntersectionObserver | undefined;
     let started = false;
     const start = () => { if (!started) { started = true; observer?.disconnect(); initialize(); } };
-    const target = ref.current?.firstElementChild ?? ref.current;
+    // Observe the section's real box and init only when it's near the viewport.
+    // Off-screen sections stay out of the initial load work (the ~1.5s of
+    // main-thread blocking on open) and init as they scroll in. If there's no
+    // box to observe, init immediately so nothing can stay uninitialized.
+    const target = ref.current?.firstElementChild;
     if (target && typeof IntersectionObserver !== "undefined") {
       observer = new IntersectionObserver((entries) => {
         if (entries.some((e) => e.isIntersecting)) start();
       }, { rootMargin: "600px 0px" });
-      observer.observe(target as Element);
-      // Safety net: if the observer never fires (e.g. a boxless host), init anyway.
-      window.setTimeout(start, 2500);
+      observer.observe(target);
     } else {
       initialize();
     }
