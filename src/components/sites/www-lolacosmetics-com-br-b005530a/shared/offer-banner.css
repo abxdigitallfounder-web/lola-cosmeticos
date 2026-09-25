@@ -1,0 +1,74 @@
+/* Campaign offer banner (35% OFF + free shipping). On-brand pink, high-contrast,
+   built to catch the eye of paid-traffic visitors without looking like spam. */
+.lola-offer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #ff2b5a 0%, #e81f4c 55%, #c8143c 100%);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(232, 31, 76, .28);
+  font-family: Lato, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.lola-offer::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  right: -10%;
+  width: 140px;
+  height: 220%;
+  background: rgba(255, 255, 255, .10);
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+.lola-offer-badge {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lola-offer-badge svg { width: 22px; height: 22px; color: #fff; }
+.lola-offer-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; line-height: 1.25; }
+.lola-offer-title { font-size: 17px; font-weight: 800; letter-spacing: .3px; }
+.lola-offer-sub { font-size: 12.5px; opacity: .95; }
+.lola-offer-code {
+  font-weight: 800;
+  background: rgba(255, 255, 255, .22);
+  padding: 1px 6px;
+  border-radius: 5px;
+  letter-spacing: .5px;
+}
+.lola-offer-check {
+  flex: none;
+  margin-left: auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  color: #12a150;
+  font-weight: 900;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Compact variant for the cart drawer */
+.lola-offer-compact { padding: 11px 12px; gap: 10px; border-radius: 10px; }
+.lola-offer-compact .lola-offer-badge { width: 34px; height: 34px; }
+.lola-offer-compact .lola-offer-badge svg { width: 18px; height: 18px; }
+.lola-offer-compact .lola-offer-title { font-size: 15px; }
+.lola-offer-compact .lola-offer-sub { font-size: 11.5px; }
+.lola-offer-compact .lola-offer-check { width: 22px; height: 22px; font-size: 13px; }
+
+@media (max-width: 400px) {
+  .lola-offer-title { font-size: 15px; }
+  .lola-offer-sub { font-size: 11.5px; }
+}

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart, countItems, sumItems, money } from "../shared/cartStore";
 import { getCurrentAccount, updateCurrentAccount } from "../shared/accountStore";
+import OfferBanner from "../shared/OfferBanner";
+import { offerDiscount, dailyCouponCode } from "../shared/dailyOffer";
 import PixPanel, { type PixCharge } from "./PixPanel";
 import "./checkout.css";
 
@@ -61,47 +63,6 @@ function PlusIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="t
 function BagIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M9 8a3 3 0 0 1 6 0" stroke="currentColor" strokeWidth="2" /></svg>; }
 function LockIcon() { return <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" /></svg>; }
 
-// Demo coupons — this is a demo checkout, so a small fixed set is honored.
-const DEMO_COUPONS: Record<string, { percent?: number; freeShipping?: boolean }> = {
-  LOLA10: { percent: 10 },
-  BEMVINDA15: { percent: 15 },
-  FRETEGRATIS: { freeShipping: true },
-};
-
-function CouponRow({ subtotal, frete, code, onApply, onRemove }: { subtotal: number; frete: number; code: string; onApply: (discount: number, code: string) => void; onRemove: () => void }) {
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const apply = () => {
-    const c = value.trim().toUpperCase();
-    const rule = DEMO_COUPONS[c];
-    if (!rule) { setError("Cupom inválido."); return; }
-    const discount = rule.freeShipping ? frete : Math.round(subtotal * (rule.percent || 0)) / 100;
-    onApply(discount, c);
-    setOpen(false); setError(null); setValue("");
-  };
-  if (code) {
-    return (
-      <div className="co-sum-row"><span className="co-sum-label">Cupons</span>
-        <span className="co-coupon-applied">{code} <button type="button" onClick={onRemove}>remover</button></span>
-      </div>
-    );
-  }
-  return (
-    <div className="co-coupon">
-      <div className="co-sum-row"><span className="co-sum-label">Cupons</span>
-        {!open && <button type="button" className="co-sum-link co-coupon-open" onClick={() => setOpen(true)}>Aplicar cupom</button>}
-      </div>
-      {open && (
-        <div className="co-coupon-field">
-          <input name="cupomCode" value={value} inputMode="text" autoComplete="off" onChange={(e) => { setValue(e.target.value); setError(null); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); apply(); } }} />
-          <button type="button" className="btn-default" onClick={apply}>Confirmar</button>
-        </div>
-      )}
-      {error && <p className="co-coupon-error" role="alert">{error}</p>}
-    </div>
-  );
-}
 // Real payment icons captured from the source theme (same PNG/SVG assets).
 const PAY_ICONS: Record<"card" | "pix" | "flower", string> = {
   card: "/sites/www-lolacosmetics-com-br-b005530a/checkout-easy-819da193/icons/creditcard.svg",
@@ -162,25 +123,26 @@ function CardForm({ total }: { total: number }) {
   );
 }
 
-function CardDeclined({ discountPct, onPix }: { discountPct: number; onPix: () => void }) {
+function CardDeclined({ onPix }: { onPix: () => void }) {
   return (
     <div className="co-card-declined" role="alert">
       <strong>Não foi possível aprovar seu cartão.</strong>
-      <p>Ocorreu um erro com a operadora do seu cartão. Pague com <b>PIX</b> e ganhe <b>{discountPct}% de desconto</b> agora mesmo.</p>
-      <button type="button" className="co-continue co-finalizar" onClick={onPix}>Pagar com PIX com {discountPct}% de desconto</button>
+      <p>Ocorreu um erro com a operadora do seu cartão. Finalize com <b>PIX</b> em segundos e mantenha seus <b>35% OFF + frete grátis</b>.</p>
+      <button type="button" className="co-continue co-finalizar" onClick={onPix}>Pagar com PIX</button>
     </div>
   );
 }
 
-function OrderSummary({ children, subtotal, frete, discount, count, coupon }: { children?: React.ReactNode; subtotal: number; frete: number; discount: number; count: number; coupon: React.ReactNode }) {
-  const total = Math.max(0, subtotal + frete - discount);
+function OrderSummary({ children, subtotal, frete, discount, count, coupon, freeShipping }: { children?: React.ReactNode; subtotal: number; frete: number; discount: number; count: number; coupon: React.ReactNode; freeShipping?: boolean }) {
+  const freteCobrado = freeShipping ? 0 : frete;
+  const total = Math.max(0, subtotal + freteCobrado - discount);
   return (
     <>
       <div className="co-sum-list">
         <div className="co-sum-row"><span className="co-sum-label">{count} {count === 1 ? "produto" : "produtos"}</span><span className="co-sum-val">{money(subtotal)}</span></div>
-        <div className="co-sum-row"><span className="co-sum-label">Frete</span><span className="co-sum-val">{money(frete)}</span></div>
+        <div className="co-sum-row"><span className="co-sum-label">Frete</span>{freeShipping ? <span className="co-sum-val co-sum-free">GRÁTIS</span> : <span className="co-sum-val">{money(frete)}</span>}</div>
         {coupon}
-        {discount > 0 && <div className="co-sum-row"><span className="co-sum-label">Desconto</span><span className="co-sum-val co-sum-desc">- {money(discount)}</span></div>}
+        {discount > 0 && <div className="co-sum-row"><span className="co-sum-label">Desconto (35%)</span><span className="co-sum-val co-sum-desc">- {money(discount)}</span></div>}
       </div>
       <div className="co-total"><span>Total:</span><strong>{money(total)}</strong></div>
       {children}
@@ -217,8 +179,6 @@ export default function CheckoutEntrega() {
   const [payError, setPayError] = useState<string | null>(null);
   const [cepBusy, setCepBusy] = useState(false);
   const [cepError, setCepError] = useState<string | null>(null);
-  const [discount, setDiscount] = useState(0);
-  const [couponCode, setCouponCode] = useState("");
 
   // Pre-fill the checkout from the logged-in account so a returning customer
   // never retypes what the panel already saved (see accountStore.ts).
@@ -279,15 +239,11 @@ export default function CheckoutEntrega() {
   const cepReady = form.cep.replace(/\D/g, "").length === 8;
   const hasDeliveryContext = Boolean(address || cepReady || step === "pagamento");
   const frete = hasDeliveryContext ? DELIVERY[delivery].price : FRETE_PLACEHOLDER;
-  const couponRow = (
-    <CouponRow
-      subtotal={subtotal}
-      frete={frete}
-      code={couponCode}
-      onApply={(d, c) => { setDiscount(d); setCouponCode(c); }}
-      onRemove={() => { setDiscount(0); setCouponCode(""); }}
-    />
-  );
+  // Campaign (paid traffic): 35% OFF + free shipping, applied automatically.
+  const freeShipping = true;
+  const freteCobrado = freeShipping ? 0 : frete;
+  const discount = offerDiscount(subtotal);
+  const couponCode = dailyCouponCode();
 
   const generatePix = async (discountArg = discount, couponArg = couponCode) => {
     if (!address?.email || !address?.cpf) {
@@ -302,7 +258,7 @@ export default function CheckoutEntrega() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           items: cart.map((p) => ({ id: p.id, name: p.name, quantity: p.quantity, price: p.price })),
-          frete,
+          frete: freteCobrado,
           discount: discountArg,
           customer: { name: address.nome, email: address.email, doc: address.cpf },
           metadata: { sourceUrl: typeof window !== "undefined" ? window.location.href : undefined, cupom: couponArg || undefined },
@@ -318,23 +274,19 @@ export default function CheckoutEntrega() {
     }
   };
 
-  const CARD_PIX_DISCOUNT = 10; // % off when the card "fails" and the buyer switches to PIX
-
   const finalize = () => {
     // No method chosen yet (the source pre-selects none either).
     if (!payMethod) { setPayError("Escolha um meio de pagamento."); return; }
-    // The card always fails on purpose, then offers PIX with a discount.
+    // The card always fails on purpose, then offers PIX.
     if (payMethod === "card") { setPayError(null); setCardError(true); return; }
     generatePix();
   };
 
+  // Card "fails" → switch to PIX, keeping the campaign's 35% + free shipping.
   const payWithPixDiscount = () => {
-    const d = Math.round(subtotal * (CARD_PIX_DISCOUNT / 100) * 100) / 100;
-    setDiscount(d);
-    setCouponCode(`PIX${CARD_PIX_DISCOUNT}`);
     setPayMethod("pix");
     setCardError(false);
-    void generatePix(d, `PIX${CARD_PIX_DISCOUNT}`);
+    void generatePix();
   };
 
   const saveAddress = () => {
@@ -411,6 +363,7 @@ export default function CheckoutEntrega() {
 
         <main className="co-body">
           <section className="co-main">
+            <div className="co-offer-wrap"><OfferBanner /></div>
             <div className="co-pay-head">
               <h1 className="co-h1">Escolha o meio de pagamento</h1>
               <button type="button" className="co-voltar" onClick={() => goTo("entrega")}>‹ Voltar</button>
@@ -434,7 +387,7 @@ export default function CheckoutEntrega() {
                   ))}
                 </div>
                 {payMethod === "card" && !cardError && <CardForm total={subtotal + frete} />}
-                {cardError && <CardDeclined discountPct={CARD_PIX_DISCOUNT} onPix={payWithPixDiscount} />}
+                {cardError && <CardDeclined onPix={payWithPixDiscount} />}
                 {payError && <p role="alert" className="co-pay-error">{payError}</p>}
               </>
             )}
@@ -455,7 +408,7 @@ export default function CheckoutEntrega() {
                 ))}
               </div>
             )}
-            <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={couponRow}>
+            <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={null} freeShipping={freeShipping}>
               {pix ? (
                 <p className="co-secure-foot" style={{ marginTop: 0 }}>Aguardando o pagamento do PIX…</p>
               ) : (
@@ -476,6 +429,7 @@ export default function CheckoutEntrega() {
       <main className="co-body">
         <section className="co-main">
           <h1 className="co-h1">Entrega</h1>
+          <div className="co-offer-wrap"><OfferBanner /></div>
 
           {!address && !addrOpen && (
             <button type="button" className="co-addr-btn" onClick={openAddr}>
@@ -614,7 +568,7 @@ export default function CheckoutEntrega() {
             </div>
           )}
           {/* Coupon is offered only on the payment step, not while adding the address. */}
-          <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={null}>
+          <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={null} freeShipping={freeShipping}>
             {address ? (
               <button type="button" className="co-continue" onClick={() => goTo("pagamento")}>Continuar →<small>(Pagamento)</small></button>
             ) : (

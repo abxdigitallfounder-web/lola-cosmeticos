@@ -110,3 +110,12 @@
  .lola-basket-info h2{font-size:16px}
  .lola-basket-summary{max-width:420px;margin-left:auto}
 }
+
+/* Campaign offer on the cart page */
+.lola-basket-original .lola-offer{margin:0 0 18px}
+.lola-coupon-applied{display:flex;align-items:center;gap:10px;background:#eafaf0;border:1px solid #bce7cd;border-radius:10px;padding:12px 14px;margin:0 0 16px}
+.lola-coupon-applied .lola-coupon-check{flex:none;width:24px;height:24px;border-radius:50%;background:#12a150;color:#fff;font-weight:900;display:inline-flex;align-items:center;justify-content:center;font-size:14px}
+.lola-coupon-applied strong{display:block;color:#14663a;font-size:14px}
+.lola-coupon-applied small{color:#2b7a4b;font-size:12px}
+#totla-lola .lola-line-desc span:last-child{color:#e81f4c;font-weight:700}
+#totla-lola .lola-line-free span:last-child{color:#12a150;font-weight:800;letter-spacing:.3px}

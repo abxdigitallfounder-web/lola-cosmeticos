@@ -264,3 +264,7 @@
 .co-card-declined strong{display:block;color:#c0392b;font-size:16px;margin-bottom:8px}
 .co-card-declined p{color:#7a3b3b;font-size:14px;line-height:1.5;margin:0 0 16px}
 .co-card-declined .co-continue{margin-top:0;min-height:auto;font-size:16px}
+
+/* Campaign offer banner + free-shipping row */
+.co-offer-wrap{margin:0 0 20px}
+.co-sum-free{color:#12a150!important;font-weight:800;letter-spacing:.3px}
