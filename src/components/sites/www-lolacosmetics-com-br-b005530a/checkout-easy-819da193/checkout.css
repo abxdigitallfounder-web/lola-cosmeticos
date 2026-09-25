@@ -20,6 +20,19 @@
 .co-secure svg{width:15px;height:15px}
 .co-spacer{height:44px;background:var(--co-skel)}
 
+/* ---- Simplified checkout header (matches the original store: one bar with a
+   centered logo). Scoped with .co-route #header so it overrides the captured
+   theme's full-site header rules. The logo image comes from source.css's
+   `#logo a` background; here we only size/center it and offset the page for the
+   fixed bar. ---- */
+.co-route #header{position:fixed;top:0;left:0;right:0;width:100%;z-index:30;min-width:auto}
+.co-route #header .main-bar{height:auto;min-height:84px;margin:0;background:#f4f3f4;box-shadow:0 1px 4px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center}
+.co-route #header .main-bar .wrapper{width:100%;max-width:none;margin:0;padding:0;display:flex;justify-content:center}
+.co-route #header .main-bar .row{width:auto;margin:0;padding:0;display:flex;align-items:center;justify-content:center}
+.co-route #header #logo{width:auto!important;max-width:none;margin:0!important;padding:0!important;float:none;flex:0 0 auto}
+.co-route #header #logo a{display:block;margin:0!important;width:72px!important;height:72px!important;background-size:contain!important;background-repeat:no-repeat;background-position:center}
+.co-page{padding-top:84px}
+
 /* Body */
 .co-body{max-width:1180px;margin:0 auto;padding:34px 20px 60px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1.6fr) 360px;gap:40px;align-items:start}
 .co-h1{font:700 30px/1.1 obviously,Lato,sans-serif;margin:0 0 22px;color:#222;letter-spacing:.2px}
