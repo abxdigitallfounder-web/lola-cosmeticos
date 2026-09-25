@@ -188,6 +188,15 @@
 .co-pay-head{display:flex;align-items:baseline;justify-content:flex-start;gap:16px;margin-bottom:18px}
 .co-pay-head .co-h1{margin:0;font-size:24px;white-space:nowrap}
 .co-voltar{background:none;border:0;color:var(--co-muted);font-size:15px;cursor:pointer;white-space:nowrap;flex:none;align-self:baseline}
+/* The captured theme applies width/float to bare <button>s; without this the
+   "‹ Voltar" button stretched to the column width, overflowed the header row and
+   forced the whole payment page to render wider than the phone (the "zoom"). */
+.co-route .co-pay-head{flex-wrap:wrap;margin-left:0;margin-right:0}
+.co-route .co-pay-head .co-voltar{width:auto!important;flex:0 0 auto!important;float:none!important;min-width:0}
+.co-route .co-pay-head .co-h1{float:none}
+/* Keep the one-line title from overflowing (and re-triggering the zoom) on very
+   small phones, without changing it on common ≥375px devices. */
+@media (max-width:360px){.co-route .co-pay-head .co-h1{font-size:15px}}
 .co-pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .co-pay-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:132px;background:#fff;border:1px solid #ddd;border-radius:0;padding:14px;cursor:pointer;transition:border-color .15s ease}
 .co-pay-card:hover{border-color:#bdbdbd}
