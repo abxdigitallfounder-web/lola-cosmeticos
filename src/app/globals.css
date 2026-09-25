@@ -141,3 +141,9 @@ body.lola-clone { --background: #f8f8f8; --foreground: #424242; --primary: #ff06
 .lola-uncloned p { font-size: 16px; color: #6f6f6f; margin-bottom: 8px; }
 .lola-uncloned code { background: #f4f4f4; border-radius: 4px; padding: 2px 6px; }
 .lola-uncloned a { color: #ea136a; text-decoration: underline; }
+
+/* "Principais Ingredientes": the source authored these thumbnails against a
+   hotlink-protected admin CDN that returns 403/404 — they are broken on
+   lolacosmetics.com.br itself. Hide only the broken image slot; the ingredient
+   names and descriptions stay. Applying it in CSS avoids any broken-image flash. */
+.box-conteudo-principais .img-area { display: none !important; }
