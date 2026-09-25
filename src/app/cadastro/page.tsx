@@ -3,12 +3,12 @@ import Header from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/
 import Footer from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/Footer";
 import ShopInteractions from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/ShopInteractions";
 import BodyClass from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/BodyClass";
-import PageContent from "@/components/sites/www-lolacosmetics-com-br-b005530a/cadastro-66a75834/PageContent";
+import AccountPanel from "@/components/sites/www-lolacosmetics-com-br-b005530a/shared/AccountPanel";
 
-export const metadata: Metadata = {"title":"Área do Cliente -"};
+export const metadata: Metadata = { title: "Criar Conta - Lola" };
 
-// Captured category page. Everything between the header and the footer is the
-// source's own #middle subtree, replayed whole so the theme's selectors keep matching.
+// Functional customer area. The clone chrome (header/footer) wraps a real,
+// client-side account panel: login, create-account popup and saved profile.
 export default function Page() {
   return (
     <>
@@ -16,7 +16,7 @@ export default function Page() {
       <section id="main" className="AccountRegisterRoute">
         <Header variant="interior" />
         <div id="bg-search" />
-        <PageContent />
+        <AccountPanel initialView="dashboard" />
         <Footer />
         <ShopInteractions />
       </section>

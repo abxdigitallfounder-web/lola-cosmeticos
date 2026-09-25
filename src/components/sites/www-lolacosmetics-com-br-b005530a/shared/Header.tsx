@@ -1,22 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import chrome from "./chrome.json";
-import { isMobileBrowser } from "./mobileDevice";
 import "./header-extra.css";
 
-/** Preserve the captured header DOM while replacing the storefront's remote scripts. */
 /**
- * `variant` picks which captured markup to replay: the source makes the logo the page
- * heading on the home page only. The cart has a separate, simplified source header.
+ * One captured header blob, replayed and wired for interactivity. The wiring is
+ * markup-agnostic (it queries by class), so the same effect drives both the
+ * desktop and the mobile templates.
  */
-export default function Header({ variant = "home" }: { variant?: "home" | "interior" | "cart" } = {}) {
+function HeaderMarkup({ html }: { html: string }) {
   const root = useRef<HTMLDivElement>(null);
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => { setMobile(isMobileBrowser()); }, []);
-  const html = variant === "cart" ? chrome.HeaderCart
-    : mobile ? (variant === "interior" ? chrome.HeaderMobileInterior : chrome.HeaderMobile)
-    : variant === "interior" ? chrome.HeaderInterior : chrome.Header;
 
   useEffect(() => {
     const header = root.current?.querySelector<HTMLElement>("#header");
@@ -34,7 +28,7 @@ export default function Header({ variant = "home" }: { variant?: "home" | "inter
     trigger?.setAttribute("aria-expanded", "false");
     input?.setAttribute("aria-label", "O que você procura?");
     suggestions?.setAttribute("aria-live", "polite");
-    const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+    const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase("pt-BR");
     const setMenu = (open: boolean) => {
       menu?.classList.toggle("active-menu", open);
       if (shade) shade.style.display = open ? "block" : "none";
@@ -164,4 +158,29 @@ export default function Header({ variant = "home" }: { variant?: "home" | "inter
   }, [html]);
 
   return <div ref={root} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+/** Preserve the captured header DOM while replacing the storefront's remote scripts. */
+/**
+ * `variant` picks which captured markup to replay: the source makes the logo the page
+ * heading on the home page only. The cart has a separate, simplified source header.
+ *
+ * Both the desktop and mobile templates are rendered into the (static) HTML and the
+ * right one is chosen purely in CSS from `html[data-lola-device]`, which the inline
+ * script in the root layout sets synchronously in <head> before first paint. That
+ * removes the flash of the desktop header on phones that a post-hydration JS swap
+ * used to cause — the correct header is painted immediately, with no JS involved.
+ */
+export default function Header({ variant = "home" }: { variant?: "home" | "interior" | "cart" } = {}) {
+  // The cart header has no device-specific variant, so it needs no split.
+  if (variant === "cart") return <HeaderMarkup html={chrome.HeaderCart} />;
+
+  const desktopHtml = variant === "interior" ? chrome.HeaderInterior : chrome.Header;
+  const mobileHtml = variant === "interior" ? chrome.HeaderMobileInterior : chrome.HeaderMobile;
+  return (
+    <>
+      <div className="lola-hdr lola-hdr-desktop"><HeaderMarkup html={desktopHtml} /></div>
+      <div className="lola-hdr lola-hdr-phone"><HeaderMarkup html={mobileHtml} /></div>
+    </>
+  );
 }

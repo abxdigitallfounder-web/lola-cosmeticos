@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart, countItems, sumItems, money } from "../shared/cartStore";
+import { getCurrentAccount, updateCurrentAccount } from "../shared/accountStore";
 import PixPanel, { type PixCharge } from "./PixPanel";
 import "./checkout.css";
 
@@ -186,6 +187,25 @@ export default function CheckoutEntrega() {
   const [discount, setDiscount] = useState(0);
   const [couponCode, setCouponCode] = useState("");
 
+  // Pre-fill the checkout from the logged-in account so a returning customer
+  // never retypes what the panel already saved (see accountStore.ts).
+  useEffect(() => {
+    const account = getCurrentAccount();
+    if (!account) return;
+    const a = account.address;
+    setForm((current) => ({
+      ...current,
+      nome: current.nome || account.name,
+      email: current.email || account.email,
+      cep: current.cep || account.cep,
+      endereco: current.endereco || a?.endereco || "",
+      numero: current.numero || a?.numero || "",
+      bairro: current.bairro || a?.bairro || "",
+      cidade: current.cidade || a?.cidade || "",
+      uf: current.uf || a?.uf || "",
+    }));
+  }, []);
+
   const lookupCep = async (value = form.cep) => {
     const cep = value.replace(/\D/g, "");
     setCepError(null);
@@ -295,6 +315,13 @@ export default function CheckoutEntrega() {
       bairro: t(form.bairro),
       cidade: t(form.cidade) || "Cidade",
       uf: t(form.uf).toUpperCase() || "UF",
+    });
+    // Keep the logged-in account in sync with what was typed here, so the next
+    // visit (panel or checkout) already has it.
+    updateCurrentAccount({
+      name: t(form.nome) || undefined,
+      cep: t(form.cep) || undefined,
+      address: { endereco: t(form.endereco), numero: t(form.numero), bairro: t(form.bairro), cidade: t(form.cidade), uf: t(form.uf).toUpperCase() },
     });
     setAddrOpen(false);
   };

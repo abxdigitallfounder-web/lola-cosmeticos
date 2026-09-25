@@ -11,3 +11,14 @@ body.BasketIndexRoute { padding: 0; }
 #header .lola-local-suggestions > p { padding: 14px; }
 /* Keep the captured search panel anchored to its form. A fixed position uses
    the theme's mobile top offset relative to the viewport and covers the logo. */
+
+/* ---- Device-correct header without a post-hydration flash ----
+   Both header templates ship in the static HTML; the right one is chosen from
+   html[data-lola-device], which the root layout's inline <head> script sets
+   synchronously before first paint. `display: contents` keeps the wrapper from
+   introducing a box when shown. Default (attribute missing / no-JS) shows the
+   desktop header, matching the prerendered output. */
+.lola-hdr { display: contents; }
+.lola-hdr-phone { display: none; }
+html[data-lola-device="phone"] .lola-hdr-desktop { display: none; }
+html[data-lola-device="phone"] .lola-hdr-phone { display: contents; }

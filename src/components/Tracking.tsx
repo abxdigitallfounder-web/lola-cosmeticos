@@ -10,7 +10,7 @@ const META_PIXEL_ID = "1734208590789662";
 export default function Tracking() {
   return (
     <>
-      <Script id="microsoft-clarity" strategy="afterInteractive">
+      <Script id="microsoft-clarity" strategy="lazyOnload">
         {`(function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -30,18 +30,18 @@ export default function Tracking() {
       <Script
         id="utmify-pixel"
         src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       {/* The two data attributes come from the vendor snippet: they stop Utmify
           from appending its own click and subid parameters to outgoing links. */}
       <Script
         id="utmify-utms"
         src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         data-utmify-prevent-xcod-sck=""
         data-utmify-prevent-subids=""
       />
-      <Script id="meta-pixel" strategy="afterInteractive">
+      <Script id="meta-pixel" strategy="lazyOnload">
         {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
