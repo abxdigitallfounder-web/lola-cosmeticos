@@ -530,7 +530,8 @@ export default function CheckoutEntrega() {
               ))}
             </div>
           )}
-          <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={couponRow}>
+          {/* Coupon is offered only on the payment step, not while adding the address. */}
+          <OrderSummary subtotal={subtotal} frete={frete} discount={discount} count={count} coupon={null}>
             {address ? (
               <button type="button" className="co-continue" onClick={() => goTo("pagamento")}>Continuar →<small>(Pagamento)</small></button>
             ) : (
