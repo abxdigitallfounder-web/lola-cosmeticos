@@ -60,8 +60,26 @@ export default function SourceSection({ name, html, mobileHtml }: { name: string
         restoreDeliveryFee();
       };
     }
-    initialize();
-    return () => { disposed = true; cleanup?.(); };
+    // Defer the heavy jQuery + slick initialization until the section is near
+    // the viewport. Initializing all ~7 home carousels at once on load froze the
+    // main thread on mobile ("travando ao abrir"); this staggers the work so only
+    // the visible section inits immediately and the rest init as they scroll in.
+    // Behaviour and appearance are unchanged — carousels look/work the same.
+    let observer: IntersectionObserver | undefined;
+    let started = false;
+    const start = () => { if (!started) { started = true; observer?.disconnect(); initialize(); } };
+    const target = ref.current?.firstElementChild ?? ref.current;
+    if (target && typeof IntersectionObserver !== "undefined") {
+      observer = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting)) start();
+      }, { rootMargin: "600px 0px" });
+      observer.observe(target as Element);
+      // Safety net: if the observer never fires (e.g. a boxless host), init anyway.
+      window.setTimeout(start, 2500);
+    } else {
+      initialize();
+    }
+    return () => { disposed = true; observer?.disconnect(); cleanup?.(); };
   }, [name, renderedHtml, mobile]);
   // display:contents keeps this host out of the box tree. It still sits in the DOM, so the
   // theme's child combinators (body.grid-products #middle #content-wrapper>.row) only
