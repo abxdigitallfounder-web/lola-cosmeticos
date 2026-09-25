@@ -18,8 +18,36 @@ const PAYMENTS = [
   { id: "pix", label: "PIX", icon: "pix" as const },
 ];
 
-type Address = { nome: string; email: string; cpf: string; cep: string; endereco: string; numero: string; bairro: string; cidade: string; uf: string };
-const EMPTY_ADDR: Address = { nome: "", email: "", cpf: "", cep: "", endereco: "", numero: "", bairro: "", cidade: "", uf: "" };
+type Address = { nome: string; email: string; cpf: string; cep: string; endereco: string; numero: string; complemento: string; bairro: string; cidade: string; uf: string };
+const EMPTY_ADDR: Address = { nome: "", email: "", cpf: "", cep: "", endereco: "", numero: "", complemento: "", bairro: "", cidade: "", uf: "" };
+
+// Field wrapper for the checkout form: persistent top label, room for a helper
+// line or an inline validation message, and an error state. Kept at module scope
+// (never redefined per render) so the inputs it wraps don't lose focus on keystroke.
+function CoField({ label, error, helper, wide, optional, children }: { label: string; error?: string; helper?: string; wide?: boolean; optional?: boolean; children: React.ReactNode }) {
+  return (
+    <div className={`co-fld${wide ? " co-wide" : ""}${error ? " co-fld-err" : ""}`}>
+      <label className="co-fld-label">{label}{optional && <span className="co-fld-opt"> (opcional)</span>}</label>
+      {children}
+      {error ? <span className="co-fld-msg" role="alert">{error}</span> : helper ? <span className="co-fld-help">{helper}</span> : null}
+    </div>
+  );
+}
+
+type AddrErrors = Partial<Record<keyof Address, string>>;
+const validateAddress = (f: Address): AddrErrors => {
+  const e: AddrErrors = {};
+  if (f.nome.trim().length < 3) e.nome = "Informe seu nome completo.";
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.trim())) e.email = "Informe um e-mail válido.";
+  if (f.cpf.replace(/\D/g, "").length !== 11) e.cpf = "Digite um CPF válido (11 dígitos).";
+  if (f.cep.replace(/\D/g, "").length !== 8) e.cep = "Digite um CEP válido (8 dígitos).";
+  if (!f.endereco.trim()) e.endereco = "Informe o endereço.";
+  if (!f.numero.trim()) e.numero = "Nº";
+  if (!f.bairro.trim()) e.bairro = "Informe o bairro.";
+  if (!f.cidade.trim()) e.cidade = "Informe a cidade.";
+  if (f.uf.trim().length !== 2) e.uf = "UF";
+  return e;
+};
 const formatCep = (value: string) => { const digits = value.replace(/\D/g, "").slice(0, 8); return digits.length > 5 ? `${digits.slice(0, 5)}-${digits.slice(5)}` : digits; };
 const formatCpf = (value: string) => {
   const d = value.replace(/\D/g, "").slice(0, 11);
@@ -172,8 +200,13 @@ export default function CheckoutEntrega() {
   // the tracking scripts (Utmify/Meta) that mutate DOM fields — they were
   // eating the "@" from the e-mail field — can't corrupt what we submit.
   const [form, setForm] = useState<Address>(EMPTY_ADDR);
-  const openAddr = () => { setForm(address ?? EMPTY_ADDR); setAddrOpen(true); };
-  const setField = (k: keyof Address) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const [errors, setErrors] = useState<AddrErrors>({});
+  const clearError = (k: keyof Address) => setErrors((prev) => (prev[k] ? { ...prev, [k]: undefined } : prev));
+  const openAddr = () => { setForm(address ?? EMPTY_ADDR); setErrors({}); setAddrOpen(true); };
+  const setField = (k: keyof Address) => (e: React.ChangeEvent<HTMLInputElement>) => { clearError(k); setForm((f) => ({ ...f, [k]: e.target.value })); };
+  // Validate a single field on blur so the customer gets feedback as they go,
+  // without being nagged the moment they start typing.
+  const validateField = (k: keyof Address) => setErrors((prev) => ({ ...prev, [k]: validateAddress(form)[k] }));
   const [delivery, setDelivery] = useState(0);
   const [seeAll, setSeeAll] = useState(false);
   const [seeDetails, setSeeDetails] = useState(false);
@@ -200,6 +233,7 @@ export default function CheckoutEntrega() {
       cep: current.cep || account.cep,
       endereco: current.endereco || a?.endereco || "",
       numero: current.numero || a?.numero || "",
+      complemento: current.complemento || a?.complemento || "",
       bairro: current.bairro || a?.bairro || "",
       cidade: current.cidade || a?.cidade || "",
       uf: current.uf || a?.uf || "",
@@ -305,23 +339,36 @@ export default function CheckoutEntrega() {
 
   const saveAddress = () => {
     const t = (s: string) => s.trim();
+    // Validate before saving: a clean, complete address is what makes the PIX
+    // step work and cuts failed/abandoned orders. Show every issue at once and
+    // jump focus to the first field that needs fixing.
+    const errs = validateAddress(form);
+    setErrors(errs);
+    if (Object.keys(errs).length) {
+      const first = Object.keys(errs)[0];
+      const el = document.querySelector<HTMLInputElement>(`.co-form [data-field="${first}"]`);
+      el?.focus();
+      el?.scrollIntoView({ block: "center", behavior: "smooth" });
+      return;
+    }
     setAddress({
-      nome: t(form.nome) || "Visitante",
+      nome: t(form.nome),
       email: t(form.email),
       cpf: t(form.cpf),
-      cep: t(form.cep) || "00000-000",
-      endereco: t(form.endereco) || "Rua",
-      numero: t(form.numero) || "0",
+      cep: t(form.cep),
+      endereco: t(form.endereco),
+      numero: t(form.numero),
+      complemento: t(form.complemento),
       bairro: t(form.bairro),
-      cidade: t(form.cidade) || "Cidade",
-      uf: t(form.uf).toUpperCase() || "UF",
+      cidade: t(form.cidade),
+      uf: t(form.uf).toUpperCase(),
     });
     // Keep the logged-in account in sync with what was typed here, so the next
     // visit (panel or checkout) already has it.
     updateCurrentAccount({
       name: t(form.nome) || undefined,
       cep: t(form.cep) || undefined,
-      address: { endereco: t(form.endereco), numero: t(form.numero), bairro: t(form.bairro), cidade: t(form.cidade), uf: t(form.uf).toUpperCase() },
+      address: { endereco: t(form.endereco), numero: t(form.numero), complemento: t(form.complemento), bairro: t(form.bairro), cidade: t(form.cidade), uf: t(form.uf).toUpperCase() },
     });
     setAddrOpen(false);
   };
@@ -440,23 +487,59 @@ export default function CheckoutEntrega() {
             // Not a <form>: the Utmify/Meta tracking scripts hijack real form
             // fields (they inject utm_* inputs and, on real phones, block typing).
             // A plain div with neutral field names keeps the checkout inputs usable.
-            <div className="co-form" role="group" aria-label="Endereço de entrega">
-              <h3>Novo endereço</h3>
-              <div className="co-grid">
-                <label className="co-wide">Nome completo<input name="lola_nome" autoComplete="off" value={form.nome} onChange={setField("nome")} onKeyDown={onFieldEnter} /></label>
-                <label>E-mail<input name="lola_email" type="text" inputMode="email" autoComplete="off" value={form.email} onChange={setField("email")} onKeyDown={onFieldEnter} /></label>
-                <label>CPF<input name="lola_doc" inputMode="numeric" autoComplete="off" maxLength={14} value={form.cpf} onChange={(e) => setForm((f) => ({ ...f, cpf: formatCpf(e.target.value) }))} onKeyDown={onFieldEnter} /></label>
-                <label>CEP<div className="co-cep-field"><input name="lola_zip" inputMode="numeric" autoComplete="off" maxLength={9} value={form.cep} onChange={(e) => { setCepError(null); setForm((f) => ({ ...f, cep: formatCep(e.target.value) })); }} onKeyDown={onFieldEnter} /></div>{cepBusy && <small className="co-cep-status">Buscando endereço…</small>}{cepError && <small className="co-cep-error" role="alert">{cepError}</small>}</label>
-                <label>Número<input name="lola_num" inputMode="numeric" autoComplete="off" value={form.numero} onChange={setField("numero")} onKeyDown={onFieldEnter} /></label>
-                <label className="co-wide">Endereço<input name="lola_rua" autoComplete="off" value={form.endereco} onChange={setField("endereco")} onKeyDown={onFieldEnter} /></label>
-                <label>Bairro<input name="lola_bairro" autoComplete="off" value={form.bairro} onChange={setField("bairro")} onKeyDown={onFieldEnter} /></label>
-                <label>Cidade<input name="lola_cidade" autoComplete="off" value={form.cidade} onChange={setField("cidade")} onKeyDown={onFieldEnter} /></label>
-                <label>UF<input name="lola_uf" maxLength={2} autoComplete="off" value={form.uf} onChange={setField("uf")} onKeyDown={onFieldEnter} /></label>
+            <div className="co-form co-form-pro" role="group" aria-label="Dados de entrega">
+              {/* 1. Contact ------------------------------------------------ */}
+              <div className="co-fieldset">
+                <h3 className="co-fs-title"><span className="co-fs-num">1</span>Seus dados</h3>
+                <div className="co-grid">
+                  <CoField label="Nome completo" wide error={errors.nome}>
+                    <input className="co-fld-input" data-field="nome" name="lola_nome" autoComplete="off" placeholder="Ex.: Maria Souza" value={form.nome} onChange={setField("nome")} onBlur={() => validateField("nome")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="E-mail" wide error={errors.email} helper="Enviaremos a confirmação e o código de rastreio aqui.">
+                    <input className="co-fld-input" data-field="email" name="lola_email" type="text" inputMode="email" autoComplete="off" placeholder="voce@email.com" value={form.email} onChange={setField("email")} onBlur={() => validateField("email")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="CPF" wide error={errors.cpf} helper="Necessário para emitir a nota e o PIX.">
+                    <input className="co-fld-input" data-field="cpf" name="lola_doc" inputMode="numeric" autoComplete="off" maxLength={14} placeholder="000.000.000-00" value={form.cpf} onChange={(e) => { clearError("cpf"); setForm((f) => ({ ...f, cpf: formatCpf(e.target.value) })); }} onBlur={() => validateField("cpf")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                </div>
               </div>
+
+              {/* 2. Address ------------------------------------------------ */}
+              <div className="co-fieldset">
+                <h3 className="co-fs-title"><span className="co-fs-num">2</span>Endereço de entrega</h3>
+                <div className="co-grid">
+                  <CoField label="CEP" error={errors.cep || cepError || undefined} helper={cepBusy ? "Buscando endereço…" : "Preenchemos o endereço pra você."}>
+                    <div className="co-cep-field">
+                      <input className="co-fld-input" data-field="cep" name="lola_zip" inputMode="numeric" autoComplete="off" maxLength={9} placeholder="00000-000" value={form.cep} onChange={(e) => { clearError("cep"); setCepError(null); setForm((f) => ({ ...f, cep: formatCep(e.target.value) })); }} onBlur={() => validateField("cep")} onKeyDown={onFieldEnter} />
+                      {cepBusy && <span className="co-cep-spin" aria-hidden="true" />}
+                    </div>
+                  </CoField>
+                  <CoField label="Número" error={errors.numero}>
+                    <input className="co-fld-input" data-field="numero" name="lola_num" inputMode="numeric" autoComplete="off" placeholder="123" value={form.numero} onChange={setField("numero")} onBlur={() => validateField("numero")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="Endereço" wide error={errors.endereco}>
+                    <input className="co-fld-input" data-field="endereco" name="lola_rua" autoComplete="off" placeholder="Rua, avenida…" value={form.endereco} onChange={setField("endereco")} onBlur={() => validateField("endereco")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="Complemento" optional>
+                    <input className="co-fld-input" data-field="complemento" name="lola_comp" autoComplete="off" placeholder="Apto, bloco, ponto de referência" value={form.complemento} onChange={setField("complemento")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="Bairro" error={errors.bairro}>
+                    <input className="co-fld-input" data-field="bairro" name="lola_bairro" autoComplete="off" placeholder="Seu bairro" value={form.bairro} onChange={setField("bairro")} onBlur={() => validateField("bairro")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="Cidade" error={errors.cidade}>
+                    <input className="co-fld-input" data-field="cidade" name="lola_cidade" autoComplete="off" placeholder="Sua cidade" value={form.cidade} onChange={setField("cidade")} onBlur={() => validateField("cidade")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                  <CoField label="UF" error={errors.uf}>
+                    <input className="co-fld-input" data-field="uf" name="lola_uf" maxLength={2} autoComplete="off" placeholder="UF" value={form.uf} onChange={(e) => { clearError("uf"); setForm((f) => ({ ...f, uf: e.target.value.replace(/[^a-zA-Z]/g, "").toUpperCase().slice(0, 2) })); }} onBlur={() => validateField("uf")} onKeyDown={onFieldEnter} />
+                  </CoField>
+                </div>
+              </div>
+
               <div className="co-form-actions">
-                <button type="button" className="co-btn-save" onClick={saveAddress}>Salvar endereço</button>
+                <button type="button" className="co-btn-save" onClick={saveAddress}>Salvar e continuar</button>
                 {address && <button type="button" className="co-btn-cancel" onClick={() => setAddrOpen(false)}>Cancelar</button>}
               </div>
+              <p className="co-form-secure"><LockIcon /> Ambiente seguro. Seus dados são usados apenas para concluir o pedido.</p>
             </div>
           )}
 
@@ -466,7 +549,7 @@ export default function CheckoutEntrega() {
                 <span className="co-addr-name">{address.nome}</span>
                 <span className="co-addr-pill">Endereço selecionado</span>
               </div>
-              <p className="co-addr-text">{address.endereco}, {address.numero}.{address.bairro ? ` ${address.bairro},` : ""} {address.cidade} - {address.uf}. CEP {address.cep}</p>
+              <p className="co-addr-text">{address.endereco}, {address.numero}{address.complemento ? ` - ${address.complemento}` : ""}.{address.bairro ? ` ${address.bairro},` : ""} {address.cidade} - {address.uf}. CEP {address.cep}</p>
               <button type="button" className="co-addr-change" onClick={openAddr}>Alterar endereço do pedido</button>
             </div>
           ) : !addrOpen && (

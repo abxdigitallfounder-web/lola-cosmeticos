@@ -18,6 +18,7 @@ const CHANGED = "lola:account-changed";
 export type AccountAddress = {
   endereco?: string;
   numero?: string;
+  complemento?: string;
   bairro?: string;
   cidade?: string;
   uf?: string;

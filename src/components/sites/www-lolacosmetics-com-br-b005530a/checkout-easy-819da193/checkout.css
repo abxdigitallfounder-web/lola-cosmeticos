@@ -46,17 +46,37 @@
 .co-skel-bar{flex:1;height:8px;border-radius:4px;background:var(--co-skel)}
 
 /* Address demo form */
-.co-form{margin-top:18px;border:1px solid var(--co-border);border-radius:4px;padding:22px}
-.co-form h3{font:700 17px Lato,sans-serif;margin:0 0 16px}
-.co-form .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.co-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--co-muted)}
+/* ---- Professional, conversion-focused checkout form ---- */
+.co-form{margin-top:18px;border:1px solid var(--co-border);border-radius:12px;padding:24px;background:#fff}
+.co-form-pro .co-fieldset{margin:0 0 26px}
+.co-form-pro .co-fieldset:last-of-type{margin-bottom:8px}
+.co-fs-title{display:flex;align-items:center;gap:10px;font:700 17px Lato,sans-serif;color:#222;margin:0 0 16px}
+.co-fs-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--co-pink);color:#fff;font-size:13px;font-weight:700;flex:none}
+.co-form .co-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.co-fld{display:flex;flex-direction:column;gap:6px;min-width:0}
 .co-form .co-wide{grid-column:1/-1}
-.co-form input{border:1px solid #d7d7d7;border-radius:4px;padding:11px 12px;font:15px Lato,sans-serif;color:#333}
-.co-form input:focus{outline:none;border-color:var(--co-blue)}
-.co-form-actions{display:flex;gap:12px;margin-top:18px}
-.co-btn-save{background:var(--co-pink);color:#fff;border:0;border-radius:4px;padding:13px 26px;font-weight:700;cursor:pointer;transition:background .18s ease}
+.co-fld-label{font-size:13px;font-weight:600;color:#444}
+.co-fld-opt{font-weight:400;color:var(--co-muted)}
+/* `.co-form` prefix raises specificity above the captured theme's
+   input[type="text"] rule, which would otherwise restyle the e-mail field
+   (the only one carrying an explicit type="text" for the Utmify mitigation). */
+.co-form .co-fld-input{width:100%;box-sizing:border-box;height:50px;border:1px solid #d3d3d3;border-radius:10px;padding:0 14px;margin:0;font:16px Lato,sans-serif;color:#222;background:#fff;box-shadow:none;transition:border-color .15s,box-shadow .15s}
+.co-form .co-fld-input::placeholder{color:#b3b3b3}
+.co-form .co-fld-input:focus{outline:none;border-color:var(--co-pink);box-shadow:0 0 0 3px rgba(255,43,90,.14)}
+.co-form .co-fld-err .co-fld-input{border-color:#e02b4a;background:#fff6f7}
+.co-form .co-fld-err .co-fld-input:focus{box-shadow:0 0 0 3px rgba(224,43,74,.16)}
+.co-fld-msg{font-size:12.5px;font-weight:600;color:#d0142f}
+.co-fld-help{font-size:12.5px;color:var(--co-muted)}
+.co-cep-field{position:relative;display:block}
+.co-cep-spin{position:absolute;top:50%;right:12px;width:18px;height:18px;margin-top:-9px;border:2px solid #e4e4e4;border-top-color:var(--co-pink);border-radius:50%;animation:co-spin .7s linear infinite}
+@keyframes co-spin{to{transform:rotate(360deg)}}
+.co-form-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.co-btn-save{width:100%;background:var(--co-pink);color:#fff;border:0;border-radius:10px;padding:0;height:54px;font-size:17px;font-weight:800;letter-spacing:.2px;cursor:pointer;transition:background .18s ease,transform .05s ease}
 .co-btn-save:hover{background:var(--co-pink-dark)}
-.co-btn-cancel{background:none;border:0;color:var(--co-muted);text-decoration:underline;cursor:pointer}
+.co-btn-save:active{transform:translateY(1px)}
+.co-btn-cancel{background:none;border:0;color:var(--co-muted);text-decoration:underline;cursor:pointer;font-size:14px}
+.co-form-secure{display:flex;align-items:center;gap:8px;margin:14px 0 0;font-size:12.5px;color:var(--co-muted)}
+.co-form-secure svg{width:16px;height:16px;flex:none;color:#2ea043}
 
 /* Right summary */
 .co-summary{border:0}
