@@ -97,7 +97,11 @@ export function readProductFrom(scope: HTMLElement, onProductPage: boolean): Lol
       id,
       name: document.querySelector("h1")?.textContent?.trim() || "Produto Lola",
       image: document.querySelector<HTMLImageElement>(".medias img")?.src || "",
-      price: priceOf(document.querySelector(".sale-price")?.textContent || "0"),
+      // Use the MAIN product price (.priceContainer). On kit pages the first
+      // .sale-price is a component in the "kit contents" list (e.g. the shampoo),
+      // which made the cart show the wrong, cheaper price. .priceContainer holds
+      // the actual product/kit price on both kit and regular pages.
+      price: priceOf((document.querySelector(".priceContainer .sale-price") || document.querySelector(".sale-price"))?.textContent || "0"),
       quantity,
     };
   }

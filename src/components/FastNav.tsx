@@ -57,6 +57,13 @@ export default function FastNav() {
       if (!url) return;
       // Same-page hash: let the browser scroll natively.
       if (url.hash && url.pathname === location.pathname && url.search === location.search) return;
+      // The header cart icon (inside .basket) must open the cart drawer, not
+      // navigate to /carrinho — matches the behaviour when an item is added.
+      if (a.closest(".basket")) {
+        event.preventDefault();
+        window.dispatchEvent(new CustomEvent("lola:open-cart"));
+        return;
+      }
       event.preventDefault();
       router.push(url.pathname + url.search + url.hash);
     };
